@@ -1,0 +1,104 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'fonts';
+@import 'grid';
+@import 'variables';
+@import 'components';
+@import 'other';
+@import 'layout';
+@import 'modal';
+@import 'custom';
+@import 'headers';
+@import 'slider';
+@import 'button';
+@import 'text';
+@import 'mainPage';
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+@import 'animate.css/animate.min.css';
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	min-height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+body, html, #root, #__next{
+	display: flex;
+	width: 100%;
+	font-family: $fontManrope300;
+	color: $colorAccent;
+	letter-spacing: 1px;
+	font-size: 14px;
+	border: 0;
+	line-height: 1;
+	position: relative;
+	//overflow: hidden;
+}
+
+#root {
+	flex-direction: column;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.icon-spin {
+	-webkit-animation: icon-spin 2s infinite linear;
+	animation: icon-spin 2s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes icon-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+.react-tabs > ul {
+	padding: 0;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+.image-bg-wrapper {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.image-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: -1;
+}

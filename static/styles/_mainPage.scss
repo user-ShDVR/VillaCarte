@@ -1,0 +1,100 @@
+@import "variables";
+
+@media (min-width: $media0) {
+	// TopBlock
+	.topBlock {
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			p {
+				text-align: center;
+			}
+		}
+	}
+
+	.videoWrapper {
+		position: relative;
+		overflow: hidden;
+
+		.bgVideo {
+			height: 100vh;
+			width: 100vw;
+			object-fit: cover;
+		}
+	}
+
+	.mainText {
+		position: absolute;
+	}
+
+	// AllServices
+	.allServices {
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+	}
+
+	// BestProjects
+	.bestProjects {
+
+		&-tabs {
+			margin-top: 28px;
+		}
+
+		&-tabList {
+			margin-bottom: 0;
+			padding: 0;
+
+			li {
+				color: rgba(255, 255, 255, .5);
+				border: none;
+				background: transparent !important;
+				border-radius: 0;
+			}
+
+			.react-tabs__tab--selected {
+				color: $colorWhite;
+				border-bottom: 1px solid $colorWhite;
+			}
+
+			.react-tabs__tab:focus:after {
+				background: transparent !important;
+			}
+		}
+	}
+
+	// FeedBackBlock
+	.feedBackBlock {
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: -2;
+		overflow: hidden;
+
+		.flowerRight {
+			width: 100%;
+			height: inherit;
+			position: absolute;
+			top: 20px;
+			right: -280px;
+			z-index: -1;
+		}
+	}
+}
+
+
+

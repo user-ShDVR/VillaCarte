@@ -1,0 +1,93 @@
+@import "variables";
+
+@media (min-width: $media0) {
+	.hoveredButton {
+		padding: 8px 20px;
+		border-radius: 30px;
+		transition: all .3s;
+		font-size: 14px;
+		line-height: 22px;
+		font-family: Manrope-Bold, sans-serif;
+		font-weight: 700;
+		color: $colorAccent;
+		border: 2px solid $colorAccent;
+		background: $colorWhite;
+		text-decoration: none;
+		cursor: pointer;
+		position: relative;
+
+		img {
+			margin-left: 8px;
+			width: 14px;
+			height: 11px;
+			margin-bottom: 2px;
+		}
+
+		&-only {
+			border: none;
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-simple {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-simpleDark {
+			background: $colorAccent;
+			color: $colorWhite;
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
+		}
+
+		&-arrow {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-arrowWhite {
+			color: $colorWhite;
+			background: transparent;
+			border-color: $colorWhite;
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+				border-color: $colorAccent;
+			}
+		}
+	}
+
+	// Scroll Button
+	.btn-scroll {
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 40px;
+		height: 40px;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 2px solid $colorWhite;
+		background: rgba(255, 255, 255, .2);
+
+		img {
+			width: 14px;
+			height: 10px;
+		}
+	}
+}

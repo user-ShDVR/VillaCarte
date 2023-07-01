@@ -1,0 +1,40 @@
+/* Fonts */
+$fontManrope700: "Manrope-Bold", sans-serif;
+$fontManrope600: "Manrope-SemiBold", sans-serif;
+$fontManrope500: "Manrope-Medium", sans-serif;
+$fontManrope300: "Manrope-Light", sans-serif;
+$fontTTTsarsA300: "TTTsarsA-Light", sans-serif;
+
+/* Colors */
+$colorAccent: #22364A;
+$colorText: #848C98;
+$colorWhite: #FFFFFF;
+$colorDarkWhite: #D4D4D4;
+$colorLightGrey: #F0F0F2;
+$colorGradient: linear-gradient(40deg, #4072A3, #7EA2BC) border-box;
+
+/* Media */
+$media1320: 1320px;
+$media1280: 1280px;
+$media1200: 1200px;
+$media1130: 1130px;
+$media1023: 1023px;
+$media930: 930px;
+$media850: 850px;
+$media767: 767px;
+$media665: 665px;
+$media560: 560px;
+$media475: 475px;
+$media375: 375px;
+$media0: 0;
+
+$grid-breakpoints: (
+	xs: 375px,
+	sm: 475px,
+	md: 767px,
+	lg: 1023px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+

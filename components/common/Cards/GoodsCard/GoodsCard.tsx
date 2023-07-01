@@ -1,0 +1,47 @@
+import React, { useState } from 'react';
+import { staticResource } from '@/utils/resources';
+import Link from 'next/link';
+import Image from 'next/image';
+import arrowRight from '@/public/icons/arrowBtnWhite.svg';
+
+interface IProps {
+	image: string;
+	logoImage: string;
+	url: string;
+}
+
+const GoodsCard = ( { image, logoImage, url }: IProps ) => {
+	const [ mouseOver, setMouseOver ] = useState<boolean>( false );
+
+	const onMouseOver = () => {
+		setMouseOver( true );
+	};
+	const onMouseLeave = () => {
+		setMouseOver( false );
+	};
+
+	return (
+		<div className={ 'goodsCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
+			<Link href={ url }>
+				<div className={ 'pos' }>
+					<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' }/>
+					{ !mouseOver && <div className={ 'bgAccentOpacity' }/> }
+				</div>
+
+				<div className={ 'cardLabel text300 colorWhite' }>Апартаменты | Район: Сурин</div>
+
+				<img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/>
+
+				<div className={ 'description-wrapper' }>
+					<div>
+						<div className={ 'text300 colorWhite' }>Цена: от $100 000</div>
+						<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
+					</div>
+					<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
+				</div>
+			</Link>
+		</div>
+	);
+};
+
+export default GoodsCard;

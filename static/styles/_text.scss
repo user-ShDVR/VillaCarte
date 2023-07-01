@@ -1,0 +1,136 @@
+@import "variables";
+
+.noUnderline {
+	text-decoration: none !important;
+}
+
+.tt-uppercase {
+	text-transform: uppercase !important;
+}
+
+.tt-capitalize {
+	text-transform: capitalize !important;
+}
+
+.text-nowrap {
+	white-space: nowrap;
+}
+
+@media (min-width: $media0) {
+	.h1Title {
+		font-size: 32px;
+		font-family: $fontTTTsarsA300;
+		color: $colorAccent;
+		line-height: 38px;
+	}
+
+	.h2Subtitle {
+		font-size: 32px;
+		font-family: $fontTTTsarsA300;
+		color: $colorAccent;
+		line-height: 38px;
+	}
+
+	.h3TitleText {
+		font-size: 18px;
+		font-family: $fontManrope600;
+		color: $colorAccent;
+		line-height: 28px;
+	}
+
+	.text500 {
+		font-size: 14px;
+		font-family: $fontManrope500;
+		color: $colorAccent;
+		line-height: 20px;
+	}
+
+	.text700 {
+		font-size: 16px;
+		font-family: $fontManrope700;
+		color: $colorAccent;
+		line-height: 28px;
+	}
+
+	.text300 {
+		font-size: 12px;
+		font-family: $fontManrope300;
+		color: $colorAccent;
+		line-height: 18px;
+	}
+
+	.text300-min {
+		font-size: 10px;
+		font-family: $fontManrope300;
+		color: $colorAccent;
+		line-height: 16px;
+	}
+}
+
+@media (min-width: $media1023) {
+	.h1Title {
+		font-size: 72px;
+		font-family: $fontTTTsarsA300;
+		color: $colorAccent;
+		line-height: 84px;
+		letter-spacing: 1px;
+	}
+
+	.h2Subtitle {
+		font-size: 48px;
+		font-family: $fontTTTsarsA300;
+		color: $colorAccent;
+		line-height: 62px;
+		letter-spacing: 1px;
+	}
+
+	.h3TitleText {
+		font-size: 26px;
+		font-family: $fontManrope600;
+		color: $colorAccent;
+		line-height: 36px;
+	}
+
+	.text500 {
+		font-size: 18px;
+		font-family: $fontManrope500;
+		color: $colorAccent;
+		line-height: 30px;
+	}
+
+	.text700 {
+		font-size: 14px;
+		font-family: $fontManrope700;
+		color: $colorAccent;
+		line-height: 24px;
+	}
+
+	.text300 {
+		font-size: 14px;
+		font-family: $fontManrope300;
+		color: $colorAccent;
+		line-height: 24px;
+	}
+
+	.text300-min {
+		font-size: 12px;
+		font-family: $fontManrope300;
+		color: $colorAccent;
+		line-height: 20px;
+	}
+}
+
+.fz-24 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.fz-60 {
+	font-size: 60px;
+	line-height: 72px;
+}
+
+
+
+
+

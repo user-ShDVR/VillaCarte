@@ -1,0 +1,26 @@
+@import "variables";
+
+// Site
+.header-section {
+	width: 100%;
+}
+
+.main-section {
+	flex: 1 0 auto;
+	width: 100%;
+}
+
+.footer-section {
+	flex: 0 1 auto;
+}
+
+.layout {
+	min-width: 100%;
+}
+
+@media (min-width: $media0) {
+	.layout {
+
+
+	}
+}
