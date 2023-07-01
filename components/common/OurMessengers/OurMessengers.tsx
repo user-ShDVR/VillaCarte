@@ -18,7 +18,7 @@ const OurMessengers = () => {
 
 	return (
 		<div className={ 'ourMessengers' }>
-			<h3 className={ 'h3TitleText fz-24' }>Наши месенджеры <br/> для связи</h3>
+			<h3 className={ 'h3TitleText fz-24 mb-28' }>Наши месенджеры <br/> для связи</h3>
 
 			{ messengers.map( item =>
 				<MessengerCard
