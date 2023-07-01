@@ -221,6 +221,7 @@
 		padding: 28px;
 		background: linear-gradient(225deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.04) 100%);
 		backdrop-filter: blur(15px);
+		box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
 
 		h3 {
 			font-family: $fontManrope300;
@@ -228,12 +229,10 @@
 
 		div {
 			background: linear-gradient(225deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.04) 100%);
-			//box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
-			//backdrop-filter: blur(15px);
-			//filter: blur(15px);
 			width: 100%;
 			padding: 8px 20px;
 			margin-bottom: 8px;
+			box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 
 			&:hover {
 				background: $colorAccent;

@@ -93,6 +93,19 @@
 			right: -280px;
 			z-index: -1;
 		}
+
+		.element-animation {
+			margin: 2rem 0;
+			font-size: 3rem;
+			opacity: 0;
+			transform: scale(3);
+		}
+
+		.element-animation.element-show {
+			opacity: 1;
+			transition: all 2.2s;
+			transform: scale(1);
+		}
 	}
 }
 

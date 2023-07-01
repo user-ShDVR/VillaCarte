@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import bgPalms from '@/public/bgPalms.png';
 import flowerRight from '@/public/flowerRight.png';
 import Image from 'next/image';
 import FeedBackForm from '@/components/common/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
+import { Slide } from 'react-awesome-reveal';
 
 const FeedBackBlock = () => {
+	function onEntry( entry: any ) {
+		entry.forEach( ( change: any ) => {
+			if ( change.isIntersecting ) {
+				change.target.classList.add( 'element-show' );
+			}
+		} );
+	}
+
+	let options = {
+		threshold: [ 0.5 ]
+	};
+
+	useEffect( () => {
+		let observer = new IntersectionObserver( onEntry, options );
+		let elements = document.querySelectorAll( '.element-animation' );
+
+		// @ts-ignore
+		for ( let elm of elements ) {
+			observer.observe( elm );
+		}
+	}, [] );
 
 	return (
 		<div className={ 'feedBackBlock ' } style={ { backgroundImage: `url(${ bgPalms.src })` } }>
-			<Image src={ flowerRight } alt={ '' } className={'flowerRight'}/>
+			<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+				<div className={ 'element-animation' }>
+					<Image src={ flowerRight } alt={ '' } className={ 'flowerRight' }/>
+				</div>
+			</Slide>
 
 			<div className={ 'container pt-60' }>
 				<div>
@@ -21,7 +47,7 @@ const FeedBackBlock = () => {
 
 				<FeedBackForm/>
 
-				<div className={'ourMessengers-wrapper'}>
+				<div className={ 'ourMessengers-wrapper' }>
 					<OurMessengers/>
 				</div>
 
