@@ -15,7 +15,7 @@ const messengers = [
 ];
 
 const OurMessengers = () => {
-	console.log(2);
+
 	return (
 		<div className={ 'ourMessengers' }>
 			<h3 className={ 'h3TitleText fz-24' }>Наши месенджеры <br/> для связи</h3>
