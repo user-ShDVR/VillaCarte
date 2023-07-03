@@ -7,7 +7,7 @@ export const weAreTrustedSliderSettings = {
 	infinite: true,
 	arrows: true,
 	autoplay: true,
-	speed: 222221000,
+	speed: 1000,
 	nextArrow: <SampleNextArrow/>,
 	prevArrow: <SamplePrevArrow/>,
 	autoplaySpeed: 5000,
