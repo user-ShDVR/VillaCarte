@@ -79,6 +79,7 @@
 	.feedBackBlock {
 		background-size: cover;
 		background-repeat: no-repeat;
+		background-position: revert;
 		width: 100%;
 		height: 100%;
 		position: relative;
@@ -105,6 +106,140 @@
 			opacity: 1;
 			transition: all 2.2s;
 			transform: scale(1);
+		}
+	}
+
+	// WeBuildOurselves
+	.weBuildOurselves {
+
+		ul {
+			padding: 12px 0 40px;
+			margin: 0;
+
+			div {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 12px;
+
+				img {
+					margin-right: 8px;
+				}
+			}
+		}
+
+		.weBuildDownBlock {
+
+			.fiveStepsSlider-wrapper {
+				padding-top: 60px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 100%;
+
+				.stepsWrapper {
+					display: flex;
+					overflow: hidden;
+					overflow-x: scroll;
+					padding: 28px 28px 28px 8px;
+
+					&::-webkit-scrollbar {
+						width: 0;
+					}
+
+					.steps {
+						position: relative;
+						min-width: 270px;
+
+						h6 {
+							color: $colorWhite;
+							opacity: .7;
+						}
+
+						section {
+							border-bottom: 1px solid $colorWhite;
+							position: absolute;
+							top: 110px;
+							left: 10px;
+							width: 100%;
+
+							p {
+								width: 240px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// JoinTheClub
+	.joinTheClub {
+		position: relative;
+		overflow: hidden;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+
+		.leavesLeft {
+			position: absolute;
+			bottom: -23px;
+			left: -170px;
+			scale: 1.2;
+			z-index: 1;
+		}
+
+		.leavesRight {
+			position: absolute;
+			bottom: 27px;
+			right: -260px;
+			scale: 1.2;
+			z-index: 1;
+		}
+
+		div {
+			position: relative;
+			z-index: 2;
+
+			h2 {
+				width: 300px;
+				font-size: 30px;
+			}
+
+			p {
+				margin: 12px 0 16px;
+				line-height: 24px;
+				width: 280px;
+			}
+		}
+	}
+
+	// WeCare
+	.weCare {
+		position: relative;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.bgGradientBlack {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(0deg, #252525, transparent);
+			height: 260px;
+		}
+
+		.textWrapper {
+			position: absolute;
+			left: 16px;
+			bottom: 16px;
+
+			p {
+				padding-top: 12px;
+			}
 		}
 	}
 }

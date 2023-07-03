@@ -9,7 +9,11 @@ export const $mainPageInfo = createStore<IMainPage>( {
 } ).on( updateMainPageInfo, ( state, newState ) => newState );
 
 export const getMainPageInfo = async () => {
-	return await apiGet( {
+	const response = await apiGet( {
 		url: '/pages/thailand/index?lang=RU'
 	} );
+
+	updateMainPageInfo( response );
+
+	return response;
 };

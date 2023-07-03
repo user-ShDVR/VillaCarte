@@ -6,7 +6,7 @@ import arrowWhite from '@/public/icons/arrowBtnWhite.svg';
 
 interface IProps {
 	text: string;
-	variant: 'simple' | 'arrow' | 'only' | 'simpleDark' | 'arrowWhite';
+	variant: 'simple' | 'arrow' | 'only' | 'simpleDark' | 'arrowWhite' | 'arrowRevert';
 	className?: string;
 	type?: 'submit' | 'button';
 }
@@ -32,6 +32,9 @@ const SimpleButton = ( { text, variant, className, type, ...props }: IProps ) =>
 		case 'arrowWhite':
 			classNameVariant = 'hoveredButton-arrowWhite';
 			break;
+		case 'arrowRevert':
+			classNameVariant = 'hoveredButton-arrowRevert';
+			break;
 	}
 
 	const onMouseOver = () => {
@@ -54,6 +57,7 @@ const SimpleButton = ( { text, variant, className, type, ...props }: IProps ) =>
 			{ variant === 'arrow' && !mouseOver && <Image src={ arrowAccent } alt={ '' }/> }
 			{ variant === 'arrow' && mouseOver && <Image src={ arrowWhite } alt={ '' }/> }
 			{ variant === 'arrowWhite' && <Image src={ arrowWhite } alt={ '' }/> }
+			{ variant === 'arrowRevert' && <Image src={ arrowAccent } alt={ '' }/> }
 		</button>
 	);
 };

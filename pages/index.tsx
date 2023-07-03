@@ -13,6 +13,10 @@ import scrollArrow from '@/public/icons/scrollArrow.svg';
 // import 'animate.css';
 import 'react-tabs/style/react-tabs.css';
 import FeedBackBlock from '@/pages/Main/FeedBackBlock5';
+import WeBuildOurselves from '@/pages/Main/WeBuildOurselves6/WeBuildOurselves6';
+import JoinTheClub from '@/pages/Main/JoinTheClub7';
+import WeAreTrusted from '@/pages/Main/WeAreTrusted7/WeAreTrusted';
+import WeCare from '@/pages/Main/WeCare8';
 
 export default function Home() {
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );
@@ -60,6 +64,14 @@ export default function Home() {
 				<BestProjects/>
 
 				<FeedBackBlock/>
+
+				<WeBuildOurselves/>
+
+				<JoinTheClub/>
+
+				<WeAreTrusted/>
+
+				<WeCare/>
 			</section>
 		</Layout>
 	);

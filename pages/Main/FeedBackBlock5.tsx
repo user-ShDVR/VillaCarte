@@ -5,6 +5,7 @@ import Image from 'next/image';
 import FeedBackForm from '@/components/common/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import { Slide } from 'react-awesome-reveal';
+import palmsTransparent from '@/public/palmsTransparent.png';
 
 const FeedBackBlock = () => {
 	function onEntry( entry: any ) {
@@ -30,7 +31,7 @@ const FeedBackBlock = () => {
 	}, [] );
 
 	return (
-		<div className={ 'feedBackBlock ' } style={ { backgroundImage: `url(${ bgPalms.src })` } }>
+		<div className={ 'feedBackBlock ' } style={ { backgroundImage: `url(${ palmsTransparent.src })` } }>
 			<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
 				<div className={ 'element-animation' }>
 					<Image src={ flowerRight } alt={ '' } className={ 'flowerRight' }/>

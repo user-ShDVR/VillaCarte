@@ -72,7 +72,7 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-color: #2AA5A0;
-	background-image: linear-gradient(90deg, #4072A3, #7EA2BC);
+	background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
 }
 
 .bgGradient {
@@ -371,6 +371,10 @@ img {
 	padding-top: 10px;
 }
 
+.pt-12 {
+	padding-top: 12px;
+}
+
 .pt-20 {
 	padding-top: 20px;
 }
@@ -429,6 +433,10 @@ img {
 	padding-bottom: 50px;
 }
 
+.pb-60 {
+	padding-bottom: 60px;
+}
+
 .pb-80 {
 	padding-bottom: 80px;
 }
@@ -439,6 +447,10 @@ img {
 
 .pl-10 {
 	padding-left: 10px;
+}
+
+.pl-16 {
+	padding-left: 16px;
 }
 
 .pl-20 {
