@@ -8,6 +8,7 @@ import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import BurgerButton from '@/components/Header/MobileNav/BurgerButton';
 import MobileMainMenu from '@/components/Header/MobileNav/MobileMainMenu';
 import cn from 'classnames';
+import { Fade } from 'react-awesome-reveal';
 
 const Header = () => {
 	const [ scrolled, setScrolled ] = useState<boolean>( false );
@@ -20,7 +21,7 @@ const Header = () => {
 
 	const transform = {
 		background: 'rgba(34, 54, 74, .4)',
-		backdropFilter: 'blur(15px)',
+		// backdropFilter: 'blur(15px)',
 		boxShadow: '5px 5px 10px 0 rgb(68, 68, 68, .15)',
 		borderRadius: '30px',
 	};
@@ -43,27 +44,29 @@ const Header = () => {
 	}, [] );
 
 	return (
-		<header style={ scrolled ? transform : {} } className="container header">
-			{/*// @ts-ignore*/ }
-			<div ref={ ref } className="header-wrapper">
-				<Link href={ '/' } style={ scrolled ? { color: 'white' } : {} } className="header-wrapper-logo">
-					<Image src={ logoImg } alt={ 'VillaCarte' }/>
-				</Link>
+			<header style={ scrolled ? transform : {} } className="container header">
+				{/*// @ts-ignore*/ }
+				<div ref={ ref } className="header-wrapper">
+		<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
+					<Link href={ '/' } style={ scrolled ? { color: 'white' } : {} } className="header-wrapper-logo">
+						<Image src={ logoImg } alt={ 'VillaCarte' }/>
+					</Link>
 
-				<div className={ 'd-flex' }>
-					<HoveredButton to={ '/' } text={ 'Заказать звонок' } variant={ 'only' }/>
+					<div className={ 'd-flex' }>
+						<HoveredButton to={ '/' } text={ 'Заказать звонок' } variant={ 'only' }/>
 
-					<div className={ 'header-wrapper-mobileMenu d-block d-lg-none ml-10' }>
-						<BurgerButton menu={ mobileMenu } toShowMenu={ toShowMenu } scrolled={ scrolled }/>
+						<div className={ 'header-wrapper-mobileMenu d-block d-lg-none ml-10' }>
+							<BurgerButton menu={ mobileMenu } toShowMenu={ toShowMenu } scrolled={ scrolled }/>
 
-						<div className={ cn( mobileMenu ? 'mobileMainMenu' : 'mobileMainMenu-active' ) }>
-							{ mobileMenu && <MobileMainMenu/> }
+							<div className={ cn( mobileMenu ? 'mobileMainMenu' : 'mobileMainMenu-active' ) }>
+								{ mobileMenu && <MobileMainMenu/> }
+							</div>
 						</div>
 					</div>
-				</div>
 
-			</div>
-		</header>
+		</Fade>
+				</div>
+			</header>
 	);
 };
 

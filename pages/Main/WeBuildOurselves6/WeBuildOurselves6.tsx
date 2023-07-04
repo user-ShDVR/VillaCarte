@@ -12,14 +12,6 @@ const list = [
 	'Остаётесь уверены и спокойны: мы выполняем обязательства перед вами и инвесторами',
 ];
 
-const steps = [
-	{ count: '01', text: 'Персонально подбираем недвижимость под ваши цели и бюджет' },
-	{ count: '02', text: 'Рассчитываем доходность, знакомим с объектами и инфраструктурой' },
-	{ count: '03', text: 'Договариваемся с застройщиком о выгодных для вас условиях и помогаем заключить сделку' },
-	{ count: '04', text: 'Юридически сопровождаем сделку: проверяем объект и помогаем с документами' },
-	{ count: '05', text: 'Берём на себя управление недвижимостью на Пхукете и предоставляем услуги консьерж-сервиса' },
-];
-
 const WeBuildOurselves = () => {
 	return (
 		<div className={ 'bgGradient weBuildOurselves' }>
@@ -45,11 +37,9 @@ const WeBuildOurselves = () => {
 					<div className={ 'container' }>
 						<h2 className={ 'h2Subtitle colorWhite' }>5 шагов – и недвижимость ваша</h2>
 					</div>
-					<div className={ 'stepsWrapper' }>
-						{ steps.map( step =>
-							<FiveSteps key={ step.count } count={ step.count } text={ step.text }/>
-						) }
-					</div>
+
+					<FiveSteps/>
+
 				</div>
 			</div>
 		</div>

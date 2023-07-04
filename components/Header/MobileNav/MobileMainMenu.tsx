@@ -78,15 +78,15 @@ const MobileMainMenu = () => {
 			<div className={ 'mb-60 ml-16 d-flex flex-column ai-start' }>
 				<div className={ 'mb-16 d-flex flex-column ai-start' }>
 					<p className={ 'text300 colorText m-0' }>Почта</p>
-					<a className={ 'text700 t-decor-none colorGradient' } href='mailto: sales@villacarte.com'>sales@villacarte.com</a>
+					<a className={ 'text700 t-decor-none' } href='mailto: sales@villacarte.com'>sales@villacarte.com</a>
 				</div>
 				<div className={ 'mb-16 d-flex flex-column ai-start' }>
 					<p className={ 'text300 colorText m-0' }>Черногория</p>
-					<a className={ 'text700 t-decor-none colorGradient' } href='tel: +38268815019'>+382 (68) 815-019</a>
+					<a className={ 'text700 t-decor-none' } href='tel: +38268815019'>+382 (68) 815-019</a>
 				</div>
 				<div className={ 'mb-20 d-flex flex-column ai-start' }>
 					<p className={ 'text300 colorText m-0' }>Пхукет</p>
-					<a className={ 'text700 t-decor-none colorGradient' } href='tel: +66892900110'>+66 (89) 290-01-10</a>
+					<a className={ 'text700 t-decor-none' } href='tel: +66892900110'>+66 (89) 290-01-10</a>
 				</div>
 				<HoveredButton to={ '/' } text={ 'Заказать звонок' } variant={ 'simpleDark' }/>
 			</div>

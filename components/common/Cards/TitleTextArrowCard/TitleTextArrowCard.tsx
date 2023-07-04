@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import LinkButton from '@/components/common/Buttons/LinkButton';
 import Link from 'next/link';
+import { Fade } from 'react-awesome-reveal';
+import cn from 'classnames';
 
 interface IProps {
 	title: string;
@@ -18,16 +20,18 @@ const TitleTextArrowCard = ( { title, text }: IProps ) => {
 	};
 
 	return (
-		<div className={ 'titleTextArrowCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
-			<Link href={'/'}>
-				<h3 className={ 'h3TitleText' }>{ title }</h3>
+		<Fade delay={1e2} cascade damping={1e-1}>
+			<div className={ 'titleTextArrowCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
+				<Link href={ '/' }>
+					<h3 className={ cn( 'h3TitleText', mouseOver ? 'colorGradient' : '' ) }>{ title }</h3>
 
-				<div>
-					<p className={ 'text300 colorText' }>{ text }</p>
-					<LinkButton mouseOver={ mouseOver }/>
-				</div>
-			</Link>
-		</div>
+					<div>
+						<p className={ 'text300 colorText' }>{ text }</p>
+						<LinkButton mouseOver={ mouseOver }/>
+					</div>
+				</Link>
+			</div>
+		</Fade>
 	);
 };
 

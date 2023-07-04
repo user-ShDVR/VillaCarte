@@ -3,7 +3,8 @@ import Slider from 'react-slick';
 import avatar1 from '@/public/icons/avatar1.png';
 import avatar2 from '@/public/icons/avatar2.png';
 import ReviewCard from '@/components/common/Cards/ReviewCard/ReviewCard';
-import { weAreTrustedSliderSettings } from '@/pages/Main/WeAreTrusted7/weAreTrustedSliderSettings';
+import { weAreTrustedSliderSettings } from '@/pages/Main/WeAreTrusted8/weAreTrustedSliderSettings';
+import { Fade } from 'react-awesome-reveal';
 
 const reviews = [
 	{
@@ -23,22 +24,24 @@ const reviews = [
 const WeAreTrusted = () => {
 	return (
 		<div className={ 'bgGradient weAreTrusted' }>
-			<div className={ 'container pt-60' }>
-				<h2 className={ 'h2Subtitle colorWhite' }>Нам доверяют успешные люди</h2>
+			<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
+				<div className={ 'container pt-60' }>
+					<h2 className={ 'h2Subtitle colorWhite' }>Нам доверяют успешные люди</h2>
 
-				<Slider { ...weAreTrustedSliderSettings } className={ 'weAreTrustedSlider' }>
-					{ reviews.map( ( review, index ) =>
-						<ReviewCard
-							key={ index }
-							name={ review.name }
-							profession={ review.profession }
-							avatar={ review.avatar }
-							text={ review.text }
-						/>
-					) }
-				</Slider>
+					<Slider { ...weAreTrustedSliderSettings } className={ 'weAreTrustedSlider' }>
+						{ reviews.map( ( review, index ) =>
+							<ReviewCard
+								key={ index }
+								name={ review.name }
+								profession={ review.profession }
+								avatar={ review.avatar }
+								text={ review.text }
+							/>
+						) }
+					</Slider>
 
-			</div>
+				</div>
+			</Fade>
 		</div>
 	);
 };

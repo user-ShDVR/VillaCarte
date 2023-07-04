@@ -15,8 +15,10 @@ import 'react-tabs/style/react-tabs.css';
 import FeedBackBlock from '@/pages/Main/FeedBackBlock5';
 import WeBuildOurselves from '@/pages/Main/WeBuildOurselves6/WeBuildOurselves6';
 import JoinTheClub from '@/pages/Main/JoinTheClub7';
-import WeAreTrusted from '@/pages/Main/WeAreTrusted7/WeAreTrusted';
-import WeCare from '@/pages/Main/WeCare8';
+import WeCare from '@/pages/Main/WeCare9';
+import WeAreTrusted from '@/pages/Main/WeAreTrusted8/WeAreTrusted8';
+import ShareContent from '@/pages/Main/ShareContent10/ShareContent10';
+import Footer from '@/pages/Main/Footer/Footer';
 
 export default function Home() {
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );
@@ -72,6 +74,10 @@ export default function Home() {
 				<WeAreTrusted/>
 
 				<WeCare/>
+
+				<ShareContent/>
+
+				<Footer/>
 			</section>
 		</Layout>
 	);

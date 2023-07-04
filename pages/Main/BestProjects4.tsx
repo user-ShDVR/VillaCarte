@@ -20,13 +20,13 @@ const BestProjects = () => {
 					</TabList>
 
 					<TabPanel className={ 'mt-28' }>
-						{ offers.data?.apartments.map( item =>
+						{ offers.data?.apartments.slice( 0, 6 ).map( item =>
 							<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 						) }
 					</TabPanel>
 
 					<TabPanel>
-						{ offers?.data?.villas.map( item =>
+						{ offers?.data?.villas.slice( 0, 6 ).map( item =>
 							<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 						) }
 					</TabPanel>

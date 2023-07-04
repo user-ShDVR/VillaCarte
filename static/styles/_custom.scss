@@ -37,14 +37,14 @@
 }
 
 .spinner {
-	position:fixed;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	top:0;
-	left:0;
-	width:100vw;
-	height:100vh;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 	z-index: 9999;
 }
 
@@ -157,6 +157,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .w-60 {
 	width: 60px;
+}
+
+.w-200 {
+	width: 200px;
+}
+
+.w-210 {
+	width: 210px;
 }
 
 .w-300 {

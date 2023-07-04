@@ -25,10 +25,11 @@
 	}
 
 	.h2Subtitle {
-		font-size: 32px;
+		font-size: 30px;
 		font-family: $fontTTTsarsA300;
 		color: $colorAccent;
 		line-height: 38px;
+		letter-spacing: 0;
 	}
 
 	.h3TitleText {
@@ -118,6 +119,11 @@
 		color: $colorAccent;
 		line-height: 20px;
 	}
+}
+
+.fz-20 {
+	font-size: 20px;
+	line-height: 26px;
 }
 
 .fz-24 {
