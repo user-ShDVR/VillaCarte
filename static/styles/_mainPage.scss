@@ -40,10 +40,18 @@
 
 	// AllServices
 	.allServices {
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 		width: 100%;
 		height: 100%;
+
+		.allServices-bg {
+			display: none;
+		}
+
+		.leavesVideo {
+			display: none;
+		}
 	}
 
 	// BestProjects
@@ -377,5 +385,86 @@
 	}
 }
 
+@media (min-width: $media475) {
 
+}
+
+@media (min-width: $media576) {
+
+}
+
+@media (min-width: $media768) {
+	// AllServices
+	.allServices {
+
+		.cardsWrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 8px;
+			position: relative;
+			z-index: 4;
+
+			.titleTextArrowCard {
+				height: 170px;
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: $media1200) {
+	// AllServices
+	.allServices {
+		position: relative;
+		padding-top: 60px;
+
+		.allServices-bg {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 170%;
+		}
+
+		.leavesVideo {
+			display: block;
+			position: absolute;
+			top: 246px;
+			left: -100px;
+			z-index: 3;
+		}
+	}
+
+	.services {
+		display: grid;
+		grid-template-columns: 38% 58%;
+		justify-content: space-between;
+		position: relative;
+		z-index: 4;
+
+		.cardsWrapper {
+			gap: 8px;
+
+			.titleTextArrowCard {
+				height: 300px;
+
+				h3 {
+					height: 72px;
+				}
+
+				div {
+					display: flex;
+					flex-direction: column;
+					height: 170px;
+				}
+			}
+		}
+	}
+}
 

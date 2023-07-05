@@ -1,8 +1,10 @@
 import React from 'react';
 import { useStore } from 'effector-react';
 import { $indicator, $indicator2, showIndicator, showIndicator2 } from '@/store/slideIndicator';
+import Image from 'next/image';
+import nextArrow from '@/public/icons/nextArrow.svg';
 
-export function SampleNextArrow( { className, style, onClick }: any ) {
+export function SampleNextArrow( { onClick }: any ) {
 	const indicator = useStore( $indicator );
 	const indicator2 = useStore( $indicator2 );
 	const onNextClick = () => {
@@ -12,15 +14,8 @@ export function SampleNextArrow( { className, style, onClick }: any ) {
 	};
 
 	return (
-		<div
-			className={ className }
-			style={
-				{
-					...
-						style
-				}
-			}
-			onClick={ onNextClick }
-		/>
+		<div className={ 'sliderNext' } onClick={ onNextClick }>
+			<Image src={ nextArrow } alt={ '' }/>
+		</div>
 	);
 }

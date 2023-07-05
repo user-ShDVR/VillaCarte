@@ -365,3 +365,14 @@
 		}
 	}
 }
+
+
+@media (min-width: $media1200) {
+	// TitleTextArrowCard
+	.titleTextArrowCard {
+
+		div {
+			grid-template-columns: 1fr;
+		}
+	}
+}

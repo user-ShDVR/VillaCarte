@@ -5,6 +5,19 @@
 	.videoSlider {
 		position: relative;
 
+		.sliderNext {
+			position: absolute;
+			bottom: 32px;
+			right: 20px;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: 32px;
+			right: 60px;
+			z-index: 1;
+		}
+
 		.slick-track {
 			height: 700px;
 		}
@@ -18,15 +31,14 @@
 		.slick-arrow {
 			position: absolute;
 			z-index: 3;
-
 		}
 
 		.slick-arrow {
 			position: absolute;
 			bottom: 20px;
 			right: 16px;
-			width: 40px;
-			height: 40px;
+			width: 0;
+			height: 0;
 			padding: 0;
 			text-indent: -9999px;
 			background: transparent;
@@ -403,7 +415,7 @@
 
 }
 
-@media (min-width: $media767) {
+@media (min-width: $media768) {
 
 }
 

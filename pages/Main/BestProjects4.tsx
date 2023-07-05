@@ -10,8 +10,8 @@ const BestProjects = () => {
 	const offers = useStore<IMainPage>( $mainPageInfo );
 
 	return (
-		<div className={ 'bgGradient bestProjects' }>
-			<div className={ 'container pt-60' }>
+		<div className={ 'bgGradient bestProjects mt_200' }>
+			<div className={ 'container pt-250' }>
 				<h2 className={ 'h2Subtitle colorWhite' }>Лучшие проекты для жизни и инвестиций</h2>
 				<Tabs className={ 'bestProjects-tabs' }>
 					<TabList className={ 'bestProjects-tabList text700 colorWhite' }>
