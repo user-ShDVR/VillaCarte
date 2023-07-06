@@ -89,14 +89,23 @@
 
 	// FeedBackBlock
 	.feedBackBlock {
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: revert;
-		width: 100%;
-		height: 100%;
 		position: relative;
-		z-index: -2;
 		overflow: hidden;
+
+		.feedBackBlock-bg {
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: revert;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -2;
+			opacity: .3;
+		}
 
 		.element-animation {
 			margin: 2rem 0;
@@ -134,7 +143,6 @@
 
 			div {
 				display: flex;
-				justify-content: space-between;
 				margin-top: 12px;
 
 				img {
@@ -147,10 +155,22 @@
 
 			.fiveStepsSlider-wrapper {
 				padding-top: 60px;
-				background-size: cover;
-				background-repeat: no-repeat;
-				width: 100%;
-				height: 100%;
+				position: relative;
+				overflow: hidden;
+
+				&-bg {
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 0;
+					opacity: .2;
+				}
 
 				.stepsWrapper {
 					display: flex;
@@ -164,7 +184,7 @@
 
 					.step {
 						position: relative;
-						min-width: 270px;
+						min-width: 260px;
 
 						h6 {
 							color: $colorWhite;
@@ -404,6 +424,13 @@
 		.element-animation {
 			transform: scale(2);
 		}
+
+		.fiveStepsSlider-wrapper {
+
+			h2 {
+				padding-top: 28px;
+			}
+		}
 	}
 }
 
@@ -459,6 +486,14 @@
 
 		.element-animation {
 			transform: scale(1.1);
+		}
+	}
+
+	// WeBuildOurselves
+	.weBuildOurselves {
+
+		ul {
+			padding: 0 0 20px;
 		}
 	}
 }
@@ -571,6 +606,18 @@
 
 		.flowerRight {
 			width: 40%;
+		}
+	}
+
+	// WeBuildOurselves
+	.weBuildOurselves {
+
+	}
+	.weBuildDownBlock {
+
+		.slick-track {
+			display: flex;
+			justify-content: end;
 		}
 	}
 }

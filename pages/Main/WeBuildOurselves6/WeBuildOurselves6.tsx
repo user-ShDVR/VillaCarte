@@ -15,10 +15,10 @@ const list = [
 const WeBuildOurselves = () => {
 	return (
 		<div className={ 'bgGradient weBuildOurselves' }>
-			<div className={ 'container pt-60' }>
-				<h2 className={ 'h2Subtitle colorWhite' }>Строим сами – <br/> а значит вы:</h2>
+			<div className={ 'container pt-60 d-md-flex' }>
+				<h2 className={ 'h2Subtitle colorWhite col-md-6' }>Строим сами – <br/> а значит вы:</h2>
 
-				<ul>
+				<ul className={'col-md-6'}>
 					{ list.map( item =>
 						<div key={ item }>
 							<Image src={ listPoint } alt={ '' }/>
@@ -33,9 +33,11 @@ const WeBuildOurselves = () => {
 					<OffersSlider/>
 				</div>
 
-				<div className={ 'fiveStepsSlider-wrapper' } style={ { backgroundImage: `url(${ palmsTransparent.src })` } }>
+				<div className={ 'fiveStepsSlider-wrapper' } >
+					<div style={ { backgroundImage: `url(${ palmsTransparent.src })` } } className={'fiveStepsSlider-wrapper-bg'}/>
+
 					<div className={ 'container' }>
-						<h2 className={ 'h2Subtitle colorWhite' }>5 шагов – и недвижимость ваша</h2>
+						<h2 className={ 'h2Subtitle colorWhite pos' }>5 шагов – и недвижимость ваша</h2>
 					</div>
 
 					<FiveSteps/>

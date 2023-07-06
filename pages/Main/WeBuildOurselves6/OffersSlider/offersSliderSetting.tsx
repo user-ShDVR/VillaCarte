@@ -10,10 +10,18 @@ export const offersSliderSetting = {
 	speed: 1000,
 	nextArrow: <SampleNextArrow/>,
 	prevArrow: <SamplePrevArrow/>,
-	autoplaySpeed: 5000,
+	autoplaySpeed: 999995000,
 	swipeToSlide: true,
-	slidesToShow: 1,
+	slidesToShow: 1.05,
 	slidesToScroll: 1,
 	initialSlide: 0,
+	responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 1,
+			}
+		},
+	]
 };
 

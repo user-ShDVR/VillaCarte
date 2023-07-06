@@ -277,13 +277,17 @@
 			text-decoration: none;
 		}
 
-		img {
-			width: 100%;
-			height: 100%;
+		&-img {
+			min-width: 100%;
+			object-fit: cover;
 		}
 
 		.description-wrapper {
 			padding-top: 20px;
+		}
+
+		.invisibleRight {
+			display: none;
 		}
 	}
 
@@ -371,10 +375,44 @@
 	}
 }
 
+@media (min-width: $media475) {
+	// OfferCard
+	.offerCard {
+
+		&-img {
+			max-width: 380px !important;
+		}
+	}
+}
+
 @media (min-width: $media576) {
 	// GoodsCard
 	.goodsCard {
 		margin-bottom: 0;
+	}
+}
+
+@media (min-width: $media768) {
+	// OfferCard
+	.offerCard {
+		padding: 16px;
+
+		&-img {
+			min-width: auto;
+			max-width: 300px !important;
+		}
+
+		&-wrapper {
+			display: flex;
+		}
+
+		.description-wrapper {
+			padding-left: 20px;
+
+			article {
+				width: 90%;
+			}
+		}
 	}
 }
 
@@ -425,6 +463,17 @@
 		margin-top: 60px;
 		height: fit-content;
 	}
+
+	// OfferCard
+	.offerCard {
+
+		.description-wrapper {
+
+			.hoveredButton-link {
+				margin-bottom: 10px !important;
+			}
+		}
+	}
 }
 
 @media (min-width: $media1200) {
@@ -434,5 +483,10 @@
 		div {
 			grid-template-columns: 1fr;
 		}
+	}
+
+	// OfferCard
+	.offerCard {
+		width: 99%;
 	}
 }

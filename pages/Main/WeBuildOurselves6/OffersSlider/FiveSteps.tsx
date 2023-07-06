@@ -7,7 +7,7 @@ import { useWindowSize } from '@/hooks/useWindowSize';
 const FiveSteps = () => {
 	const size = useWindowSize();
 	// @ts-ignore
-	const isMobile = size.width <= 767.98;
+	const isMobile = size.width <= 1439;
 
 	return (
 		<div className={ 'stepsWrapper' }>

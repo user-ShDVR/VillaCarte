@@ -10,7 +10,7 @@ const OffersSlider = () => {
 	const offers = useStore<IMainPage>( $mainPageInfo );
 	
 	return (
-		<div>
+		<div className={'offersSlider-wrapper'}>
 			<Slider { ...offersSliderSetting } className={'offersSlider'}>
 				{ offers.data?.apartments.map( ( offer, index ) =>
 					<OfferCard key={ index } url={ offer.url } image={ offer.image }/>
