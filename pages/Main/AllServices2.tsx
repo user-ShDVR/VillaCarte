@@ -38,7 +38,7 @@ const AllServices = () => {
 					</div>
 				</div>
 
-				<div className={ 'mt-20 pb-20' }>
+				<div className={ 'mt-20 pb-8' }>
 					<div className={ 'cardsWrapper' }>
 						{ allServices.map( ( item, index ) =>
 							<TitleTextArrowCard key={ index } title={ item.title } text={ item.text }/>

@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import bgPalms from '@/public/bgPalms.png';
+import palmsTransparent from '@/public/palmsTransparent.png';
 import flowerRight from '@/public/flowerRight.png';
 import Image from 'next/image';
 import FeedBackForm from '@/components/common/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import { Slide } from 'react-awesome-reveal';
-import palmsTransparent from '@/public/palmsTransparent.png';
 
 const FeedBackBlock = () => {
 	function onEntry( entry: any ) {
@@ -38,15 +37,17 @@ const FeedBackBlock = () => {
 				</div>
 			</Slide>
 
-			<div className={ 'container pt-60' }>
+			<div className={ 'container pt-60 pos feedBackBlock-content' }>
 				<div>
-					<h2 className={ 'h2Subtitle' }>Закажите персональную подборку</h2>
-					<p className={ 'text300 colorText pt-8' }>
-						Вам позвонит менеджер и подберёт недвижимость под ваши индивидуальные запросы
-					</p>
-				</div>
+					<div>
+						<h2 className={ 'h2Subtitle' }>Закажите персональную подборку</h2>
+						<h6 className={ 'text300 colorText pt-8' }>
+							Вам позвонит менеджер и подберёт недвижимость под ваши индивидуальные запросы
+						</h6>
+					</div>
 
-				<FeedBackForm/>
+					<FeedBackForm/>
+				</div>
 
 				<div className={ 'ourMessengers-wrapper' }>
 					<OurMessengers/>

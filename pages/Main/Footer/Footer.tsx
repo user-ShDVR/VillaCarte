@@ -7,19 +7,25 @@ import youtubeStock from '@/public/icons/socials/contacts/youtubeStock.svg';
 import vkStock from '@/public/icons/socials/contacts/vkStock.svg';
 import instagramStock from '@/public/icons/socials/contacts/instagramStock.svg';
 import telegramStock from '@/public/icons/socials/contacts/telegramStock.svg';
-import telegramHovered from '@/public/icons/socials/contacts/tgHovered.svg';
+import fbHovered from '@/public/icons/socials/contacts/fbHovered.svg';
+import youtubeHovered from '@/public/icons/socials/contacts/youtubeHovered.svg';
+import vkHovered from '@/public/icons/socials/contacts/vkHovered.svg';
+import instagramHovered from '@/public/icons/socials/contacts/instagramHovered.svg';
+import telegramHovered from '@/public/icons/socials/contacts/telegramHovered.svg';
 import Link from 'next/link';
 import creativeTeam from '@/public/creativeTeam.svg';
+import Socials from '@/components/common/Socials/Socials';
 
 const socialsStock = [
-	{ icon: facebookStock, hoveredIcon: telegramHovered, link: '/' },
-	{ icon: youtubeStock, hoveredIcon: telegramHovered, link: '/' },
-	{ icon: vkStock, hoveredIcon: telegramHovered, link: '/' },
-	{ icon: instagramStock, hoveredIcon: telegramHovered, link: '/' },
+	{ icon: facebookStock, hoveredIcon: fbHovered, link: '/' },
+	{ icon: youtubeStock, hoveredIcon: youtubeHovered, link: '/' },
+	{ icon: vkStock, hoveredIcon: vkHovered, link: '/' },
+	{ icon: instagramStock, hoveredIcon: instagramHovered, link: '/' },
 	{ icon: telegramStock, hoveredIcon: telegramHovered, link: '/' },
 ];
 
 const ContactsBlock = () => {
+
 	return (
 		<footer>
 			<div className={ 'container contactsBlock' }>
@@ -32,9 +38,7 @@ const ContactsBlock = () => {
 
 				<div className={ 'socials' }>
 					{ socialsStock.map( ( social, index ) =>
-						<Link key={ index } href={ social.link }>
-							<Image src={ social.icon } alt={ social.link }/>
-						</Link>
+						<Socials key={ index } icon={ social.icon } hoveredIcon={ social.hoveredIcon } link={ social.link }/>
 					) }
 				</div>
 

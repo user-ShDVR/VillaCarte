@@ -3,6 +3,7 @@ import { staticResource } from '@/utils/resources';
 import Link from 'next/link';
 import Image from 'next/image';
 import arrowRight from '@/public/icons/arrowBtnWhite.svg';
+import { useWindowSize } from '@/hooks/useWindowSize';
 
 interface IProps {
 	image: string;
@@ -11,6 +12,10 @@ interface IProps {
 }
 
 const GoodsCard = ( { image, logoImage, url }: IProps ) => {
+	const size = useWindowSize();
+	// @ts-ignore
+	const isMobile = size.width <= 1023;
+
 	const [ mouseOver, setMouseOver ] = useState<boolean>( false );
 
 	const onMouseOver = () => {
@@ -26,19 +31,33 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 				<div className={ 'pos' }>
 					<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' }/>
 					{ !mouseOver && <div className={ 'bgAccentOpacity' }/> }
+					{ !isMobile && mouseOver && <div className={ 'bgGradientBlack' }/> }
 				</div>
 
-				<div className={ 'cardLabel text300 colorWhite' }>Апартаменты | Район: Сурин</div>
+				{ mouseOver && <div className={ 'cardLabel text300 colorWhite' }>Апартаменты | Район: Сурин</div> }
+				{ isMobile && <div className={ 'cardLabel text300 colorWhite' }>Апартаменты | Район: Сурин</div> }
 
-				<img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/>
+				{ !mouseOver && <img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/> }
+				{ isMobile && <img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/> }
 
-				<div className={ 'description-wrapper' }>
-					<div>
-						<div className={ 'text300 colorWhite' }>Цена: от $100 000</div>
-						<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
+				{ mouseOver &&
+					<div className={ 'description-wrapper' }>
+						<div>
+							<div className={ 'text300 colorWhite' }>Цена: от $100 000</div>
+							<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
+						</div>
+						<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
 					</div>
-					<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
-				</div>
+				}
+				{ isMobile &&
+					<div className={ 'description-wrapper' }>
+						<div>
+							<div className={ 'text300 colorWhite' }>Цена: от $100 000</div>
+							<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
+						</div>
+						<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
+					</div>
+				}
 			</Link>
 		</div>
 	);

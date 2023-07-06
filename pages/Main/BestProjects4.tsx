@@ -11,15 +11,16 @@ const BestProjects = () => {
 
 	return (
 		<div className={ 'bgGradient bestProjects mt_200' }>
-			<div className={ 'container pt-250' }>
+			<div className={ 'container bestProjects-inner' }>
 				<h2 className={ 'h2Subtitle colorWhite' }>Лучшие проекты для жизни и инвестиций</h2>
+
 				<Tabs className={ 'bestProjects-tabs' }>
 					<TabList className={ 'bestProjects-tabList text700 colorWhite' }>
 						<Tab>Апартаменты</Tab>
 						<Tab>Виллы</Tab>
 					</TabList>
 
-					<TabPanel className={ 'mt-28' }>
+					<TabPanel>
 						{ offers.data?.apartments.slice( 0, 6 ).map( item =>
 							<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 						) }
@@ -33,7 +34,7 @@ const BestProjects = () => {
 
 				</Tabs>
 
-				<div className={ 'mt-28 pb-40 d-flex jc-center' }>
+				<div className={ 'mt-28 pb-40-60 d-flex jc-center' }>
 					<HoveredButton text={ 'Показать еще 115 предложений' } to={ '/' } variant={ 'arrowWhite' }/>
 				</div>
 			</div>

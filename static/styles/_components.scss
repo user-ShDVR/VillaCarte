@@ -159,6 +159,7 @@
 			left: 0;
 			right: 0;
 			z-index: 2;
+			margin: auto;
 		}
 
 		.description-wrapper {
@@ -180,7 +181,7 @@
 				img {
 					width: 18px;
 					height: 10px;
-					margin-top: 3px;
+					margin-top: 4px;
 				}
 			}
 		}
@@ -201,6 +202,7 @@
 				width: 100%;
 				resize: none;
 				padding: 20px 12px;
+				border-radius: 0;
 
 				&::placeholder {
 					color: $colorText;
@@ -215,12 +217,14 @@
 	// OurMessengers
 	.ourMessengers-wrapper {
 		margin: 28px 0 40px;
+		position: relative;
+		z-index: 1;
 	}
 
 	.ourMessengers {
 		padding: 28px;
 		background: linear-gradient(225deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.04) 100%);
-		//backdrop-filter: blur(15px);
+		backdrop-filter: blur(15px);
 		box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
 
 		h3 {
@@ -250,6 +254,7 @@
 				text-align: center;
 
 				img {
+
 					width: 24px;
 					height: 24px;
 				}
@@ -366,6 +371,61 @@
 	}
 }
 
+@media (min-width: $media576) {
+	// GoodsCard
+	.goodsCard {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: $media1023) {
+	// GoodsCard
+	.goodsCard {
+
+		.bgGradientBlack {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(0deg, #252525, transparent);
+			height: 150px;
+		}
+
+		.description-wrapper {
+
+			p {
+
+				img {
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+
+	// FeedBackForm
+	.feedBackForm {
+
+		.feedBackInputWrapper {
+
+			.feedBackInput {
+				width: 368px;
+			}
+		}
+	}
+
+	// OurMessengers
+	.ourMessengers-wrapper {
+		display: flex;
+		justify-content: end;
+
+	}
+
+	.ourMessengers {
+		width: 324px;
+		margin-top: 60px;
+		height: fit-content;
+	}
+}
 
 @media (min-width: $media1200) {
 	// TitleTextArrowCard
