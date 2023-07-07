@@ -89,7 +89,6 @@
 		.slick-arrow {
 			position: absolute;
 			z-index: 3;
-
 		}
 
 		.slick-arrow {
@@ -121,6 +120,20 @@
 		position: relative;
 		padding-bottom: 100px;
 
+		.sliderNext {
+			position: absolute;
+			bottom: 60px;
+			right: 40%;
+			z-index: 1;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: 60px;
+			left: 40%;
+			z-index: 1;
+		}
+
 		.slick-track {
 			height: fit-content;
 		}
@@ -134,7 +147,6 @@
 		.slick-arrow {
 			position: absolute;
 			z-index: 3;
-
 		}
 
 		.slick-arrow {
@@ -159,95 +171,9 @@
 			height: 0;
 			border-style: solid;
 		}
-
-		// next
-		.slick-arrow.slick-next {
-			z-index: 3;
-		}
-
-		.slick-next:after {
-			content: "";
-			position: absolute;
-			bottom: -145px;
-			right: 130px;
-			width: 12px;
-			height: 12px;
-			border-bottom-right-radius: 3px;
-			border-top-left-radius: 3px;
-			border-top: 2px solid $colorWhite;
-			border-right: 2px solid $colorWhite;
-			transform: rotate(45deg);
-			display: inline-block;
-			transition: 1s;
-			z-index: 6;
-		}
-
-		.slick-next:hover::after {
-			border-top: 2px solid $colorDarkWhite;
-			border-right: 2px solid $colorDarkWhite;
-		}
-
-		.slick-next:before {
-			content: "";
-			position: absolute;
-			bottom: -140px;
-			right: 130px;
-			width: 16px;
-			height: 2px;
-			background: $colorWhite;
-			display: inline-block;
-			transition: 1s;
-			z-index: 6;
-		}
-
-		.slick-next:hover::before {
-			background: $colorDarkWhite;
-		}
-
-		// prev
-		.slick-arrow.slick-prev {
-			z-index: 3;
-		}
-
-		.slick-prev:after {
-			content: "";
-			position: absolute;
-			bottom: -145px;
-			right: -140px;
-			width: 12px;
-			height: 12px;
-			border-bottom-right-radius: 3px;
-			border-top-left-radius: 3px;
-			border-top: 2px solid $colorWhite;
-			border-right: 2px solid $colorWhite;
-			transform: rotate(-135deg);
-			display: inline-block;
-			transition: .3s;
-			z-index: 6;
-		}
-
-		.slick-prev:hover::after {
-			border-top: 2px solid $colorDarkWhite;
-			border-right: 2px solid $colorDarkWhite;
-		}
-
-		.slick-prev:before {
-			content: "";
-			position: absolute;
-			bottom: -140px;
-			right: -145px;
-			width: 16px;
-			height: 2px;
-			background: $colorWhite;
-			display: inline-block;
-			transition: 1s;
-			z-index: 6;
-		}
-
-		.slick-prev:hover::before {
-			background: $colorDarkWhite;
-		}
 	}
+
+
 }
 
 @media (min-width: $media475) {
@@ -292,7 +218,25 @@
 }
 
 @media (min-width: $media1023) {
+	.weAreTrustedSlider {
 
+		.sliderNext {
+			position: absolute;
+			bottom: auto;
+			top: -44px;
+			right: 0;
+			z-index: 1;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: auto;
+			top: -44px;
+			left: auto;
+			right: 40px;
+			z-index: 1;
+		}
+	}
 }
 
 @media (min-width: $media1200) {

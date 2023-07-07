@@ -313,7 +313,6 @@
 
 		&-top {
 			display: flex;
-			justify-content: space-between;
 
 			img {
 				width: 58px;
@@ -490,6 +489,12 @@
 			height: auto;
 			align-items: end;
 		}
+	}
+
+	// ReviewCard
+	.reviewCard {
+		width: 99%;
+		margin-right: 12px;
 	}
 }
 
