@@ -286,6 +286,17 @@
 			padding-top: 20px;
 		}
 
+		.description-down {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 120px;
+		}
+
+		&-btn {
+			margin-top: 20px;
+		}
+
 		.invisibleRight {
 			display: none;
 		}
@@ -472,6 +483,12 @@
 			.hoveredButton-link {
 				margin-bottom: 10px !important;
 			}
+		}
+
+		.description-down {
+			flex-direction: row;
+			height: auto;
+			align-items: end;
 		}
 	}
 }

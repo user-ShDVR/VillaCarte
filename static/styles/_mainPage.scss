@@ -1,6 +1,16 @@
 @import "variables";
 
 @media (min-width: $media0) {
+	.palmsTransparent-bg {
+		position: absolute;
+		top: 40%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
 	// TopBlock
 	.topBlock {
 		height: 100vh;
@@ -158,20 +168,6 @@
 				position: relative;
 				overflow: hidden;
 
-				&-bg {
-					background-size: cover;
-					background-repeat: no-repeat;
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					z-index: 0;
-					opacity: .2;
-				}
-
 				.stepsWrapper {
 					display: flex;
 					overflow: hidden;
@@ -218,10 +214,20 @@
 	.joinTheClub {
 		position: relative;
 		overflow: hidden;
-		background-size: cover;
-		background-repeat: no-repeat;
-		width: 100%;
-		height: 100%;
+		margin: 0 auto;
+		background: #fff;
+
+		&-bg {
+			position: absolute !important;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+		}
 
 		.leavesLeft {
 			position: absolute;
@@ -435,6 +441,10 @@
 }
 
 @media (min-width: $media576) {
+	.palmsTransparent-bg {
+		top: 44%;
+	}
+
 	// BestProjects
 	.bestProjects {
 
@@ -460,6 +470,10 @@
 }
 
 @media (min-width: $media768) {
+	.palmsTransparent-bg {
+		top: 30%;
+	}
+
 	// AllServices
 	.allServices {
 
@@ -494,6 +508,18 @@
 
 		ul {
 			padding: 0 0 20px;
+		}
+	}
+
+	// JoinTheClub
+	.joinTheClub {
+
+		.leavesLeft {
+			left: -70px;
+		}
+
+		.leavesRight {
+			right: -130px;
 		}
 	}
 }
@@ -543,6 +569,31 @@
 
 		.element-animation {
 			transform: scale(1.1);
+		}
+	}
+
+	// JoinTheClub
+	.joinTheClub {
+		.leavesLeft {
+			bottom: -23px;
+			scale: 1;
+		}
+
+		.leavesRight {
+			bottom: 0;
+			scale: 1;
+		}
+
+		div {
+
+			h2 {
+				width: 70%;
+				line-height: 44px;
+			}
+
+			p {
+				width: 70%;
+			}
 		}
 	}
 }
@@ -620,6 +671,32 @@
 			justify-content: end;
 		}
 	}
+
+	// JoinTheClub
+	.joinTheClub {
+		.leavesLeft {
+			bottom: -60px;
+			left: -70px;
+			scale: .82;
+		}
+
+		.leavesRight {
+			bottom: -60px;
+			right: -130px;
+			scale: .82;
+		}
+
+		div {
+
+			h2 {
+				width: 60%;
+			}
+
+			p {
+				width: 60%;
+			}
+		}
+	}
 }
 
 @media (min-width: $media1400) {
@@ -632,3 +709,22 @@
 		}
 	}
 }
+
+@media (min-width: $media1440) {
+	// JoinTheClub
+	.joinTheClub {
+		div {
+
+			h2 {
+				width: 50%;
+			}
+
+			p {
+				width: 50%;
+			}
+		}
+	}
+}
+
+
+

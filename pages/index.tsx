@@ -19,6 +19,7 @@ import WeCare from '@/pages/Main/WeCare9';
 import WeAreTrusted from '@/pages/Main/WeAreTrusted8/WeAreTrusted8';
 import ShareContent from '@/pages/Main/ShareContent10/ShareContent10';
 import Footer from '@/pages/Main/Footer/Footer';
+import palmsTransparent from '@/public/palmsTransparent.png';
 
 export default function Home() {
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );
@@ -67,11 +68,15 @@ export default function Home() {
 
 				<FeedBackBlock/>
 
-				<WeBuildOurselves/>
+				<div className={ 'bgGradient pos' }>
+					<WeBuildOurselves/>
 
-				<JoinTheClub/>
+					<div style={ { backgroundImage: `url(${ palmsTransparent.src })` } } className={ 'palmsTransparent-bg' }/>
 
-				<WeAreTrusted/>
+					<JoinTheClub/>
+
+					<WeAreTrusted/>
+				</div>
 
 				<WeCare/>
 

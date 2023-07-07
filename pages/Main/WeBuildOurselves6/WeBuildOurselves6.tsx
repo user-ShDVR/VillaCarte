@@ -34,7 +34,6 @@ const WeBuildOurselves = () => {
 				</div>
 
 				<div className={ 'fiveStepsSlider-wrapper' } >
-					<div style={ { backgroundImage: `url(${ palmsTransparent.src })` } } className={'fiveStepsSlider-wrapper-bg'}/>
 
 					<div className={ 'container' }>
 						<h2 className={ 'h2Subtitle colorWhite pos' }>5 шагов – и недвижимость ваша</h2>

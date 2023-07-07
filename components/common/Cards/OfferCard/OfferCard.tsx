@@ -27,14 +27,19 @@ const OfferCard = ( { url, image }: IProps ) => {
 							World Hotels. Сейчас в нём продано больше 90% апартаментов
 						</article>
 
-						<div className={'d-lg-flex jc-between ai-end'}>
+						<div className={ 'description-down' }>
 							<h2 className={ 'h2Subtitle colorWhite pt-20 m-0' }>от $147.000</h2>
 
-							<HoveredButton to={ '/' } text={ 'Подробнее об объекте' } variant={ 'arrowRevert' }/>
+							<HoveredButton
+								to={ '/' }
+								text={ 'Подробнее об объекте' }
+								variant={ 'arrowRevert' }
+								// className={'offerCard-btn'}
+							/>
 						</div>
 					</div>
 
-					<div className={'invisibleRight'}/>
+					<div className={ 'invisibleRight' }/>
 				</div>
 			</Link>
 		</div>

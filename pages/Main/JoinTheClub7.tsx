@@ -7,7 +7,9 @@ import HoveredButton from '@/components/common/Buttons/HoveredButton';
 
 const JoinTheClub = () => {
 	return (
-		<div className={ 'joinTheClub' } style={ { backgroundImage: `url(${ leavesTransparent.src })` } }>
+		<div className={ 'joinTheClub container-xs' }>
+			<div style={ { backgroundImage: `url(${ leavesTransparent.src })` } } className={'joinTheClub-bg'}/>
+
 			<Image src={ leavesLeft } alt={ '' } className={'leavesLeft'}/>
 
 			<div className={ 'container pt-60 mb-60 d-flex flex-column jc-center ai-center' }>
