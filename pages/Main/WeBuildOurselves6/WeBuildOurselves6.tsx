@@ -36,7 +36,7 @@ const WeBuildOurselves = () => {
 				<div className={ 'fiveStepsSlider-wrapper' } >
 
 					<div className={ 'container' }>
-						<h2 className={ 'h2Subtitle colorWhite pos' }>5 шагов – и недвижимость ваша</h2>
+						<h2 className={ 'h2Subtitle colorWhite pos' }>5 шагов – <br/> и недвижимость ваша</h2>
 					</div>
 
 					<FiveSteps/>

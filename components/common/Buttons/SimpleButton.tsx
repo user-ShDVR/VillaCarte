@@ -6,7 +6,7 @@ import arrowWhite from '@/public/icons/arrowBtnWhite.svg';
 
 interface IProps {
 	text: string;
-	variant: 'simple' | 'arrow' | 'only' | 'simpleDark' | 'arrowWhite' | 'arrowRevert';
+	variant: 'simple' | 'arrow' | 'only' | 'simpleDark' | 'arrowWhite' | 'arrowRevert' | 'light';
 	className?: string;
 	type?: 'submit' | 'button';
 }
@@ -34,6 +34,9 @@ const SimpleButton = ( { text, variant, className, type, ...props }: IProps ) =>
 			break;
 		case 'arrowRevert':
 			classNameVariant = 'hoveredButton-arrowRevert';
+			break;
+		case 'light':
+			classNameVariant = 'hoveredButton-light';
 			break;
 	}
 

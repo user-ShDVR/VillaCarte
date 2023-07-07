@@ -162,6 +162,8 @@
 		}
 
 		.weBuildDownBlock {
+			position: relative;
+			z-index: 1;
 
 			.fiveStepsSlider-wrapper {
 				padding-top: 60px;
@@ -323,6 +325,10 @@
 			width: 100%;
 			padding: 60px 12px;
 
+			.linkPages {
+				display: none;
+			}
+
 			.logotype {
 				display: flex;
 				justify-content: center;
@@ -398,6 +404,13 @@
 					margin-top: 30px;
 					text-decoration: underline $colorText;
 					text-align: center;
+
+					&:hover {
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						background-color: #2AA5A0;
+						background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
+					}
 				}
 			}
 
@@ -416,9 +429,13 @@
 				margin-bottom: 0;
 
 				img {
-					margin-bottom: 7px;
+					margin-bottom: 6px;
 				}
 			}
+		}
+
+		.requestCall {
+			display: none;
 		}
 	}
 }
@@ -435,6 +452,17 @@
 
 			h2 {
 				padding-top: 28px;
+			}
+		}
+	}
+
+	// WeBuildOurselves
+	.weBuildOurselves {
+
+		.weBuildDownBlock {
+
+			.fiveStepsSlider-wrapper {
+				padding-top: 120px;
 			}
 		}
 	}
@@ -509,6 +537,13 @@
 		ul {
 			padding: 0 0 20px;
 		}
+
+		.weBuildDownBlock {
+
+			.fiveStepsSlider-wrapper {
+				padding-top: 80px;
+			}
+		}
 	}
 
 	// JoinTheClub
@@ -574,8 +609,10 @@
 
 	// JoinTheClub
 	.joinTheClub {
+		padding: 56px 0;
+
 		.leavesLeft {
-			bottom: -23px;
+			bottom: -3px;
 			scale: 1;
 		}
 
@@ -593,6 +630,21 @@
 
 			p {
 				width: 70%;
+			}
+		}
+	}
+
+	// Footer
+	footer {
+
+		.contactsBlock {
+
+			.logotype {
+
+				img {
+					width: 38px;
+					height: 38px;
+				}
 			}
 		}
 	}
@@ -674,18 +726,6 @@
 
 	// JoinTheClub
 	.joinTheClub {
-		.leavesLeft {
-			bottom: -60px;
-			left: -70px;
-			scale: .82;
-		}
-
-		.leavesRight {
-			bottom: -60px;
-			right: -130px;
-			scale: .82;
-		}
-
 		div {
 
 			h2 {
@@ -719,6 +759,68 @@
 			height: 50%;
 		}
 	}
+
+	// Footer
+	footer {
+
+		.footer {
+			padding-top: 20px;
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+		}
+
+		.requestCall {
+			display: block;
+		}
+
+		.contactsBlock {
+			padding: 60px 20px 20px;
+			position: relative;
+
+			.linkPages {
+				display: grid;
+				grid-template-columns: 1fr;
+				position: absolute;
+				top: 180px;
+				right: 10%;
+
+				a {
+					text-decoration: none;
+					line-height: 30px;
+				}
+			}
+
+			.logotype {
+				justify-content: start;
+			}
+
+			.contacts-wrapper {
+				align-items: flex-start;
+
+				.contact {
+					align-items: start;
+					margin-right: 28px;
+				}
+			}
+
+			.socials {
+				justify-content: start;
+
+				a {
+					justify-content: start;
+					margin: 0 16px 0 0;
+				}
+			}
+
+			.privacyPolicy-wrapper {
+				justify-content: start;
+			}
+
+			.divider {
+				margin: 28px 0 0 0;
+			}
+		}
+	}
 }
 
 @media (min-width: $media1400) {
@@ -728,6 +830,18 @@
 		.flowerRight {
 			width: 30%;
 			right: -160px;
+		}
+	}
+
+	// JoinTheClub
+	.joinTheClub {
+
+		.leavesLeft {
+			left: 0;
+		}
+
+		.leavesRight {
+			right: 0;
 		}
 	}
 }
@@ -743,6 +857,20 @@
 
 			p {
 				width: 50%;
+			}
+		}
+	}
+
+	// Footer
+	footer {
+
+		.contactsBlock {
+
+			.linkPages {
+				grid-template-columns: 1fr 1fr;
+				top: 180px;
+				right: 0;
+				column-gap: 30px;
 			}
 		}
 	}

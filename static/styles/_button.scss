@@ -81,6 +81,18 @@
 			color: $colorAccent;
 			border-color: $colorWhite;
 		}
+
+		&-light {
+			border: 1px solid $colorWhite;
+			background: rgba(255, 255, 255, .1);
+			color: $colorWhite;
+			cursor: pointer;
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
+		}
 	}
 
 	// Scroll Button

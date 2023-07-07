@@ -333,14 +333,13 @@
 
 		.mediaCard {
 			width: 100%;
-			height: 190px;
 			margin-top: 8px;
 			cursor: pointer;
 
 			img {
 				object-fit: cover;
 				width: 100%;
-				height: inherit;
+				height: 300px;
 				transition: .2s;
 			}
 
@@ -357,11 +356,20 @@
 	.defaultMediaCard-link {
 		text-decoration: none;
 
+		&:hover {
+			p {
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-color: #2AA5A0;
+				background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
+			}
+		}
+
 		.defaultMediaCard {
 			width: 100%;
 			height: 190px;
 			margin-top: 8px;
-			padding: 20px;
+			padding: 12px;
 			background: $colorWhite;
 			display: flex;
 			flex-direction: column;
@@ -377,8 +385,7 @@
 				}
 
 				img {
-					width: 24px;
-					height: 16px;
+					margin-bottom: 2px;
 				}
 			}
 		}
@@ -399,6 +406,42 @@
 	// GoodsCard
 	.goodsCard {
 		margin-bottom: 0;
+	}
+
+	// MediaCard
+	.mediaCards {
+		display: grid;
+		gap: 8px;
+	}
+
+	.mediaCard-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+
+		.mediaCard {
+			margin-top: 0;
+			height: 190px;
+
+			img {
+				height: 190px;
+			}
+
+			&:hover {
+
+				img {
+					scale: 1.1;
+				}
+			}
+		}
+	}
+
+	// DefaultMediaCard
+	.defaultMediaCard-link {
+
+		.defaultMediaCard {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -496,6 +539,15 @@
 		width: 99%;
 		margin-right: 12px;
 	}
+
+	// MediaCard
+	.photoCards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.mediaCard-wrapper {
+		grid-template-rows: 1fr 1fr;
+	}
 }
 
 @media (min-width: $media1200) {
@@ -510,5 +562,66 @@
 	// OfferCard
 	.offerCard {
 		width: 99%;
+	}
+
+	// MediaCard
+	.mediaCards {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.mediaCard-wrapper {
+		grid-template-rows: 1fr 1fr;
+	}
+
+	// DefaultMediaCard
+	.defaultMediaCard-link {
+
+		.defaultMediaCard {
+
+			div {
+
+				img {
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}
+
+	// RequestCall
+	.requestCall-wrapper {
+		padding: 12px;
+		background: $colorWhite;
+	}
+
+	.requestCall {
+		height: 100%;
+		padding: 60px;
+
+		.requestCallForm {
+			width: 100%;
+			height: inherit;
+
+			.requestCallInputWrapper {
+				margin-bottom: 0;
+
+				.requestCallInput {
+					background: transparent;
+					border: none;
+					border-bottom: 1px solid $colorDarkWhite;
+					width: 100%;
+					resize: none;
+					padding: 20px 12px;
+					border-radius: 0;
+					color: $colorWhite;
+
+					&::placeholder {
+						color: $colorDarkWhite;
+						font-size: 14px;
+						font-family: $fontManrope500;
+						line-height: 20px;
+					}
+				}
+			}
+		}
 	}
 }
