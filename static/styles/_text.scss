@@ -119,6 +119,16 @@
 	}
 }
 
+.fz-12-14 {
+	font-size: 12px;
+}
+
+@media (min-width: $media1440) {
+	.fz-12-14 {
+		font-size: 14px;
+	}
+}
+
 .fz-20 {
 	font-size: 20px;
 	line-height: 26px;

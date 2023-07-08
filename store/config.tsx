@@ -1,10 +1,9 @@
-import NavSales from '@/components/Header/NavSales';
-import NavService from '@/components/Header/NavService';
+import MobileNavService from '@/components/Header/MobileNav/MobileNavService';
 
 export const leftMenu = [
-	// { text: 'Продажа', component: <NavSales/> },
+	// { text: 'Продажа', component: <MobileNavSales/> },
 	{ path: '/', text: 'Аренда' },
-	{ text: 'Консьерж и сервис', component: <NavService/> },
+	{ text: 'Консьерж и сервис', component: <MobileNavService/> },
 	{ path: '/', text: 'Управление недвижимостью' },
 	{ path: '/', text: 'О компании' },
 	{ path: '/', text: 'О Пхукете' },

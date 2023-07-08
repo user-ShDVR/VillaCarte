@@ -9,15 +9,15 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import logoImgDark from '@/public/logoImgDark.svg';
-import CustomMenuItem from '@/components/Header/MobileNav/CustomMenuItem';
 import BurgerButton from '@/components/Header/MobileNav/BurgerButton';
 import { leftMenu } from '@/store/config';
 import LanguageSelect from '@/components/common/Selects/LanguageSelect';
 import CurrencySelect from '@/components/common/Selects/CurrencySelect';
-import NavSales from '@/components/Header/NavSales';
-import NavService from '@/components/Header/NavService';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import cn from 'classnames';
+import MobileNavService from '@/components/Header/MobileNav/MobileNavService';
+import MobileNavSales from '@/components/Header/MobileNav/MobileNavSales';
+import CustomMenuItem from '@/components/Header/CustomMenuItem';
 
 const MobileMainMenu = () => {
 	const mobileDropMenuServices = useStore( $mobileDropMenuVisibleServices );
@@ -60,7 +60,7 @@ const MobileMainMenu = () => {
 					textClass={ cn( mobileDropMenuSales ? 'colorGradient' : '' ) }
 					toShowDropMenu={ toShowDropMenuSales }
 				/>
-				{ mobileDropMenuSales && <NavSales/> }
+				{ mobileDropMenuSales && <MobileNavSales/> }
 
 				{ leftMenu.map( ( item: any ) => (
 					<CustomMenuItem
@@ -72,7 +72,7 @@ const MobileMainMenu = () => {
 						toShowDropMenu={ toShowDropMenu }
 					/>
 				) ) }
-				{ mobileDropMenuServices && <NavService/> }
+				{ mobileDropMenuServices && <MobileNavService/> }
 			</nav>
 
 			<div className={ 'mb-60 ml-16 d-flex flex-column ai-start' }>

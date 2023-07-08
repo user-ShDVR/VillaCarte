@@ -14,7 +14,16 @@ interface IProps {
 	ref?: any;
 }
 
-const CustomMenuItem = ( { path, text, className, textClass, component, toShowDropMenu, ref }: IProps ) => {
+const CustomMenuItem = (
+	{
+		path,
+		text,
+		className,
+		textClass,
+		component,
+		toShowDropMenu,
+		ref
+	}: IProps ) => {
 	const toCloseMenu = () => {
 		hideMobileMenu( true );
 	};

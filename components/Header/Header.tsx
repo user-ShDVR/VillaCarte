@@ -9,6 +9,7 @@ import BurgerButton from '@/components/Header/MobileNav/BurgerButton';
 import MobileMainMenu from '@/components/Header/MobileNav/MobileMainMenu';
 import cn from 'classnames';
 import { Fade } from 'react-awesome-reveal';
+import MainMenu from '@/components/Header/MainMenu/MainMenu';
 
 const Header = () => {
 	const [ scrolled, setScrolled ] = useState<boolean>( false );
@@ -25,6 +26,26 @@ const Header = () => {
 		boxShadow: '5px 5px 10px 0 rgb(68, 68, 68, .15)',
 		borderRadius: '30px',
 	};
+
+	const dropBgTransform = {
+		background: 'rgba(34, 54, 74, .4)',
+		// backdropFilter: 'blur(15px)',
+		boxShadow: '5px 5px 10px 0 rgb(68, 68, 68, .15)',
+		borderRadius: '0 0 15px 15px',
+	};
+
+	const dropBg = {
+		background: 'transparent',
+		borderLeft: '1px solid #fff',
+		borderRight: '1px solid #fff',
+		borderBottom: '1px solid #fff',
+		boxShadow: '5px 5px 10px 0 rgb(68, 68, 68, .15)',
+		borderRadius: '0 0 15px 15px',
+	};
+
+	const style = scrolled ? transform : {};
+
+	const dropBgStyle = scrolled ? dropBgTransform : dropBg;
 
 	useEffect( () => {
 		const onScroll = () => {
@@ -44,15 +65,18 @@ const Header = () => {
 	}, [] );
 
 	return (
-			<header style={ scrolled ? transform : {} } className="container header">
-				{/*// @ts-ignore*/ }
-				<div ref={ ref } className="header-wrapper">
-		<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
+		<header style={ style } className="container header">
+			{/*// @ts-ignore*/ }
+			<div ref={ ref } className="header-wrapper">
+				<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
 					<Link href={ '/' } style={ scrolled ? { color: 'white' } : {} } className="header-wrapper-logo">
 						<Image src={ logoImg } alt={ 'VillaCarte' }/>
 					</Link>
 
-					<div className={ 'd-flex' }>
+					<div className={ 'd-flex ai-center' }>
+
+						<MainMenu dropBgStyle={ dropBgStyle }/>
+
 						<HoveredButton to={ '/' } text={ 'Заказать звонок' } variant={ 'only' }/>
 
 						<div className={ 'header-wrapper-mobileMenu d-block d-lg-none ml-10' }>
@@ -64,9 +88,9 @@ const Header = () => {
 						</div>
 					</div>
 
-		</Fade>
-				</div>
-			</header>
+				</Fade>
+			</div>
+		</header>
 	);
 };
 
