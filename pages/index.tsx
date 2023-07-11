@@ -1,25 +1,25 @@
 import Head from 'next/head';
 import Layout from '../components/Layout/Layout';
 import React, { useEffect, useState } from 'react';
-import TopBlock from '@/pages/Main/TopBlock';
 import { useQuery } from 'react-query';
 import { getMainPageInfo } from '@/store/mainPage';
 import { IMainPage } from '@/types/mainPage';
-import AllServices from '@/pages/Main/AllServices2';
-import VideoBlock from '@/pages/Main/VideoBlock3/VideoBlock3';
-import BestProjects from '@/pages/Main/BestProjects4';
 import Image from 'next/image';
 import scrollArrow from '@/public/icons/scrollArrow.svg';
 // import 'animate.css';
 import 'react-tabs/style/react-tabs.css';
-import FeedBackBlock from '@/pages/Main/FeedBackBlock5';
-import WeBuildOurselves from '@/pages/Main/WeBuildOurselves6/WeBuildOurselves6';
-import JoinTheClub from '@/pages/Main/JoinTheClub7';
-import WeCare from '@/pages/Main/WeCare9';
-import WeAreTrusted from '@/pages/Main/WeAreTrusted8/WeAreTrusted8';
-import ShareContent from '@/pages/Main/ShareContent10/ShareContent10';
-import Footer from '@/pages/Main/Footer/Footer';
 import palmsTransparent from '@/public/palmsTransparent.png';
+import TopBlock from '@/components/Main/TopBlock';
+import AllServices from '@/components/Main/AllServices2';
+import BestProjects from '@/components/Main/BestProjects4';
+import JoinTheClub from '@/components/Main/JoinTheClub7';
+import VideoBlock from '@/components/Main/VideoBlock3/VideoBlock3';
+import FeedBackBlock from '@/components/Main/FeedBackBlock5';
+import WeAreTrusted from '@/components/Main/WeAreTrusted8/WeAreTrusted8';
+import WeCare from '@/components/Main/WeCare9';
+import WeBuildOurselves from '@/components/Main/WeBuildOurselves6/WeBuildOurselves6';
+import ShareContent from '@/components/Main/ShareContent10/ShareContent10';
+import Footer from '@/components/Main/Footer/Footer';
 
 export default function Home() {
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );

@@ -1,7 +1,6 @@
 import React from 'react';
 import logoImg from '@/public/logoImgDark.svg';
 import Image from 'next/image';
-import Contacts from '@/pages/Main/Footer/Contacts';
 import facebookStock from '@/public/icons/socials/contacts/facebookStock.svg';
 import youtubeStock from '@/public/icons/socials/contacts/youtubeStock.svg';
 import vkStock from '@/public/icons/socials/contacts/vkStock.svg';
@@ -16,6 +15,7 @@ import Link from 'next/link';
 import creativeTeam from '@/public/creativeTeam.svg';
 import Socials from '@/components/common/Socials/Socials';
 import RequestCallForm from '@/components/common/Forms/RequestСall/RequestCallForm';
+import Contacts from '@/components/Main/Footer/Contacts';
 
 const socialsStock = [
 	{ icon: facebookStock, hoveredIcon: fbHovered, link: '/' },
