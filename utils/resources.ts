@@ -2,7 +2,7 @@ export const staticResource = ( link?: string, width?: number, height?: number )
 	if ( !link ) return '';
 
 	// eslint-disable-next-line no-undef
-	const baseUrl = 'https://store.villacartetest.com';
+	const baseUrl = process.env.NEXT_PUBLIC_ENV_VARIABLE;
 
 	let _link = link.split( '.' );
 	let ext = _link.pop();
