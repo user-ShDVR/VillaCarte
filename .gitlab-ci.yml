@@ -1,0 +1,21 @@
+stages:
+  - build_image
+
+build_image:
+  image: docker:latest
+  stage: build_image
+  services:
+    - docker:dind
+  variables:
+    CMD: ""
+  before_script:
+    - apk --update add py-pip
+    - pip install awscli --upgrade --user
+  script:
+    - echo "Starting build_image stage"
+    - CMD=$(/root/.local/bin/aws ecr get-login --no-include-email --region ap-southeast-1)
+    - eval $CMD
+    - docker build -t vc-frontend .
+    - docker tag vc-frontend:latest 653851200001.dkr.ecr.ap-southeast-1.amazonaws.com/vc-frontend:latest
+    - docker push 653851200001.dkr.ecr.ap-southeast-1.amazonaws.com/vc-frontend:latest
+  when: manual
