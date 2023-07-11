@@ -3,8 +3,8 @@ import Slider from 'react-slick';
 import avatar1 from '@/public/icons/avatar1.png';
 import avatar2 from '@/public/icons/avatar2.png';
 import ReviewCard from '@/components/common/Cards/ReviewCard/ReviewCard';
-import { weAreTrustedSliderSettings } from '@/pages/Main/WeAreTrusted8/weAreTrustedSliderSettings';
 import { Fade } from 'react-awesome-reveal';
+import { weAreTrustedSliderSettings } from '@/components/common/SliderSettings/weAreTrustedSliderSettings';
 
 const reviews = [
 	{
