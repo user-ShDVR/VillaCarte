@@ -14,6 +14,7 @@
 .customSelect {
 	font-family: $fontManrope600;
 	font-size: 12px;
+	caret-color: transparent;
 
 	&:hover {
 		& > div > div> div {
