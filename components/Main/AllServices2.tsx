@@ -7,8 +7,13 @@ import Image from 'next/image';
 
 const allServices = [
 	{ title: 'Продажа недвижимости', text: 'Виллы и апартаменты для жизни и инвестиций' },
-	{ title: 'Аренда недвижимости', text: 'Виллы премиум- и люкс-класса для комфортного отдыха' },
-	{ title: 'Консьерж-сервис', text: 'Решение любых вопросов — от аренды транспорта до развлечений и получения визы' },
+	{ title: 'Аренда недвижимости', text: 'Виллы премиум- и люкс-класса', text2: 'для комфортного отдыха' },
+	{
+		title: 'Консьерж-сервис',
+		text: 'Решение любых вопросов —',
+		text2: 'от аренды транспорта',
+		text3: 'до развлечений и получения визы'
+	},
 	{ title: 'Управление недвижимостью', text: 'Пассивный доход из любой точки мира без забот' },
 ];
 
@@ -16,7 +21,7 @@ const AllServices = () => {
 	return (
 
 		<div className={ 'allServices' } style={ { backgroundImage: `url(${ bgPalms.src })` } }>
-			<div className={'allServices-bg'} style={ { backgroundImage: `url(${ bgPalms.src })` } }/>
+			<div className={ 'allServices-bg' } style={ { backgroundImage: `url(${ bgPalms.src })` } }/>
 
 			<Image src={ leavesVideo } alt={ '' } className={ 'leavesVideo' }/>
 
@@ -32,15 +37,21 @@ const AllServices = () => {
 						</div>
 					</div>
 
-					<div className={'mt-40'}>
+					<div className={ 'mt-40' }>
 						<HoveredButton to={ '/' } text={ 'Узнать больше' } variant={ 'arrow' } className={ 'mt-16' }/>
 					</div>
 				</div>
 
-				<div className={ 'mt-20 pb-8' }>
+				<div className={ 'mt-20 pb-16' }>
 					<div className={ 'cardsWrapper' }>
 						{ allServices.map( ( item, index ) =>
-							<TitleTextArrowCard key={ index } title={ item.title } text={ item.text }/>
+							<TitleTextArrowCard
+								key={ index }
+								title={ item.title }
+								text={ item.text }
+								text2={ item.text2 }
+								text3={ item.text3 }
+							/>
 						) }
 					</div>
 				</div>

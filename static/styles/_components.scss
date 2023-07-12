@@ -10,6 +10,65 @@
 	}
 }
 
+// CustomSelect
+.customSelect {
+	font-family: $fontManrope600;
+	font-size: 12px;
+
+	&:hover {
+		& > div > div> div {
+			color: $colorDarkWhite;
+		}
+	}
+
+	& > div {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+
+		& > div > span {
+			display: none;
+		}
+
+		& > div > div {
+			color: $colorWhite;
+			padding: 0;
+			//margin-right: 0;
+
+			&:hover {
+				color: $colorDarkWhite;
+			}
+		}
+	}
+
+	.css-1nmdiq5-menu {
+		background: rgba(255, 255, 255, 0.20);
+		box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
+		backdrop-filter: blur(15px);
+		border-radius: 15px;
+		width: 80px;
+
+		.css-1n6sfyn-MenuList {
+
+			div {
+				background: transparent;
+				color: $colorWhite;
+				padding: 12px 16px;
+				width: 80px;
+				justify-content: start;
+
+				&:hover {
+					color: $colorDarkWhite;
+				}
+			}
+		}
+	}
+
+	.css-1fdsijx-ValueContainer {
+		padding: 2px 2px;
+	}
+}
+
 @media (min-width: $media0) {
 	// TitleTextArrowCard
 	.titleTextArrowCard {

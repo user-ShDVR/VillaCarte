@@ -45,7 +45,7 @@ const MobileMainMenu = () => {
 
 				<div className={ 'mobileMainMenu-header-right' }>
 					<LanguageSelect/>
-					<CurrencySelect/>
+					<CurrencySelect />
 
 					<BurgerButton menu={ mobileMenu } toShowMenu={ toHideMenu } scrolled={ false }/>
 				</div>

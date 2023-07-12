@@ -40,12 +40,10 @@ const Header = () => {
 	};
 
 	const dropBg = {
-		background: 'transparent',
-		borderLeft: '1px solid #fff',
-		borderRight: '1px solid #fff',
-		borderBottom: '1px solid #fff',
-		boxShadow: '5px 5px 10px 0 rgb(68, 68, 68, .15)',
-		borderRadius: '0 0 15px 15px',
+		background: 'rgba(255, 255, 255, 0.20)',
+		boxShadow: '0px 51px 64px 0px rgba(0, 0, 0, 0.10)',
+		backdropFilter: 'blur(15px)',
+		borderRadius: '15px',
 	};
 
 	const style = scrolled ? transform : {};
@@ -74,7 +72,7 @@ const Header = () => {
 			{/*// @ts-ignore*/ }
 			<div ref={ ref } className="header-wrapper">
 				<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
-					<div className={'header-logo-wrapper'}>
+					<div className={ 'header-logo-wrapper' }>
 						<Link href={ '/' } style={ scrolled ? { color: 'white' } : {} } className="header-logo">
 							{ isMobile
 								? <Image src={ logoImg } alt={ 'VillaCarte' }/>
