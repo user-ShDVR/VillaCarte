@@ -60,7 +60,8 @@ const SimpleButton = ( { text, variant, className, type, ...props }: IProps ) =>
 			{ variant === 'arrow' && !mouseOver && <Image src={ arrowAccent } alt={ '' }/> }
 			{ variant === 'arrow' && mouseOver && <Image src={ arrowWhite } alt={ '' }/> }
 			{ variant === 'arrowWhite' && <Image src={ arrowWhite } alt={ '' }/> }
-			{ variant === 'arrowRevert' && <Image src={ arrowAccent } alt={ '' }/> }
+			{ variant === 'arrowRevert' && mouseOver && <Image src={ arrowAccent } alt={ '' }/> }
+			{ variant === 'arrowRevert' && !mouseOver && <Image src={ arrowWhite } alt={ '' }/> }
 		</button>
 	);
 };

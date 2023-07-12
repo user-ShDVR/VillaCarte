@@ -29,7 +29,7 @@ const FeedBackForm = () => {
 					{ required: true, message: 'Ваше имя' }
 				] }
 			>
-				<Input className={ 'feedBackInput' } placeholder={ 'Ваше имя' }/>
+				<Input className={ 'feedBackInput text300' } placeholder={ 'Ваше имя' }/>
 			</Form.Item>
 
 			<Form.Item
@@ -42,7 +42,7 @@ const FeedBackForm = () => {
 			>
 				<PhoneInput
 					name="phone"
-					textareaClass={ 'feedBackInput' }
+					textareaClass={ 'feedBackInput text300' }
 					placeholder={ 'Номер телефона' }
 				/>
 			</Form.Item>
@@ -52,7 +52,7 @@ const FeedBackForm = () => {
 				персональных данных
 			</p>
 
-			<SimpleButton text={ 'Заказать подборку' } variant={ 'simpleDark' } type={ 'submit' }/>
+			<SimpleButton text={ 'Заказать подборку' } variant={ 'simple' } type={ 'submit' }/>
 
 		</Form>
 	);

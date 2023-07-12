@@ -195,6 +195,17 @@
 							top: 110px;
 							left: 10px;
 							width: 100%;
+							animation: stream 5s linear;
+						}
+
+						@keyframes stream {
+							0%{
+								transform: translate(0, 0);
+							}
+
+							100%{
+								transform: translate(160%, 0);
+							}
 						}
 
 						p {
@@ -716,6 +727,7 @@
 	.weBuildOurselves {
 
 	}
+
 	.weBuildDownBlock {
 
 		.slick-track {
@@ -847,6 +859,34 @@
 }
 
 @media (min-width: $media1440) {
+	// BestProjects
+	.bestProjects {
+
+		&-inner {
+
+			h2 {
+				margin-top: 40px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	// WeBuildOurselves
+	.weBuildOurselves {
+
+		ul {
+			padding-top: 20px;
+
+			img {
+				margin-top: 4px;
+			}
+
+			li {
+				margin: 4px 0;
+			}
+		}
+	}
+
 	// JoinTheClub
 	.joinTheClub {
 		div {

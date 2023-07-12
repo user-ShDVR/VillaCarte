@@ -23,8 +23,12 @@
 			text-decoration: none;
 		}
 
-		.h3 {
-			width: 244px;
+		h3 {
+			max-width: 250px;
+		}
+
+		p {
+			max-width: 250px;
 		}
 
 		div {
@@ -165,7 +169,7 @@
 		.description-wrapper {
 			position: absolute;
 			left: 16px;
-			bottom: 16px;
+			bottom: 24px;
 			z-index: 2;
 			display: flex;
 			justify-content: space-between;
@@ -621,6 +625,55 @@
 						line-height: 20px;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media (min-width: $media1440) {
+	// GoodsCard
+	.goodsCard {
+		overflow: hidden;
+
+		&-image {
+			transition: all 5s;
+
+			&:hover {
+				scale: 1.15;
+			}
+		}
+	}
+
+	// OfferCard
+	.offerCard {
+		height: 445px;
+
+		a {
+			display: block;
+			height: 100%;
+		}
+
+		.offerCard-wrapper {
+			height: 100%;
+		}
+
+		&-img {
+			max-width: 100% !important;
+			width: 532px !important;
+		}
+
+		.description-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			h2, article {
+				margin-top: -180px;
+			}
+
+			a {
+				display: flex;
+				align-items: flex-end;
 			}
 		}
 	}

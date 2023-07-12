@@ -26,7 +26,7 @@
 			margin-left: 8px;
 			width: 14px;
 			height: 11px;
-			margin-bottom: 2px;
+			//margin-bottom: 2px;
 		}
 
 		&-only {
@@ -77,9 +77,14 @@
 		}
 
 		&-arrowRevert {
-			background: $colorWhite;
-			color: $colorAccent;
+			background: transparent;
+			color: $colorWhite;
 			border-color: $colorWhite;
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
 		}
 
 		&-light {

@@ -24,16 +24,15 @@ const AllServices = () => {
 				<div>
 					<div className={ 'pt-60-40' }>
 						<div>
-							<h2 className={ 'h2Subtitle' }>Все услуги — <br/> в одной компании</h2>
-							<p className={ 'text300 colorText pt-8' }>
+							<h2 className={ 'h2Subtitle mb-16' }>Все услуги — <br/> в одной компании</h2>
+							<p className={ 'text300 colorText pt-10' }>
 								Помогаем купить недвижимость на Пхукете и Самуи, наслаждаться жизнью и отдыхом на островах и получать
-								доход
-								от аренды
+								доход от аренды
 							</p>
 						</div>
 					</div>
 
-					<div>
+					<div className={'mt-40'}>
 						<HoveredButton to={ '/' } text={ 'Узнать больше' } variant={ 'arrow' } className={ 'mt-16' }/>
 					</div>
 				</div>

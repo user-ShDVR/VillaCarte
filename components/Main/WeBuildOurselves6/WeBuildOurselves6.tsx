@@ -15,7 +15,7 @@ const WeBuildOurselves = () => {
 	return (
 		<div className={ 'bgGradient weBuildOurselves' }>
 			<div className={ 'container pt-60 d-md-flex' }>
-				<h2 className={ 'h2Subtitle colorWhite col-md-6' }>Строим сами – <br/> а значит вы:</h2>
+				<h2 className={ 'h1Title colorWhite col-md-6' }>Строим сами – <br/> а значит вы:</h2>
 
 				<ul className={ 'col-md-6' }>
 					{ list.map( item =>

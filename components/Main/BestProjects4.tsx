@@ -12,7 +12,7 @@ const BestProjects = () => {
 	return (
 		<div className={ 'bgGradient bestProjects mt_200' }>
 			<div className={ 'container bestProjects-inner' }>
-				<h2 className={ 'h2Subtitle colorWhite' }>Лучшие проекты для жизни и инвестиций</h2>
+				<h2 className={ 'h2Subtitle colorWhite' }>Лучшие проекты <br/> для жизни и инвестиций</h2>
 
 				<Tabs className={ 'bestProjects-tabs' }>
 					<TabList className={ 'bestProjects-tabList text700 colorWhite' }>
@@ -35,7 +35,7 @@ const BestProjects = () => {
 				</Tabs>
 
 				<div className={ 'mt-28 pb-40-60 d-flex jc-center' }>
-					<HoveredButton text={ 'Показать еще 115 предложений' } to={ '/' } variant={ 'arrowWhite' }/>
+					<HoveredButton text={ 'Показать еще 115 предложений' } to={ '/' } variant={ 'arrowRevert' }/>
 				</div>
 			</div>
 		</div>

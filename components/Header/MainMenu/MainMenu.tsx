@@ -64,7 +64,7 @@ const MainMenu = ( { dropBgStyle }: IProps ) => {
 				/>
 
 				<div className={ 'nav-item pos' } onMouseOver={ onMouseOverServices }>
-					<p>Консьерж и сервис</p>
+					<p>Консьерж сервис</p>
 					{ mainDropMenuServices
 						? <Image src={ upSmall } alt={ '' }/>
 						: <Image src={ downSmall } alt={ '' }/>

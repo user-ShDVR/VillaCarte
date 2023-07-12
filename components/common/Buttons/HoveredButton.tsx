@@ -12,7 +12,7 @@ interface IProps {
 const HoveredButton = ( { to, text, variant, className, ...props }: IProps ) => {
 
 	return (
-		<Link href={ to }{ ...props } className={'hoveredButton-link'}>
+		<Link href={ to } { ...props } className={ 'hoveredButton-link' }>
 
 			<SimpleButton text={ text } variant={ variant } className={ className }/>
 

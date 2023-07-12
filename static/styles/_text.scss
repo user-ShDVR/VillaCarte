@@ -139,9 +139,16 @@
 	line-height: 30px;
 }
 
-.fz-60 {
+.fz-60-200 {
 	font-size: 60px;
 	line-height: 72px;
+}
+
+@media (min-width: $media1320) {
+.fz-60-200 {
+	font-size: 200px;
+	line-height: 220px;
+}
 }
 
 .fz-80 {

@@ -88,7 +88,7 @@ ul, ol, li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: inherit;
+	//font-weight: inherit;
 	font-size: inherit;
 }
 
@@ -383,6 +383,10 @@ img {
 	padding-top: 12px;
 }
 
+.pt-12 {
+	padding-top: 12px;
+}
+
 .pt-20 {
 	padding-top: 20px;
 }
@@ -590,6 +594,10 @@ img {
 	margin-top: 20px;
 }
 
+.mt-24 {
+	margin-top: 24px;
+}
+
 .mt-28 {
 	margin-top: 28px;
 }
@@ -690,6 +698,10 @@ img {
 
 .mb-130 {
 	margin-bottom: 130px;
+}
+
+.ml-0 {
+	margin-left: 0px;
 }
 
 .ml-5 {

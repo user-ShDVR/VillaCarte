@@ -28,7 +28,7 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 	return (
 		<div className={ 'goodsCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
 			<Link href={ url }>
-				<div className={ 'pos' }>
+				<div className={ 'pos goodsCard-image overflowNoHidden' }>
 					<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' }/>
 					{ !mouseOver && <div className={ 'bgAccentOpacity' }/> }
 					{ !isMobile && mouseOver && <div className={ 'bgGradientBlack' }/> }

@@ -17,9 +17,9 @@ const TopBlock = () => {
 			} }/>
 			<div className={ 'container mainText' }>
 				<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
-					<h1 className={ 'h1Title colorWhite fz-60' }>VillaCarte</h1>
+					<h1 className={ 'h1Title colorWhite fz-60-200' }>VillaCarte</h1>
 					<p className={ 'text500 colorWhite' }>
-						Сервисная компания по продаже и аренде курортной недвижимости в Таиланде
+						Сервисная компания по продаже и аренде <br/> курортной недвижимости в Таиланде
 					</p>
 				</Fade>
 			</div>
