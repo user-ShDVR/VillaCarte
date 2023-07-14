@@ -118,7 +118,6 @@
 		left: 16px;
 	}
 
-
 	.spinnerItem {
 		position: relative;
 		width: 24px;
@@ -180,7 +179,8 @@
 			border-color: $colorWhite;
 			top: 0;
 			left: 0;
-			border-width: 12px;
+			border-width: 2px;
+			padding: 10px;
 			border-style: solid;
 			animation: border-animate 5s linear infinite;
 		}
