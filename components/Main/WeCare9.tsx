@@ -13,8 +13,8 @@ const WeCare = () => {
 					<div className={ 'bgGradientBlack' }/>
 
 					<div className={ 'textWrapper' }>
-						<h3 className={ 'h2Subtitle colorWhite' }>Больше 10 лет заботимся о вашем отдыхе и доходе</h3>
-						<p className={ 'text500 colorWhite' }>
+						<h3 className={ 'h2Subtitle colorWhite' }>Больше 10 лет заботимся <br/> о вашем отдыхе и доходе</h3>
+						<p className={ 'text300 colorWhite' }>
 							Каждый день мы работаем над тем, чтобы исполнять ваши желания в VillaCarte
 						</p>
 					</div>

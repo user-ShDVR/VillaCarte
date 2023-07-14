@@ -60,12 +60,21 @@
 	color: $colorWhite !important;
 }
 
+.colorWhite70 {
+	color: $colorWhite !important;
+	opacity: .7 !important;
+}
+
 .colorDarkWhite {
 	color: $colorDarkWhite !important;
 }
 
 .colorLightGrey {
 	color: $colorLightGrey !important;
+}
+
+.colorGrey {
+	color: $colorGrey !important;
 }
 
 .colorGradient {
@@ -414,6 +423,16 @@ img {
 @media (min-width: 1200px) {
 	.pt-60-40 {
 		padding-top: 40px;
+	}
+}
+
+.pt-60-80 {
+	padding-top: 60px;
+}
+
+@media (min-width: 1400px) {
+	.pt-60-80 {
+		padding-top: 80px;
 	}
 }
 

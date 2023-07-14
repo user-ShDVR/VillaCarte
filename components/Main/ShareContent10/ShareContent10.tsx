@@ -27,9 +27,9 @@ const ShareContent = () => {
 		<div className={ 'shareContent' }>
 			{/*<div className={ 'bgOpacity' } style={ { backgroundImage: `url(${ palmsTransparent.src })`, opacity: .1 } }/>*/ }
 
-			<div className={ 'container pt-60' }>
+			<div className={ 'container pt-60-80' }>
 				<div>
-					<h2 className={ 'h2Subtitle' }>Делимся эксклюзивным <br/> контентом с острова</h2>
+					<h2 className={ 'h1Title' }>Делимся эксклюзивным <br/> контентом с острова</h2>
 
 					<div className={ 'mediaCards' }>
 						<div className={ 'mediaCard-wrapper' }>

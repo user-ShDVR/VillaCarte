@@ -17,7 +17,7 @@
 	caret-color: transparent;
 
 	&:hover {
-		& > div > div> div {
+		& > div > div > div {
 			color: $colorDarkWhite;
 		}
 	}
@@ -267,6 +267,7 @@
 				resize: none;
 				padding: 20px 12px;
 				border-radius: 0;
+				overflow: hidden;
 
 				&::placeholder {
 					color: $colorText;
@@ -387,6 +388,7 @@
 
 		.divider {
 			border-bottom: 1px solid $colorWhite;
+			opacity: .7;
 			margin: 20px 0 28px;
 			width: 100%;
 		}
@@ -486,17 +488,23 @@
 		.mediaCard {
 			margin-top: 0;
 			height: 190px;
+			overflow: hidden;
 
 			img {
 				height: 190px;
-			}
+				transition: all 5s;
 
-			&:hover {
-
-				img {
-					scale: 1.1;
+				&:hover {
+					scale: 1.15;
 				}
 			}
+
+			//&:hover {
+			//
+			//	img {
+			//		scale: 1.1;
+			//	}
+			//}
 		}
 	}
 
@@ -677,6 +685,7 @@
 					padding: 20px 12px;
 					border-radius: 0;
 					color: $colorWhite;
+					overflow: hidden;
 
 					&::placeholder {
 						color: $colorDarkWhite;
@@ -735,6 +744,31 @@
 				display: flex;
 				align-items: flex-end;
 			}
+		}
+	}
+
+	// ReviewCard
+	.reviewCard {
+		padding: 40px 28px;
+		//margin-top: 20px;
+		//height: fit-content;
+
+		&-top {
+
+			img {
+				width: 88px;
+				height: 88px;
+			}
+
+			div {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+			}
+		}
+
+		.divider {
+			margin: 28px 0;
 		}
 	}
 }

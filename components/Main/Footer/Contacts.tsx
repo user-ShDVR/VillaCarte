@@ -3,7 +3,7 @@ import React from 'react';
 const Contacts = () => {
 	return (
 		<div className={'contacts-wrapper'}>
-			<a className={ 'text700 t-decor-none contact-mail' } href='mailto: sales@villacarte.com'>sales@villacarte.com</a>
+			<a className={ 'text500 t-decor-none contact-mail' } href='mailto: sales@villacarte.com'>sales@villacarte.com</a>
 			<div className={'d-flex jc-around jc-xl-start mt-20 w-100-p'}>
 				<div className={ 'contact' }>
 					<p className={ 'text300 colorText m-0' }>Черногория</p>

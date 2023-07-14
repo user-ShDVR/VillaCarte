@@ -32,6 +32,7 @@ const FeedBackBlock = () => {
 	return (
 		<div className={ 'feedBackBlock ' }>
 			<div className={ 'feedBackBlock-bg' } style={ { backgroundImage: `url(${ palmsTransparent.src })` } }/>
+
 			<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
 				<div className={ 'element-animation' }>
 					<Image src={ flowerRight } alt={ '' } className={ 'flowerRight' }/>

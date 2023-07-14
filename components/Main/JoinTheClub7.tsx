@@ -15,7 +15,7 @@ const JoinTheClub = () => {
 			<div className={ 'container pt-60 mb-60 d-flex flex-column jc-center ai-center' }>
 				<h2 className={ 'h2Subtitle ta-center' }>Присоединяйтесь к закрытому клубу VillaCarte</h2>
 
-				<p className={ 'colorText ta-center' }>
+				<p className={ 'colorGrey ta-center' }>
 					Чтобы стать членом клуба, нужно купить или арендовать недвижимость на Пхукете или Самуи. За каждую покупку
 					начисляются бонусы — сабаи. Их можно потратить на аренду виллы и авто, посещения SPA (или спа — можно как
 					угодно), морские прогулки и другие услуги корсьер-сервиса.

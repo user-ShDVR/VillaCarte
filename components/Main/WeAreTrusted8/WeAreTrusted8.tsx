@@ -37,8 +37,8 @@ const WeAreTrusted = () => {
 	return (
 		<div className={ 'bgGradient weAreTrusted' }>
 			<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
-				<div className={ 'container pt-60' }>
-					<h2 className={ 'h2Subtitle colorWhite' }>Нам доверяют успешные люди</h2>
+				<div className={ 'container pt-60-80' }>
+					<h2 className={ 'h1Title colorWhite' }>Нам доверяют успешные люди</h2>
 
 					<Slider { ...weAreTrustedSliderSettings } className={ 'weAreTrustedSlider' }>
 						{ reviews.map( ( review, index ) =>

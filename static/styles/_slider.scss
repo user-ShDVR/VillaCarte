@@ -172,8 +172,6 @@
 			border-style: solid;
 		}
 	}
-
-
 }
 
 @media (min-width: $media475) {
@@ -223,7 +221,7 @@
 		.sliderNext {
 			position: absolute;
 			bottom: auto;
-			top: -44px;
+			top: -34px;
 			right: 0;
 			z-index: 1;
 		}
@@ -231,7 +229,7 @@
 		.sliderPrev {
 			position: absolute;
 			bottom: auto;
-			top: -44px;
+			top: -34px;
 			left: auto;
 			right: 40px;
 			z-index: 1;
@@ -266,6 +264,18 @@
 		.sliderNext {
 			right: 50px;
 			cursor: pointer;
+		}
+	}
+
+	// WeAreTrustedSlider
+	.weAreTrustedSlider {
+
+		.sliderNext {
+			top: -54px;
+		}
+
+		.sliderPrev {
+			top: -54px;
 		}
 	}
 }

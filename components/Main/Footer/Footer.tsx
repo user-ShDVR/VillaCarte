@@ -56,7 +56,7 @@ const ContactsBlock = () => {
 						</div>
 
 						<div className={ 'privacyPolicy-wrapper' }>
-							<Link href={ '/' } className={ 'text500 colorText privacyPolicy' }>
+							<Link href={ '/' } className={ 'text300 colorText privacyPolicy' }>
 								Политика конфиденциальности
 							</Link>
 						</div>

@@ -105,7 +105,7 @@
 		.feedBackBlock-bg {
 			background-size: cover;
 			background-repeat: no-repeat;
-			background-position: revert;
+			transform: scale(-1, 1);
 			width: 100%;
 			height: 100%;
 			position: absolute;
@@ -114,7 +114,7 @@
 			right: 0;
 			bottom: 0;
 			z-index: -2;
-			opacity: .3;
+			opacity: .5;
 		}
 
 		.element-animation {
@@ -186,7 +186,7 @@
 
 						h6 {
 							color: $colorWhite;
-							opacity: .7;
+							opacity: .5;
 						}
 
 						.stepLine {
@@ -199,11 +199,11 @@
 						}
 
 						@keyframes stream {
-							0%{
+							0% {
 								transform: translate(0, 0);
 							}
 
-							100%{
+							100% {
 								transform: translate(160%, 0);
 							}
 						}
@@ -264,7 +264,6 @@
 
 			h2 {
 				width: 300px;
-				font-size: 30px;
 			}
 
 			p {
@@ -308,6 +307,7 @@
 	.shareContent {
 		position: relative;
 		background: $colorLightGrey;
+		padding-bottom: 40px;
 
 		.bgOpacity {
 			position: absolute;
@@ -328,8 +328,7 @@
 	// Footer
 	footer {
 		position: relative;
-		background: $colorLightGrey;
-		padding: 40px 16px 16px;
+		background: $colorWhite;
 
 		.contactsBlock {
 			background: $colorWhite;
@@ -364,7 +363,8 @@
 				align-items: center;
 
 				.contact-mail {
-					font-size: 20px;
+					font-size: 26px;
+					line-height: 36px;
 
 					&:hover {
 						-webkit-background-clip: text;
@@ -413,14 +413,16 @@
 
 				.privacyPolicy {
 					margin-top: 30px;
-					text-decoration: underline $colorText;
+					//text-decoration: underline $colorText;
+					text-decoration: none;
 					text-align: center;
 
 					&:hover {
-						-webkit-background-clip: text;
-						-webkit-text-fill-color: transparent;
-						background-color: #2AA5A0;
-						background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
+						//-webkit-background-clip: text;
+						//-webkit-text-fill-color: transparent;
+						//background-color: #2AA5A0;
+						//background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
+						text-decoration: underline $colorText;
 					}
 				}
 			}
@@ -455,6 +457,10 @@
 	// FeedBackBlock
 	.feedBackBlock {
 
+		.feedBackBlock-bg {
+			left: -120px;
+		}
+
 		.element-animation {
 			transform: scale(2);
 		}
@@ -482,6 +488,7 @@
 @media (min-width: $media576) {
 	.palmsTransparent-bg {
 		top: 44%;
+		left: 140px;
 	}
 
 	// BestProjects
@@ -497,6 +504,10 @@
 	// FeedBackBlock
 	.feedBackBlock {
 
+		.feedBackBlock-bg {
+			left: -180px;
+		}
+
 		.flowerRight {
 			right: -340px;
 			width: 90%;
@@ -511,6 +522,7 @@
 @media (min-width: $media768) {
 	.palmsTransparent-bg {
 		top: 30%;
+		left: 270px;
 	}
 
 	// AllServices
@@ -532,6 +544,10 @@
 
 	// FeedBackBlock
 	.feedBackBlock {
+
+		.feedBackBlock-bg {
+			left: -320px;
+		}
 
 		.flowerRight {
 			width: 70%;
@@ -571,6 +587,10 @@
 }
 
 @media (min-width: $media1023) {
+	.palmsTransparent-bg {
+		left: 380px;
+	}
+
 	// BestProjects
 	.bestProjects {
 
@@ -603,6 +623,10 @@
 			justify-content: space-between;
 		}
 
+		.feedBackBlock-bg {
+			left: -560px;
+		}
+
 		.flowerRight {
 			width: 50%;
 			right: -230px;
@@ -620,10 +644,10 @@
 
 	// JoinTheClub
 	.joinTheClub {
-		padding: 56px 0;
+		padding: 53px 0;
 
 		.leavesLeft {
-			bottom: -3px;
+			bottom: 0;
 			scale: 1;
 		}
 
@@ -662,6 +686,10 @@
 }
 
 @media (min-width: $media1200) {
+	.palmsTransparent-bg {
+		left: 430px;
+	}
+
 	// AllServices
 	.allServices {
 		position: relative;
@@ -717,6 +745,10 @@
 
 	// FeedBackBlock
 	.feedBackBlock {
+
+		.feedBackBlock-bg {
+			left: -720px;
+		}
 
 		.flowerRight {
 			width: 40%;
@@ -776,7 +808,6 @@
 	footer {
 
 		.footer {
-			padding-top: 20px;
 			display: grid;
 			grid-template-columns: 2fr 1fr;
 		}
@@ -839,6 +870,10 @@
 	// FeedBackBlock
 	.feedBackBlock {
 
+		.feedBackBlock-bg {
+			left: -800px;
+		}
+
 		.flowerRight {
 			width: 30%;
 			right: -160px;
@@ -848,17 +883,20 @@
 	// JoinTheClub
 	.joinTheClub {
 
-		.leavesLeft {
-			left: 0;
-		}
+		div {
 
-		.leavesRight {
-			right: 0;
+			h2 {
+				line-height: 62px;
+			}
 		}
 	}
 }
 
 @media (min-width: $media1440) {
+	.palmsTransparent-bg {
+		left: 600px;
+	}
+
 	// BestProjects
 	.bestProjects {
 
@@ -868,6 +906,15 @@
 				margin-top: 40px;
 				margin-bottom: 20px;
 			}
+		}
+	}
+
+	// FeedBackBlock
+	.feedBackBlock {
+
+		.feedBackBlock-bg {
+			opacity: .5;
+			left: -1040px;
 		}
 	}
 
@@ -887,17 +934,27 @@
 		}
 	}
 
-	// JoinTheClub
-	.joinTheClub {
-		div {
+	// WeCare
+	.weCare {
 
-			h2 {
-				width: 50%;
-			}
+		.textWrapper {
+			left: 58px;
+			bottom: 32px;
 
 			p {
-				width: 50%;
+				font-size: 14px;
+				line-height: 24px;
+				letter-spacing: .14px;
 			}
+		}
+	}
+
+	// ShareContent
+	.shareContent {
+		padding-bottom: 80px;
+
+		h2 {
+			margin-bottom: 40px;
 		}
 	}
 
@@ -912,9 +969,19 @@
 				right: 0;
 				column-gap: 30px;
 			}
+
+			.contacts-wrapper {
+
+				.contact {
+
+					a {
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+			}
 		}
 	}
 }
-
 
 
