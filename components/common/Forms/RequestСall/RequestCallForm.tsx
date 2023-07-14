@@ -51,7 +51,7 @@ const RequestCallForm = () => {
 						/>
 					</Form.Item>
 
-					<p className={ 'text300-min mt-16 colorWhite' }>
+					<p className={ 'text300-min mt-16 colorWhite70' }>
 						Нажимая кнопку “Отправить запрос” я даю согласие на обработку моих персональных данных
 					</p>
 
