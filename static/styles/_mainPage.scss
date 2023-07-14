@@ -171,51 +171,45 @@
 				overflow: hidden;
 
 				.stepsWrapper {
-					display: flex;
+					display: grid;
 					overflow: hidden;
 					overflow-x: scroll;
-					padding: 28px 28px 28px 8px;
+					padding: 28px 11px 28px 0;
+					position: relative;
+					grid-template-columns: repeat(5, 1fr);
 
 					&::-webkit-scrollbar {
 						width: 0;
 					}
 
+					.stepLine {
+						border-bottom: 1px solid $colorWhite;
+						position: absolute;
+						top: 107px;
+						left: 10px;
+						width: 100%;
+					}
+
 					.step {
 						position: relative;
 						min-width: 260px;
+						width: 100%;
 
 						h6 {
 							color: $colorWhite;
 							opacity: .5;
 						}
 
-						.stepLine {
-							border-bottom: 1px solid $colorWhite;
-							position: absolute;
-							top: 110px;
-							left: 10px;
-							width: 100%;
-							animation: stream 5s linear;
-						}
-
-						@keyframes stream {
-							0% {
-								transform: translate(0, 0);
-							}
-
-							100% {
-								transform: translate(160%, 0);
-							}
-						}
-
 						p {
-							width: 240px;
+							width: 200px;
+							padding-top: 20px;
+							height: 120px;
 						}
 
 						.lastImage {
 							position: absolute;
 							top: 95px;
-							right: -20px;
+							right: -14px;
 						}
 					}
 				}
@@ -882,6 +876,7 @@
 
 	// JoinTheClub
 	.joinTheClub {
+		margin-top: 40px;
 
 		div {
 
@@ -932,6 +927,86 @@
 				margin: 4px 0;
 			}
 		}
+
+		.weBuildDownBlock {
+
+			.fiveStepsSlider-wrapper {
+
+				.stepsWrapper {
+					height: 381px;
+
+					.steps {
+						display: grid;
+						overflow: hidden;
+						padding: 28px 11px 28px 0;
+						position: relative;
+						grid-template-columns: repeat(5, 1fr);
+					}
+
+					.stepLine {
+						top: 107px;
+						animation: stream 1.5s linear;
+						width: 100%;
+					}
+
+					@keyframes stream {
+						0% {
+							transform: translate(-98%, 0);
+						}
+
+						100% {
+							transform: translate(0, 0);
+						}
+					}
+
+					.step {
+
+						p {
+							width: 240px;
+						}
+					}
+				}
+			}
+		}
+		//.weBuildDownBlock {
+		//
+		//	.fiveStepsSlider-wrapper {
+		//
+		//		.stepsWrapper {
+		//
+		//			.steps {
+		//				display: grid;
+		//				overflow: hidden;
+		//				padding: 28px 11px 28px 0;
+		//				position: relative;
+		//				grid-template-columns: repeat(5, 1fr);
+		//			}
+		//
+		//			.stepLine {
+		//				top: 162px;
+		//				animation: stream 7.3s linear;
+		//				width: 96.5%;
+		//			}
+		//
+		//			@keyframes stream {
+		//				0% {
+		//					transform: translate(-98%, 0);
+		//				}
+		//
+		//				100% {
+		//					transform: translate(0, 0);
+		//				}
+		//			}
+		//
+		//			.step {
+		//
+		//				p {
+		//					width: 240px;
+		//				}
+		//			}
+		//		}
+		//	}
+		//}
 	}
 
 	// WeCare
