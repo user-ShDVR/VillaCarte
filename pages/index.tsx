@@ -21,10 +21,23 @@ import WeBuildOurselves from '@/components/Main/WeBuildOurselves6/WeBuildOurselv
 import ShareContent from '@/components/Main/ShareContent10/ShareContent10';
 import Footer from '@/components/Main/Footer/Footer';
 
-export default function Home() {
+async function getStaticProps() {
+	// @ts-ignore
+	const res = await fetch( `${ process.env.REACT_APP_URL }api/pages/thailand/index?lang=RU` );
+	const info = await res.json();
+
+	return {
+		props: { info },
+		revalidate: 60,
+	};
+}
+
+export default function Home( { info }: any ) {
+
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );
 	// useWheelEvent();
 	// useWindowSize();
+	console.log( 'info', info );
 
 	const handleClickScroll = () => {
 		const element = document.getElementById( 'section-2' );

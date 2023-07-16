@@ -118,25 +118,35 @@
 		}
 
 		.element-animation {
-			margin: 2rem 0;
-			font-size: 3rem;
-			opacity: 0;
-			transform: scale(3);
-		}
-
-		.element-animation.element-show {
-			opacity: 1;
-			transition: all 2.2s;
-			transform: scale(1);
-		}
-
-		.flowerRight {
-			width: 100%;
-			height: inherit;
 			position: absolute;
-			top: 20px;
-			right: -280px;
-			z-index: -1;
+			top: 0;
+			right: 0;
+			bottom: 0;
+
+			.flowerRight {
+				width: 100%;
+				object-fit: cover;
+				height: 700px;
+				animation: show-flower 2s linear;
+			}
+
+			@-webkit-keyframes show-flower {
+				0% {
+					transform: scale(1.3);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+
+			@keyframes show-flower {
+				0% {
+					transform: scale(1.3);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
 		}
 
 		h2, h6 {
@@ -456,7 +466,7 @@
 		}
 
 		.element-animation {
-			transform: scale(2);
+			//transform: scale(2);
 		}
 
 		.fiveStepsSlider-wrapper {
@@ -503,12 +513,12 @@
 		}
 
 		.flowerRight {
-			right: -340px;
-			width: 90%;
+			//right: -340px;
+			//width: 90%;
 		}
 
 		.element-animation {
-			transform: scale(1.3);
+			//transform: scale(1.3);
 		}
 	}
 }
@@ -544,11 +554,11 @@
 		}
 
 		.flowerRight {
-			width: 70%;
+			//width: 70%;
 		}
 
 		.element-animation {
-			transform: scale(1.1);
+			//transform: scale(1.1);
 		}
 	}
 
@@ -622,9 +632,9 @@
 		}
 
 		.flowerRight {
-			width: 50%;
-			right: -230px;
-			top: -100px;
+			//width: 50%;
+			//right: -230px;
+			//top: -100px;
 		}
 
 		h2, h6 {
@@ -632,7 +642,7 @@
 		}
 
 		.element-animation {
-			transform: scale(1.1);
+			//transform: scale(1.1);
 		}
 	}
 
@@ -745,7 +755,7 @@
 		}
 
 		.flowerRight {
-			width: 40%;
+			//width: 40%;
 		}
 	}
 
@@ -869,8 +879,8 @@
 		}
 
 		.flowerRight {
-			width: 30%;
-			right: -160px;
+			//width: 30%;
+			//right: -160px;
 		}
 	}
 
@@ -917,7 +927,7 @@
 	.weBuildOurselves {
 
 		ul {
-			padding-top: 20px;
+			padding: 20px 0 40px;
 
 			img {
 				margin-top: 4px;
