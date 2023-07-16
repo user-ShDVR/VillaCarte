@@ -18,4 +18,5 @@ build_image:
     - docker build -t vc-frontend .
     - docker tag vc-frontend:latest 653851200001.dkr.ecr.ap-southeast-1.amazonaws.com/vc-frontend:latest
     - docker push 653851200001.dkr.ecr.ap-southeast-1.amazonaws.com/vc-frontend:latest
+    - /root/.local/bin/aws ecs update-service --region ap-southeast-1 --cluster NewWebsiteTest --service vc-frontend --force-new-deployment
   when: manual

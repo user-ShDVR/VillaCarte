@@ -1,6 +1,6 @@
 FROM node:18-alpine
 WORKDIR /app
-ENV NEXT_PUBLIC_ENV_VARIABLE="https://store.villacartetest.com"
+ENV NEXT_PUBLIC_ENV_VARIABLE="https://villacartetest.com"
 ENV REACT_APP_URL="https://villacartetest.com/"
 COPY . .
 RUN npm cache clean --force
