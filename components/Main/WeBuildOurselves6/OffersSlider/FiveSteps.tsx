@@ -140,7 +140,6 @@ const FiveSteps = () => {
 						</div>
 					</div>
 
-					{/*<div className={ 'stepLine' }/>*/ }
 				</div>
 			}
 		</div>

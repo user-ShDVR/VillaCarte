@@ -12,7 +12,7 @@ const BestProjects = () => {
 	return (
 		<div className={ 'bgGradient bestProjects mt_200' }>
 			<div className={ 'container bestProjects-inner' }>
-				<h2 className={ 'h2Subtitle colorWhite' }>Лучшие проекты <br/> для жизни и инвестиций</h2>
+				<h2 className={ 'h1Title colorWhite' }>Лучшие проекты <br/> для жизни и инвестиций</h2>
 
 				<Tabs className={ 'bestProjects-tabs' }>
 					<TabList className={ 'bestProjects-tabList text700 colorWhite' }>
