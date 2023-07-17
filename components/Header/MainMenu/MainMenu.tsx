@@ -14,12 +14,14 @@ import LanguageSelect from '@/components/common/Selects/LanguageSelect';
 import CurrencySelect from '@/components/common/Selects/CurrencySelect';
 import upSmall from '@/public/icons/upSmall.svg';
 import downSmall from '@/public/icons/downSmall.svg';
+import cn from 'classnames';
 
 interface IProps {
 	dropBgStyle: any;
+	dropBgClass?: string;
 }
 
-const MainMenu = ( { dropBgStyle }: IProps ) => {
+const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 	const mainDropMenuSales = useStore( $mainDropMenuVisibleSales );
 	const mainDropMenuServices = useStore( $mainDropMenuVisibleServices );
 
@@ -100,8 +102,8 @@ const MainMenu = ( { dropBgStyle }: IProps ) => {
 				/>
 			</nav>
 
-			<LanguageSelect className={ 'mr-10 ml-10 fz-12-14' }/>
-			<CurrencySelect className={ 'mr-20 ml-10 fz-12-14' }/>
+			<LanguageSelect className={ cn( dropBgClass, 'mr-10 ml-10 fz-12-14' ) }/>
+			<CurrencySelect className={ cn( dropBgClass, 'mr-20 ml-10 fz-12-14' ) }/>
 		</div>
 	);
 };

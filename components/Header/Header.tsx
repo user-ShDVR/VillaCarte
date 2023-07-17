@@ -50,6 +50,8 @@ const Header = () => {
 
 	const dropBgStyle = scrolled ? dropBgTransform : dropBg;
 
+	const dropBgClass = scrolled ? 'dropBgClass' : '';
+
 	useEffect( () => {
 		const onScroll = () => {
 			// @ts-ignore
@@ -83,7 +85,7 @@ const Header = () => {
 
 					<div className={ 'd-flex ai-center' }>
 
-						<MainMenu dropBgStyle={ dropBgStyle }/>
+						<MainMenu dropBgStyle={ dropBgStyle } dropBgClass={ dropBgClass }/>
 
 						<HoveredButton to={ '/' } text={ 'Заказать звонок' } variant={ 'only' } className={ 'text-nowrap ml-10' }/>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { saveUserInfo } from '@/store/account';
 
 import CustomSelect from '@/components/common/Selects/CustomSelect';
+import cn from 'classnames';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
@@ -29,7 +30,7 @@ const CurrencySelect = ( { className, ...newProps }: IProps ) => {
 	return (
 		<div className={ 'header-select-wrapper' }>
 
-			<CustomSelect options={ currencies } className={'ml-10 mr-10'}/>
+			<CustomSelect options={ currencies } className={ cn( className, ' h-122' ) }/>
 
 		</div>
 	);

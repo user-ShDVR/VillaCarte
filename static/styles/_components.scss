@@ -70,6 +70,14 @@
 	}
 }
 
+.dropBgClass .css-1nmdiq5-menu {
+	background: rgba(34, 54, 74, .4) !important;
+	backdrop-filter: blur(15px);
+	box-shadow: 5px 5px 10px 0 rgb(68, 68, 68, .15);
+	top: 42px;
+	border-radius: 0 0 15px 15px;
+}
+
 @media (min-width: $media0) {
 	// TitleTextArrowCard
 	.titleTextArrowCard {
