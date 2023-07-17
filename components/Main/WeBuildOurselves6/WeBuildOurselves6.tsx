@@ -3,6 +3,7 @@ import listPoint from '@/public/icons/listPoint.svg';
 import Image from 'next/image';
 import OffersSlider from '@/components/Main/WeBuildOurselves6/OffersSlider/OffersSlider';
 import FiveSteps from '@/components/Main/WeBuildOurselves6/OffersSlider/FiveSteps';
+import { Slide } from 'react-awesome-reveal';
 
 const list = [
 	'Покупаете недвижимость только у проверенных подрядчиков',
@@ -14,34 +15,36 @@ const list = [
 const WeBuildOurselves = () => {
 	return (
 		<div className={ 'bgGradient weBuildOurselves' }>
-			<div className={ 'container pt-60 d-md-flex' }>
-				<h2 className={ 'h1Title colorWhite col-md-6' }>Строим сами – <br/> а значит вы:</h2>
+			<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+				<div className={ 'container pt-60 d-md-flex' }>
+					<h2 className={ 'h1Title colorWhite col-md-6' }>Строим сами – <br/> а значит вы:</h2>
 
-				<ul className={ 'col-md-6' }>
-					{ list.map( item =>
-						<div key={ item }>
-							<Image src={ listPoint } alt={ '' }/>
-							<li className={ 'text500 colorWhite' }>{ item }</li>
-						</div>
-					) }
-				</ul>
-			</div>
-
-			<div className={ 'weBuildDownBlock' }>
-				<div className={ 'container' }>
-					<OffersSlider/>
+					<ul className={ 'col-md-6' }>
+						{ list.map( item =>
+							<div key={ item }>
+								<Image src={ listPoint } alt={ '' }/>
+								<li className={ 'text500 colorWhite' }>{ item }</li>
+							</div>
+						) }
+					</ul>
 				</div>
 
-				<div className={ 'fiveStepsSlider-wrapper' }>
-
+				<div className={ 'weBuildDownBlock' }>
 					<div className={ 'container' }>
-						<h2 className={ 'h1Title colorWhite pos' }>5 шагов – <br/> и недвижимость ваша</h2>
+						<OffersSlider/>
 					</div>
 
-					<FiveSteps/>
+					<div className={ 'fiveStepsSlider-wrapper' }>
 
+						<div className={ 'container' }>
+							<h2 className={ 'h1Title colorWhite pos' }>5 шагов – <br/> и недвижимость ваша</h2>
+						</div>
+
+						<FiveSteps/>
+
+					</div>
 				</div>
-			</div>
+			</Slide>
 		</div>
 	);
 };

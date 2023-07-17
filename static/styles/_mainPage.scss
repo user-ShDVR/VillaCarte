@@ -9,6 +9,8 @@
 		bottom: 0;
 		background-size: cover;
 		background-repeat: no-repeat;
+		z-index: 1;
+		opacity: .7;
 	}
 
 	// TopBlock
@@ -706,7 +708,7 @@
 			left: 0;
 			right: 0;
 			bottom: 0;
-			z-index: 1;
+			z-index: 0;
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 100%;
@@ -718,7 +720,7 @@
 			position: absolute;
 			top: 246px;
 			left: -100px;
-			z-index: 3;
+			z-index: 0;
 		}
 	}
 

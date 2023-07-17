@@ -2,6 +2,7 @@ import React from 'react';
 import VideoSlide from '@/components/common/Video/VideoSlide';
 import Slider from 'react-slick';
 import { videoSliderSettings } from '@/components/common/SliderSettings/videoSliderSettings';
+import { Slide } from 'react-awesome-reveal';
 
 const videos = [
 	{ link: require( '@/public/taiVideo.mp4' ) },
@@ -10,15 +11,17 @@ const videos = [
 
 const VideoBlock = () => {
 	return (
-		<div className={ 'bgLightGrey' }>
-			<div className={ 'pos container-xl z-5' }>
-				<Slider { ...videoSliderSettings } className={ 'videoSlider' }>
-					{ videos.map( ( video, index ) =>
-						<VideoSlide key={ index } video={ video.link }/>
-					) }
-				</Slider>
+		<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+			<div className={ '' }>
+				<div className={ 'pos container-xl z-5' }>
+					<Slider { ...videoSliderSettings } className={ 'videoSlider' }>
+						{ videos.map( ( video, index ) =>
+							<VideoSlide key={ index } video={ video.link }/>
+						) }
+					</Slider>
+				</div>
 			</div>
-		</div>
+		</Slide>
 	);
 };
 

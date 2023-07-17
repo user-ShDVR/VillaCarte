@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import avatar1 from '@/public/icons/avatar1.png';
 import avatar2 from '@/public/icons/avatar2.png';
 import ReviewCard from '@/components/common/Cards/ReviewCard/ReviewCard';
-import { Fade } from 'react-awesome-reveal';
+import { Fade, Slide } from 'react-awesome-reveal';
 import { weAreTrustedSliderSettings } from '@/components/common/SliderSettings/weAreTrustedSliderSettings';
 
 const reviews = [
@@ -35,26 +35,28 @@ const reviews = [
 
 const WeAreTrusted = () => {
 	return (
-		<div className={ 'bgGradient weAreTrusted' }>
-			<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
-				<div className={ 'container pt-60-80' }>
-					<h2 className={ 'h1Title colorWhite' }>Нам доверяют успешные люди</h2>
+		<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+			<div className={ 'bgGradient weAreTrusted' }>
+				<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
+					<div className={ 'container pt-60-80' }>
+						<h2 className={ 'h1Title colorWhite' }>Нам доверяют успешные люди</h2>
 
-					<Slider { ...weAreTrustedSliderSettings } className={ 'weAreTrustedSlider' }>
-						{ reviews.map( ( review, index ) =>
-							<ReviewCard
-								key={ index }
-								name={ review.name }
-								profession={ review.profession }
-								avatar={ review.avatar }
-								text={ review.text }
-							/>
-						) }
-					</Slider>
+						<Slider { ...weAreTrustedSliderSettings } className={ 'weAreTrustedSlider' }>
+							{ reviews.map( ( review, index ) =>
+								<ReviewCard
+									key={ index }
+									name={ review.name }
+									profession={ review.profession }
+									avatar={ review.avatar }
+									text={ review.text }
+								/>
+							) }
+						</Slider>
 
-				</div>
-			</Fade>
-		</div>
+					</div>
+				</Fade>
+			</div>
+		</Slide>
 	);
 };
 
