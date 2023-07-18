@@ -8,7 +8,7 @@ import { Slide } from 'react-awesome-reveal';
 
 const JoinTheClub = () => {
 	return (
-		<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+		<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 } className={'pos z-5'}>
 			<div className={ 'joinTheClub container-xs' }>
 				<div style={ { backgroundImage: `url(${ leavesTransparent.src })` } } className={ 'joinTheClub-bg' }/>
 

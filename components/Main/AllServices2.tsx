@@ -26,7 +26,7 @@ const AllServices = () => {
 
 			<Image src={ leavesVideo } alt={ '' } className={ 'leavesVideo' }/>
 
-			<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+			<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 }>
 				<div className={ 'container services' }>
 					<div>
 						<div className={ 'pt-60-40' }>

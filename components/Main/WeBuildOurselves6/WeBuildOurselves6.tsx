@@ -15,7 +15,7 @@ const list = [
 const WeBuildOurselves = () => {
 	return (
 		<div className={ 'bgGradient weBuildOurselves' }>
-			<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+			<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 }>
 				<div className={ 'container pt-60 d-md-flex' }>
 					<h2 className={ 'h1Title colorWhite col-md-6' }>Строим сами – <br/> а значит вы:</h2>
 

@@ -4,12 +4,14 @@
 	// VideoSlider
 	.videoSlider {
 		position: relative;
+		z-index: 6;
 
 		.sliderNext {
 			position: absolute;
 			bottom: 32px;
 			right: 20px;
 			z-index: 1;
+			cursor: pointer;
 		}
 
 		.sliderPrev {
@@ -17,6 +19,7 @@
 			bottom: 32px;
 			right: 60px;
 			z-index: 1;
+			cursor: pointer;
 		}
 
 		.slick-track {
@@ -124,14 +127,16 @@
 			position: absolute;
 			bottom: 60px;
 			right: 40%;
-			z-index: 1;
+			cursor: pointer;
+			z-index: 3;
 		}
 
 		.sliderPrev {
 			position: absolute;
 			bottom: 60px;
 			left: 40%;
-			z-index: 1;
+			cursor: pointer;
+			z-index: 3;
 		}
 
 		.slick-track {

@@ -11,7 +11,7 @@ interface IProps {
 	text3?: string;
 }
 
-const TitleTextArrowCard = ( { title, text, text2,text3 }: IProps ) => {
+const TitleTextArrowCard = ( { title, text, text2, text3 }: IProps ) => {
 	const [ mouseOver, setMouseOver ] = useState<boolean>( false );
 
 	const onMouseOver = () => {
@@ -22,18 +22,16 @@ const TitleTextArrowCard = ( { title, text, text2,text3 }: IProps ) => {
 	};
 
 	return (
-		<Fade delay={1e2} cascade damping={1e-1}>
-			<div className={ 'titleTextArrowCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
-				<Link href={ '/' }>
-					<h3 className={ cn( 'h3TitleText', mouseOver ? 'colorGradient' : '' ) }>{ title }</h3>
+		<div className={ 'titleTextArrowCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
+			<Link href={ '/' }>
+				<h3 className={ cn( 'h3TitleText', mouseOver ? 'colorGradient' : '' ) }>{ title }</h3>
 
-					<div>
-						<p className={ 'text300 colorText' }>{ text } <br/> <span>{text2}</span><br/> <span>{text3}</span></p>
-						<LinkButton mouseOver={ mouseOver }/>
-					</div>
-				</Link>
-			</div>
-		</Fade>
+				<div>
+					<p className={ 'text300 colorText' }>{ text } <br/> <span>{ text2 }</span><br/> <span>{ text3 }</span></p>
+					<LinkButton mouseOver={ mouseOver }/>
+				</div>
+			</Link>
+		</div>
 	);
 };
 

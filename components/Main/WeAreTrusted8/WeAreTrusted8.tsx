@@ -35,8 +35,8 @@ const reviews = [
 
 const WeAreTrusted = () => {
 	return (
-		<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
-			<div className={ 'bgGradient weAreTrusted' }>
+		<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 } className={ 'pos' }>
+			<div className={ 'weAreTrusted' }>
 				<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
 					<div className={ 'container pt-60-80' }>
 						<h2 className={ 'h1Title colorWhite' }>Нам доверяют успешные люди</h2>

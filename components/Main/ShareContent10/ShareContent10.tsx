@@ -28,7 +28,7 @@ const ShareContent = () => {
 		<div className={ 'shareContent' }>
 			{/*<div className={ 'bgOpacity' } style={ { backgroundImage: `url(${ palmsTransparent.src })`, opacity: .1 } }/>*/ }
 
-			<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+			<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 }>
 				<div className={ 'container pt-60-80' }>
 					<div>
 						<h2 className={ 'h1Title' }>Делимся эксклюзивным <br/> контентом с острова</h2>

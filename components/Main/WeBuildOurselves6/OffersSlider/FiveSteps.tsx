@@ -34,7 +34,7 @@ const FiveSteps = () => {
 	}, [] );
 
 	if ( scrolled ) {
-		setInterval( toShow, 1500 );
+		setInterval( toShow, 1000 );
 	}
 
 	return (

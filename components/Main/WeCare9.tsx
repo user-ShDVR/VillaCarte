@@ -5,7 +5,7 @@ import { Fade, Slide } from 'react-awesome-reveal';
 
 const WeCare = () => {
 	return (
-		<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+		<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 }>
 			<div className={ 'weCare' }>
 				<div className={ 'bgGradient' }/>
 				<div className={ 'container-xl pos' }>

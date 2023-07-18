@@ -11,7 +11,7 @@ const videos = [
 
 const VideoBlock = () => {
 	return (
-		<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+		<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 } className={'pos z-5'}>
 			<div className={ '' }>
 				<div className={ 'pos container-xl z-5' }>
 					<Slider { ...videoSliderSettings } className={ 'videoSlider' }>

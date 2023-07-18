@@ -12,7 +12,7 @@ const BestProjects = () => {
 
 	return (
 		<div className={ 'bgGradient bestProjects mt_202' }>
-			<Slide direction={ 'up' } triggerOnce={ true } delay={ 500 }>
+			<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 }>
 				<div className={ 'container bestProjects-inner' }>
 					<h2 className={ 'h1Title colorWhite' }>Лучшие проекты <br/> для жизни и инвестиций</h2>
 
