@@ -1,10 +1,10 @@
 @import "./variables";
 
-.customModal {
-	background: fade-out($colorAccent, .2);
+.modal {
+	background: var(--bg-black-light);
 	bottom: 0;
 	left: 0;
-	padding: 30px 0;
+	padding: 20vh 0;
 	position: fixed;
 	right: 0;
 	top: 0;
@@ -17,75 +17,7 @@
 		right: 0;
 		top: 0;
 		z-index: -1;
-	}
-
-	.wrapper {
-		background: #fff;
-		border-radius: 8px;
-		box-shadow: 8px 8px 12px rgba(67, 86, 100, 0.2);
-		max-width: 430px;
-		padding: 25px;
-		position: relative;
-		width: 100%;
-
-		.modal-close {
-			border: 1px solid #cacdd7;
-			border-radius: 50%;
-			cursor: pointer;
-			height: 36px;
-			position: absolute;
-			right: 25px;
-			top: 25px;
-			width: 36px;
-
-			img {
-				height: 12px;
-				width: 12px;
-			}
-		}
-
-		.title {
-			font-size: 32px;
-			line-height: 1.2;
-		}
-
-		.des {
-			font-size: 15px;
-		}
-
-		&._wide {
-			max-width: 988px;
-		}
-	}
-
-	@media (max-width: $media930) {
-		align-items: stretch;
-		overflow: hidden !important;
-		padding: 0;
-
-		.wrapper {
-			border-radius: 0;
-			height: 100%;
-			max-width: 100%;
-			overflow: hidden auto;
-			//-webkit-overflow-scrolling: touch;
-			padding: 15px !important;
-
-			.modal-close {
-				right: 15px;
-				top: 15px;
-			}
-
-			.title {
-				font-size: 26px;
-				padding-right: 50px;
-				text-align: left !important;
-			}
-
-			.des {
-				text-align: left;
-			}
-		}
+		background: rgba(0, 0, 0, 0.3);
 	}
 }
 

@@ -9,9 +9,10 @@ interface IProps {
 	variant: 'simple' | 'arrow' | 'only' | 'simpleDark' | 'arrowWhite' | 'arrowRevert' | 'light';
 	className?: string;
 	type?: 'submit' | 'button';
+	onClick?: () => void;
 }
 
-const SimpleButton = ( { text, variant, className, type, ...props }: IProps ) => {
+const SimpleButton = ( { text, variant, className, type, onClick, ...props }: IProps ) => {
 	const [ mouseOver, setMouseOver ] = useState<boolean>( false );
 
 	let classNameVariant;
@@ -53,6 +54,7 @@ const SimpleButton = ( { text, variant, className, type, ...props }: IProps ) =>
 			onMouseOver={ onMouseOver }
 			onMouseLeave={ onMouseLeave }
 			type={ type }
+			onClick={ onClick }
 			{ ...props }
 		>
 			<span>{ text }</span>

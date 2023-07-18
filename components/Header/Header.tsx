@@ -1,17 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useStore } from 'effector-react';
+import { useStore, useStoreMap } from 'effector-react';
 import { $mobileMenuVisible, showMobileMenu } from '@/store/mobileMenu';
 import Link from 'next/link';
 import Image from 'next/image';
 import logoImg from '@/public/logoImg.svg';
 import logoDesktop from '@/public/logoDesktop.svg';
-import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import BurgerButton from '@/components/Header/MobileNav/BurgerButton';
 import MobileMainMenu from '@/components/Header/MobileNav/MobileMainMenu';
 import cn from 'classnames';
 import { Fade } from 'react-awesome-reveal';
 import MainMenu from '@/components/Header/MainMenu/MainMenu';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import SimpleButton from '@/components/common/Buttons/SimpleButton';
+import { $modalVisible, showModal } from '@/store/modal';
+import { EModal_VisibleStore } from '@/types/modal';
+import ModalCallRequest from '@/components/common/Modal/ModalCallRequest';
 
 const Header = () => {
 	const size = useWindowSize();
@@ -19,7 +22,12 @@ const Header = () => {
 	const isMobile = size.width <= 1439;
 	const [ scrolled, setScrolled ] = useState<boolean>( false );
 	const mobileMenu = useStore( $mobileMenuVisible );
+	const requestCallModal = useStoreMap( $modalVisible, s => s.callRequest );
 	const ref = useRef();
+
+	const toCallModal = () => {
+		showModal( EModal_VisibleStore.CallRequest );
+	};
 
 	const toShowMenu = () => {
 		showMobileMenu( !mobileMenu );
@@ -87,7 +95,12 @@ const Header = () => {
 
 						<MainMenu dropBgStyle={ dropBgStyle } dropBgClass={ dropBgClass }/>
 
-						<HoveredButton to={ '/' } text={ 'Заказать звонок' } variant={ 'only' } className={ 'text-nowrap ml-10' }/>
+						<SimpleButton
+							text={ 'Заказать звонок' }
+							variant={ 'only' }
+							className={ 'text-nowrap ml-10' }
+							onClick={ toCallModal }
+						/>
 
 						<div className={ 'header-wrapper-mobileMenu d-block d-lg-none ml-10' }>
 							<BurgerButton menu={ mobileMenu } toShowMenu={ toShowMenu } scrolled={ scrolled }/>
@@ -100,6 +113,8 @@ const Header = () => {
 
 				</Fade>
 			</div>
+
+			{ requestCallModal && <ModalCallRequest/> }
 		</header>
 	);
 };
