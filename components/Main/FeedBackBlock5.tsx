@@ -42,7 +42,7 @@ const FeedBackBlock = () => {
 				<div className={ 'container pt-60 pos feedBackBlock-content' }>
 					<div>
 						<div>
-							<h2 className={ 'h2Subtitle' }>Закажите персональную подборку</h2>
+							<h2 className={ 'h2Subtitle' }>Закажите <br/> персональную подборку</h2>
 							<h6 className={ 'text300 colorText pt-8' }>
 								Вам позвонит менеджер и подберёт недвижимость под ваши индивидуальные запросы
 							</h6>

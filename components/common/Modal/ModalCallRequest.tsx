@@ -6,22 +6,28 @@ import Image from 'next/image';
 import flowerRight from '@/public/flowerRight.png';
 import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
+import ModalCloseButton from '@/components/common/Buttons/ModalCloseButton';
+import { hideModal } from '@/store/modal';
 
 const ModalCallRequest = () => {
-	return (
-		<Modal storeKey={ EModal_VisibleStore.CallRequest }>
+	const toCloseModal = () => {
+		hideModal( EModal_VisibleStore.CallRequest );
+	};
 
-			<div className={ 'feedBackBlock bgLightGrey p-40 brad-15' }>
-				<div className={ 'feedBackBlock-bg' } style={ { backgroundImage: `url(${ palmsTransparent.src })` } }/>
+	return (
+		<Modal storeKey={ EModal_VisibleStore.CallRequest } wrapperClass={ 'feedBack-modal-wrapper' }>
+
+			<div className={ 'feedBack-modal bgLightGrey p-40' }>
+				<div className={ 'feedBack-modal-bg' } style={ { backgroundImage: `url(${ palmsTransparent.src })` } }/>
 
 				<div className={ 'element-animation' }>
 					<Image src={ flowerRight } alt={ '' } className={ 'flowerRight' }/>
 				</div>
 
-				<div className={ 'container pt-60 pos feedBackBlock-content' }>
+				<div className={ 'container pos feedBackBlock-content' }>
 					<div>
 						<div>
-							<h2 className={ 'h2Subtitle' }>Закажите персональную подборку</h2>
+							<h2 className={ 'h2Subtitle' }>Закажите <br/> персональную подборку</h2>
 							<h6 className={ 'text300 colorText pt-8' }>
 								Вам позвонит менеджер и подберёт недвижимость под ваши индивидуальные запросы
 							</h6>
@@ -37,6 +43,7 @@ const ModalCallRequest = () => {
 				</div>
 			</div>
 
+			<ModalCloseButton onClick={ toCloseModal }/>
 		</Modal>
 	);
 };

@@ -9,7 +9,7 @@ interface IProps {
 	variant: 'simple' | 'arrow' | 'only' | 'simpleDark' | 'arrowWhite' | 'arrowRevert' | 'light';
 	className?: string;
 	type?: 'submit' | 'button';
-	onClick?: () => void;
+	onClick?: any;
 }
 
 const SimpleButton = ( { text, variant, className, type, onClick, ...props }: IProps ) => {

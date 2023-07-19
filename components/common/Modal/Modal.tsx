@@ -28,7 +28,7 @@ export const Modal = ( props: IModalProps ) => {
 			{ visible &&
 				<div
 					id={ props.id }
-					className={ cn( 'modal d-flex ai-start jc-center overflowNoHidden', props.modalClass, {
+					className={ cn( 'modal d-flex ai-start jc-center', props.modalClass, {
 						'd-none': !visible,
 					} ) }
 				>

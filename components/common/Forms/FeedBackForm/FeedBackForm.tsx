@@ -4,14 +4,16 @@ import { Form, Input } from 'antd';
 import { updatePreloader } from '@/store/preloader';
 import { postFeedback } from '@/store/feedback';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
+import { hideModal } from '@/store/modal';
+import { EModal_VisibleStore } from '@/types/modal';
 
 const FeedBackForm = () => {
-
 	const [ form ] = Form.useForm();
 
 	const onFinish = async ( values: any ) => {
 		updatePreloader( true );
-		await postFeedback( values );
+		hideModal(EModal_VisibleStore.CallRequest);
+		// await postFeedback( values );
 	};
 
 	return (
@@ -52,7 +54,11 @@ const FeedBackForm = () => {
 				персональных данных
 			</p>
 
-			<SimpleButton text={ 'Заказать подборку' } variant={ 'simple' } type={ 'submit' }/>
+			<SimpleButton
+				text={ 'Заказать подборку' }
+				variant={ 'simple' }
+				type={ 'submit' }
+			/>
 
 		</Form>
 	);
