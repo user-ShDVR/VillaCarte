@@ -17,7 +17,7 @@ const ModalCallRequest = () => {
 	return (
 		<Modal storeKey={ EModal_VisibleStore.CallRequest } wrapperClass={ 'feedBack-modal-wrapper' }>
 
-			<div className={ 'feedBack-modal bgLightGrey p-40' }>
+			<div className={ 'feedBack-modal bgModal p-40' }>
 				<div className={ 'feedBack-modal-bg' } style={ { backgroundImage: `url(${ palmsTransparent.src })` } }/>
 
 				<div className={ 'element-animation' }>
