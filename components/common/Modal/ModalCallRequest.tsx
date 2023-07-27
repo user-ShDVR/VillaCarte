@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal } from '@/components/common/Modal/Modal';
 import { EModal_VisibleStore } from '@/types/modal';
-import palmsTransparent from '@/public/palmsTransparent.png';
+import feedBackBg from '@/public/feedBackBg.png';
 import Image from 'next/image';
 import flowerRight from '@/public/flowerRight.png';
 import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
@@ -18,7 +18,7 @@ const ModalCallRequest = () => {
 		<Modal storeKey={ EModal_VisibleStore.CallRequest } wrapperClass={ 'feedBack-modal-wrapper' }>
 
 			<div className={ 'feedBack-modal bgModal p-40' }>
-				<div className={ 'feedBack-modal-bg' } style={ { backgroundImage: `url(${ palmsTransparent.src })` } }/>
+				<div className={ 'feedBack-modal-bg' } style={ { backgroundImage: `url(${ feedBackBg.src })` } }/>
 
 				<div className={ 'element-animation' }>
 					<Image src={ flowerRight } alt={ '' } className={ 'flowerRight' }/>

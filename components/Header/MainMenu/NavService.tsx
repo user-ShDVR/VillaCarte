@@ -5,11 +5,9 @@ import { dropMenuItemsService } from '@/components/Header/MobileNav/MobileNavSer
 
 interface IProps {
 	dropBgStyle: any;
-	onMouseOverServices: () => void;
-	onMouseLeaveServices: () => void;
 }
 
-const NavService = ( { dropBgStyle, onMouseOverServices, onMouseLeaveServices }: IProps ) => {
+const NavService = ( { dropBgStyle }: IProps ) => {
 	const toCloseMenu = () => {
 		showMobileDropMenuServices( false );
 	};
@@ -18,8 +16,6 @@ const NavService = ( { dropBgStyle, onMouseOverServices, onMouseLeaveServices }:
 		<div
 			style={ dropBgStyle }
 			className={ 'dropdownContent dropService' }
-			onMouseOver={ onMouseOverServices }
-			onMouseLeave={ onMouseLeaveServices }
 		>
 			{ dropMenuItemsService?.map( ( service, index ) =>
 				<Link href={ service.path } key={ index } onClick={ toCloseMenu }>

@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import { getMainPageInfo } from '@/store/mainPage';
 import { IMainPage } from '@/types/mainPage';
 import Image from 'next/image';
+import metaImage from '@/public/metaImageTest.png';
 import scrollArrow from '@/public/icons/scrollArrow.svg';
 // import 'animate.css';
 import 'react-tabs/style/react-tabs.css';
@@ -58,7 +59,10 @@ export default function Home( { info }: any ) {
 	return (
 		<Layout>
 			<Head>
-				<title>VillaCarte</title>
+				<meta property="og:title" content={ mainPageInfo?.meta.title }/>
+				<meta property="og:description" content={ mainPageInfo?.meta.description }/>
+				<meta property="og:keywords" content={ mainPageInfo?.meta.keywords }/>
+				<meta property="og:image" content={ metaImage.src }/>
 			</Head>
 
 			<section className='pt-100-60 pos' style={ style } id="hero-section">

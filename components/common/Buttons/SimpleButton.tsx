@@ -42,10 +42,10 @@ const SimpleButton = ( { text, variant, className, type, onClick, ...props }: IP
 	}
 
 	const onMouseOver = () => {
-		setMouseOver( true );
+		setTimeout( () => setMouseOver( true ), 100 );
 	};
 	const onMouseLeave = () => {
-		setMouseOver( false );
+		setTimeout( () => setMouseOver( false ), 100 );
 	};
 
 	return (

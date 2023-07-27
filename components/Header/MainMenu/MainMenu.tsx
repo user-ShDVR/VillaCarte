@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useStore } from 'effector-react';
 import {
 	$mainDropMenuVisibleSales,
@@ -15,6 +15,7 @@ import CurrencySelect from '@/components/common/Selects/CurrencySelect';
 import upSmall from '@/public/icons/upSmall.svg';
 import downSmall from '@/public/icons/downSmall.svg';
 import cn from 'classnames';
+import useOnClickOutside from '@/utils/onClickOutside';
 
 interface IProps {
 	dropBgStyle: any;
@@ -24,27 +25,31 @@ interface IProps {
 const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 	const mainDropMenuSales = useStore( $mainDropMenuVisibleSales );
 	const mainDropMenuServices = useStore( $mainDropMenuVisibleServices );
+	const refSales = useRef( null );
+	const refService = useRef( null );
 
-	const onMouseOverSales = () => {
-		showMainDropMenuSales( true );
+	useOnClickOutside( refSales, () => {
+		showMainDropMenuSales( false );
+	} );
+
+	useOnClickOutside( refService, () => {
+		showMainDropMenuServices( false );
+	} );
+
+	const toSalesMenu = () => {
+		showMainDropMenuSales( !mainDropMenuSales );
 		showMainDropMenuServices( false );
 	};
-	const onMouseLeaveSales = () => {
-		showMainDropMenuSales( false );
-	};
 
-	const onMouseOverServices = () => {
-		showMainDropMenuServices( true );
+	const toServiceMenu = () => {
+		showMainDropMenuServices( !mainDropMenuServices );
 		showMainDropMenuSales( false );
-	};
-	const onMouseLeaveServices = () => {
-		showMainDropMenuServices( false );
 	};
 
 	return (
 		<div className={ 'meinMenu-wrapper' }>
 			<nav>
-				<div className={ 'nav-item pos' } onMouseOver={ onMouseOverSales }>
+				<div className={ 'nav-item pos' } onClick={ toSalesMenu } ref={ refSales }>
 					<p>Продажа</p>
 					{ mainDropMenuSales
 						? <Image src={ upSmall } alt={ '' }/>
@@ -53,8 +58,6 @@ const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 					{ mainDropMenuSales &&
 						<NavSales
 							dropBgStyle={ dropBgStyle }
-							onMouseOverSales={ onMouseOverSales }
-							onMouseLeaveSales={ onMouseLeaveSales }
 						/>
 					}
 				</div>
@@ -65,8 +68,8 @@ const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 					path={ '/' }
 				/>
 
-				<div className={ 'nav-item pos' } onMouseOver={ onMouseOverServices }>
-					<p>Консьерж сервис</p>
+				<div className={ 'nav-item pos' } onClick={ toServiceMenu } ref={ refService }>
+					<p>Консьерж-сервис</p>
 					{ mainDropMenuServices
 						? <Image src={ upSmall } alt={ '' }/>
 						: <Image src={ downSmall } alt={ '' }/>
@@ -74,8 +77,6 @@ const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 					{ mainDropMenuServices &&
 						<NavService
 							dropBgStyle={ dropBgStyle }
-							onMouseOverServices={ onMouseOverServices }
-							onMouseLeaveServices={ onMouseLeaveServices }
 						/>
 					}
 				</div>
@@ -102,7 +103,7 @@ const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 				/>
 			</nav>
 
-			<LanguageSelect className={ cn( dropBgClass, 'mr-10 ml-10 fz-12-14' ) }/>
+			<LanguageSelect className={ cn( dropBgClass, 'mr-10 ml-20 fz-12-14' ) }/>
 			<CurrencySelect className={ cn( dropBgClass, 'mr-20 ml-10 fz-12-14' ) }/>
 		</div>
 	);

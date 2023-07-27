@@ -1,46 +1,78 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { $mainPageInfo } from '@/store/mainPage';
 import { IMainPage } from '@/types/mainPage';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import GoodsCard from '@/components/common/Cards/GoodsCard/GoodsCard';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { useStore } from 'effector-react';
-import { Slide } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 
 const BestProjects = () => {
 	const offers = useStore<IMainPage>( $mainPageInfo );
 
+	// const [ showApartments, setShowApartments ] = useState<boolean>( true );
+	// const [ showVillas, setShowVillas ] = useState<boolean>( true );
+	//
+	// const toClickApartments = () => {
+	// 	setShowApartments( true );
+	// 	// setShowVillas( false );
+	// };
+	//
+	// const toClickVillas = () => {
+	// 	setShowVillas( true );
+	// 	// setShowApartments( false );
+	// };
+	//
+	// const showContent = {
+	// 	transform: 'translateX(0)',
+	// 	transition: 'opacity 1.5s',
+	// };
+	//
+	// const displayNone = {
+	// 	transform: 'translateX(100%)',
+	// 	transition: 'opacity 1.5s',
+	// };
+	//
+	// const styleAnimateApartments = showApartments ? showContent : displayNone;
+	// const styleAnimateVillas = showVillas ? showContent : displayNone;
+
 	return (
-		<div className={ 'bgGradient bestProjects mt_202' }>
-			<Slide direction={ 'up' } triggerOnce={ true } delay={ 1000 }>
-				<div className={ 'container bestProjects-inner' }>
-					<h2 className={ 'h1Title colorWhite' }>Лучшие проекты <br/> для жизни и инвестиций</h2>
+		<div className={ 'bgGradient bestProjects' }>
+			<div className={ 'container bestProjects-inner' }>
+				<h2 className={ 'h1Title colorWhite ls--216' }>Лучшие проекты <br/> для жизни и инвестиций</h2>
 
-					<Tabs className={ 'bestProjects-tabs' }>
-						<TabList className={ 'bestProjects-tabList text700 colorWhite' }>
-							<Tab>Апартаменты</Tab>
-							<Tab>Виллы</Tab>
-						</TabList>
+				<Tabs className={ 'bestProjects-tabs' }>
+					<TabList className={ 'bestProjects-tabList text500 colorWhite' }>
+						<Tab>Апартаменты</Tab>
+						<Tab>Виллы</Tab>
+					</TabList>
 
+					<Fade>
 						<TabPanel>
 							{ offers.data?.apartments.slice( 0, 6 ).map( item =>
 								<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 							) }
 						</TabPanel>
+					</Fade>
 
+					<Fade>
 						<TabPanel>
 							{ offers?.data?.villas.slice( 0, 6 ).map( item =>
 								<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 							) }
 						</TabPanel>
+					</Fade>
+				</Tabs>
 
-					</Tabs>
-
-					<div className={ 'mt-28 pb-40-60 d-flex jc-center' }>
-						<HoveredButton text={ 'Показать еще 115 предложений' } to={ '/' } variant={ 'arrowRevert' }/>
-					</div>
+				<div className={ 'mt-28 pb-40-100 d-flex jc-center' }>
+					<HoveredButton
+						text={ 'Показать еще 115 предложений' }
+						to={ '/' }
+						variant={ 'arrowRevert' }
+						className={ 'manrope600-14' }
+					/>
 				</div>
-			</Slide>
+			</div>
 		</div>
 	);
 };

@@ -3,7 +3,6 @@ import { hideMobileMenu, } from '@/store/mobileMenu';
 import Link from 'next/link';
 import collapseArrow from '@/public/icons/collapseArrow.svg';
 import Image from 'next/image';
-import { showMainDropMenuSales, showMainDropMenuServices } from '@/store/mainMenu';
 
 interface IProps {
 	path?: string;
@@ -26,11 +25,6 @@ const CustomMenuItem = (
 		ref
 	}: IProps ) => {
 
-	const onMouseOverCloseOtherDropDown = () => {
-		showMainDropMenuSales( false );
-		showMainDropMenuServices( false );
-	};
-
 	const toCloseMenu = () => {
 		hideMobileMenu( true );
 	};
@@ -39,12 +33,12 @@ const CustomMenuItem = (
 		<>
 			{ path
 				?
-				<Link href={ path } className={ className } onClick={ toCloseMenu } onMouseOver={ onMouseOverCloseOtherDropDown }>
+				<Link href={ path } className={ className } onClick={ toCloseMenu }>
 					<p>{ text }</p>
 				</Link>
 
 				:
-				<div ref={ ref } className={ className } onClick={ toShowDropMenu } onMouseOver={ onMouseOverCloseOtherDropDown }>
+				<div ref={ ref } className={ className } onClick={ toShowDropMenu }>
 					<p className={ textClass }>{ text }</p>
 					<Image src={ collapseArrow } alt={ '' }/>
 					{ component }

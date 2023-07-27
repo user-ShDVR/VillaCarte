@@ -29,7 +29,7 @@ const linkPages = [
 	{ title: 'О компании', link: '/' },
 	{ title: 'Новости', link: '/' },
 	{ title: 'Управление недвижимостью', link: '/' },
-	{ title: 'Консьерж сервис', link: '/' },
+	{ title: 'Консьерж-сервис', link: '/' },
 	{ title: 'Аренда', link: '/' },
 	{ title: 'Продажа', link: '/' },
 	{ title: 'О Пхукете', link: '/' },

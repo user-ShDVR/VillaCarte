@@ -9,13 +9,17 @@
 		line-height: 22px;
 		font-family: Manrope-Bold, sans-serif;
 		color: $colorAccent;
-		border: 2px solid $colorAccent;
+		border: 1.6px solid $colorAccent;
 		background: $colorWhite;
 		text-decoration: none;
 		cursor: pointer;
 		position: relative;
 		display: flex;
 		align-items: center;
+
+		span {
+			letter-spacing: -0.14px;
+		}
 
 		&-link {
 			text-decoration: none;
@@ -76,7 +80,9 @@
 		}
 
 		&-arrowRevert {
-			background: transparent;
+			background: rgba(255, 255, 255, 0.10) ;
+			box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10) !important;
+			backdrop-filter: blur(2px) !important;
 			color: $colorWhite;
 			border-color: $colorWhite;
 

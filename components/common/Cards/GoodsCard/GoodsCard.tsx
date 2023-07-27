@@ -25,30 +25,86 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 		setMouseOver( false );
 	};
 
+	const bgAccentOpacity = {
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		width: '100%',
+		height: '100%',
+		background: 'rgba(0, 0, 0, .5)',
+		zIndex: 3,
+		transition: 'all .5s',
+	};
+
+	const styleBg = !mouseOver ? bgAccentOpacity : {};
+
+	// const bgGradientBlack = {
+	// 	position: 'absolute',
+	// 	top: 0,
+	// 	left: 0,
+	// 	bottom: 0,
+	// 	zIndex: 3,
+	// 	background: 'linear-gradient(0deg, #252525, transparent)',
+	// 	height: '150px',
+	// };
+	//
+	// const styleGradientBg = (!isMobile && mouseOver) ? bgGradientBlack : {};
+
+	const showContent = {
+		opacity: 1,
+		transition: 'opacity .5s',
+	};
+
+	const displayNone = {
+		opacity: 0,
+		transition: 'opacity .5s',
+	};
+
+	const styleShowContent = mouseOver ? showContent : displayNone;
+	const styleShowContentReverse = mouseOver ? displayNone : showContent;
+
+	const scaleImage = {
+		scale: '1.1',
+		transition: 'scale .5s',
+	};
+
+	const scaleImageReverse = {
+		scale: '1',
+		transition: 'scale .5s',
+	};
+
+	const styleScaleImage = mouseOver ? scaleImage : scaleImageReverse;
+
 	return (
 		<div className={ 'goodsCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
 			<Link href={ url }>
 				<div className={ 'pos goodsCard-image overflowNoHidden' }>
-					<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' }/>
-					{ !mouseOver && <div className={ 'bgAccentOpacity' }/> }
-					{ !isMobile && mouseOver && <div className={ 'bgGradientBlack' }/> }
+					<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' } style={ styleScaleImage }/>
+
+					<div style={ styleBg }/>
+					{ !isMobile && <div className={ 'bgGradientBlack' } style={ styleShowContent }/> }
 				</div>
 
-				{ mouseOver && <div className={ 'cardLabel text300 colorWhite' }>Апартаменты | Район: Сурин</div> }
+				<div
+					className={ 'cardLabel text300 colorWhite' }
+					style={ styleShowContent }
+				>
+					Апартаменты | Район: Сурин
+				</div>
+
 				{ isMobile && <div className={ 'cardLabel text300 colorWhite' }>Апартаменты | Район: Сурин</div> }
 
-				{ !mouseOver && <img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/> }
+				<img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' } style={ styleShowContentReverse }/>
 				{ isMobile && <img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/> }
 
-				{ mouseOver &&
-					<div className={ 'description-wrapper' }>
-						<div>
-							<div className={ 'text300 colorWhite' }>Цена: от $100 000</div>
-							<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
-						</div>
-						<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
+				<div className={ 'description-wrapper' } style={ styleShowContent }>
+					<div>
+						<div className={ 'text300 colorWhite' }>Цена: от $100 000</div>
+						<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
 					</div>
-				}
+					<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
+				</div>
+
 				{ isMobile &&
 					<div className={ 'description-wrapper' }>
 						<div>

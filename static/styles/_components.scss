@@ -12,11 +12,15 @@
 
 // CustomSelect
 .customSelect {
-	font-family: $fontManrope600;
-	font-size: 12px;
 	caret-color: transparent;
+	-moz-appearance: none !important;
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	outline: none !important;
+	border: none !important;
 
 	&:hover {
+
 		& > div > div > div {
 			color: $colorDarkWhite;
 		}
@@ -24,8 +28,12 @@
 
 	& > div {
 		background: transparent;
-		border: none;
 		cursor: pointer;
+		outline: none !important;
+		border: none !important;
+		-moz-appearance: none !important;
+		-webkit-appearance: none !important;
+		appearance: none !important;
 
 		& > div > span {
 			display: none;
@@ -34,10 +42,19 @@
 		& > div > div {
 			color: $colorWhite;
 			padding: 0;
-			//margin-right: 0;
+			font-family: $fontManrope700;
+			font-size: 14px;
+			margin: 0;
+			white-space: nowrap;
+			letter-spacing: -0.42px;
 
 			&:hover {
-				color: $colorDarkWhite;
+				//color: $colorDarkWhite;
+			}
+
+			svg {
+				width: 15px;
+				height: 15px;
 			}
 		}
 	}
@@ -48,15 +65,20 @@
 		backdrop-filter: blur(15px);
 		border-radius: 15px;
 		width: 80px;
+		top: 30px;
 
 		.css-1n6sfyn-MenuList {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
 
 			div {
 				background: transparent;
 				color: $colorWhite;
-				padding: 12px 16px;
-				width: 80px;
-				justify-content: start;
+				cursor: pointer;
+				margin-top: 12px !important;
+				margin-bottom: 12px !important;
 
 				&:hover {
 					color: $colorDarkWhite;
@@ -68,15 +90,24 @@
 	.css-1fdsijx-ValueContainer {
 		padding: 2px 2px;
 	}
+
+	.css-t3ipsp-control {
+		outline: none !important;
+		border: none !important;
+		-moz-appearance: none !important;
+		-webkit-appearance: none !important;
+		appearance: none !important;
+		box-shadow: none;
+	}
 }
 
-.dropBgClass .css-1nmdiq5-menu {
-	background: rgba(34, 54, 74, .4) !important;
-	backdrop-filter: blur(15px);
-	box-shadow: 5px 5px 10px 0 rgb(68, 68, 68, .15);
-	top: 42px;
-	border-radius: 0 0 15px 15px;
-}
+//.dropBgClass .css-1nmdiq5-menu {
+//	background: rgba(34, 54, 74, .4) !important;
+//	backdrop-filter: blur(15px);
+//	box-shadow: 5px 5px 10px 0 rgb(68, 68, 68, .15);
+//	top: 42px;
+//	border-radius: 0 0 15px 15px;
+//}
 
 @media (min-width: $media0) {
 	// TitleTextArrowCard
@@ -84,15 +115,24 @@
 		background: $colorWhite;
 		width: 100%;
 		margin-top: 8px;
-		padding: 30px 20px;
+		padding: 32px;
 		cursor: pointer;
+		position: relative;
 
-		a {
-			text-decoration: none;
+		&:hover h3 {
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-color: transparent;
+			background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
 		}
 
 		h3 {
 			max-width: 250px;
+			transition: 2s all;
+		}
+
+		a {
+			text-decoration: none;
 		}
 
 		p {
@@ -108,11 +148,22 @@
 			button {
 				width: 40px;
 				height: 40px;
+				position: absolute;
+				bottom: 32px;
+				left: 32px;
 			}
 		}
 	}
 
-	// VideoSlide
+	// VideoBlock
+	.videoBlock {
+		padding-top: 40px;
+	}
+
+	.videoInner {
+		height: 700px;
+	}
+
 	.slideVideo {
 		width: 100%;
 		height: 700px;
@@ -212,7 +263,6 @@
 
 		.cardPhoto {
 			width: 100%;
-			background: rgba(0, 0, 0, .2);
 		}
 
 		.cardLabel {
@@ -280,7 +330,7 @@
 				&::placeholder {
 					color: $colorText;
 					font-size: 14px;
-					font-family: $fontManrope500;
+					font-family: $fontManrope400;
 					line-height: 20px;
 				}
 			}
@@ -300,16 +350,13 @@
 		backdrop-filter: blur(15px);
 		box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
 
-		h3 {
-			font-family: $fontManrope300;
-		}
-
 		div {
 			background: linear-gradient(225deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.04) 100%);
 			width: 100%;
 			padding: 8px 20px;
 			margin-bottom: 8px;
 			box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+			transition: .2s all;
 
 			&:hover {
 				background: $colorAccent;
@@ -327,7 +374,6 @@
 				text-align: center;
 
 				img {
-
 					width: 24px;
 					height: 24px;
 				}
@@ -588,7 +634,6 @@
 	.ourMessengers-wrapper {
 		display: flex;
 		justify-content: end;
-
 	}
 
 	.ourMessengers {
@@ -719,6 +764,11 @@
 				scale: 1.15;
 			}
 		}
+	}
+
+	// OurMessengers
+	.ourMessengers-wrapper {
+
 	}
 
 	// OfferCard

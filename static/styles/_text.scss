@@ -22,7 +22,8 @@
 		font-family: $fontTTTsarsA300;
 		color: $colorAccent;
 		line-height: 38px;
-		letter-spacing: 0;
+		letter-spacing: 0.14px;
+		font-weight: lighter;
 	}
 
 	.h2Subtitle {
@@ -30,7 +31,7 @@
 		font-family: $fontTTTsarsA300;
 		color: $colorAccent;
 		line-height: 38px;
-		letter-spacing: 0;
+		letter-spacing: 0.14px;
 	}
 
 	.h3TitleText {
@@ -38,6 +39,7 @@
 		font-family: $fontManrope600;
 		color: $colorAccent;
 		line-height: 28px;
+		letter-spacing: 0.14px;
 	}
 
 	.text500 {
@@ -45,6 +47,7 @@
 		font-family: $fontManrope500;
 		color: $colorAccent;
 		line-height: 20px;
+		letter-spacing: 0.14px;
 	}
 
 	.text700 {
@@ -52,6 +55,7 @@
 		font-family: $fontManrope700;
 		color: $colorAccent;
 		line-height: 28px;
+		letter-spacing: 0.14px;
 	}
 
 	.text300 {
@@ -59,6 +63,7 @@
 		font-family: $fontManrope300;
 		color: $colorAccent;
 		line-height: 18px;
+		letter-spacing: 0.14px;
 	}
 
 	.text300-min {
@@ -66,6 +71,7 @@
 		font-family: $fontManrope300;
 		color: $colorAccent;
 		line-height: 16px;
+		letter-spacing: 0.14px;
 	}
 }
 
@@ -146,10 +152,10 @@
 }
 
 @media (min-width: $media1320) {
-.fz-60-200 {
-	font-size: 200px;
-	line-height: 220px;
-}
+	.fz-60-200 {
+		font-size: 200px;
+		line-height: 220px;
+	}
 }
 
 .fz-80 {
@@ -157,7 +163,26 @@
 	line-height: 88px;
 }
 
+// LetterSpacing
+.ls--028 {
+	letter-spacing: -0.28px;
+}
 
+.ls--144 {
+	letter-spacing: -1.44px;
+}
 
+.ls--216 {
+	letter-spacing: -2.16px;
+}
 
+.ls--8 {
+	letter-spacing: -8px;
+}
+
+//differentFonts
+.manrope600-14 {
+	font-size: 14px;
+	font-family: $fontManrope600;
+}
 

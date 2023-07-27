@@ -28,7 +28,7 @@ const FeedBackForm = () => {
 				className={ 'feedBackInputWrapper' }
 				rules={ [
 					{ type: 'string', message: 'Введите Ваше имя' },
-					{ required: true, message: 'Ваше имя' }
+					{ required: true, message: 'Введите Ваше имя' }
 				] }
 			>
 				<Input className={ 'feedBackInput text300' } placeholder={ 'Ваше имя' }/>
@@ -39,7 +39,7 @@ const FeedBackForm = () => {
 				className={ 'feedBackInputWrapper' }
 				rules={ [
 					{ type: 'string', message: 'Введите номер телефона' },
-					{ required: true, message: 'Номер телефона' }
+					{ required: true, message: 'Введите номер телефона' }
 				] }
 			>
 				<PhoneInput

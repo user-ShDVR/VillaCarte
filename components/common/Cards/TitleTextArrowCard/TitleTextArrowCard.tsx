@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import LinkButton from '@/components/common/Buttons/LinkButton';
 import Link from 'next/link';
-import { Fade } from 'react-awesome-reveal';
 import cn from 'classnames';
 
 interface IProps {
@@ -24,7 +23,7 @@ const TitleTextArrowCard = ( { title, text, text2, text3 }: IProps ) => {
 	return (
 		<div className={ 'titleTextArrowCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
 			<Link href={ '/' }>
-				<h3 className={ cn( 'h3TitleText', mouseOver ? 'colorGradient' : '' ) }>{ title }</h3>
+				<h3 className={ 'h3TitleText' }>{ title }</h3>
 
 				<div>
 					<p className={ 'text300 colorText' }>{ text } <br/> <span>{ text2 }</span><br/> <span>{ text3 }</span></p>

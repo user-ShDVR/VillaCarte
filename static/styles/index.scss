@@ -26,6 +26,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	outline: none !important;
 }
 
 html {
@@ -38,7 +39,7 @@ body {
 	padding: 0 !important;
 }
 
-body, html, #root, #__next{
+body, html, #root, #__next {
 	display: flex;
 	width: 100%;
 	font-family: $fontManrope300;
@@ -55,8 +56,15 @@ body, html, #root, #__next{
 	flex-direction: column;
 }
 
-.pointer {
-	cursor: pointer;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+input {
+	&:focus {
+		box-shadow: none !important;
+	}
 }
 
 .icon-spin {

@@ -99,6 +99,8 @@
 		}
 	}
 
+
+
 	// FeedBackBlock
 	.feedBackBlock {
 		position: relative;
@@ -107,7 +109,6 @@
 		.feedBackBlock-bg {
 			background-size: cover;
 			background-repeat: no-repeat;
-			transform: scale(-1, 1);
 			width: 100%;
 			height: 100%;
 			position: absolute;
@@ -116,7 +117,6 @@
 			right: 0;
 			bottom: 0;
 			z-index: -2;
-			opacity: .5;
 		}
 
 		.element-animation {
@@ -127,14 +127,15 @@
 
 			.flowerRight {
 				width: 100%;
-				object-fit: cover;
+				//object-fit: cover;
 				height: 700px;
-				animation: show-flower 2s linear;
+				-webkit-animation: show-flower 1s linear;
+				animation: show-flower 1s linear;
 			}
 
 			@-webkit-keyframes show-flower {
 				0% {
-					transform: scale(1.3);
+					transform: scale(1.2);
 				}
 				100% {
 					transform: scale(1);
@@ -143,7 +144,7 @@
 
 			@keyframes show-flower {
 				0% {
-					transform: scale(1.3);
+					transform: scale(1.2);
 				}
 				100% {
 					transform: scale(1);
@@ -464,7 +465,7 @@
 	.feedBackBlock {
 
 		.feedBackBlock-bg {
-			left: -120px;
+
 		}
 
 		.element-animation {
@@ -511,7 +512,7 @@
 	.feedBackBlock {
 
 		.feedBackBlock-bg {
-			left: -180px;
+
 		}
 
 		.flowerRight {
@@ -552,7 +553,7 @@
 	.feedBackBlock {
 
 		.feedBackBlock-bg {
-			left: -320px;
+
 		}
 
 		.flowerRight {
@@ -599,6 +600,7 @@
 
 	// BestProjects
 	.bestProjects {
+		margin-top: -250px;
 
 		&-tabList {
 			display: flex;
@@ -606,7 +608,7 @@
 		}
 
 		h2 {
-			max-width: 70%;
+			max-width: 80%;
 		}
 
 		&-tabs {
@@ -630,7 +632,7 @@
 		}
 
 		.feedBackBlock-bg {
-			left: -560px;
+
 		}
 
 		.flowerRight {
@@ -699,7 +701,7 @@
 	// AllServices
 	.allServices {
 		position: relative;
-		padding-top: 60px;
+		padding-top: 100px;
 
 		.allServices-bg {
 			display: block;
@@ -718,9 +720,10 @@
 		.leavesVideo {
 			display: block;
 			position: absolute;
-			top: 246px;
-			left: -100px;
+			top: 281px;
+			left: 0;
 			z-index: 0;
+			scale: 1.0424;
 		}
 	}
 
@@ -737,13 +740,13 @@
 				height: 300px;
 
 				h3 {
-					height: 72px;
+
 				}
 
 				div {
 					display: flex;
 					flex-direction: column;
-					height: 170px;
+
 				}
 			}
 		}
@@ -753,7 +756,7 @@
 	.feedBackBlock {
 
 		.feedBackBlock-bg {
-			left: -720px;
+
 		}
 
 		.flowerRight {
@@ -877,7 +880,7 @@
 	.feedBackBlock {
 
 		.feedBackBlock-bg {
-			left: -800px;
+
 		}
 
 		.flowerRight {
@@ -910,7 +913,7 @@
 		&-inner {
 
 			h2 {
-				margin-top: 40px;
+				margin-top: 110px;
 				margin-bottom: 20px;
 			}
 
@@ -933,9 +936,9 @@
 	// FeedBackBlock
 	.feedBackBlock {
 
-		.feedBackBlock-bg {
-			opacity: .5;
-			left: -1040px;
+		.element-animation {
+			right: -80px;
+			scale: 1.3;
 		}
 	}
 

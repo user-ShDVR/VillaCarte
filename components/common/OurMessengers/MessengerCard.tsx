@@ -29,7 +29,7 @@ const MessengerCard = ( { url, icon, whiteIcon, text }: IProps ) => {
 					? <Image src={ whiteIcon } alt={ text }/>
 					: <Image src={ icon } alt={ text }/>
 				}
-				<p className={ 'text500' }>{ text }</p>
+				<p className={ 'text500 ls--028' }>{ text }</p>
 			</Link>
 		</div>
 

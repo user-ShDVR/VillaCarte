@@ -7,7 +7,6 @@ import whatsappWhiteIcon from '@/public/icons/socials/whatsappWhiteIcon.svg';
 import facebookWhiteIcon from '@/public/icons/socials/facebookWhiteIcon.svg';
 import MessengerCard from '@/components/common/OurMessengers/MessengerCard';
 
-
 const messengers = [
 	{ url: '/', icon: telegramIcon, whiteIcon: telegramWhiteIcon, text: 'Telegram' },
 	{ url: '/', icon: whatsappIcon, whiteIcon: whatsappWhiteIcon, text: 'WhatsApp' },

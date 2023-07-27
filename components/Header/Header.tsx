@@ -8,7 +8,6 @@ import logoDesktop from '@/public/logoDesktop.svg';
 import BurgerButton from '@/components/Header/MobileNav/BurgerButton';
 import MobileMainMenu from '@/components/Header/MobileNav/MobileMainMenu';
 import cn from 'classnames';
-import { Fade } from 'react-awesome-reveal';
 import MainMenu from '@/components/Header/MainMenu/MainMenu';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
@@ -81,37 +80,36 @@ const Header = () => {
 		<header style={ style } className="container header">
 			{/*// @ts-ignore*/ }
 			<div ref={ ref } className="header-wrapper">
-				<Fade delay={ 1e2 } cascade damping={ 1e-1 }>
-					<div className={ 'header-logo-wrapper' }>
-						<Link href={ '/' } style={ scrolled ? { color: 'white' } : {} } className="header-logo">
-							{ isMobile
-								? <Image src={ logoImg } alt={ 'VillaCarte' }/>
-								: <Image src={ logoDesktop } alt={ 'VillaCarte' }/>
-							}
-						</Link>
-					</div>
 
-					<div className={ 'd-flex ai-center' }>
+				<div className={ 'header-logo-wrapper' }>
+					<Link href={ '/' } style={ scrolled ? { color: 'white' } : {} } className="header-logo">
+						{ isMobile
+							? <Image src={ logoImg } alt={ 'VillaCarte' }/>
+							: <Image src={ logoDesktop } alt={ 'VillaCarte' }/>
+						}
+					</Link>
+				</div>
 
-						<MainMenu dropBgStyle={ dropBgStyle } dropBgClass={ dropBgClass }/>
+				<div className={ 'd-flex ai-center' }>
 
-						<SimpleButton
-							text={ 'Заказать звонок' }
-							variant={ 'only' }
-							className={ 'text-nowrap ml-10' }
-							onClick={ toCallModal }
-						/>
+					<MainMenu dropBgStyle={ dropBgStyle } dropBgClass={ dropBgClass }/>
 
-						<div className={ 'header-wrapper-mobileMenu d-block d-lg-none ml-10' }>
-							<BurgerButton menu={ mobileMenu } toShowMenu={ toShowMenu } scrolled={ scrolled }/>
+					<SimpleButton
+						text={ 'Заказать звонок' }
+						variant={ 'only' }
+						className={ 'text-nowrap ml-10' }
+						onClick={ toCallModal }
+					/>
 
-							<div className={ cn( mobileMenu ? 'mobileMainMenu' : 'mobileMainMenu-active' ) }>
-								{ mobileMenu && <MobileMainMenu/> }
-							</div>
+					<div className={ 'header-wrapper-mobileMenu d-block d-lg-none ml-10' }>
+						<BurgerButton menu={ mobileMenu } toShowMenu={ toShowMenu } scrolled={ scrolled }/>
+
+						<div className={ cn( mobileMenu ? 'mobileMainMenu' : 'mobileMainMenu-active' ) }>
+							{ mobileMenu && <MobileMainMenu/> }
 						</div>
 					</div>
+				</div>
 
-				</Fade>
 			</div>
 
 			{ requestCallModal && <ModalCallRequest/> }

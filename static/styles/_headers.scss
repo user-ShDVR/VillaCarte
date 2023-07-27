@@ -209,6 +209,7 @@
 		align-items: center;
 		justify-content: center;
 		//height: 40px;
+		width: 78px;
 		text-transform: uppercase;
 		//width: 84px !important;
 	}
@@ -242,23 +243,24 @@
 					padding: 10px;
 					cursor: pointer;
 
-					&:hover p {
-						color: $colorDarkWhite;
-					}
+					//&:hover p {
+					//	color: $colorDarkWhite;
+					//}
 
 					p {
 						//padding: 1px;
 						color: $colorWhite;
-						font-family: $fontManrope600;
-						font-size: 12px;
+						font-family: $fontManrope700;
+						font-size: 14px;
 						//margin-right: auto;
 						margin: 0;
 						white-space: nowrap;
+						letter-spacing: -0.42px;
 					}
 
 					img {
-						width: 20px;
-						height: 20px;
+						width: 15px;
+						height: 15px;
 						margin-left: 4px;
 					}
 
@@ -268,7 +270,7 @@
 						flex-direction: column;
 						align-items: flex-start;
 						position: absolute;
-						top: 51px;
+						top: 48px;
 						left: 0;
 						padding: 16px 16px 8px 16px;
 						//border-radius: 0 0 15px 15px;
