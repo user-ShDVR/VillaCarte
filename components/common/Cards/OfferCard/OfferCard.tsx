@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { staticResource } from '@/utils/resources';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
+import { useStore } from 'effector-react';
+import { $currencies } from '@/store/currencies';
 
 interface IProps {
 	url: string;
@@ -9,6 +11,21 @@ interface IProps {
 }
 
 const OfferCard = ( { url, image }: IProps ) => {
+	const currency = useStore( $currencies );
+
+	let cur;
+
+	switch ( currency.value ) {
+		case 'usd' :
+			cur = '$';
+			break;
+		case 'rub':
+			cur = '₽';
+			break;
+		case 'thb':
+			cur = '฿';
+			break;
+	}
 
 	return (
 		<div className={ 'offerCard' }>
@@ -18,7 +35,14 @@ const OfferCard = ( { url, image }: IProps ) => {
 
 					<div className={ 'description-wrapper' }>
 
-						<div className={ 'text300 colorWhite' }>01/03 | Апартаменты | Район: Банг Тао</div>
+						<div className={ 'text700 colorWhite fz-12' }>
+							01/
+							<span className={ 'color03' }>03</span>
+							<span className={ 'ml-8' }/>|<span className={ 'ml-8' }/>
+							Апартаменты
+							<span className={ 'ml-8' }/>|<span className={ 'ml-8' }/>
+							Район: Банг Тао
+						</div>
 
 						<h2 className={ 'h2Subtitle colorWhite pt-12' }>Layan Green Park</h2>
 
@@ -28,7 +52,7 @@ const OfferCard = ( { url, image }: IProps ) => {
 						</article>
 
 						<div className={ 'description-down' }>
-							<h2 className={ 'h2Subtitle colorWhite pt-20 m-0' }>от $147.000</h2>
+							<h2 className={ 'h2Subtitle colorWhite pt-20 m-0 pb-20' }>от { cur }147.000</h2>
 
 							<HoveredButton
 								to={ '/' }

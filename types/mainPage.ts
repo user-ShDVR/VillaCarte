@@ -25,9 +25,11 @@ export interface IGoods {
 }
 
 export interface ICurrencies {
-	usd: number;
-	thb: number;
-	rub: number;
+	// usd: number;
+	// thb: number;
+	// rub: number;
+	value: string;
+	label: string;
 }
 
 export interface ISocialsMediaResources {

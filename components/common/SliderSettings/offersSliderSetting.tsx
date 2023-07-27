@@ -12,7 +12,7 @@ export const offersSliderSetting = {
 	prevArrow: <SamplePrevArrow/>,
 	autoplaySpeed: 999995000,
 	swipeToSlide: true,
-	slidesToShow: 1.05,
+	slidesToShow: 1.1,
 	slidesToScroll: 1,
 	initialSlide: 0,
 	responsive: [

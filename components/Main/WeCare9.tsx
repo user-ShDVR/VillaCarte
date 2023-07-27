@@ -5,7 +5,7 @@ import Image from 'next/image';
 const WeCare = () => {
 	return (
 		<div className={ 'weCare' }>
-			<div className={ 'bgGradient' }/>
+			<div className={ 'bgTransparent-white' }/>
 			<div className={ 'container-xl pos' }>
 				<Image src={ groupPhoto } alt={ 'VillaCarte' }/>
 				<div className={ 'bgGradientBlack' }/>

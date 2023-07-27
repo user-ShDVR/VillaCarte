@@ -76,6 +76,10 @@
 	color: $colorGrey !important;
 }
 
+.color03 {
+	color: $color03 !important;
+}
+
 .colorGradient {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -85,6 +89,10 @@
 
 .bgGradient {
 	background: $colorGradient !important;
+}
+
+.bgTransparent-white {
+	background: linear-gradient(90deg, #4072A3, #fff) border-box !important;
 }
 
 .bgLightGrey {
@@ -758,6 +766,10 @@ img {
 
 .ml-5 {
 	margin-left: 5px;
+}
+
+.ml-8 {
+	margin-left: 8px;
 }
 
 .ml-10 {

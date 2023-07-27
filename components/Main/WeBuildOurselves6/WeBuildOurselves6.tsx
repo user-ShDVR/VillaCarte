@@ -13,7 +13,7 @@ const list = [
 
 const WeBuildOurselves = () => {
 	return (
-		<div className={ 'bgGradient weBuildOurselves' }>
+		<div className={ 'weBuildOurselves' }>
 			<div className={ 'container pt-60 d-md-flex' }>
 				<h2 className={ 'h1Title colorWhite col-md-6 ls--216' }>Строим сами – <br/> а значит вы:</h2>
 

@@ -3,6 +3,7 @@ import { saveUserInfo } from '@/store/account';
 import { IOption } from '@/components/common/Selects/CurrencySelect';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
 import cn from 'classnames';
+import { updateLanguages } from '@/store/languages';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
@@ -24,7 +25,7 @@ const LanguageSelect = ( { className, ...newProps }: IProps ) => {
 	return (
 		<div className={ 'header-select-wrapper' }>
 
-			<CustomSelect options={ languages } className={ cn( className, 'h-84' ) }/>
+			<CustomSelect options={ languages } className={ cn( className, 'h-84' ) } updateStore={ updateLanguages }/>
 
 		</div>
 	);

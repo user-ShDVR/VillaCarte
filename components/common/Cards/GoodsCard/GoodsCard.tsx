@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import arrowRight from '@/public/icons/arrowBtnWhite.svg';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import { useStore } from 'effector-react';
+import { $currencies } from '@/store/currencies';
 
 interface IProps {
 	image: string;
@@ -24,6 +26,22 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 	const onMouseLeave = () => {
 		setMouseOver( false );
 	};
+
+	const currency = useStore( $currencies );
+
+	let cur;
+
+	switch ( currency.value ) {
+		case 'usd' :
+			cur = '$';
+			break;
+		case 'rub':
+			cur = '₽';
+			break;
+		case 'thb':
+			cur = '฿';
+			break;
+	}
 
 	const bgAccentOpacity = {
 		position: 'absolute',
@@ -99,7 +117,7 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 
 				<div className={ 'description-wrapper' } style={ styleShowContent }>
 					<div>
-						<div className={ 'text300 colorWhite' }>Цена: от $100 000</div>
+						<div className={ 'text300 colorWhite' }>Цена: от { cur }100 000</div>
 						<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
 					</div>
 					<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
@@ -108,7 +126,7 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 				{ isMobile &&
 					<div className={ 'description-wrapper' }>
 						<div>
-							<div className={ 'text300 colorWhite' }>Цена: от $100 000</div>
+							<div className={ 'text300 colorWhite' }>Цена: от { cur }100 000</div>
 							<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
 						</div>
 						<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>

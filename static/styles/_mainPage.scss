@@ -3,14 +3,13 @@
 @media (min-width: $media0) {
 	.palmsTransparent-bg {
 		position: absolute;
-		top: 40%;
+		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
 		background-size: cover;
 		background-repeat: no-repeat;
-		z-index: 1;
-		opacity: .7;
+		z-index: 0;
 	}
 
 	// TopBlock
@@ -159,6 +158,9 @@
 
 	// WeBuildOurselves
 	.weBuildOurselves {
+		position: relative;
+		z-index: 1;
+		padding-top: 40px;
 
 		ul {
 			padding: 12px 0 40px;
@@ -494,8 +496,8 @@
 
 @media (min-width: $media576) {
 	.palmsTransparent-bg {
-		top: 44%;
-		left: 140px;
+		//top: 44%;
+		//left: 140px;
 	}
 
 	// BestProjects
@@ -528,8 +530,8 @@
 
 @media (min-width: $media768) {
 	.palmsTransparent-bg {
-		top: 30%;
-		left: 270px;
+		//top: 30%;
+		//left: 270px;
 	}
 
 	// AllServices
@@ -595,7 +597,7 @@
 
 @media (min-width: $media1023) {
 	.palmsTransparent-bg {
-		left: 380px;
+		//left: 380px;
 	}
 
 	// BestProjects
@@ -695,7 +697,7 @@
 
 @media (min-width: $media1200) {
 	.palmsTransparent-bg {
-		left: 430px;
+		//left: 430px;
 	}
 
 	// AllServices
@@ -904,7 +906,8 @@
 
 @media (min-width: $media1440) {
 	.palmsTransparent-bg {
-		left: 600px;
+		//left: 600px;
+		scale: 1.26;
 	}
 
 	// BestProjects

@@ -648,7 +648,7 @@
 		.description-wrapper {
 
 			.hoveredButton-link {
-				margin-bottom: 10px !important;
+				margin-bottom: 30px !important;
 			}
 		}
 
@@ -687,6 +687,12 @@
 	// OfferCard
 	.offerCard {
 		width: 99%;
+
+		.description-wrapper {
+			padding-top: 44px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
 	}
 
 	// MediaCard
@@ -795,7 +801,7 @@
 			justify-content: space-between;
 
 			h2, article {
-				margin-top: -180px;
+				margin-top: -130px;
 			}
 
 			a {

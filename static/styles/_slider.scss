@@ -209,9 +209,14 @@
 			right: -20px;
 			bottom: 46%;
 			border-radius: 50%;
-			padding: 12px 9px;
-			border: 1px solid $colorWhite;
+			padding: 12px;
+			border: 2px solid $colorWhite;
 			backdrop-filter: blur(2px);
+
+			img {
+				width: 14px;
+				height: 10px;
+			}
 		}
 
 		.sliderPrev {
@@ -247,7 +252,7 @@
 	.offersSlider {
 
 		.sliderNext {
-			right: 38px;
+			right: 88px;
 		}
 	}
 }
@@ -257,7 +262,7 @@
 	.offersSlider {
 
 		.sliderNext {
-			right: 45px;
+			right: 98px;
 		}
 	}
 }
@@ -267,7 +272,7 @@
 	.offersSlider {
 
 		.sliderNext {
-			right: 50px;
+			right: 108px;
 			cursor: pointer;
 		}
 	}

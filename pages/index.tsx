@@ -9,7 +9,8 @@ import metaImage from '@/public/metaImageTest.png';
 import scrollArrow from '@/public/icons/scrollArrow.svg';
 // import 'animate.css';
 import 'react-tabs/style/react-tabs.css';
-import palmsTransparent from '@/public/palmsTransparent.png';
+// import palmsTransparent from '@/public/palmsTransparent.png';
+import weBuildBg from '@/public/weBuildBg.png';
 import TopBlock from '@/components/Main/TopBlock';
 import AllServices from '@/components/Main/AllServices2';
 import BestProjects from '@/components/Main/BestProjects4';
@@ -85,17 +86,18 @@ export default function Home( { info }: any ) {
 
 				<FeedBackBlock/>
 
-				<div className={ 'bgGradient pos' }>
-					<WeBuildOurselves/>
+				<div className={ 'pos overflow-hidden' }>
+					<div style={ { backgroundImage: `url(${ weBuildBg.src })` } } className={ 'palmsTransparent-bg' }/>
 
-					<div style={ { backgroundImage: `url(${ palmsTransparent.src })` } } className={ 'palmsTransparent-bg' }/>
+					<WeBuildOurselves/>
 
 					<JoinTheClub/>
 
 					<WeAreTrusted/>
+
+					<WeCare/>
 				</div>
 
-				<WeCare/>
 
 				<ShareContent/>
 

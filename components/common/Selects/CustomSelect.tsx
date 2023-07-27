@@ -6,11 +6,13 @@ import cn from 'classnames';
 interface IProps {
 	options: IOption[];
 	className?: string;
+	updateStore?: any;
 }
 
-const CustomSelect = ( { options, className }: IProps ) => {
+const CustomSelect = ( { options, className, updateStore }: IProps ) => {
 
 	const handleChange = ( selectedOption: any ) => {
+		updateStore( selectedOption );
 		console.log( selectedOption );
 	};
 
