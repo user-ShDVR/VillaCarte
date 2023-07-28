@@ -742,7 +742,8 @@
 					overflow: hidden;
 
 					&::placeholder {
-						color: $colorDarkWhite;
+						color: $colorWhite;
+						opacity: .6;
 						font-size: 14px;
 						font-family: $fontManrope500;
 						line-height: 20px;

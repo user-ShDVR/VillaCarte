@@ -4,6 +4,13 @@
 //    line-height: 0;
 //}
 
+:where(.css-dev-only-do-not-override-12upa3x).ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus {
+	border-bottom: 1px solid $colorDarkWhite !important;
+}
+:where(.css-dev-only-do-not-override-12upa3x).ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+	border-bottom: 1px solid $colorDarkWhite !important;
+}
+
 .m-0-auto {
 	margin: 0 auto;
 }
@@ -57,6 +64,11 @@
 
 .colorWhite {
 	color: $colorWhite !important;
+}
+
+.colorWhite60 {
+	color: $colorWhite !important;
+	opacity: .6 !important;
 }
 
 .colorWhite70 {

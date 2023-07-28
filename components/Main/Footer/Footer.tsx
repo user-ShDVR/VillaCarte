@@ -26,13 +26,13 @@ const socialsStock = [
 ];
 
 const linkPages = [
-	{ title: 'О компании', link: '/' },
-	{ title: 'Новости', link: '/' },
-	{ title: 'Управление недвижимостью', link: '/' },
-	{ title: 'Консьерж-сервис', link: '/' },
-	{ title: 'Аренда', link: '/' },
 	{ title: 'Продажа', link: '/' },
+	{ title: 'Аренда', link: '/' },
+	{ title: 'Консьерж-сервис', link: '/' },
+	{ title: 'Управление недвижимостью', link: '/' },
+	{ title: 'О компании', link: '/' },
 	{ title: 'О Пхукете', link: '/' },
+	{ title: 'Новости', link: '/' },
 ];
 
 const ContactsBlock = () => {
@@ -64,7 +64,9 @@ const ContactsBlock = () => {
 
 					<div className={ 'linkPages' }>
 						{ linkPages.map( ( item, index ) =>
-							<Link href={ item.link } key={ index } className={ 'text300 colorText' }>{ item.title }</Link>
+							<Link href={ item.link } key={ index }>
+								<p className={ 'text300 colorText' }>{ item.title }</p>
+							</Link>
 						) }
 					</div>
 

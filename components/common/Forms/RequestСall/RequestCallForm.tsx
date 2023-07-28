@@ -29,8 +29,8 @@ const RequestCallForm = () => {
 						name="username"
 						className={ 'requestCallInputWrapper' }
 						rules={ [
-							{ type: 'string', message: 'Введите Ваше имя' },
-							{ required: true, message: 'Ваше имя' }
+							{ type: 'string', message: '' },
+							{ required: true, message: '' }
 						] }
 					>
 						<Input className={ 'requestCallInput text300' } placeholder={ 'Ваше имя' }/>
@@ -40,8 +40,8 @@ const RequestCallForm = () => {
 						name="phone"
 						className={ 'requestCallInputWrapper' }
 						rules={ [
-							{ type: 'string', message: 'Введите номер телефона' },
-							{ required: true, message: 'Номер телефона' }
+							{ type: 'string', message: '' },
+							{ required: true, message: '' }
 						] }
 					>
 						<PhoneInput
@@ -51,7 +51,7 @@ const RequestCallForm = () => {
 						/>
 					</Form.Item>
 
-					<p className={ 'text300-min mt-16 colorWhite70' }>
+					<p className={ 'text300-min mt-16 colorWhite60' }>
 						Нажимая кнопку “Отправить запрос” я даю согласие на обработку моих персональных данных
 					</p>
 
