@@ -2,7 +2,7 @@ import React from 'react';
 
 const BgVideo = () => {
 
-	const video = { link: require( '@/public/VillaCarte.mp4' ) };
+	const video = { link: require( '@/public/mainPalms.mp4' ) };
 
 	return (
 		<div className={'videoWrapper'}>
