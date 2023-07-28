@@ -16,13 +16,13 @@ const ReviewCard = ( { name, profession, avatar, text }: IProps ) => {
 				<Image src={ avatar } alt={ name }/>
 				<div className={ 'pl-20' }>
 					<h3 className={ 'h3TitleText colorWhite' }>{ name }</h3>
-					<p className={ 'text300 colorWhite70' }>{ profession }</p>
+					<p className={ 'text300 colorWhite' }>{ profession }</p>
 				</div>
 			</div>
 
 			<div className={ 'divider' }/>
 
-			<p className={ 'text300 colorWhite70' }>{ text }</p>
+			<p className={ 'text300 colorWhite' }>{ text }</p>
 
 		</div>
 	);

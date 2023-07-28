@@ -1,31 +1,20 @@
 import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
+import Link from 'next/link';
 
 interface IProps {
-	video: any;
+	image: any;
+	path: string;
 }
 
-const YouTubeCard = ( { video }: IProps ) => {
-	const onPlayerReady: YouTubeProps['onReady'] = ( event ) => {
-		event.target.pauseVideo();
-	};
-
-	const opts: YouTubeProps['opts'] = {
-		height: '190',
-		width: '100%',
-		playerVars: {},
-	};
+const YouTubeCard = ( { image, path }: IProps ) => {
 
 	return (
-		<div className={ 'mediaCard' }>
-			<YouTube
-				videoId={ video }
-				opts={ opts }
-				onReady={ onPlayerReady }
-				className={ 'youTube' }
-				iframeClassName={ 'youTubeFrame' }
-			/>
-		</div>
+		<Link target={ '_blank' } href={ path }>
+			<div className={ 'mediaCard' }>
+				<img src={ image } alt={ '' }/>
+			</div>
+		</Link>
 	);
 };
 

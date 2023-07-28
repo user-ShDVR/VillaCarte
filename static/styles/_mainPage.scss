@@ -211,8 +211,7 @@
 						width: 100%;
 
 						h6 {
-							color: $colorWhite;
-							opacity: .5;
+							color: rgba(255, 255, 255, .5);
 						}
 
 						p {
@@ -977,19 +976,19 @@
 
 					.stepLine {
 						top: 107px;
-						animation: stream 1s linear;
+						//animation: stream 1s linear;
 						width: 100%;
 					}
 
-					@keyframes stream {
-						0% {
-							transform: translate(-98%, 0);
-						}
-
-						100% {
-							transform: translate(0, 0);
-						}
-					}
+					//@keyframes stream {
+					//	0% {
+					//		transform: translate(-98%, 0);
+					//	}
+					//
+					//	100% {
+					//		transform: translate(0, 0);
+					//	}
+					//}
 
 					.step {
 

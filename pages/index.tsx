@@ -98,7 +98,6 @@ export default function Home( { info }: any ) {
 					<WeCare/>
 				</div>
 
-
 				<ShareContent/>
 
 				<Footer/>

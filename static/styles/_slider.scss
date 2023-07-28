@@ -141,6 +141,8 @@
 
 		.slick-track {
 			height: fit-content;
+			display: flex;
+			justify-content: end;
 		}
 
 		.slick-slider {

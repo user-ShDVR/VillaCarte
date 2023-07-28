@@ -12,7 +12,7 @@ export const weAreTrustedSliderSettings = {
 	prevArrow: <SamplePrevArrow/>,
 	autoplaySpeed: 5000,
 	swipeToSlide: true,
-	slidesToShow: 2,
+	slidesToShow: 2.02,
 	slidesToScroll: 1,
 	initialSlide: 0,
 	responsive: [

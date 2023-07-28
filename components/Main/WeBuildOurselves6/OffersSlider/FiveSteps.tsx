@@ -93,8 +93,10 @@ const FiveSteps = () => {
 				<div className={ 'container' }>
 					<div className={ 'steps' }>
 
-						<div className={ 'step' } style={ step >= 1 ? { display: 'block' } : { display: 'none' } }>
-							<h6 className={ 'text300 fz-80 pl-16' }>01</h6>
+						<div className={ 'step' }>
+							<h6 className={ 'text300 fz-80 pl-16' } style={ step >= 1 ? { opacity: '1' } : { opacity: '0' } }>
+								01
+							</h6>
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
@@ -102,8 +104,10 @@ const FiveSteps = () => {
 							</p>
 						</div>
 
-						<div className={ 'step' } style={ step >= 5 ? { display: 'block' } : { display: 'none' } }>
-							<h6 className={ 'text300 fz-80 pl-16' }>02</h6>
+						<div className={ 'step' }>
+							<h6 className={ 'text300 fz-80 pl-16' } style={ step >= 4 ? { opacity: '1' } : { opacity: '0' } }>
+								02
+							</h6>
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
@@ -111,8 +115,10 @@ const FiveSteps = () => {
 							</p>
 						</div>
 
-						<div className={ 'step' } style={ step >= 12 ? { display: 'block' } : { display: 'none' } }>
-							<h6 className={ 'text300 fz-80 pl-16' }>03</h6>
+						<div className={ 'step' }>
+							<h6 className={ 'text300 fz-80 pl-16' } style={ step >= 9 ? { opacity: '1' } : { opacity: '0' } }>
+								03
+							</h6>
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
@@ -120,8 +126,10 @@ const FiveSteps = () => {
 							</p>
 						</div>
 
-						<div className={ 'step' } style={ step >= 20 ? { display: 'block' } : { display: 'none' } }>
-							<h6 className={ 'text300 fz-80 pl-16' }>04</h6>
+						<div className={ 'step' }>
+							<h6 className={ 'text300 fz-80 pl-16' } style={ step >= 16 ? { opacity: '1' } : { opacity: '0' } }>
+								04
+							</h6>
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
@@ -129,8 +137,10 @@ const FiveSteps = () => {
 							</p>
 						</div>
 
-						<div className={ 'step' } style={ step >= 33 ? { display: 'block' } : { display: 'none' } }>
-							<h6 className={ 'text300 fz-80 pl-16' }>05</h6>
+						<div className={ 'step' }>
+							<h6 className={ 'text300 fz-80 pl-16' } style={ step >= 26 ? { opacity: '1' } : { opacity: '0' } }>
+								05
+							</h6>
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
