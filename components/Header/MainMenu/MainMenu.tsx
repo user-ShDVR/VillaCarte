@@ -103,8 +103,10 @@ const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 				/>
 			</nav>
 
-			<LanguageSelect className={ cn( dropBgClass, 'mr-10 ml-20 fz-12-14' ) }/>
-			<CurrencySelect className={ cn( dropBgClass, 'mr-20 ml-10 fz-12-14' ) }/>
+			<div className={'ml-20'}/>
+
+			<LanguageSelect className={ cn( dropBgClass, 'fz-12-14' ) }/>
+			<CurrencySelect className={ cn( dropBgClass, 'fz-12-14' ) }/>
 		</div>
 	);
 };
