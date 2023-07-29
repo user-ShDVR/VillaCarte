@@ -1,9 +1,9 @@
 import React from 'react';
 import { saveUserInfo } from '@/store/account';
-import { IOption } from '@/components/common/Selects/CurrencySelect';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
 import cn from 'classnames';
 import { updateLanguages } from '@/store/languages';
+import { ILanguages } from '@/types/mainPage';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
@@ -11,9 +11,9 @@ interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTML
 
 const LanguageSelect = ( { className, ...newProps }: IProps ) => {
 
-	const languages: IOption[] = [
-		{ value: 'ru', label: 'ru' },
+	const languages: ILanguages[] = [
 		{ value: 'en', label: 'en' },
+		{ value: 'ru', label: 'ru' },
 	];
 
 	const onChange = async ( e: any ) => {

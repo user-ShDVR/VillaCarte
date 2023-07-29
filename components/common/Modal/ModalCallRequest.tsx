@@ -8,6 +8,7 @@ import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import ModalCloseButton from '@/components/common/Buttons/ModalCloseButton';
 import { hideModal } from '@/store/modal';
+import { lang } from '@/pages';
 
 const ModalCallRequest = () => {
 	const toCloseModal = () => {
@@ -27,9 +28,9 @@ const ModalCallRequest = () => {
 				<div className={ 'container pos feedBackBlock-content' }>
 					<div>
 						<div>
-							<h2 className={ 'h2Subtitle' }>Закажите <br/> персональную подборку</h2>
+							<h2 className={ 'h2Subtitle' }>{ lang?.orderAPersonalSelection || '' }</h2>
 							<h6 className={ 'text300 colorText pt-8' }>
-								Вам позвонит менеджер и подберёт недвижимость под ваши индивидуальные запросы
+								{ lang?.ourManagerWillCallYou || '' }
 							</h6>
 						</div>
 

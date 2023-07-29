@@ -6,6 +6,7 @@ import telegramWhiteIcon from '@/public/icons/socials/telegramWhiteIcon.svg';
 import whatsappWhiteIcon from '@/public/icons/socials/whatsappWhiteIcon.svg';
 import facebookWhiteIcon from '@/public/icons/socials/facebookWhiteIcon.svg';
 import MessengerCard from '@/components/common/OurMessengers/MessengerCard';
+import { lang } from '@/pages';
 
 const messengers = [
 	{ url: '/', icon: telegramIcon, whiteIcon: telegramWhiteIcon, text: 'Telegram' },
@@ -17,7 +18,7 @@ const OurMessengers = () => {
 
 	return (
 		<div className={ 'ourMessengers' }>
-			<h3 className={ 'h3TitleText fz-24 mb-28' }>Наши месенджеры <br/> для связи</h3>
+			<h3 className={ 'h3TitleText fz-24 mb-28' }>{ lang?.contactUsThroughOurMessengers || '' }</h3>
 
 			{ messengers.map( item =>
 				<MessengerCard

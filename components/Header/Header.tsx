@@ -14,6 +14,7 @@ import SimpleButton from '@/components/common/Buttons/SimpleButton';
 import { $modalVisible, showModal } from '@/store/modal';
 import { EModal_VisibleStore } from '@/types/modal';
 import ModalCallRequest from '@/components/common/Modal/ModalCallRequest';
+import { lang } from '@/pages';
 
 const Header = () => {
 	const size = useWindowSize();
@@ -95,7 +96,7 @@ const Header = () => {
 					<MainMenu dropBgStyle={ dropBgStyle } dropBgClass={ dropBgClass }/>
 
 					<SimpleButton
-						text={ 'Заказать звонок' }
+						text={ lang?.requestACall || '' }
 						variant={ 'only' }
 						className={ 'text-nowrap ml-10' }
 						onClick={ toCallModal }

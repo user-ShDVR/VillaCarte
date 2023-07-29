@@ -13,6 +13,7 @@ import { useStore } from 'effector-react';
 import { IMainPage } from '@/types/mainPage';
 import { $mainPageInfo } from '@/store/mainPage';
 import InstagramCard from '@/components/common/Cards/MediaCards/InstagramCard/InstagramCard';
+import { lang } from '@/pages';
 
 const videos = [
 	{ image: videoFrame_1, path: 'https://youtu.be/ew2AIrxIdhM/', code: 1 },
@@ -44,7 +45,7 @@ const ShareContent = () => {
 
 			<div className={ 'container pt-60-80' }>
 				<div>
-					<h2 className={ 'h1Title ls--216' }>Делимся эксклюзивным <br/> контентом с острова</h2>
+					<h2 className={ 'h1Title ls--216' }>{ lang?.sharingExclusiveContentFromTheIsland || '' }</h2>
 
 					<div className={ 'mediaCards' }>
 						<div className={ 'mediaCard-wrapper' }>
@@ -54,7 +55,7 @@ const ShareContent = () => {
 							<DefaultMediaCard
 								icon={ youtubeIcon }
 								hoveredIcon={ ytMedia }
-								text={ 'Смотреть экспертные обзоры' }
+								text={ lang?.watchExpertReviews || '' }
 								link={ 'https://www.youtube.com/@VillaCartePhuket/videos' }
 							/>
 						</div>
@@ -66,7 +67,7 @@ const ShareContent = () => {
 							<DefaultMediaCard
 								icon={ instagramIcon }
 								hoveredIcon={ instaMedia }
-								text={ 'Узнать все о недвижимости в Таиланде' }
+								text={ lang?.learnAllAboutRealEstateInThailand || '' }
 								link={ 'https://www.instagram.com/villacarte.vip/?igshid=NTc4MTIwNjQ2YQ%3D%3D' }
 							/>
 						</div>

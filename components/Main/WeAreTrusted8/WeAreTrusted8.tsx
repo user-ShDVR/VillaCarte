@@ -4,39 +4,40 @@ import avatar1 from '@/public/icons/avatar1.png';
 import avatar2 from '@/public/icons/avatar2.png';
 import ReviewCard from '@/components/common/Cards/ReviewCard/ReviewCard';
 import { weAreTrustedSliderSettings } from '@/components/common/SliderSettings/weAreTrustedSliderSettings';
-
-const reviews = [
-	{
-		name: 'Йенс Бракебуш',
-		profession: 'Генеральный директор PPG Industry',
-		avatar: avatar1,
-		text: 'Я сотрудничал с многими компаниями по приобретению недвижимости в Таиланде, но только VillaCarte доказали свой профессионализм и ответственность на практике. Они нашли для меня идеальный объект недвижимости и помогли провести все необходимые процедуры, чтобы моя сделка была безопасной и выгодной. Я рекомендую VillaCarte всем, кто ищет недвижимость в Таиланде'
-	},
-	{
-		name: 'Окишима Жуничи',
-		profession: 'Генеральный директор ЙОКОХАМА РУС',
-		avatar: avatar2,
-		text: 'Сотрудничество с VillaCarte стало для меня настоящим открытием — я не ожидал, что сервис и качество работы могут быть настолько высокими. Они помогли мне выбрать и купить недвижимость в Таиланде, а также провели все необходимые проверки и согласования условий. Я рекомендую VillaCarte всем, кто ищет надёжного партнёра для приобретения недвижимости в Таиланде'
-	},
-	{
-		name: 'Йенс Бракебуш',
-		profession: 'Генеральный директор PPG Industry',
-		avatar: avatar1,
-		text: 'Я сотрудничал с многими компаниями по приобретению недвижимости в Таиланде, но только VillaCarte доказали свой профессионализм и ответственность на практике. Они нашли для меня идеальный объект недвижимости и помогли провести все необходимые процедуры, чтобы моя сделка была безопасной и выгодной. Я рекомендую VillaCarte всем, кто ищет недвижимость в Таиланде'
-	},
-	{
-		name: 'Окишима Жуничи',
-		profession: 'Генеральный директор ЙОКОХАМА РУС',
-		avatar: avatar2,
-		text: 'Сотрудничество с VillaCarte стало для меня настоящим открытием — я не ожидал, что сервис и качество работы могут быть настолько высокими. Они помогли мне выбрать и купить недвижимость в Таиланде, а также провели все необходимые проверки и согласования условий. Я рекомендую VillaCarte всем, кто ищет надёжного партнёра для приобретения недвижимости в Таиланде'
-	},
-];
+import { lang } from '@/pages';
 
 const WeAreTrusted = () => {
+	const reviews = [
+		{
+			name: lang?.yensBrakerbush || '',
+			profession: lang?.cEOofPPGIndustry || '',
+			avatar: avatar1,
+			text: lang?.review1 || ''
+		},
+		{
+			name: lang?.okishimaJunichi || '',
+			profession: lang?.cEOYOKOHAMARUS || '',
+			avatar: avatar2,
+			text: lang?.review2 || ''
+		},
+		{
+			name: lang?.yensBrakerbush || '',
+			profession: lang?.cEOofPPGIndustry || '',
+			avatar: avatar1,
+			text: lang?.review1 || ''
+		},
+		{
+			name: lang?.okishimaJunichi || '',
+			profession: lang?.cEOYOKOHAMARUS || '',
+			avatar: avatar2,
+			text: lang?.review2 || ''
+		},
+	];
+
 	return (
 		<div className={ 'weAreTrusted pos' }>
 			<div className={ 'container pt-60-80' }>
-				<h2 className={ 'h1Title colorWhite ls--216' }>Нам доверяют успешные люди</h2>
+				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.weAreTrustedBySuccessfulPeople || '' }</h2>
 
 				<Slider { ...weAreTrustedSliderSettings } className={ 'weAreTrustedSlider' }>
 					{ reviews.map( ( review, index ) =>

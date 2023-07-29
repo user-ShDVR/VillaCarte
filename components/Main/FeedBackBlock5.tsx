@@ -4,6 +4,7 @@ import Image from 'next/image';
 import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import feedBackBg from '@/public/feedBackBg.png';
+import { lang } from '@/pages';
 
 const FeedBackBlock = () => {
 
@@ -40,9 +41,9 @@ const FeedBackBlock = () => {
 			<div className={ 'container pt-60 pos feedBackBlock-content' }>
 				<div>
 					<div>
-						<h2 className={ 'h2Subtitle ' }>Закажите <br/> персональную подборку</h2>
+						<h2 className={ 'h2Subtitle ' }>{ lang?.orderAPersonalSelection || '' }</h2>
 						<h6 className={ 'text300 colorText pt-8' }>
-							Вам позвонит менеджер и подберёт недвижимость под ваши индивидуальные запросы
+							{ lang?.ourManagerWillCallYou || '' }
 						</h6>
 					</div>
 

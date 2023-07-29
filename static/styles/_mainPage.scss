@@ -47,6 +47,10 @@
 
 	.mainText {
 		position: absolute;
+
+		p {
+			max-width: 380px;
+		}
 	}
 
 	// AllServices
@@ -746,6 +750,10 @@
 		position: relative;
 		z-index: 4;
 
+		h2 {
+			max-width: 500px;
+		}
+
 		.cardsWrapper {
 
 			.titleTextArrowCard {
@@ -1069,6 +1077,10 @@
 			left: 58px;
 			bottom: 32px;
 
+			h3 {
+				max-width: 700px;
+			}
+
 			p {
 				font-size: 14px;
 				line-height: 24px;
@@ -1083,6 +1095,7 @@
 
 		h2 {
 			margin-bottom: 40px;
+			max-width: 860px;
 		}
 	}
 
@@ -1096,6 +1109,10 @@
 				top: 180px;
 				right: 40px;
 				column-gap: 0;
+
+				a {
+					width: 193px;
+				}
 			}
 
 			.contacts-wrapper {

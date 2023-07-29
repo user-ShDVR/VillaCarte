@@ -4,6 +4,7 @@ import { updatePreloader } from '@/store/preloader';
 import { postFeedback } from '@/store/feedback';
 import PhoneInput from '@/components/common/Forms/PhoneInput';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
+import { lang } from '@/pages';
 
 const RequestCallForm = () => {
 
@@ -17,7 +18,7 @@ const RequestCallForm = () => {
 	return (
 		<div className={ 'requestCall-wrapper' }>
 			<div className={ 'requestCall bgGradient' }>
-				<h5 className={ 'text500 fz-20 colorWhite' }>Закажите индивидуальную <br/> подборку недвижимости</h5>
+				<h5 className={ 'text500 fz-20 colorWhite' }>{ lang?.orderAnIndividualSelection || '' }</h5>
 
 				<Form
 					className={ 'requestCallForm' }
@@ -33,7 +34,7 @@ const RequestCallForm = () => {
 							{ required: true, message: '' }
 						] }
 					>
-						<Input className={ 'requestCallInput text300' } placeholder={ 'Ваше имя' }/>
+						<Input className={ 'requestCallInput text300' } placeholder={ lang?.yourName || '' }/>
 					</Form.Item>
 
 					<Form.Item
@@ -47,15 +48,15 @@ const RequestCallForm = () => {
 						<PhoneInput
 							name="phone"
 							textareaClass={ 'requestCallInput text300' }
-							placeholder={ 'Номер телефона' }
+							placeholder={ lang?.phoneNumber || '' }
 						/>
 					</Form.Item>
 
 					<p className={ 'text300-min mt-16 colorWhite60' }>
-						Нажимая кнопку “Отправить запрос” я даю согласие на обработку моих персональных данных
+						{ lang?.byClickingTheSendRequest || '' }
 					</p>
 
-					<SimpleButton text={ 'Заказать звонок' } variant={ 'light' } type={ 'submit' }/>
+					<SimpleButton text={ lang?.requestACall || '' } variant={ 'light' } type={ 'submit' }/>
 
 				</Form>
 			</div>

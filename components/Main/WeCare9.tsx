@@ -1,6 +1,7 @@
 import React from 'react';
 import groupPhoto from '@/public/groupPhoto.png';
 import Image from 'next/image';
+import { lang } from '@/pages';
 
 const WeCare = () => {
 	return (
@@ -11,9 +12,9 @@ const WeCare = () => {
 				<div className={ 'bgGradientBlack' }/>
 
 				<div className={ 'textWrapper' }>
-					<h3 className={ 'h2Subtitle colorWhite' }>Больше 10 лет заботимся <br/> о вашем отдыхе и доходе</h3>
+					<h3 className={ 'h2Subtitle colorWhite' }>{ lang?.weHaveBeenTakingCare || '' }</h3>
 					<p className={ 'text300 colorWhite' }>
-						Каждый день мы работаем над тем, чтобы исполнять ваши желания в VillaCarte
+						{ lang?.inVillaCarteEveryDayWeWork || '' }
 					</p>
 				</div>
 			</div>

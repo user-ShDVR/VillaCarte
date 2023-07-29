@@ -24,10 +24,13 @@ export interface IGoods {
 	url: string;
 }
 
-export interface ICurrencies {
-	// usd: number;
-	// thb: number;
-	// rub: number;
+export interface ICurrencies extends IValueLabel {
+}
+
+export interface ILanguages extends IValueLabel {
+}
+
+export interface IValueLabel {
 	value: string;
 	label: string;
 }

@@ -6,13 +6,14 @@ import { postFeedback } from '@/store/feedback';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
 import { hideModal } from '@/store/modal';
 import { EModal_VisibleStore } from '@/types/modal';
+import { lang } from '@/pages';
 
 const FeedBackForm = () => {
 	const [ form ] = Form.useForm();
 
 	const onFinish = async ( values: any ) => {
 		updatePreloader( true );
-		hideModal(EModal_VisibleStore.CallRequest);
+		hideModal( EModal_VisibleStore.CallRequest );
 		// await postFeedback( values );
 	};
 
@@ -27,35 +28,34 @@ const FeedBackForm = () => {
 				name="username"
 				className={ 'feedBackInputWrapper' }
 				rules={ [
-					{ type: 'string', message: 'Введите Ваше имя' },
-					{ required: true, message: 'Введите Ваше имя' }
+					{ type: 'string', message: lang?.yourName || '' },
+					{ required: true, message: lang?.yourName || '' }
 				] }
 			>
-				<Input className={ 'feedBackInput text300' } placeholder={ 'Ваше имя' }/>
+				<Input className={ 'feedBackInput text300' } placeholder={ lang?.yourName || '' }/>
 			</Form.Item>
 
 			<Form.Item
 				name="phone"
 				className={ 'feedBackInputWrapper' }
 				rules={ [
-					{ type: 'string', message: 'Введите номер телефона' },
-					{ required: true, message: 'Введите номер телефона' }
+					{ type: 'string', message: lang?.phoneNumber || '' },
+					{ required: true, message: lang?.phoneNumber || '' }
 				] }
 			>
 				<PhoneInput
 					name="phone"
 					textareaClass={ 'feedBackInput text300' }
-					placeholder={ 'Номер телефона' }
+					placeholder={ lang?.phoneNumber || '' }
 				/>
 			</Form.Item>
 
 			<p className={ 'text300 mt-16' }>
-				Нажимая кнопку «Заказать звонок», я соглашаюсь с политикой конфиденциальности и даю согласие на обработку
-				персональных данных
+				{ lang?.byClickingTheRequestACall || '' }
 			</p>
 
 			<SimpleButton
-				text={ 'Заказать подборку' }
+				text={ lang?.requestASelection || '' }
 				variant={ 'simple' }
 				type={ 'submit' }
 			/>

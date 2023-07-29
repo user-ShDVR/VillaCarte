@@ -1,17 +1,8 @@
 import { createEvent, createStore } from 'effector';
-import { ILanguages } from '@/types/languages';
-import { apiGet } from '@/api';
-// import { updateLocalizations } from '../data/localization';
-
-export const getLanguages = async () => {
-	const response = await apiGet( { url: '/' } );
-	// updateLocalizations( response.labels );
-	updateLanguages( response );
-
-	return response;
-};
+import { ILanguages } from '@/types/mainPage';
 
 export const updateLanguages = createEvent<ILanguages>();
 
-export const $languages = createStore<ILanguages>( { languages: [ { language: 'ru', code: 'ru' } ] } )
+export const $languages = createStore<ILanguages>( { value: 'en', label: 'en' } )
 	.on( updateLanguages, ( _, newState ) => newState );
+

@@ -16,26 +16,26 @@ import creativeTeam from '@/public/creativeTeam.svg';
 import Socials from '@/components/common/Socials/Socials';
 import RequestCallForm from '@/components/common/Forms/RequestСall/RequestCallForm';
 import Contacts from '@/components/Main/Footer/Contacts';
-
-const socialsStock = [
-	{ icon: facebookStock, hoveredIcon: fbHovered, link: '/' },
-	{ icon: youtubeStock, hoveredIcon: youtubeHovered, link: '/' },
-	{ icon: vkStock, hoveredIcon: vkHovered, link: '/' },
-	{ icon: instagramStock, hoveredIcon: instagramHovered, link: '/' },
-	{ icon: telegramStock, hoveredIcon: telegramHovered, link: '/' },
-];
-
-const linkPages = [
-	{ title: 'Продажа', link: '/' },
-	{ title: 'Аренда', link: '/' },
-	{ title: 'Консьерж-сервис', link: '/' },
-	{ title: 'Управление недвижимостью', link: '/' },
-	{ title: 'О компании', link: '/' },
-	{ title: 'О Пхукете', link: '/' },
-	{ title: 'Новости', link: '/' },
-];
+import { lang } from '@/pages';
 
 const ContactsBlock = () => {
+	const socialsStock = [
+		{ icon: facebookStock, hoveredIcon: fbHovered, link: '/' },
+		{ icon: youtubeStock, hoveredIcon: youtubeHovered, link: '/' },
+		{ icon: vkStock, hoveredIcon: vkHovered, link: '/' },
+		{ icon: instagramStock, hoveredIcon: instagramHovered, link: '/' },
+		{ icon: telegramStock, hoveredIcon: telegramHovered, link: '/' },
+	];
+
+	const linkPages = [
+		{ title: lang?.sale || '', link: '/' },
+		{ title: lang?.rent || '', link: '/' },
+		{ title: lang?.concierge || '', link: '/' },
+		{ title: lang?.propertyManagement || '', link: '/' },
+		{ title: lang?.aboutTheCompany || '', link: '/' },
+		{ title: lang?.aboutPhuket || '', link: '/' },
+		{ title: lang?.news || '', link: '/' },
+	];
 
 	return (
 		<footer>
@@ -57,7 +57,7 @@ const ContactsBlock = () => {
 
 						<div className={ 'privacyPolicy-wrapper' }>
 							<Link href={ '/' } className={ 'text300 colorText privacyPolicy' }>
-								Политика конфиденциальности
+								{ lang?.privacyPolicy || '' }
 							</Link>
 						</div>
 					</div>
@@ -73,10 +73,10 @@ const ContactsBlock = () => {
 					<div className={ 'divider' }/>
 
 					<div className={ 'd-xl-flex jc-between' }>
-						<p className={ 'text300-min copyRights' }>VillaCarte © 2012 - 2023 — Все права и материалы защищены</p>
+						<p className={ 'text300-min copyRights' }>{ lang?.VillaCarteAllRights || '' }</p>
 
 						<p className={ 'text300-min copyRights' }>
-							создание сайтов —
+							{ lang?.websiteDevelopment || '' }
 							<Link href={ '/' }>
 								<Image src={ creativeTeam } alt={ 'creativeTeam' }/>
 							</Link>

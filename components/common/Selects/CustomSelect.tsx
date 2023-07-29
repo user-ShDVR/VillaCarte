@@ -1,10 +1,10 @@
 import React from 'react';
 import Select from 'react-select';
-import { IOption } from '@/components/common/Selects/CurrencySelect';
 import cn from 'classnames';
+import { IValueLabel } from '@/types/mainPage';
 
 interface IProps {
-	options: IOption[];
+	options: IValueLabel[];
 	className?: string;
 	updateStore?: any;
 }

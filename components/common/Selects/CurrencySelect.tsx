@@ -3,19 +3,15 @@ import { saveUserInfo } from '@/store/account';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
 import cn from 'classnames';
 import { updateCurrencies } from '@/store/currencies';
+import { ICurrencies } from '@/types/mainPage';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
 }
 
-export interface IOption {
-	value: string;
-	label: string;
-}
-
 const CurrencySelect = ( { className, ...newProps }: IProps ) => {
 
-	const currenciesList: IOption[] = [
+	const currenciesList: ICurrencies[] = [
 		{ value: 'usd', label: 'usd' },
 		{ value: 'rub', label: 'rub' },
 		{ value: 'thb', label: 'thb' },

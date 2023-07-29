@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import listPoint from '@/public/icons/listPoint1.svg';
 import Image from 'next/image';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import { lang } from '@/pages';
 
 const FiveSteps = () => {
 	const size = useWindowSize();
@@ -48,7 +49,7 @@ const FiveSteps = () => {
 						<Image src={ listPoint } alt={ '' }/>
 						<div className={ 'stepLine' }/>
 						<p className={ 'text300 colorWhite pl-16' }>
-							Персонально подбираем недвижимость под ваши цели и бюджет
+							{ lang?.weSelectTheRealEstatePersonally || '' }
 						</p>
 					</div>
 
@@ -57,7 +58,7 @@ const FiveSteps = () => {
 						<Image src={ listPoint } alt={ '' }/>
 						<div className={ 'stepLine' }/>
 						<p className={ 'text300 colorWhite pl-16' }>
-							Рассчитываем доходность, знакомим с объектами и инфраструктурой
+							{ lang?.weCalculateProfitability || '' }
 						</p>
 					</div>
 
@@ -66,7 +67,7 @@ const FiveSteps = () => {
 						<Image src={ listPoint } alt={ '' }/>
 						<div className={ 'stepLine' }/>
 						<p className={ 'text300 colorWhite pl-16' }>
-							Договариваемся с застройщиком о выгодных для вас условиях и помогаем заключить сделку
+							{ lang?.weNegotiateWithTheDeveloper || '' }
 						</p>
 					</div>
 
@@ -75,7 +76,7 @@ const FiveSteps = () => {
 						<Image src={ listPoint } alt={ '' }/>
 						<div className={ 'stepLine' }/>
 						<p className={ 'text300 colorWhite pl-16' }>
-							Юридически сопровождаем сделку: проверяем объект и помогаем с документами
+							{ lang?.weLegallyAccompanyTheTransaction || '' }
 						</p>
 					</div>
 
@@ -84,7 +85,7 @@ const FiveSteps = () => {
 						<Image src={ listPoint } alt={ '' }/>
 						<div className={ 'stepLine' }/>
 						<p className={ 'text300 colorWhite pl-16' }>
-							Берём на себя управление недвижимостью на Пхукете и предоставляем услуги консьерж-сервиса
+							{ lang?.weTakeCareOfYourPropertyManagement || '' }
 						</p>
 						<Image className={ 'lastImage' } src={ listPoint } alt={ '' }/>
 					</div>
@@ -100,7 +101,7 @@ const FiveSteps = () => {
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
-								Персонально подбираем недвижимость под ваши цели и бюджет
+								{ lang?.weSelectTheRealEstatePersonally || '' }
 							</p>
 						</div>
 
@@ -111,7 +112,7 @@ const FiveSteps = () => {
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
-								Рассчитываем доходность, знакомим с объектами и инфраструктурой
+								{ lang?.weCalculateProfitability || '' }
 							</p>
 						</div>
 
@@ -122,7 +123,7 @@ const FiveSteps = () => {
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
-								Договариваемся с застройщиком о выгодных для вас условиях и помогаем заключить сделку
+								{ lang?.weNegotiateWithTheDeveloper || '' }
 							</p>
 						</div>
 
@@ -133,7 +134,7 @@ const FiveSteps = () => {
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
-								Юридически сопровождаем сделку: проверяем объект и помогаем с документами
+								{ lang?.weLegallyAccompanyTheTransaction || '' }
 							</p>
 						</div>
 
@@ -144,7 +145,7 @@ const FiveSteps = () => {
 							<Image src={ listPoint } alt={ '' }/>
 							<div className={ 'stepLine' }/>
 							<p className={ 'text300 colorWhite pl-16' }>
-								Берём на себя управление недвижимостью на Пхукете и предоставляем услуги консьерж-сервиса
+								{ lang?.weTakeCareOfYourPropertyManagement || '' }
 							</p>
 							<Image className={ 'lastImage' } src={ listPoint } alt={ '' }/>
 						</div>

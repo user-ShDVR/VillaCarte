@@ -22,6 +22,9 @@ import WeCare from '@/components/Main/WeCare9';
 import WeBuildOurselves from '@/components/Main/WeBuildOurselves6/WeBuildOurselves6';
 import ShareContent from '@/components/Main/ShareContent10/ShareContent10';
 import Footer from '@/components/Main/Footer/Footer';
+import { enLocalization, ruLocalization } from '@/static/localization';
+import { useStore } from 'effector-react';
+import { $languages } from '@/store/languages';
 
 async function getStaticProps() {
 	// @ts-ignore
@@ -34,7 +37,18 @@ async function getStaticProps() {
 	};
 }
 
+export let lang: any;
+
 export default function Home( { info }: any ) {
+	const languages = useStore( $languages );
+	switch ( languages.value ) {
+		case 'en':
+			lang = enLocalization;
+			break;
+		case 'ru':
+			lang = ruLocalization;
+			break;
+	}
 
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );
 	// useWheelEvent();

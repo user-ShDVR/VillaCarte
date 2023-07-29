@@ -4,6 +4,7 @@ import { staticResource } from '@/utils/resources';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { useStore } from 'effector-react';
 import { $currencies } from '@/store/currencies';
+import { lang } from '@/pages';
 
 interface IProps {
 	url: string;
@@ -39,24 +40,23 @@ const OfferCard = ( { url, image }: IProps ) => {
 							01/
 							<span className={ 'color03' }>03</span>
 							<span className={ 'ml-8' }/>|<span className={ 'ml-8' }/>
-							Апартаменты
+							{ lang?.apartments || '' }
 							<span className={ 'ml-8' }/>|<span className={ 'ml-8' }/>
-							Район: Банг Тао
+							{ lang?.bangTaoRegion || '' }
 						</div>
 
-						<h2 className={ 'h2Subtitle colorWhite pt-12' }>Layan Green Park</h2>
+						<h2 className={ 'h2Subtitle colorWhite pt-12' }>{ lang?.layanGreenPark || '' }</h2>
 
 						<article className={ 'text300 colorWhite pt-12' }>
-							Первый апарт-отель, который получил сертификацию экологичности EDGE Advanced и стал частью коллекции
-							World Hotels. Сейчас в нём продано больше 90% апартаментов
+							{ lang?.theFirstAparthotelToGainTheEDGE || '' }
 						</article>
 
 						<div className={ 'description-down' }>
-							<h2 className={ 'h2Subtitle colorWhite pt-20 m-0 pb-20' }>от { cur }147.000</h2>
+							<h2 className={ 'h2Subtitle colorWhite pt-20 m-0 pb-20' }>{ lang?.from || '' } { cur }147.000</h2>
 
 							<HoveredButton
 								to={ '/' }
-								text={ 'Подробнее об объекте' }
+								text={ lang?.learnMoreAbout || '' }
 								variant={ 'arrowRevert' }
 								// className={'offerCard-btn'}
 							/>

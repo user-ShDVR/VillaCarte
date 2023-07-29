@@ -6,6 +6,7 @@ import arrowRight from '@/public/icons/arrowBtnWhite.svg';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import { useStore } from 'effector-react';
 import { $currencies } from '@/store/currencies';
+import { lang } from '@/pages';
 
 interface IProps {
 	image: string;
@@ -107,29 +108,33 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 					className={ 'cardLabel text300 colorWhite' }
 					style={ styleShowContent }
 				>
-					Апартаменты | Район: Сурин
+					{ lang?.apartments || '' } | { lang?.region || '' }: { lang?.surin || '' }
 				</div>
 
-				{ isMobile && <div className={ 'cardLabel text300 colorWhite' }>Апартаменты | Район: Сурин</div> }
+				{ isMobile &&
+					<div className={ 'cardLabel text300 colorWhite' }>
+						{ lang?.apartments || '' } | { lang?.region || '' }: { lang?.surin || '' }
+					</div>
+				}
 
 				<img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' } style={ styleShowContentReverse }/>
 				{ isMobile && <img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/> }
 
 				<div className={ 'description-wrapper' } style={ styleShowContent }>
 					<div>
-						<div className={ 'text300 colorWhite' }>Цена: от { cur }100 000</div>
-						<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
+						<div className={ 'text300 colorWhite' }>{ lang?.priceFrom || '' } { cur }100 000</div>
+						<div className={ 'text300 colorWhite mt-8' }>{ lang?.income || '' } 10% { lang?.aYear || '' }</div>
 					</div>
-					<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
+					<p className={ 'text300 colorWhite' }>{ lang?.more || '' } <Image src={ arrowRight } alt={ '' }/></p>
 				</div>
 
 				{ isMobile &&
 					<div className={ 'description-wrapper' }>
 						<div>
-							<div className={ 'text300 colorWhite' }>Цена: от { cur }100 000</div>
-							<div className={ 'text300 colorWhite mt-8' }>Доход 10% в год</div>
+							<div className={ 'text300 colorWhite' }>{ lang?.priceFrom || '' } { cur }100 000</div>
+							<div className={ 'text300 colorWhite mt-8' }>{ lang?.income || '' } 10% { lang?.aYear || '' }</div>
 						</div>
-						<p className={ 'text300 colorWhite' }>Подробнее <Image src={ arrowRight } alt={ '' }/></p>
+						<p className={ 'text300 colorWhite' }>{ lang?.more || '' } <Image src={ arrowRight } alt={ '' }/></p>
 					</div>
 				}
 			</Link>

@@ -4,20 +4,16 @@ import leavesVideo from '@/public/leavesVideo.png';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import TitleTextArrowCard from '@/components/common/Cards/TitleTextArrowCard/TitleTextArrowCard';
 import Image from 'next/image';
-
-const allServices = [
-	{ title: 'Продажа недвижимости', text: 'Виллы и апартаменты для жизни и инвестиций' },
-	{ title: 'Аренда недвижимости', text: 'Виллы премиум- и люкс-класса', text2: 'для комфортного отдыха' },
-	{
-		title: 'Консьерж-сервис',
-		text: 'Решение любых вопросов —',
-		text2: 'от аренды транспорта',
-		text3: 'до развлечений и получения визы'
-	},
-	{ title: 'Управление недвижимостью', text: 'Пассивный доход из любой точки мира без забот' },
-];
+import { lang } from '@/pages';
 
 const AllServices = () => {
+	const allServices = [
+		{ title: lang?.propertySale || '', text: lang?.villasAndApartmentsForLife || '' },
+		{ title: lang?.propertyForRent || '', text: lang?.premiumAndLuxuryVillas || '' },
+		{ title: lang?.concierge || '', text: lang?.anyIssuesAreSolvedForYou || '' },
+		{ title: lang?.propertyManagement || '', text: lang?.passiveIncomeWithoutWorries || '' },
+	];
+
 	return (
 
 		<div className={ 'allServices' }>
@@ -29,16 +25,15 @@ const AllServices = () => {
 				<div>
 					<div className={ 'pt-60-40' }>
 						<div>
-							<h2 className={ 'h2Subtitle mb-16 ls--144' }>Все услуги — <br/> в одной компании</h2>
+							<h2 className={ 'h2Subtitle mb-16 ls--144' }>{ lang?.allServicesInOneCompany || '' }</h2>
 							<p className={ 'text300 colorText pt-10' }>
-								Помогаем купить недвижимость на Пхукете и Самуи, наслаждаться жизнью и отдыхом на островах и получать
-								доход от аренды
+								{ lang?.weHelpYouBuyProperty || '' }
 							</p>
 						</div>
 					</div>
 
 					<div className={ 'mt-40' }>
-						<HoveredButton to={ '/' } text={ 'Узнать больше' } variant={ 'arrow' } className={ 'mt-16' }/>
+						<HoveredButton to={ '/' } text={ lang?.learnMore || '' } variant={ 'arrow' } className={ 'mt-16' }/>
 					</div>
 				</div>
 
@@ -49,8 +44,6 @@ const AllServices = () => {
 								key={ index }
 								title={ item.title }
 								text={ item.text }
-								text2={ item.text2 }
-								text3={ item.text3 }
 							/>
 						) }
 					</div>

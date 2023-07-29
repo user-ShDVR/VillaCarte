@@ -6,6 +6,7 @@ import GoodsCard from '@/components/common/Cards/GoodsCard/GoodsCard';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { useStore } from 'effector-react';
 import { Fade } from 'react-awesome-reveal';
+import { lang } from '@/pages';
 
 const BestProjects = () => {
 	const offers = useStore<IMainPage>( $mainPageInfo );
@@ -39,12 +40,12 @@ const BestProjects = () => {
 	return (
 		<div className={ 'bgGradient bestProjects' }>
 			<div className={ 'container bestProjects-inner' }>
-				<h2 className={ 'h1Title colorWhite ls--216' }>Лучшие проекты <br/> для жизни и инвестиций</h2>
+				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.theBestProjectsForLife || '' }</h2>
 
 				<Tabs className={ 'bestProjects-tabs' }>
 					<TabList className={ 'bestProjects-tabList text500 colorWhite' }>
-						<Tab>Апартаменты</Tab>
-						<Tab>Виллы</Tab>
+						<Tab>{ lang?.apartments || '' }</Tab>
+						<Tab>{ lang?.villas || '' }</Tab>
 					</TabList>
 
 					<Fade>
@@ -66,7 +67,7 @@ const BestProjects = () => {
 
 				<div className={ 'mt-28 pb-40-100 d-flex jc-center' }>
 					<HoveredButton
-						text={ 'Показать еще 115 предложений' }
+						text={ `${ lang?.showTheRest || '' } 115 ${ lang?.offers || '' }` }
 						to={ '/' }
 						variant={ 'arrowRevert' }
 						className={ 'manrope600-14' }
