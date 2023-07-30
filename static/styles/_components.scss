@@ -360,6 +360,7 @@
 		background: linear-gradient(225deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.04) 100%);
 		backdrop-filter: blur(15px);
 		box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
+		margin-bottom: 40px;
 
 		div {
 			background: linear-gradient(225deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.04) 100%);
@@ -368,14 +369,6 @@
 			margin-bottom: 8px;
 			box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 			transition: .2s all;
-
-			&:hover {
-				background: $colorAccent;
-
-				p {
-					color: $colorWhite;
-				}
-			}
 
 			a {
 				text-decoration: none;
@@ -434,12 +427,12 @@
 
 	// ReviewCard
 	.reviewCard {
-		width: 100%;
+		width: 99%;
 		background: rgba(255, 255, 255, 0.10);
 		backdrop-filter: blur(10px);
 		padding: 16px 16px 28px;
 		margin-top: 20px;
-		height: fit-content;
+		min-height: 340px;
 
 		&-top {
 			display: flex;
@@ -472,13 +465,6 @@
 				width: 100%;
 				height: 300px;
 				transition: .2s;
-			}
-
-			&:hover {
-
-				img {
-					scale: 1.05;
-				}
 			}
 		}
 	}
@@ -531,6 +517,11 @@
 			max-width: 380px !important;
 		}
 	}
+
+	// ReviewCard
+	.reviewCard {
+		min-height: 300px;
+	}
 }
 
 @media (min-width: $media576) {
@@ -558,13 +549,6 @@
 			img {
 				height: 190px;
 			}
-
-			//&:hover {
-			//
-			//	img {
-			//		scale: 1.1;
-			//	}
-			//}
 		}
 	}
 
@@ -599,6 +583,11 @@
 			}
 		}
 	}
+
+	// ReviewCard
+	.reviewCard {
+		min-height: 250px;
+	}
 }
 
 @media (min-width: $media1023) {
@@ -612,16 +601,6 @@
 			bottom: 0;
 			background: linear-gradient(0deg, #252525, transparent);
 			height: 150px;
-		}
-
-		.description-wrapper {
-
-			p {
-
-				img {
-					//margin-top: 8px;
-				}
-			}
 		}
 	}
 
@@ -646,6 +625,18 @@
 		width: 324px;
 		margin-top: 60px;
 		height: fit-content;
+		margin-bottom: 0;
+
+		div {
+
+			&:hover {
+				background: $colorAccent;
+
+				p {
+					color: $colorWhite;
+				}
+			}
+		}
 	}
 
 	// OfferCard
@@ -786,6 +777,11 @@
 		}
 	}
 
+	// ReviewCard
+	.reviewCard {
+		min-height: 264px;
+	}
+
 	// MediaCard
 	.mediaCard-wrapper {
 
@@ -794,6 +790,14 @@
 
 			img {
 				height: 190px;
+			}
+
+			&:hover {
+
+				img {
+					height: 190px;
+					scale: 1.05;
+				}
 			}
 		}
 	}

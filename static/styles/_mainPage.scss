@@ -3,8 +3,8 @@
 @media (min-width: $media0) {
 	.palmsTransparent-bg {
 		position: absolute;
+		left: -930px;
 		top: 0;
-		left: 0;
 		right: 0;
 		bottom: 0;
 		background-size: cover;
@@ -143,8 +143,8 @@
 
 		.element-animation {
 			position: absolute;
-			top: 0;
-			right: 0;
+			top: 30px;
+			right: -280px;
 			bottom: 0;
 
 			.flowerRight {
@@ -175,7 +175,7 @@
 		}
 
 		h2, h6 {
-			width: 240px;
+			width: 70%;
 		}
 	}
 
@@ -505,6 +505,11 @@
 }
 
 @media (min-width: $media475) {
+	.palmsTransparent-bg {
+		position: absolute;
+		left: -730px;
+	}
+
 	.mainText {
 
 		h1 {
@@ -515,14 +520,6 @@
 
 	// FeedBackBlock
 	.feedBackBlock {
-
-		.feedBackBlock-bg {
-
-		}
-
-		.element-animation {
-			//transform: scale(2);
-		}
 
 		.fiveStepsSlider-wrapper {
 
@@ -545,6 +542,11 @@
 }
 
 @media (min-width: $media576) {
+	.palmsTransparent-bg {
+		position: absolute;
+		left: -560px;
+	}
+
 	.mainText {
 
 		h1 {
@@ -562,26 +564,14 @@
 			gap: 8px;
 		}
 	}
-
-	// FeedBackBlock
-	.feedBackBlock {
-
-		.feedBackBlock-bg {
-
-		}
-
-		.flowerRight {
-			//right: -340px;
-			//width: 90%;
-		}
-
-		.element-animation {
-			//transform: scale(1.3);
-		}
-	}
 }
 
 @media (min-width: $media768) {
+	.palmsTransparent-bg {
+		position: absolute;
+		left: 0;
+	}
+
 	.mainText {
 
 		h1 {
@@ -691,22 +681,13 @@
 			justify-content: space-between;
 		}
 
-		.feedBackBlock-bg {
-
-		}
-
-		.flowerRight {
-			//width: 50%;
-			//right: -230px;
-			//top: -100px;
-		}
-
 		h2, h6 {
 			width: 100%;
 		}
 
 		.element-animation {
-			//transform: scale(1.1);
+			top: 0;
+			right: -220px;
 		}
 	}
 
@@ -842,18 +823,6 @@
 		}
 	}
 
-	// FeedBackBlock
-	.feedBackBlock {
-
-		.feedBackBlock-bg {
-
-		}
-
-		.flowerRight {
-			//width: 40%;
-		}
-	}
-
 	// WeBuildOurselves
 	.weBuildOurselves {
 
@@ -985,19 +954,6 @@
 		}
 	}
 
-	// FeedBackBlock
-	.feedBackBlock {
-
-		.feedBackBlock-bg {
-
-		}
-
-		.flowerRight {
-			//width: 30%;
-			//right: -160px;
-		}
-	}
-
 	// JoinTheClub
 	.joinTheClub {
 		margin-top: 40px;
@@ -1088,16 +1044,6 @@
 						width: 100%;
 					}
 
-					//@keyframes stream {
-					//	0% {
-					//		transform: translate(-98%, 0);
-					//	}
-					//
-					//	100% {
-					//		transform: translate(0, 0);
-					//	}
-					//}
-
 					.step {
 
 						p {
@@ -1107,46 +1053,6 @@
 				}
 			}
 		}
-
-		//.weBuildDownBlock {
-		//
-		//	.fiveStepsSlider-wrapper {
-		//
-		//		.stepsWrapper {
-		//
-		//			.steps {
-		//				display: grid;
-		//				overflow: hidden;
-		//				padding: 28px 11px 28px 0;
-		//				position: relative;
-		//				grid-template-columns: repeat(5, 1fr);
-		//			}
-		//
-		//			.stepLine {
-		//				top: 162px;
-		//				animation: stream 7.3s linear;
-		//				width: 96.5%;
-		//			}
-		//
-		//			@keyframes stream {
-		//				0% {
-		//					transform: translate(-98%, 0);
-		//				}
-		//
-		//				100% {
-		//					transform: translate(0, 0);
-		//				}
-		//			}
-		//
-		//			.step {
-		//
-		//				p {
-		//					width: 240px;
-		//				}
-		//			}
-		//		}
-		//	}
-		//}
 	}
 
 	// WeCare

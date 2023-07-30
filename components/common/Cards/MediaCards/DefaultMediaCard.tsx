@@ -35,7 +35,7 @@ const DefaultMediaCard = ( { icon, hoveredIcon, text, link }: IProps ) => {
 					: <Image src={ icon } alt={ '' } className={ 'icon' }/>
 				}
 				<div className={ 'd-flex jc-between ai-end' }>
-					<p className={ 'text300 w-140' }>{ text }</p>
+					<p className={ 'text700 fz-14 w-140' }>{ text }</p>
 					{ mouseOver
 						? <Image src={ arrowBtnGradient } alt={ '' }/>
 						: <Image src={ arrowBtnAccent } alt={ '' }/>

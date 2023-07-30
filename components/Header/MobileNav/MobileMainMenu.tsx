@@ -31,10 +31,12 @@ const MobileMainMenu = () => {
 
 	const toShowDropMenuSales = () => {
 		showMobileDropMenuSales( !mobileDropMenuSales );
+		showMobileDropMenuServices( false );
 	};
 
 	const toShowDropMenu = () => {
 		showMobileDropMenuServices( !mobileDropMenuServices );
+		showMobileDropMenuSales( false );
 	};
 
 	const toHideMenu = () => {
@@ -62,14 +64,16 @@ const MobileMainMenu = () => {
 			</div>
 
 			<nav>
-				<CustomMenuItem
-					key={ '9656' }
-					text={ lang?.sale || '' }
-					className={ 'mobileMainMenu-item' }
-					textClass={ cn( mobileDropMenuSales ? 'colorGradient' : '' ) }
-					toShowDropMenu={ toShowDropMenuSales }
-				/>
-				{ mobileDropMenuSales && <MobileNavSales/> }
+				<div className={ 'pos' }>
+					<CustomMenuItem
+						key={ '9656' }
+						text={ lang?.sale || '' }
+						className={ 'mobileMainMenu-item' }
+						textClass={ cn( mobileDropMenuSales ? 'colorGradient' : '' ) }
+						toShowDropMenu={ toShowDropMenuSales }
+					/>
+					{ mobileDropMenuSales && <MobileNavSales/> }
+				</div>
 
 				<CustomMenuItem
 					path={ '/' }
@@ -77,14 +81,16 @@ const MobileMainMenu = () => {
 					className={ 'mobileMainMenu-item' }
 				/>
 
-				<CustomMenuItem
-					path={ '/' }
-					text={ lang?.concierge || '' }
-					className={ 'mobileMainMenu-item' }
-					textClass={ cn( mobileDropMenuServices ? 'colorGradient' : '' ) }
-					toShowDropMenu={ toShowDropMenu }
-				/>
-				{ mobileDropMenuServices && <MobileNavService/> }
+				<div className={ '' }>
+					<CustomMenuItem
+						key={ '9646' }
+						text={ lang?.concierge || '' }
+						className={ 'mobileMainMenu-item' }
+						textClass={ cn( mobileDropMenuServices ? 'colorGradient' : '' ) }
+						toShowDropMenu={ toShowDropMenu }
+					/>
+					{ mobileDropMenuServices && <MobileNavService/> }
+				</div>
 
 				<CustomMenuItem
 					path={ '/' }

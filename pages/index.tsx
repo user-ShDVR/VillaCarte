@@ -25,6 +25,7 @@ import Footer from '@/components/Main/Footer/Footer';
 import { enLocalization, ruLocalization } from '@/static/localization';
 import { useStore } from 'effector-react';
 import { $languages } from '@/store/languages';
+import Spinner from '@/components/common/Spinner/Spinner';
 
 async function getStaticProps() {
 	// @ts-ignore
@@ -72,51 +73,56 @@ export default function Home( { info }: any ) {
 	}, [] );
 
 	return (
-		<Layout>
-			<Head>
-				<meta property="og:title" content={ mainPageInfo?.meta.title }/>
-				<meta property="og:description" content={ mainPageInfo?.meta.description }/>
-				<meta property="og:keywords" content={ mainPageInfo?.meta.keywords }/>
-				<meta property="og:image" content={ metaImage.src }/>
-			</Head>
+		<>
+			{/*{ isLoading ? <><Spinner/></>*/}
+			{/*	:*/}
+				<Layout>
+					<Head>
+						<meta property="og:title" content={ mainPageInfo?.meta.title }/>
+						<meta property="og:description" content={ mainPageInfo?.meta.description }/>
+						<meta property="og:keywords" content={ mainPageInfo?.meta.keywords }/>
+						<meta property="og:image" content={ metaImage.src }/>
+					</Head>
 
-			<section className='pt-100-60 pos' style={ style } id="hero-section">
+					<section className='pt-100-60 pos' style={ style } id="hero-section">
 
-				<div className={ 'pos' }>
-					<TopBlock/>
+						<div className={ 'pos' }>
+							<TopBlock/>
 
-					<button className="btn-scroll" onClick={ handleClickScroll }>
-						<Image src={ scrollArrow } alt={ 'scroll' }/>
-					</button>
-				</div>
+							<button className="btn-scroll" onClick={ handleClickScroll }>
+								<Image src={ scrollArrow } alt={ 'scroll' }/>
+							</button>
+						</div>
 
-				<div id="section-2">
-					<AllServices/>
-				</div>
+						<div id="section-2">
+							<AllServices/>
+						</div>
 
-				<VideoBlock/>
+						<VideoBlock/>
 
-				<BestProjects/>
+						<BestProjects/>
 
-				<FeedBackBlock/>
+						<FeedBackBlock/>
 
-				<div className={ 'pos overflow-hidden' }>
-					<div style={ { backgroundImage: `url(${ weBuildBg.src })` } } className={ 'palmsTransparent-bg' }/>
+						<div className={ 'pos overflow-hidden' }>
+							<div style={ { backgroundImage: `url(${ weBuildBg.src })` } } className={ 'palmsTransparent-bg' }/>
 
-					<WeBuildOurselves/>
+							<WeBuildOurselves/>
 
-					<JoinTheClub/>
+							<JoinTheClub/>
 
-					<WeAreTrusted/>
+							<WeAreTrusted/>
 
-					<WeCare/>
-				</div>
+							<WeCare/>
+						</div>
 
-				<ShareContent/>
+						<ShareContent/>
 
-				<Footer/>
-			</section>
-		</Layout>
+						<Footer/>
+					</section>
+				</Layout>
+			{/*}*/}
+		</>
 	);
 }
 

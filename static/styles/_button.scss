@@ -34,49 +34,17 @@
 
 		&-only {
 			border: none;
-
-			&:hover {
-				background: $colorAccent;
-				color: $colorWhite;
-			}
-		}
-
-		&-simple {
-
-			&:hover {
-				background: $colorAccent;
-				color: $colorWhite;
-			}
 		}
 
 		&-simpleDark {
 			background: $colorAccent;
 			color: $colorWhite;
-
-			&:hover {
-				background: $colorWhite;
-				color: $colorAccent;
-			}
-		}
-
-		&-arrow {
-
-			&:hover {
-				background: $colorAccent;
-				color: $colorWhite;
-			}
 		}
 
 		&-arrowWhite {
 			color: $colorWhite;
 			background: transparent;
 			border-color: $colorWhite;
-
-			&:hover {
-				background: $colorAccent;
-				color: $colorWhite;
-				border-color: $colorAccent;
-			}
 		}
 
 		&-arrowRevert {
@@ -85,11 +53,6 @@
 			backdrop-filter: blur(2px) !important;
 			color: $colorWhite;
 			border-color: $colorWhite;
-
-			&:hover {
-				background: $colorWhite;
-				color: $colorAccent;
-			}
 		}
 
 		&-light {
@@ -97,11 +60,6 @@
 			background: rgba(255, 255, 255, .1);
 			color: $colorWhite;
 			cursor: pointer;
-
-			&:hover {
-				background: $colorWhite;
-				color: $colorAccent;
-			}
 		}
 	}
 
@@ -122,6 +80,68 @@
 		img {
 			width: 14px;
 			height: 10px;
+		}
+	}
+}
+
+@media (min-width: $media1200) {
+	.hoveredButton {
+
+		&-only {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-simple {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-simpleDark {
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
+		}
+
+		&-arrow {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-arrowWhite {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+				border-color: $colorAccent;
+			}
+		}
+
+		&-arrowRevert {
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
+		}
+
+		&-light {
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
 		}
 	}
 }
