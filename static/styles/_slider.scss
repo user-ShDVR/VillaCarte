@@ -67,14 +67,14 @@
 
 		.sliderNext {
 			position: absolute;
-			bottom: 10px;
+			bottom: -10px;
 			right: 40%;
 			z-index: 1;
 		}
 
 		.sliderPrev {
 			position: absolute;
-			bottom: 10px;
+			bottom: -10px;
 			left: 40%;
 			z-index: 1;
 		}
