@@ -10,7 +10,7 @@ export const weAreTrustedSliderSettings = {
 	speed: 1000,
 	nextArrow: <SampleNextArrow/>,
 	prevArrow: <SamplePrevArrow/>,
-	autoplaySpeed: 5000,
+	autoplaySpeed: 99999995000,
 	swipeToSlide: true,
 	slidesToShow: 2.02,
 	slidesToScroll: 1,

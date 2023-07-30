@@ -17,15 +17,20 @@ interface IProps {
 const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 	const size = useWindowSize();
 	// @ts-ignore
-	const isMobile = size.width <= 1023;
+	const isMobile = size.width <= 1024;
 
 	const [ mouseOver, setMouseOver ] = useState<boolean>( false );
+	const [ mobileShowContent, setMobileShowContent ] = useState<boolean>( false );
 
 	const onMouseOver = () => {
 		setMouseOver( true );
 	};
 	const onMouseLeave = () => {
 		setMouseOver( false );
+	};
+
+	const toMobileShowContent = () => {
+		setMobileShowContent( !mobileShowContent );
 	};
 
 	const currency = useStore( $currencies );
@@ -95,50 +100,78 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 	const styleScaleImage = mouseOver ? scaleImage : scaleImageReverse;
 
 	return (
-		<div className={ 'goodsCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
-			<Link href={ url }>
-				<div className={ 'pos goodsCard-image overflowNoHidden' }>
-					<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' } style={ styleScaleImage }/>
+		<>
+			{
+				isMobile ?
+					<div className={ 'goodsCard' } onClick={ toMobileShowContent }>
 
-					<div style={ styleBg }/>
-					{ !isMobile && <div className={ 'bgGradientBlack' } style={ styleShowContent }/> }
-				</div>
+						<div className={ 'pos goodsCard-image overflowNoHidden' }>
+							<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' } style={ styleScaleImage }/>
 
-				<div
-					className={ 'cardLabel text300 colorWhite' }
-					style={ styleShowContent }
-				>
-					{ lang?.apartments || '' } | { lang?.region || '' }: { lang?.surin || '' }
-				</div>
-
-				{ isMobile &&
-					<div className={ 'cardLabel text300 colorWhite' }>
-						{ lang?.apartments || '' } | { lang?.region || '' }: { lang?.surin || '' }
-					</div>
-				}
-
-				<img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' } style={ styleShowContentReverse }/>
-				{ isMobile && <img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/> }
-
-				<div className={ 'description-wrapper' } style={ styleShowContent }>
-					<div>
-						<div className={ 'text300 colorWhite' }>{ lang?.priceFrom || '' } { cur }100 000</div>
-						<div className={ 'text300 colorWhite mt-8' }>{ lang?.income || '' } 10% { lang?.aYear || '' }</div>
-					</div>
-					<p className={ 'text300 colorWhite' }>{ lang?.more || '' } <Image src={ arrowRight } alt={ '' }/></p>
-				</div>
-
-				{ isMobile &&
-					<div className={ 'description-wrapper' }>
-						<div>
-							<div className={ 'text300 colorWhite' }>{ lang?.priceFrom || '' } { cur }100 000</div>
-							<div className={ 'text300 colorWhite mt-8' }>{ lang?.income || '' } 10% { lang?.aYear || '' }</div>
+							{ !mobileShowContent && <div style={ styleBg }/> }
+							{ !mobileShowContent && <div className={ 'bgGradientBlack' } style={ styleShowContent }/> }
 						</div>
-						<p className={ 'text300 colorWhite' }>{ lang?.more || '' } <Image src={ arrowRight } alt={ '' }/></p>
+
+						{ mobileShowContent && <div className={ 'cardLabel text300 colorWhite' }>
+							{ lang?.apartments || '' } | { lang?.region || '' }: { lang?.surin || '' }
+						</div>
+						}
+
+						{ !mobileShowContent && <img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/> }
+
+						{ mobileShowContent &&
+							<div className={ 'bottomBg' }>
+								<div className={ 'description-wrapper' }>
+									<div>
+										<div className={ 'text300 colorWhite' }>{ lang?.priceFrom || '' } { cur }100 000</div>
+										<div className={ 'text300 colorWhite mt-8' }>{ lang?.income || '' } 10% { lang?.aYear || '' }</div>
+									</div>
+
+									<Link href={ url } className={ 'text-decoration-none' }>
+										<p className={ 'text300 colorWhite' }>{ lang?.more || '' } <Image src={ arrowRight } alt={ '' }/>
+										</p>
+									</Link>
+
+								</div>
+							</div>
+						}
 					</div>
-				}
-			</Link>
-		</div>
+					:
+					<div className={ 'goodsCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
+						<Link href={ url }>
+							<div className={ 'pos goodsCard-image overflowNoHidden' }>
+								<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' } style={ styleScaleImage }/>
+
+								<div style={ styleBg }/>
+							</div>
+
+							<div
+								className={ 'cardLabel text300 colorWhite' }
+								style={ styleShowContent }
+							>
+								{ lang?.apartments || '' } | { lang?.region || '' }: { lang?.surin || '' }
+							</div>
+
+							<img
+								src={ staticResource( logoImage ) }
+								alt={ '' }
+								className={ 'cardLogo' }
+								style={ styleShowContentReverse }
+							/>
+
+							<div className={ 'bottomBg' }>
+								<div className={ 'description-wrapper' } style={ styleShowContent }>
+									<div>
+										<div className={ 'text300 colorWhite' }>{ lang?.priceFrom || '' } { cur }100 000</div>
+										<div className={ 'text300 colorWhite mt-8' }>{ lang?.income || '' } 10% { lang?.aYear || '' }</div>
+									</div>
+									<p className={ 'text300 colorWhite' }>{ lang?.more || '' } <Image src={ arrowRight } alt={ '' }/></p>
+								</div>
+							</div>
+						</Link>
+					</div>
+			}
+		</>
 	);
 };
 

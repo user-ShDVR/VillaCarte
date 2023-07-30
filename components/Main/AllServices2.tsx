@@ -22,7 +22,7 @@ const AllServices = () => {
 			<Image src={ leavesVideo } alt={ '' } className={ 'leavesVideo' }/>
 
 			<div className={ 'container services' }>
-				<div>
+				<div className={ 'pos' }>
 					<div className={ 'pt-60-40' }>
 						<div>
 							<h2 className={ 'h2Subtitle mb-16 ls--144' }>{ lang?.allServicesInOneCompany || '' }</h2>

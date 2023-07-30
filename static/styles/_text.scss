@@ -145,6 +145,18 @@
 	line-height: 26px;
 }
 
+.fz-18-24 {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+@media (min-width: $media1200) {
+	.fz-18-24 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+
 .fz-24 {
 	font-size: 24px;
 	line-height: 30px;

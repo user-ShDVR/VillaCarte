@@ -115,7 +115,7 @@
 		background: $colorWhite;
 		width: 100%;
 		margin-top: 8px;
-		padding: 32px;
+		padding: 20px;
 		cursor: pointer;
 		position: relative;
 
@@ -149,8 +149,9 @@
 				width: 40px;
 				height: 40px;
 				position: absolute;
-				bottom: 32px;
-				left: 32px;
+				bottom: 42px;
+				left: inherit;
+				right: 32px;
 			}
 		}
 	}
@@ -282,6 +283,16 @@
 			right: 0;
 			z-index: 2;
 			margin: auto;
+		}
+
+		.bottomBg {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 3;
+			background: linear-gradient(0deg, #252525, transparent);
+			height: 150px;
+			width: 100%;
 		}
 
 		.description-wrapper {
@@ -608,7 +619,7 @@
 			p {
 
 				img {
-					margin-top: 8px;
+					//margin-top: 8px;
 				}
 			}
 		}
@@ -643,11 +654,12 @@
 		.description-wrapper {
 
 			.hoveredButton-link {
-				margin-bottom: 30px !important;
+				margin-bottom: 20px !important;
 			}
 		}
 
 		.description-down {
+			margin-top: 72px;
 			flex-direction: row;
 			height: auto;
 			align-items: end;
@@ -668,11 +680,32 @@
 	.mediaCard-wrapper {
 		grid-template-rows: 1fr 1fr;
 	}
+
+	// MediaCard
+	.mediaCard-wrapper {
+
+		.mediaCard {
+			height: 300px;
+
+			img {
+				height: 300px;
+			}
+		}
+	}
+
+	// DefaultMediaCard
+	.defaultMediaCard-link {
+
+		.defaultMediaCard {
+			height: 300px;
+		}
+	}
 }
 
 @media (min-width: $media1200) {
 	// TitleTextArrowCard
 	.titleTextArrowCard {
+		padding: 32px;
 
 		div {
 			grid-template-columns: 1fr;
@@ -752,6 +785,26 @@
 			}
 		}
 	}
+
+	// MediaCard
+	.mediaCard-wrapper {
+
+		.mediaCard {
+			height: 190px;
+
+			img {
+				height: 190px;
+			}
+		}
+	}
+
+	// DefaultMediaCard
+	.defaultMediaCard-link {
+
+		.defaultMediaCard {
+			height: 190px;
+		}
+	}
 }
 
 @media (min-width: $media1440) {
@@ -795,6 +848,10 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+
+			.description-down {
+				margin-top: 0;
+			}
 
 			h2, article {
 				margin-top: -130px;

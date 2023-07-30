@@ -48,6 +48,10 @@
 	.mainText {
 		position: absolute;
 
+		h1 {
+			letter-spacing: -2.56px;
+		}
+
 		p {
 			max-width: 380px;
 		}
@@ -59,9 +63,20 @@
 		background-repeat: no-repeat;
 		width: 100%;
 		height: 100%;
+		position: relative;
 
 		.allServices-bg {
-			display: none;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 170%;
 		}
 
 		.leavesVideo {
@@ -73,7 +88,12 @@
 	.bestProjects {
 
 		&-inner {
-			padding-top: 250px;
+			padding-top: 10px;
+
+			h2 {
+				margin-top: 60px;
+				margin-bottom: 30px;
+			}
 		}
 
 		&-tabs {
@@ -169,13 +189,17 @@
 			padding: 12px 0 40px;
 			margin: 0;
 
+			li {
+				margin: 4px 0;
+			}
+
 			div {
 				display: flex;
 				margin-top: 12px;
 
-				img {
-					margin-right: 8px;
-				}
+				//img {
+				//	margin-right: 8px;
+				//}
 			}
 		}
 
@@ -474,9 +498,21 @@
 			display: none;
 		}
 	}
+
+	footer {
+		height: fit-content;
+	}
 }
 
 @media (min-width: $media475) {
+	.mainText {
+
+		h1 {
+			font-size: 76px;
+			line-height: 84px;
+		}
+	}
+
 	// FeedBackBlock
 	.feedBackBlock {
 
@@ -509,9 +545,12 @@
 }
 
 @media (min-width: $media576) {
-	.palmsTransparent-bg {
-		//top: 44%;
-		//left: 140px;
+	.mainText {
+
+		h1 {
+			font-size: 86px;
+			line-height: 94px;
+		}
 	}
 
 	// BestProjects
@@ -543,15 +582,19 @@
 }
 
 @media (min-width: $media768) {
-	.palmsTransparent-bg {
-		//top: 30%;
-		//left: 270px;
+	.mainText {
+
+		h1 {
+			font-size: 100px;
+			line-height: 108px;
+		}
 	}
 
 	// AllServices
 	.allServices {
 
 		.cardsWrapper {
+			margin-top: 40px;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 16px;
@@ -562,22 +605,6 @@
 				height: 170px;
 				margin: 0;
 			}
-		}
-	}
-
-	// FeedBackBlock
-	.feedBackBlock {
-
-		.feedBackBlock-bg {
-
-		}
-
-		.flowerRight {
-			//width: 70%;
-		}
-
-		.element-animation {
-			//transform: scale(1.1);
 		}
 	}
 
@@ -607,16 +634,33 @@
 			right: -130px;
 		}
 	}
+
+	// WeCare
+	.weCare {
+
+		.textWrapper {
+			width: 50%;
+		}
+	}
 }
 
 @media (min-width: $media1023) {
-	.palmsTransparent-bg {
-		//left: 380px;
+	.mainText {
+
+		h1 {
+			font-size: 140px;
+			line-height: 150px;
+			letter-spacing: -4px;
+		}
 	}
 
 	// BestProjects
 	.bestProjects {
 		margin-top: -250px;
+
+		&-inner {
+			padding-top: 250px;
+		}
 
 		&-tabList {
 			display: flex;
@@ -693,6 +737,23 @@
 		}
 	}
 
+	// WeCare
+	.weCare {
+
+		.textWrapper {
+
+			h3 {
+				font-size: 36px;
+				line-height: 42px;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+	}
+
 	// Footer
 	footer {
 
@@ -710,8 +771,13 @@
 }
 
 @media (min-width: $media1200) {
-	.palmsTransparent-bg {
-		//left: 430px;
+	.mainText {
+
+		h1 {
+			font-size: 170px;
+			line-height: 180px;
+			letter-spacing: -6px;
+		}
 	}
 
 	// AllServices
@@ -767,6 +833,10 @@
 					display: flex;
 					flex-direction: column;
 
+					button {
+						right: inherit;
+						left: 32px;
+					}
 				}
 			}
 		}
@@ -906,6 +976,15 @@
 }
 
 @media (min-width: $media1400) {
+	.mainText {
+
+		h1 {
+			font-size: 200px;
+			line-height: 220px;
+			letter-spacing: -8px;
+		}
+	}
+
 	// FeedBackBlock
 	.feedBackBlock {
 

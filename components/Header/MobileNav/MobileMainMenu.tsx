@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStore } from 'effector-react';
+import { useStore, useStoreMap } from 'effector-react';
 import {
 	$mobileDropMenuVisibleServices, $mobileDropMenuVisibleSales,
 	$mobileMenuVisible,
@@ -18,11 +18,16 @@ import MobileNavService from '@/components/Header/MobileNav/MobileNavService';
 import MobileNavSales from '@/components/Header/MobileNav/MobileNavSales';
 import CustomMenuItem from '@/components/Header/CustomMenuItem';
 import { lang } from '@/pages';
+import { $modalVisible, showModal } from '@/store/modal';
+import { EModal_VisibleStore } from '@/types/modal';
+import SimpleButton from '@/components/common/Buttons/SimpleButton';
+import ModalCallRequest from '@/components/common/Modal/ModalCallRequest';
 
 const MobileMainMenu = () => {
 	const mobileDropMenuServices = useStore( $mobileDropMenuVisibleServices );
 	const mobileDropMenuSales = useStore( $mobileDropMenuVisibleSales );
 	const mobileMenu = useStore( $mobileMenuVisible );
+	const requestCallModal = useStoreMap( $modalVisible, s => s.callRequest );
 
 	const toShowDropMenuSales = () => {
 		showMobileDropMenuSales( !mobileDropMenuSales );
@@ -34,6 +39,10 @@ const MobileMainMenu = () => {
 
 	const toHideMenu = () => {
 		showMobileMenu( false );
+	};
+
+	const toCallModal = () => {
+		showModal( EModal_VisibleStore.CallRequest );
 	};
 
 	return (
@@ -105,19 +114,21 @@ const MobileMainMenu = () => {
 
 			<div className={ 'mb-60 ml-16 d-flex flex-column ai-start' }>
 				<div className={ 'mb-16 d-flex flex-column ai-start' }>
-					<p className={ 'text300 colorText m-0' }>{lang?.email || ''}</p>
+					<p className={ 'text300 colorText m-0' }>{ lang?.email || '' }</p>
 					<a className={ 'text700 t-decor-none' } href='mailto: sales@villacarte.com'>sales@villacarte.com</a>
 				</div>
 				<div className={ 'mb-16 d-flex flex-column ai-start' }>
-					<p className={ 'text300 colorText m-0' }>{lang?.montenegro || ''}</p>
+					<p className={ 'text300 colorText m-0' }>{ lang?.montenegro || '' }</p>
 					<a className={ 'text700 t-decor-none' } href='tel: +38268815019'>+382 (68) 815-019</a>
 				</div>
 				<div className={ 'mb-20 d-flex flex-column ai-start' }>
-					<p className={ 'text300 colorText m-0' }>{lang?.phuket || ''}</p>
+					<p className={ 'text300 colorText m-0' }>{ lang?.phuket || '' }</p>
 					<a className={ 'text700 t-decor-none' } href='tel: +66892900110'>+66 (89) 290-01-10</a>
 				</div>
-				<HoveredButton to={ '/' } text={ 'Заказать звонок' } variant={ 'simpleDark' }/>
+				<SimpleButton text={ 'Заказать звонок' } variant={ 'simpleDark' } onClick={ toCallModal }/>
 			</div>
+
+			{ requestCallModal && <ModalCallRequest/> }
 		</section>
 	);
 };

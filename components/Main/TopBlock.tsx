@@ -9,7 +9,7 @@ const TopBlock = () => {
 
 			<div className={ 'bgAccentOpacity' }/>
 			<div className={ 'container mainText' }>
-				<h1 className={ 'h1Title colorWhite fz-60-200 ls--8' }>VillaCarte</h1>
+				<h1 className={ 'h1Title colorWhite fz-60-200' }>VillaCarte</h1>
 				<p className={ 'text500 colorWhite' }>
 					{ lang?.resortReal || '' }
 				</p>
