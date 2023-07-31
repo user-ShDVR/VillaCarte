@@ -41,6 +41,7 @@ const BestProjects = () => {
 		<div className={ 'bgGradient bestProjects' }>
 			<div className={ 'container bestProjects-inner' }>
 				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.theBestProjectsForLife || '' }</h2>
+				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.theBestProjectsForLife2 || '' }</h2>
 
 				<Tabs className={ 'bestProjects-tabs' }>
 					<TabList className={ 'bestProjects-tabList text500 colorWhite' }>

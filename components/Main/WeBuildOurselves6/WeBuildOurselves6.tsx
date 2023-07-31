@@ -15,8 +15,11 @@ const WeBuildOurselves = () => {
 
 	return (
 		<div className={ 'weBuildOurselves' }>
-			<div className={ 'container pt-60 d-md-flex' }>
-				<h2 className={ 'h1Title colorWhite col-md-6 ls--216' }>{ lang?.weAlsoBuildOurselves || '' }</h2>
+			<div className={ 'container pt-60 d-md-flex jc-between' }>
+				<div>
+					<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.weAlsoBuildOurselves || '' }</h2>
+					<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.weAlsoBuildOurselves2 || '' }</h2>
+				</div>
 
 				<ul className={ 'col-md-6' }>
 					{ list.map( item =>
@@ -36,7 +39,8 @@ const WeBuildOurselves = () => {
 				<div className={ 'fiveStepsSlider-wrapper' }>
 
 					<div className={ 'container' }>
-						<h2 className={ 'h1Title colorWhite pos ls--216' }>{ lang?.fiveSteps || '' }</h2>
+						<h3 className={ 'h1Title colorWhite pos ls--216' }>{ lang?.fiveSteps || '' }</h3>
+						<h3 className={ 'h1Title colorWhite pos ls--216' }>{ lang?.fiveSteps2 || '' }</h3>
 					</div>
 
 					<FiveSteps/>

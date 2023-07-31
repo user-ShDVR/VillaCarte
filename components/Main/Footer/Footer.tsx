@@ -17,6 +17,7 @@ import Socials from '@/components/common/Socials/Socials';
 import RequestCallForm from '@/components/common/Forms/RequestСall/RequestCallForm';
 import Contacts from '@/components/Main/Footer/Contacts';
 import { lang } from '@/pages';
+import feedBackBg from '@/public/feedBackBg.webp';
 
 const ContactsBlock = () => {
 	const socialsStock = [
@@ -39,6 +40,8 @@ const ContactsBlock = () => {
 
 	return (
 		<footer>
+			<div className={ 'footer-bg' } style={ { backgroundImage: `url(${ feedBackBg.src })` } }/>
+
 			<div className={ 'container footer' }>
 				<div className={ 'container contactsBlock' }>
 					<div>

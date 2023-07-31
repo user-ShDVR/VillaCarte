@@ -67,20 +67,20 @@
 
 		.sliderNext {
 			position: absolute;
-			bottom: -10px;
+			bottom: -30px;
 			right: 40%;
 			z-index: 1;
 		}
 
 		.sliderPrev {
 			position: absolute;
-			bottom: -10px;
+			bottom: -30px;
 			left: 40%;
 			z-index: 1;
 		}
 
 		.slick-track {
-			min-height: 700px;
+			//min-height: 700px;
 		}
 
 		.slick-slider {

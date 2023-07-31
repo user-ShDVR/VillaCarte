@@ -1,5 +1,5 @@
 import React from 'react';
-import allServicesBg from '@/public/allServicesBg.png';
+import allServicesBg from '@/public/allServicesBg.webp';
 import leavesVideo from '@/public/leavesVideo.png';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import TitleTextArrowCard from '@/components/common/Cards/TitleTextArrowCard/TitleTextArrowCard';
@@ -15,7 +15,6 @@ const AllServices = () => {
 	];
 
 	return (
-
 		<div className={ 'allServices' }>
 			<div className={ 'allServices-bg' } style={ { backgroundImage: `url(${ allServicesBg.src })` } }/>
 
@@ -25,7 +24,8 @@ const AllServices = () => {
 				<div className={ 'pos' }>
 					<div className={ 'pt-60-40' }>
 						<div>
-							<h2 className={ 'h2Subtitle mb-16 ls--144' }>{ lang?.allServicesInOneCompany || '' }</h2>
+							<h2 className={ 'h2Subtitle ls--144' }>{ lang?.allServicesInOneCompany || '' }</h2>
+							<h2 className={ 'h2Subtitle mb-16 ls--144' }>{ lang?.allServicesInOneCompany2 || '' }</h2>
 							<p className={ 'text300 colorText pt-10' }>
 								{ lang?.weHelpYouBuyProperty || '' }
 							</p>

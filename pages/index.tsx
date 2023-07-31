@@ -7,10 +7,8 @@ import { IMainPage } from '@/types/mainPage';
 import Image from 'next/image';
 import metaImage from '@/public/metaImageTest.png';
 import scrollArrow from '@/public/icons/scrollArrow.svg';
-// import 'animate.css';
 import 'react-tabs/style/react-tabs.css';
-// import palmsTransparent from '@/public/palmsTransparent.png';
-import weBuildBg from '@/public/weBuildBg.png';
+import weBuildBg from '@/public/weBuildBg.webp';
 import TopBlock from '@/components/Main/TopBlock';
 import AllServices from '@/components/Main/AllServices2';
 import BestProjects from '@/components/Main/BestProjects4';
@@ -54,7 +52,6 @@ export default function Home( { info }: any ) {
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );
 	// useWheelEvent();
 	// useWindowSize();
-	console.log( 'info', info );
 
 	const handleClickScroll = () => {
 		const element = document.getElementById( 'section-2' );
@@ -74,8 +71,8 @@ export default function Home( { info }: any ) {
 
 	return (
 		<>
-			{/*{ isLoading ? <><Spinner/></>*/}
-			{/*	:*/}
+			{ isLoading ? <><Spinner/></>
+				:
 				<Layout>
 					<Head>
 						<meta property="og:title" content={ mainPageInfo?.meta.title }/>
@@ -121,7 +118,7 @@ export default function Home( { info }: any ) {
 						<Footer/>
 					</section>
 				</Layout>
-			{/*}*/}
+			}
 		</>
 	);
 }

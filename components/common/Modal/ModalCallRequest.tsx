@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal } from '@/components/common/Modal/Modal';
 import { EModal_VisibleStore } from '@/types/modal';
-import feedBackBg from '@/public/feedBackBg.png';
+import feedBackBg from '@/public/feedBackBg.webp';
 import Image from 'next/image';
 import flowerRight from '@/public/flowerRight.png';
 import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
@@ -29,6 +29,7 @@ const ModalCallRequest = () => {
 					<div>
 						<div>
 							<h2 className={ 'h2Subtitle' }>{ lang?.orderAPersonalSelection || '' }</h2>
+							<h2 className={ 'h2Subtitle' }>{ lang?.orderAPersonalSelection2 || '' }</h2>
 							<h6 className={ 'text300 colorText pt-8' }>
 								{ lang?.ourManagerWillCallYou || '' }
 							</h6>

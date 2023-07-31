@@ -14,7 +14,7 @@ export default function Layout( { children }: IProps ) {
 	return (
 		<div className='layout'>
 			<Head>
-				<link rel="icon" href="/logoFavicon.ico"/>
+				<link rel="icon" href="/favicon.ico"/>
 			</Head>
 
 			<Header/>
