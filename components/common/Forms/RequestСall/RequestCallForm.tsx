@@ -2,9 +2,10 @@ import React from 'react';
 import { Form, Input } from 'antd';
 import { updatePreloader } from '@/store/preloader';
 import { postFeedback } from '@/store/feedback';
-import PhoneInput from '@/components/common/Forms/PhoneInput';
+import PhoneInputComp from '@/components/common/Forms/PhoneInputComp';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
 import { lang } from '@/pages';
+import TextAreaLikeInput from '@/components/common/Forms/TextAreaLikeInput';
 
 const RequestCallForm = () => {
 
@@ -24,30 +25,34 @@ const RequestCallForm = () => {
 					className={ 'requestCallForm' }
 					form={ form }
 					name="requestCallForm"
-					onFinish={ onFinish }
+					// onFinish={ onFinish }
 				>
 					<Form.Item
 						name="username"
 						className={ 'requestCallInputWrapper' }
 						rules={ [
-							{ type: 'string', message: '' },
-							{ required: true, message: '' }
+							{ type: 'string', message: lang?.yourName || '' },
+							{ required: true, message: lang?.yourName || '' }
 						] }
 					>
-						<Input className={ 'requestCallInput text300' } placeholder={ lang?.yourName || '' }/>
+						<TextAreaLikeInput
+							name='name'
+							className={ 'requestCallInput text300' }
+							placeholder={ lang?.yourName || '' }
+						/>
 					</Form.Item>
 
 					<Form.Item
 						name="phone"
 						className={ 'requestCallInputWrapper' }
 						rules={ [
-							{ type: 'string', message: '' },
-							{ required: true, message: '' }
+							{ type: 'string', message: lang?.phoneNumber || '' },
+							{ required: true, message: lang?.phoneNumber || '' }
 						] }
 					>
-						<PhoneInput
+						<PhoneInputComp
 							name="phone"
-							textareaClass={ 'requestCallInput text300' }
+							className={ 'requestCallInput text300' }
 							placeholder={ lang?.phoneNumber || '' }
 						/>
 					</Form.Item>

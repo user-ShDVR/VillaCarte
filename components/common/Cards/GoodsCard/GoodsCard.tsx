@@ -17,7 +17,7 @@ interface IProps {
 const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 	const size = useWindowSize();
 	// @ts-ignore
-	const isMobile = size.width <= 1024;
+	const isMobile = size.width <= 1400;
 
 	const [ mouseOver, setMouseOver ] = useState<boolean>( false );
 	const [ mobileShowContent, setMobileShowContent ] = useState<boolean>( false );

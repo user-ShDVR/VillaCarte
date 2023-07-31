@@ -356,7 +356,7 @@
 	}
 
 	.ourMessengers {
-		padding: 28px;
+		padding: 28px 28px 20px 28px;
 		background: linear-gradient(225deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.04) 100%);
 		backdrop-filter: blur(15px);
 		box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
@@ -623,7 +623,8 @@
 
 	.ourMessengers {
 		width: 324px;
-		margin-top: 60px;
+		margin-top: 0;
+		margin-right: 80px;
 		height: fit-content;
 		margin-bottom: 0;
 
@@ -645,7 +646,7 @@
 		.description-wrapper {
 
 			.hoveredButton-link {
-				margin-bottom: 20px !important;
+				margin-bottom: 30px !important;
 			}
 		}
 

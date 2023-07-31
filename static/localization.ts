@@ -31,8 +31,8 @@ export const enLocalization = {
 	offers: 'offers',
 	orderAPersonalSelection: 'Order a personal selection',
 	ourManagerWillCallYou: 'Our manager will call you and compile the property list according to your personal needs and wants',
-	yourName: 'Your name',
-	phoneNumber: 'Phone number',
+	yourName: 'Enter your name',
+	phoneNumber: 'Enter your phone number',
 	byClickingTheRequestACall: 'By clicking the "Request a call" button, I agree to the privacy policy and consent to the processing of personal data',
 	requestASelection: 'Request a selection',
 	contactUsThroughOurMessengers: 'Contact us through our messengers',
@@ -74,8 +74,6 @@ export const enLocalization = {
 	websiteDevelopment: 'website development —',
 	orderAnIndividualSelection: 'Order an individual selection of real estate',
 	byClickingTheSendRequest: 'By clicking the "Send request" button, I consent to the processing of my personal data',
-
-
 };
 
 export const ruLocalization = {
@@ -89,7 +87,7 @@ export const ruLocalization = {
 	email: 'Почта',
 	requestACall: 'Заказать звонок',
 	resortReal: 'Сервисная компания по продаже и аренде курортной недвижимости в Таиланде',
-	allServicesInOneCompany: 'Все услуги — в одной компании',
+	allServicesInOneCompany: 'Все услуги —  в одной компании',
 	weHelpYouBuyProperty: 'Помогаем купить недвижимость на Пхукете и Самуи, наслаждаться жизнью и отдыхом на островах и получать доход от аренды',
 	learnMore: 'Узнать больше',
 	propertySale: 'Продажа недвижимости',
@@ -111,8 +109,8 @@ export const ruLocalization = {
 	offers: 'предложений',
 	orderAPersonalSelection: 'Закажите персональную подборку',
 	ourManagerWillCallYou: 'Вам позвонит менеджер и подберёт недвижимость под ваши индивидуальные запросы',
-	yourName: 'Ваше имя',
-	phoneNumber: 'Номер телефона',
+	yourName: 'Введите ваше имя',
+	phoneNumber: 'Введите ваш номер телефона',
 	byClickingTheRequestACall: 'Нажимая кнопку «Заказать звонок», я соглашаюсь с политикой конфиденциальности и даю согласие на обработку персональных данных',
 	requestASelection: 'Заказать подборку',
 	contactUsThroughOurMessengers: 'Наши месенджеры для связи',
@@ -154,6 +152,4 @@ export const ruLocalization = {
 	websiteDevelopment: 'создание сайтов —',
 	orderAnIndividualSelection: 'Закажите индивидуальную подборку недвижимости',
 	byClickingTheSendRequest: 'Нажимая кнопку “Отправить запрос” я даю согласие на обработку моих персональных данных',
-
-
 };

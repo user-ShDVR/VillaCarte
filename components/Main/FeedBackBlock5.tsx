@@ -14,7 +14,7 @@ const FeedBackBlock = () => {
 
 		const onScroll = () => {
 			// @ts-ignore
-			if ( document.documentElement.scrollTop > 2200 ) {
+			if ( document.documentElement.scrollTop > 3000 ) {
 				setScrolled( true );
 			} else {
 				setScrolled( false );
@@ -38,7 +38,7 @@ const FeedBackBlock = () => {
 				</div>
 			}
 
-			<div className={ 'container pt-60 pos feedBackBlock-content' }>
+			<div className={ 'container pt-60 pos feedBackBlock-content w-620px' }>
 				<div>
 					<div>
 						<h2 className={ 'h2Subtitle ' }>{ lang?.orderAPersonalSelection || '' }</h2>
