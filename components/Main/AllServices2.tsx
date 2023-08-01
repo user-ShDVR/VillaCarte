@@ -1,6 +1,6 @@
 import React from 'react';
 import allServicesBg from '@/public/allServicesBg.webp';
-import leavesVideo from '@/public/leavesVideo.png';
+import leavesVideo from '@/public/leavesLeft.webp';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import TitleTextArrowCard from '@/components/common/Cards/TitleTextArrowCard/TitleTextArrowCard';
 import Image from 'next/image';

@@ -1,7 +1,7 @@
 import React from 'react';
 import leavesTransparent from '@/public/leavesTransparent.png';
-import leavesLeft from '@/public/leavesLeft.png';
-import leavesRight from '@/public/leavesRight.png';
+import leavesLeft from '@/public/leavesLeft.webp';
+import leavesRight from '@/public/leavesRight.webp';
 import Image from 'next/image';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { lang } from '@/pages';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input } from 'antd';
+import { Form } from 'antd';
 import { updatePreloader } from '@/store/preloader';
 import { postFeedback } from '@/store/feedback';
 import PhoneInputComp from '@/components/common/Forms/PhoneInputComp';

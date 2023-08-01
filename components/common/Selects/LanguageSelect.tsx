@@ -1,7 +1,6 @@
 import React from 'react';
 import { saveUserInfo } from '@/store/account';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
-import cn from 'classnames';
 import { updateLanguages } from '@/store/languages';
 import { ILanguages } from '@/types/mainPage';
 
@@ -25,7 +24,7 @@ const LanguageSelect = ( { className, ...newProps }: IProps ) => {
 	return (
 		<div className={ 'header-select-wrapper' }>
 
-			<CustomSelect options={ languages } className={ cn( className, 'h-84' ) } updateStore={ updateLanguages }/>
+			<CustomSelect options={ languages } className={ className } updateStore={ updateLanguages }/>
 
 		</div>
 	);

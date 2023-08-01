@@ -3,7 +3,7 @@ import { Modal } from '@/components/common/Modal/Modal';
 import { EModal_VisibleStore } from '@/types/modal';
 import feedBackBg from '@/public/feedBackBg.webp';
 import Image from 'next/image';
-import flowerRight from '@/public/flowerRight.png';
+import flowerRight from '@/public/leavesRight.webp';
 import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import ModalCloseButton from '@/components/common/Buttons/ModalCloseButton';

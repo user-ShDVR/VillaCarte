@@ -229,6 +229,15 @@
 	}
 }
 
+@media (min-width: $media576) {
+	.mobileMainMenu-header-right {
+
+		button {
+			margin-left: 28px;
+		}
+	}
+}
+
 @media (min-width: $media1440) {
 	.header {
 

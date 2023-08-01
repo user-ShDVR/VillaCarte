@@ -183,7 +183,7 @@
 
 @media (min-width: $media1023) {
 	.modal {
-		padding: 15vh 0;
+		padding: 5vh 0;
 		overflow: hidden;
 	}
 
@@ -192,13 +192,17 @@
 		overflow-y: hidden;
 
 		.element-animation {
-			top: -50px;
+			top: -30px;
 			right: -130px;
 		}
 	}
 }
 
 @media (min-width: $media1200) {
+	.modal {
+		padding: 10vh 0;
+	}
+
 	// ModalCallRequest
 	.feedBack-modal-wrapper {
 		width: 74%;

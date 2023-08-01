@@ -1,7 +1,6 @@
 import React from 'react';
 import { saveUserInfo } from '@/store/account';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
-import cn from 'classnames';
 import { updateCurrencies } from '@/store/currencies';
 import { ICurrencies } from '@/types/mainPage';
 
@@ -28,7 +27,7 @@ const CurrencySelect = ( { className, ...newProps }: IProps ) => {
 
 			<CustomSelect
 				options={ currenciesList }
-				className={ cn( className, ' h-122' ) }
+				className={ className }
 				updateStore={ updateCurrencies }
 			/>
 

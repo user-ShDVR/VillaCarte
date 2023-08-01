@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import flowerRight from '@/public/flowerRight.png';
+import flowerRight from '@/public/leavesRight.webp';
 import Image from 'next/image';
 import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';

@@ -86,6 +86,8 @@
 
 	// BestProjects
 	.bestProjects {
+		position: relative;
+		z-index: 1;
 
 		&-inner {
 			padding-top: 70px;
@@ -93,6 +95,32 @@
 
 		&-tabs {
 			margin-top: 28px;
+		}
+
+		.react-tabs__tab-panel--selected {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 8px;
+			-webkit-animation: fadeTabPanel 2s linear;
+			animation: fadeTabPanel 2s linear;
+		}
+
+		@-webkit-keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
 		}
 
 		&-tabList {
@@ -116,7 +144,6 @@
 			}
 		}
 	}
-
 
 	// FeedBackBlock
 	.feedBackBlock {
@@ -275,18 +302,25 @@
 
 		.leavesLeft {
 			position: absolute;
-			bottom: -23px;
-			left: -170px;
-			scale: 1.2;
 			z-index: 1;
+			bottom: -1170px;
+			scale: 0.4;
+			left: -1160px;
+			rotate: 50deg;
+			transform: scale(-1, 1);
+			max-width: -moz-fit-content !important;
+			max-width: fit-content !important;
 		}
 
 		.leavesRight {
 			position: absolute;
-			bottom: 27px;
-			right: -260px;
-			scale: 1.2;
 			z-index: 1;
+			scale: 0.4;
+			bottom: -980px;
+			transform: scale(-1, 1);
+			right: -759px;
+			max-width: -moz-fit-content !important;
+			max-width: fit-content !important;
 		}
 
 		div {
@@ -613,11 +647,11 @@
 	.joinTheClub {
 
 		.leavesLeft {
-			left: -70px;
+			left: -1100px;
 		}
 
 		.leavesRight {
-			right: -130px;
+			right: -710px;
 		}
 	}
 
@@ -692,13 +726,11 @@
 		padding: 53px 0;
 
 		.leavesLeft {
-			bottom: 0;
-			scale: 1;
+			bottom: -860px;
 		}
 
 		.leavesRight {
-			bottom: 0;
-			scale: 1;
+			right: -660px;
 		}
 
 		div {
@@ -779,10 +811,11 @@
 		.leavesVideo {
 			display: block;
 			position: absolute;
-			top: 349px;
-			left: 0;
+			top: -230px;
+			left: -934px;
 			z-index: 0;
-			scale: 1.0424;
+			scale: 0.5;
+			max-width: inherit !important;
 		}
 	}
 
@@ -1101,6 +1134,25 @@
 					}
 				}
 			}
+		}
+	}
+
+	// JoinTheClub
+	.joinTheClub {
+
+		.leavesLeft {
+			bottom: -860px;
+			scale: 0.4;
+			left: -1050px;
+			rotate: 30deg;
+			transform: scale(-1, 1);
+			max-width: fit-content !important;
+		}
+
+		.leavesRight {
+			scale: 0.4;
+			bottom: -970px;
+			right: -549px;
 		}
 	}
 

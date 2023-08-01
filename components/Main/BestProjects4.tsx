@@ -43,27 +43,28 @@ const BestProjects = () => {
 				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.theBestProjectsForLife || '' }</h2>
 				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.theBestProjectsForLife2 || '' }</h2>
 
-				<Tabs className={ 'bestProjects-tabs' }>
+				<Tabs className={ 'bestProjects-tabs' } selectedTabPanelClassName={ '' }>
 					<TabList className={ 'bestProjects-tabList text500 colorWhite' }>
-						<Tab >{ lang?.apartments || '' }</Tab>
+						<Tab>{ lang?.apartments || '' }</Tab>
 						<Tab>{ lang?.villas || '' }</Tab>
 					</TabList>
 
-					<Fade duration={ 2000 }>
-						<TabPanel>
-							{ offers.data?.apartments.slice( 0, 6 ).map( item =>
+					{/*<Fade duration={ 2000 }> */}
+						<TabPanel className={''}>
+							{ offers.data?.villas.slice( 0, 6 ).map( item =>
 								<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 							) }
 						</TabPanel>
-					</Fade>
+					{/*</Fade> */}
 
-					<Fade duration={ 2000 }>
-						<TabPanel>
-							{ offers?.data?.villas.slice( 0, 6 ).map( item =>
+					{/*<Fade duration={ 2000 }> */}
+						<TabPanel className={''}>
+							{ offers.data?.villas.slice( 0, 6 ).map( item =>
 								<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 							) }
 						</TabPanel>
-					</Fade>
+					{/*</Fade> */}
+
 				</Tabs>
 
 				<div className={ 'mt-28 pb-40-100 d-flex jc-center' }>
