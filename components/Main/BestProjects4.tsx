@@ -45,11 +45,11 @@ const BestProjects = () => {
 
 				<Tabs className={ 'bestProjects-tabs' }>
 					<TabList className={ 'bestProjects-tabList text500 colorWhite' }>
-						<Tab>{ lang?.apartments || '' }</Tab>
+						<Tab >{ lang?.apartments || '' }</Tab>
 						<Tab>{ lang?.villas || '' }</Tab>
 					</TabList>
 
-					<Fade>
+					<Fade duration={ 2000 }>
 						<TabPanel>
 							{ offers.data?.apartments.slice( 0, 6 ).map( item =>
 								<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
@@ -57,7 +57,7 @@ const BestProjects = () => {
 						</TabPanel>
 					</Fade>
 
-					<Fade>
+					<Fade duration={ 2000 }>
 						<TabPanel>
 							{ offers?.data?.villas.slice( 0, 6 ).map( item =>
 								<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
