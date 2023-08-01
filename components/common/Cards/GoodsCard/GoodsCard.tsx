@@ -105,6 +105,7 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 				isMobile ?
 					<div className={ 'goodsCard' } onClick={ toMobileShowContent }>
 
+
 						<div className={ 'pos goodsCard-image overflowNoHidden' }>
 							<img src={ staticResource( image ) } alt={ '' } className={ 'cardPhoto' } style={ styleScaleImage }/>
 
@@ -112,29 +113,33 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 							{ !mobileShowContent && <div className={ 'bgGradientBlack' } style={ styleShowContent }/> }
 						</div>
 
-						{ mobileShowContent && <div className={ 'cardLabel text300 colorWhite' }>
-							{ lang?.apartments || '' } | { lang?.region || '' }: { lang?.surin || '' }
-						</div>
-						}
 
 						{ !mobileShowContent && <img src={ staticResource( logoImage ) } alt={ '' } className={ 'cardLogo' }/> }
 
-						{ mobileShowContent &&
-							<div className={ 'bottomBg' }>
-								<div className={ 'description-wrapper' }>
-									<div>
-										<div className={ 'text300 colorWhite' }>{ lang?.priceFrom || '' } { cur }100 000</div>
-										<div className={ 'text300 colorWhite mt-8' }>{ lang?.income || '' } 10% { lang?.aYear || '' }</div>
-									</div>
+						<Link href={ url } className={ 'mobileLink' }>
+							{ mobileShowContent &&
+								<div className={ 'cardLabel text300 colorWhite' }>
+									{ lang?.apartments || '' } | { lang?.region || '' }: { lang?.surin || '' }
+								</div>
+							}
 
-									<Link href={ url } className={ 'text-decoration-none' }>
+							{ mobileShowContent &&
+								<div className={ 'bottomBg' }>
+									<div className={ 'description-wrapper' }>
+										<div>
+											<div className={ 'text300 colorWhite' }>{ lang?.priceFrom || '' } { cur }100 000</div>
+											<div
+												className={ 'text300 colorWhite mt-8' }>{ lang?.income || '' } 10% { lang?.aYear || '' }</div>
+										</div>
+
 										<p className={ 'text300 colorWhite' }>{ lang?.more || '' } <Image src={ arrowRight } alt={ '' }/>
 										</p>
-									</Link>
 
+									</div>
 								</div>
-							</div>
-						}
+							}
+
+						</Link>
 					</div>
 					:
 					<div className={ 'goodsCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>

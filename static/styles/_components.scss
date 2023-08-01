@@ -10,106 +10,106 @@
 	}
 }
 
-// CustomSelect
-.customSelect {
-	caret-color: transparent;
-	-moz-appearance: none !important;
-	-webkit-appearance: none !important;
-	appearance: none !important;
-	outline: none !important;
-	border: none !important;
-
-	&:hover {
-
-		& > div > div > div {
-			color: $colorDarkWhite;
-		}
-	}
-
-	& > div {
-		background: transparent;
-		cursor: pointer;
-		outline: none !important;
-		border: none !important;
+@media (min-width: $media0) {
+	// CustomSelect
+	.customSelect {
+		caret-color: transparent;
 		-moz-appearance: none !important;
 		-webkit-appearance: none !important;
 		appearance: none !important;
+		outline: none !important;
+		border: none !important;
 
-		& > div > span {
-			display: none;
+		&:hover {
+
+			//& > div > div > div {
+			//	color: $colorDarkWhite;
+			//}
 		}
 
-		& > div > div {
-			color: $colorWhite;
-			padding: 0;
-			font-family: $fontManrope700;
-			font-size: 14px;
-			margin: 0;
-			white-space: nowrap;
-			letter-spacing: -0.42px;
+		& > div {
+			background: transparent;
+			cursor: pointer;
+			outline: none !important;
+			border: none !important;
+			-moz-appearance: none !important;
+			-webkit-appearance: none !important;
+			appearance: none !important;
 
-			&:hover {
-				//color: $colorDarkWhite;
+			& > div > span {
+				display: none;
 			}
 
-			svg {
-				width: 15px;
-				height: 15px;
-			}
-		}
-	}
-
-	.css-1nmdiq5-menu {
-		background: rgba(255, 255, 255, 0.20);
-		box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
-		backdrop-filter: blur(15px);
-		border-radius: 15px;
-		width: 80px;
-		top: 30px;
-
-		.css-1n6sfyn-MenuList {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-
-			div {
-				background: transparent;
-				color: $colorWhite;
-				cursor: pointer;
-				margin-top: 12px !important;
-				margin-bottom: 12px !important;
+			& > div > div {
+				color: $colorAccent;
+				padding: 0;
+				font-family: $fontManrope700;
+				font-size: 14px;
+				margin: 0;
+				white-space: nowrap;
+				letter-spacing: -0.42px;
 
 				&:hover {
 					color: $colorDarkWhite;
 				}
+
+				svg {
+					width: 15px;
+					height: 15px;
+				}
 			}
+		}
+
+		.css-1nmdiq5-menu {
+			background: rgba(255, 255, 255, 0.20);
+			box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10);
+			backdrop-filter: blur(15px);
+			border-radius: 15px;
+			width: 80px;
+			top: 30px;
+
+			.css-1n6sfyn-MenuList {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+
+				div {
+					background: transparent;
+					color: $colorAccent;
+					cursor: pointer;
+					margin-top: 12px !important;
+					margin-bottom: 12px !important;
+
+					&:hover {
+						color: $colorDarkWhite;
+					}
+				}
+			}
+		}
+
+		.css-1fdsijx-ValueContainer {
+			padding: 2px 2px;
+		}
+
+		.css-t3ipsp-control {
+			outline: none !important;
+			border: none !important;
+			-moz-appearance: none !important;
+			-webkit-appearance: none !important;
+			appearance: none !important;
+			box-shadow: none;
 		}
 	}
 
-	.css-1fdsijx-ValueContainer {
-		padding: 2px 2px;
-	}
+	//.dropBgClass .css-1nmdiq5-menu {
+	//	background: rgba(34, 54, 74, .4) !important;
+	//	backdrop-filter: blur(15px);
+	//	box-shadow: 5px 5px 10px 0 rgb(68, 68, 68, .15);
+	//	top: 42px;
+	//	border-radius: 0 0 15px 15px;
+	//}
 
-	.css-t3ipsp-control {
-		outline: none !important;
-		border: none !important;
-		-moz-appearance: none !important;
-		-webkit-appearance: none !important;
-		appearance: none !important;
-		box-shadow: none;
-	}
-}
-
-//.dropBgClass .css-1nmdiq5-menu {
-//	background: rgba(34, 54, 74, .4) !important;
-//	backdrop-filter: blur(15px);
-//	box-shadow: 5px 5px 10px 0 rgb(68, 68, 68, .15);
-//	top: 42px;
-//	border-radius: 0 0 15px 15px;
-//}
-
-@media (min-width: $media0) {
 	// TitleTextArrowCard
 	.titleTextArrowCard {
 		background: $colorWhite;
@@ -263,6 +263,16 @@
 
 		.cardPhoto {
 			width: 100%;
+		}
+
+		.mobileLink {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			display: block;
+			width: 100%;
+			height: 100%;
 		}
 
 		.cardLabel {
@@ -618,6 +628,7 @@
 	.ourMessengers-wrapper {
 		display: flex;
 		justify-content: end;
+		margin: 70px 30px 0 !important;
 	}
 
 	.ourMessengers {
@@ -812,6 +823,34 @@
 }
 
 @media (min-width: $media1440) {
+	// CustomSelect
+	.customSelect {
+
+		&:hover {
+
+			& > div > div > div {
+				color: $colorDarkWhite;
+			}
+		}
+
+		& > div {
+
+			& > div > div {
+				color: $colorWhite;
+			}
+		}
+
+		.css-1nmdiq5-menu {
+
+			.css-1n6sfyn-MenuList {
+
+				div {
+					color: $colorWhite;
+				}
+			}
+		}
+	}
+
 	// GoodsCard
 	.goodsCard {
 		overflow: hidden;
@@ -821,6 +860,17 @@
 
 			&:hover {
 				scale: 1.15;
+			}
+		}
+
+		.description-wrapper {
+
+			p {
+				margin-right: 28px;
+
+				img {
+					margin-top: 8px;
+				}
 			}
 		}
 	}

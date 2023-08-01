@@ -3,6 +3,7 @@ import cn from 'classnames';
 import Image from 'next/image';
 import arrowAccent from '@/public/icons/arrowBtnAccent.svg';
 import arrowWhite from '@/public/icons/arrowBtnWhite.svg';
+import { useWindowSize } from '@/hooks/useWindowSize';
 
 interface IProps {
 	text: string;
@@ -13,6 +14,9 @@ interface IProps {
 }
 
 const SimpleButton = ( { text, variant, className, type, onClick, ...props }: IProps ) => {
+	const size = useWindowSize();
+	// @ts-ignore
+	const isMobile = size.width <= 1200;
 	const [ mouseOver, setMouseOver ] = useState<boolean>( false );
 
 	let classNameVariant;
@@ -60,7 +64,8 @@ const SimpleButton = ( { text, variant, className, type, onClick, ...props }: IP
 			<span>{ text }</span>
 
 			{ variant === 'arrow' && !mouseOver && <Image src={ arrowAccent } alt={ '' }/> }
-			{ variant === 'arrow' && mouseOver && <Image src={ arrowWhite } alt={ '' }/> }
+			{ variant === 'arrow' && mouseOver && !isMobile && <Image src={ arrowWhite } alt={ '' }/> }
+			{ variant === 'arrow' && mouseOver && isMobile && <Image src={ arrowAccent } alt={ '' }/> }
 			{ variant === 'arrowWhite' && <Image src={ arrowWhite } alt={ '' }/> }
 			{ variant === 'arrowRevert' && mouseOver && <Image src={ arrowAccent } alt={ '' }/> }
 			{ variant === 'arrowRevert' && !mouseOver && <Image src={ arrowWhite } alt={ '' }/> }

@@ -19,7 +19,7 @@ import { lang } from '@/pages';
 const Header = () => {
 	const size = useWindowSize();
 	// @ts-ignore
-	const isMobile = size.width <= 1439;
+	const isMobile = size.width <= 474;
 	const [ scrolled, setScrolled ] = useState<boolean>( false );
 	const mobileMenu = useStore( $mobileMenuVisible );
 	const requestCallModal = useStoreMap( $modalVisible, s => s.callRequest );

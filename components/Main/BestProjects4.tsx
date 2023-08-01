@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { $mainPageInfo } from '@/store/mainPage';
 import { IMainPage } from '@/types/mainPage';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';

@@ -37,6 +37,14 @@
 			border: none;
 		}
 
+		&-simple {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
 		&-simpleDark {
 			background: $colorAccent;
 			color: $colorWhite;
@@ -49,7 +57,7 @@
 		}
 
 		&-arrowRevert {
-			background: rgba(255, 255, 255, 0.10) ;
+			background: rgba(255, 255, 255, 0.10);
 			box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10) !important;
 			backdrop-filter: blur(2px) !important;
 			color: $colorWhite;

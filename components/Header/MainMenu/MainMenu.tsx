@@ -57,11 +57,7 @@ const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 						? <Image src={ upSmall } alt={ '' }/>
 						: <Image src={ downSmall } alt={ '' }/>
 					}
-					{ mainDropMenuSales &&
-						<NavSales
-							dropBgStyle={ dropBgStyle }
-						/>
-					}
+					{ mainDropMenuSales && <NavSales dropBgStyle={ dropBgStyle }/> }
 				</div>
 
 				<CustomMenuItem
@@ -76,11 +72,7 @@ const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 						? <Image src={ upSmall } alt={ '' }/>
 						: <Image src={ downSmall } alt={ '' }/>
 					}
-					{ mainDropMenuServices &&
-						<NavService
-							dropBgStyle={ dropBgStyle }
-						/>
-					}
+					{ mainDropMenuServices && <NavService dropBgStyle={ dropBgStyle }/> }
 				</div>
 
 				<CustomMenuItem

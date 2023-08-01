@@ -119,7 +119,6 @@
 			align-items: center;
 
 			&-right {
-				min-width: 50%;
 				display: flex;
 				justify-content: space-between;
 			}
@@ -131,13 +130,14 @@
 			display: flex;
 			justify-content: start;
 			position: relative;
-			padding: 10px 16px;
+			padding: 16px 16px;
 
 			p {
 				//padding: 1px;
 				color: $colorAccent;
 				font-family: $fontManrope600;
 				font-size: 20px;
+				margin: 0;
 				//margin-right: auto;
 			}
 
@@ -212,7 +212,24 @@
 	}
 }
 
-@media (min-width: $media1200) {
+@media (min-width: $media475) {
+	.header {
+
+		&-logo {
+
+			&-wrapper {
+				margin-bottom: 7px;
+			}
+
+			img {
+				width: 176px;
+				height: 22px;
+			}
+		}
+	}
+}
+
+@media (min-width: $media1440) {
 	.header {
 
 		&-wrapper {
@@ -285,23 +302,6 @@
 						}
 					}
 				}
-			}
-		}
-	}
-}
-
-@media (min-width: $media1440) {
-	.header {
-
-		&-logo {
-
-			&-wrapper {
-				margin-bottom: 7px;
-			}
-
-			img {
-				width: 176px;
-				height: 22px;
 			}
 		}
 	}
