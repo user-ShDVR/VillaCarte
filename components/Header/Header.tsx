@@ -35,14 +35,14 @@ const Header = () => {
 
 	const transform = {
 		background: 'rgba(34, 54, 74, .4)',
-		// backdropFilter: 'blur(15px)',
+		backdropFilter: 'blur(15px)',
 		boxShadow: '5px 5px 10px 0 rgb(68, 68, 68, .15)',
 		borderRadius: '30px',
 	};
 
 	const dropBgTransform = {
 		background: 'rgba(34, 54, 74, .4)',
-		// backdropFilter: 'blur(15px)',
+		backdropFilter: 'blur(15px)',
 		boxShadow: '5px 5px 10px 0 rgb(68, 68, 68, .15)',
 		borderRadius: '0 0 15px 15px',
 	};

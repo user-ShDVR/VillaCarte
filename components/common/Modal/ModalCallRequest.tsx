@@ -22,7 +22,7 @@ const ModalCallRequest = () => {
 				<div className={ 'feedBack-modal-bg' } style={ { backgroundImage: `url(${ feedBackBg.src })` } }/>
 
 				<div className={ 'element-animation' }>
-					<Image src={ flowerRight } alt={ '' } className={ 'flowerRight' }/>
+					<Image src={ flowerRight } alt={ '' } className={ 'flowerRight-modal' }/>
 				</div>
 
 				<div className={ 'container pos feedBackBlock-content' }>

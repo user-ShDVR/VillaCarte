@@ -6,10 +6,10 @@
 		background: rgba(0, 0, 0, 0.50);
 		bottom: 0;
 		left: 0;
+		top: 0;
+		right: 0;
 		padding: 0;
 		position: fixed;
-		right: 0;
-		top: 0;
 		z-index: 1010;
 
 		.shadow {
@@ -99,15 +99,14 @@
 
 		.element-animation {
 			position: absolute;
-			bottom: 0;
-			top: 110px;
-			right: -280px;
+			right: -530px;
+			top: 90px;
 
-			.flowerRight {
-				width: 100%;
-				object-fit: cover;
+			.flowerRight-modal {
+				object-fit: contain;
 				height: 700px;
 				animation: show-flower .5s linear;
+				max-width: 100% !important;
 			}
 
 			@-webkit-keyframes show-flower {
@@ -148,14 +147,25 @@
 		}
 
 		.element-animation {
-			top: 100px;
-			right: -270px;
+			//top: 100px;
+			right: -600px;
 		}
 	}
 }
 
 @media (min-width: $media576) {
+	// ModalCallRequest
+	.feedBack-modal {
 
+		.feedBack-modal-bg {
+
+		}
+
+		.element-animation {
+			//top: 100px;
+			right: -700px;
+		}
+	}
 }
 
 @media (min-width: $media768) {
@@ -192,8 +202,8 @@
 		overflow-y: hidden;
 
 		.element-animation {
-			top: -30px;
-			right: -130px;
+			right: -630px;
+			top: -28px;
 		}
 	}
 }
@@ -201,6 +211,9 @@
 @media (min-width: $media1200) {
 	.modal {
 		padding: 10vh 0;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	// ModalCallRequest
@@ -245,6 +258,22 @@
 		h6 {
 			width: 620px;
 			margin-bottom: 28px;
+		}
+	}
+}
+
+@media (min-width: $media1400) {
+	// ModalCallRequest
+	.feedBack-modal-wrapper {
+
+		h2 {
+			font-size: 30px;
+			line-height: 38px;
+		}
+
+		h6 {
+			font-size: 12px;
+			line-height: 18px;
 		}
 	}
 }

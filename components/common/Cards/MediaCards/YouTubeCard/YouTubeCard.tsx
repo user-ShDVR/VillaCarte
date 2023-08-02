@@ -1,6 +1,6 @@
 import React from 'react';
-import YouTube, { YouTubeProps } from 'react-youtube';
 import Link from 'next/link';
+import playBtn from '@/public/icons/playBtn.svg';
 
 interface IProps {
 	image: any;
@@ -13,6 +13,9 @@ const YouTubeCard = ( { image, path }: IProps ) => {
 		<Link target={ '_blank' } href={ path }>
 			<div className={ 'mediaCard' }>
 				<img src={ image } alt={ '' } className={ 'object-fit-cover' }/>
+				<div className={ 'playIcon-wrapper' }>
+					<img src={ playBtn.src } alt={ '' } className={ 'playIcon' }/>
+				</div>
 			</div>
 		</Link>
 	);

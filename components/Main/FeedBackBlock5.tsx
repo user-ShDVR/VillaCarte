@@ -14,7 +14,7 @@ const FeedBackBlock = () => {
 
 		const onScroll = () => {
 			// @ts-ignore
-			if ( document.documentElement.scrollTop > 3000 ) {
+			if ( document.documentElement.scrollTop > 2900 ) {
 				setScrolled( true );
 			} else {
 				setScrolled( false );

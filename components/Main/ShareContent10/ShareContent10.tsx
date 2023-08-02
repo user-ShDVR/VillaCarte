@@ -4,9 +4,9 @@ import DefaultMediaCard from '@/components/common/Cards/MediaCards/DefaultMediaC
 import youtubeIcon from '@/public/icons/socials/youtube.svg';
 import instagramIcon from '@/public/icons/socials/instagram.svg';
 import instaImg from '@/public/instaImg.png';
-import videoFrame_1 from '@/public/videoFrame_1.png';
-import videoFrame_2 from '@/public/videoFrame_2.png';
-import videoFrame_3 from '@/public/videoFrame_3.png';
+import videoFrame_1 from '@/public/frameVideo_1.png';
+import videoFrame_2 from '@/public/frameVideo_2.png';
+import videoFrame_3 from '@/public/frameVideo_3.png';
 import ytMedia from '@/public/icons/socials/ytMedia.svg';
 import instaMedia from '@/public/icons/socials/instaMedia.svg';
 import { useStore } from 'effector-react';

@@ -99,7 +99,7 @@
 
 		.react-tabs__tab-panel--selected {
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr;
 			gap: 8px;
 			-webkit-animation: fadeTabPanel 2s linear;
 			animation: fadeTabPanel 2s linear;
@@ -166,12 +166,12 @@
 		.element-animation {
 			position: absolute;
 			top: 30px;
-			right: -280px;
+			right: -560px;
 			bottom: 0;
 
 			.flowerRight {
-				width: 100%;
-				//object-fit: cover;
+				//width: 100%;
+				object-fit: contain;
 				height: 700px;
 				-webkit-animation: show-flower 1s linear;
 				animation: show-flower 1s linear;
@@ -551,6 +551,10 @@
 	// FeedBackBlock
 	.feedBackBlock {
 
+		.element-animation {
+			right: -600px;
+		}
+
 		.fiveStepsSlider-wrapper {
 
 			h3 {
@@ -592,6 +596,14 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 8px;
+		}
+	}
+
+	// FeedBackBlock
+	.feedBackBlock {
+
+		.element-animation {
+			right: -700px;
 		}
 	}
 }
@@ -717,7 +729,7 @@
 
 		.element-animation {
 			top: 0;
-			right: -220px;
+			right: -670px;
 		}
 	}
 
@@ -1043,8 +1055,12 @@
 	.feedBackBlock {
 
 		.element-animation {
-			right: -80px;
-			scale: 1.3;
+			right: -600px;
+			top: -40px;
+
+			.flowerRight {
+
+			}
 		}
 	}
 
