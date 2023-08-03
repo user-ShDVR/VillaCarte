@@ -23,7 +23,6 @@ const CustomSelect = ( { options, className, updateStore, scrolled }: IProps ) =
 			defaultValue={ options[ 0 ] }
 			onChange={ handleChange }
 			className={ cn( className, 'customSelect', scrolled ? 'bgScrolledColor' : '' ) }
-			menuIsOpen
 		/>
 	);
 };
