@@ -43,7 +43,7 @@
 			box-shadow: 1px 1px 22px 10px rgba(0, 0, 0, 0.1);
 			border-radius: 15px;
 			width: 80px;
-			margin-top: 12px;
+			margin-top: 7px;
 
 			div {
 
@@ -75,6 +75,20 @@
 			-moz-appearance: none !important;
 			-webkit-appearance: none !important;
 			appearance: none !important;
+
+			div {
+
+				div {
+
+					margin: 12px 0 !important;
+					background: transparent !important;
+					cursor: pointer;
+
+					&:hover {
+						color: $colorDarkWhite;
+					}
+				}
+			}
 
 			& > div > span {
 				display: none;
