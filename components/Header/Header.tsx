@@ -49,8 +49,8 @@ const Header = () => {
 
 	const dropBg = {
 		background: 'rgba(255, 255, 255, 0.20)',
-		boxShadow: '0px 51px 64px 0px rgba(0, 0, 0, 0.10)',
 		backdropFilter: 'blur(15px)',
+		boxShadow: '0px 51px 64px 0px rgba(0, 0, 0, 0.10)',
 		borderRadius: '15px',
 	};
 
@@ -78,43 +78,45 @@ const Header = () => {
 	}, [] );
 
 	return (
-		<header style={ style } className="container header">
-			{/*// @ts-ignore*/ }
-			<div ref={ ref } className="header-wrapper">
+		<>
+			<header style={ style } className='container header'>
+				{/*// @ts-ignore*/ }
+				<div ref={ ref } className='header-wrapper'>
 
-				<div className={ 'header-logo-wrapper' }>
-					<Link href={ '/' } style={ scrolled ? { color: 'white' } : {} } className="header-logo">
-						{ isMobile
-							? <Image src={ logoImg } alt={ 'VillaCarte' }/>
-							: <Image src={ logoDesktop } alt={ 'VillaCarte' }/>
-						}
-					</Link>
-				</div>
+					<div className={ 'header-logo-wrapper' }>
+						<Link href={ '/' } style={ scrolled ? { color: 'white' } : {} } className='header-logo'>
+							{ isMobile
+								? <Image src={ logoImg } alt={ 'VillaCarte' }/>
+								: <Image src={ logoDesktop } alt={ 'VillaCarte' }/>
+							}
+						</Link>
+					</div>
 
-				<div className={ 'd-flex ai-center' }>
+					<div className={ 'd-flex ai-center' }>
 
-					<MainMenu dropBgStyle={ dropBgStyle } dropBgClass={ dropBgClass }/>
+						<MainMenu dropBgStyle={ dropBgStyle } dropBgClass={ dropBgClass } scrolled={ scrolled }/>
 
-					<SimpleButton
-						text={ lang?.requestACall || '' }
-						variant={ 'only' }
-						className={ 'text-nowrap ml-10' }
-						onClick={ toCallModal }
-					/>
+						<SimpleButton
+							text={ lang?.requestACall || '' }
+							variant={ 'only' }
+							className={ 'text-nowrap ml-10' }
+							onClick={ toCallModal }
+						/>
 
-					<div className={ 'header-wrapper-mobileMenu d-block d-lg-none ml-10' }>
-						<BurgerButton menu={ mobileMenu } toShowMenu={ toShowMenu } scrolled={ scrolled }/>
+						<div className={ 'header-wrapper-mobileMenu d-block d-lg-none ml-10' }>
+							<BurgerButton menu={ mobileMenu } toShowMenu={ toShowMenu } scrolled={ scrolled }/>
 
-						<div className={ cn( mobileMenu ? 'mobileMainMenu' : 'mobileMainMenu-active' ) }>
-							{ mobileMenu && <MobileMainMenu/> }
+							<div className={ cn( mobileMenu ? 'mobileMainMenu' : 'mobileMainMenu-active' ) }>
+								{ mobileMenu && <MobileMainMenu/> }
+							</div>
 						</div>
 					</div>
+
 				</div>
 
-			</div>
-
+			</header>
 			{ requestCallModal && <ModalCallRequest/> }
-		</header>
+		</>
 	);
 };
 

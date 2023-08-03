@@ -14,6 +14,7 @@ import { IMainPage } from '@/types/mainPage';
 import { $mainPageInfo } from '@/store/mainPage';
 import InstagramCard from '@/components/common/Cards/MediaCards/InstagramCard/InstagramCard';
 import { lang } from '@/pages';
+import noise from '@/public/noise.webp';
 
 const videos = [
 	{ image: videoFrame_1, path: 'https://youtu.be/ew2AIrxIdhM/', code: 1 },
@@ -42,6 +43,7 @@ const ShareContent = () => {
 	return (
 		<div className={ 'shareContent' }>
 			{/*<div className={ 'bgOpacity' } style={ { backgroundImage: `url(${ palmsTransparent.src })`, opacity: .1 } }/>*/ }
+			<img src={ noise.src } alt="" className={ 'noise' }/>
 
 			<div className={ 'container pt-60-80' }>
 				<div>

@@ -5,6 +5,7 @@ import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import feedBackBg from '@/public/feedBackBg.webp';
 import { lang } from '@/pages';
+import noise from '@/public/noise.webp';
 
 const FeedBackBlock = () => {
 
@@ -30,6 +31,8 @@ const FeedBackBlock = () => {
 
 	return (
 		<div className={ 'feedBackBlock ' }>
+			<img src={ noise.src } alt="" className={ 'noise' }/>
+
 			<div className={ 'feedBackBlock-bg' } style={ { backgroundImage: `url(${ feedBackBg.src })` } }/>
 
 			{ scrolled &&
@@ -38,7 +41,7 @@ const FeedBackBlock = () => {
 				</div>
 			}
 
-			<div className={ 'container pt-60 pos feedBackBlock-content w-620px' }>
+			<div className={ 'container pt-60 pos feedBackBlock-content w-620px z-7' }>
 				<div>
 					<div>
 						<h2 className={ 'h2Subtitle ' }>{ lang?.orderAPersonalSelection || '' }</h2>

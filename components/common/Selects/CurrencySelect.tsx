@@ -6,9 +6,10 @@ import { ICurrencies } from '@/types/mainPage';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
+	scrolled?: boolean;
 }
 
-const CurrencySelect = ( { className, ...newProps }: IProps ) => {
+const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
 
 	const currenciesList: ICurrencies[] = [
 		{ value: 'usd', label: 'usd' },
@@ -29,6 +30,7 @@ const CurrencySelect = ( { className, ...newProps }: IProps ) => {
 				options={ currenciesList }
 				className={ className }
 				updateStore={ updateCurrencies }
+				scrolled={ scrolled }
 			/>
 
 		</div>

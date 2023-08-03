@@ -24,7 +24,7 @@ import { enLocalization, ruLocalization } from '@/static/localization';
 import { useStore } from 'effector-react';
 import { $languages } from '@/store/languages';
 import Spinner from '@/components/common/Spinner/Spinner';
-
+import noise from '@/public/noise.webp';
 async function getStaticProps() {
 	// @ts-ignore
 	const res = await fetch( `${ process.env.REACT_APP_URL }api/pages/thailand/index?lang=RU` );
@@ -102,11 +102,15 @@ export default function Home( { info }: any ) {
 						<FeedBackBlock/>
 
 						<div className={ 'pos overflow-hidden' }>
+
 							<div style={ { backgroundImage: `url(${ weBuildBg.src })` } } className={ 'palmsTransparent-bg' }/>
 
 							<WeBuildOurselves/>
 
+							<div>
+								<img src={ noise.src } alt="" className={ 'noise z-1 h-100-p-mobile' }/>
 							<JoinTheClub/>
+							</div>
 
 							<WeAreTrusted/>
 

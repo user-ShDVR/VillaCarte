@@ -1,10 +1,12 @@
 import React from 'react';
 import allServicesBg from '@/public/allServicesBg.webp';
-import leavesVideo from '@/public/leavesLeft.webp';
+import leavesAllServicesMobile from '@/public/leavesAllServicesMobile.webp';
+import leavesLeft from '@/public/leavesLeft.webp';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import TitleTextArrowCard from '@/components/common/Cards/TitleTextArrowCard/TitleTextArrowCard';
 import Image from 'next/image';
 import { lang } from '@/pages';
+import noise from '@/public/noise.webp';
 
 const AllServices = () => {
 	const allServices = [
@@ -16,9 +18,15 @@ const AllServices = () => {
 
 	return (
 		<div className={ 'allServices' }>
-			<div className={ 'allServices-bg' } style={ { backgroundImage: `url(${ allServicesBg.src })` } }/>
+			<img src={ noise.src } alt="" className={ 'noise z-1' }/>
 
-			<Image src={ leavesVideo } alt={ '' } className={ 'leavesVideo' }/>
+			<div className={ 'allServices-bg' } style={ { backgroundImage: `url(${ allServicesBg.src })` } }/>
+			<div
+				className={ 'leavesAllServicesMobile' }
+				style={ { backgroundImage: `url(${ leavesAllServicesMobile.src })` } }
+			/>
+
+			<Image src={ leavesLeft } alt={ '' } className={ 'leavesVideo' }/>
 
 			<div className={ 'container services' }>
 				<div className={ 'pos' }>

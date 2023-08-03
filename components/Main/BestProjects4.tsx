@@ -7,6 +7,7 @@ import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { useStore } from 'effector-react';
 import { Fade } from 'react-awesome-reveal';
 import { lang } from '@/pages';
+import noise from '@/public/noise.webp';
 
 const BestProjects = () => {
 	const offers = useStore<IMainPage>( $mainPageInfo );
@@ -39,6 +40,8 @@ const BestProjects = () => {
 
 	return (
 		<div className={ 'bgGradient bestProjects' }>
+			<img src={ noise.src } alt="" className={ 'noise noisePadding h-100-p-mobile' }/>
+
 			<div className={ 'container bestProjects-inner' }>
 				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.theBestProjectsForLife || '' }</h2>
 				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.theBestProjectsForLife2 || '' }</h2>
@@ -49,21 +52,21 @@ const BestProjects = () => {
 						<Tab>{ lang?.villas || '' }</Tab>
 					</TabList>
 
-					{/*<Fade duration={ 2000 }> */}
-						<TabPanel className={''}>
-							{ offers.data?.villas.slice( 0, 6 ).map( item =>
-								<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
-							) }
-						</TabPanel>
-					{/*</Fade> */}
+					{/*<Fade duration={ 2000 }> */ }
+					<TabPanel className={ '' }>
+						{ offers.data?.villas.slice( 0, 6 ).map( item =>
+							<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
+						) }
+					</TabPanel>
+					{/*</Fade> */ }
 
-					{/*<Fade duration={ 2000 }> */}
-						<TabPanel className={''}>
-							{ offers.data?.villas.slice( 0, 6 ).map( item =>
-								<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
-							) }
-						</TabPanel>
-					{/*</Fade> */}
+					{/*<Fade duration={ 2000 }> */ }
+					<TabPanel className={ '' }>
+						{ offers.data?.villas.slice( 0, 6 ).map( item =>
+							<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
+						) }
+					</TabPanel>
+					{/*</Fade> */ }
 
 				</Tabs>
 
@@ -72,7 +75,7 @@ const BestProjects = () => {
 						text={ `${ lang?.showTheRest || '' } 115 ${ lang?.offers || '' }` }
 						to={ '/' }
 						variant={ 'arrowRevert' }
-						className={ 'manrope600-14' }
+						className={ 'manrope600-14 z-7' }
 					/>
 				</div>
 			</div>

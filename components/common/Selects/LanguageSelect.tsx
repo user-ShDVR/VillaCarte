@@ -6,9 +6,10 @@ import { ILanguages } from '@/types/mainPage';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
+	scrolled?: boolean;
 }
 
-const LanguageSelect = ( { className, ...newProps }: IProps ) => {
+const LanguageSelect = ( { className, scrolled, ...newProps }: IProps ) => {
 
 	const languages: ILanguages[] = [
 		{ value: 'en', label: 'en' },
@@ -24,7 +25,12 @@ const LanguageSelect = ( { className, ...newProps }: IProps ) => {
 	return (
 		<div className={ 'header-select-wrapper' }>
 
-			<CustomSelect options={ languages } className={ className } updateStore={ updateLanguages }/>
+			<CustomSelect
+				options={ languages }
+				className={ className }
+				updateStore={ updateLanguages }
+				scrolled={ scrolled }
+			/>
 
 		</div>
 	);

@@ -7,6 +7,7 @@
 :where(.css-dev-only-do-not-override-12upa3x).ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus {
 	border-bottom: 1px solid $colorDarkWhite !important;
 }
+
 :where(.css-dev-only-do-not-override-12upa3x).ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
 	border-bottom: 1px solid $colorDarkWhite !important;
 }
@@ -150,11 +151,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --z-index-- */
+.z-1 {
+	z-index: 1 !important;
+}
+
 .z-5 {
-	z-index: 5;
+	z-index: 5 !important;
+}
+
+.z-7 {
+	z-index: 7 !important;
 }
 
 /* --Width & Height Classes-- */
+@media (max-width: $media576) {
+	.h-100-p-mobile {
+		height: 100% !important;
+	}
+}
+
 .h-100-p {
 	height: 100% !important;
 }
@@ -971,4 +986,26 @@ img {
 	flex: 1 1 0;
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+.backdropFilter15 {
+	backdrop-filter: blur(15px);
+}
+
+.noise {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	z-index: 2;
+}
+
+@media (min-width: $media1023) {
+	.noisePadding {
+		padding-top: 200px;
+	}
 }

@@ -79,6 +79,18 @@
 		}
 	}
 
+	.dropSales {
+		z-index: 5;
+		backdrop-filter: blur(15px) !important;
+		-webkit-backdrop-filter: blur(15px) !important;
+	}
+
+	.dropService {
+		z-index: 5;
+		backdrop-filter: blur(15px) !important;
+		-webkit-backdrop-filter: blur(15px) !important;
+	}
+
 	.menuBtn-line {
 		background: $colorWhite;
 		height: 2px;
@@ -164,14 +176,6 @@
 				text-align: left;
 				box-shadow: 0 0 15px 0 rgba(68, 68, 68, .15);
 				border-radius: 12px !important;
-			}
-
-			.dropSales {
-				z-index: 5;
-			}
-
-			.dropService {
-				z-index: 5;
 			}
 
 			.dropdownContent a {

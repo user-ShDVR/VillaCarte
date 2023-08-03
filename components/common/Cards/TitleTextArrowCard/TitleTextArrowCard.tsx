@@ -21,7 +21,7 @@ const TitleTextArrowCard = ( { title, text, text2, text3 }: IProps ) => {
 	};
 
 	return (
-		<div className={ 'titleTextArrowCard' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
+		<div className={ 'titleTextArrowCard z-7' } onMouseOver={ onMouseOver } onMouseLeave={ onMouseLeave }>
 			<Link href={ '/' }>
 				<h3 className={ 'h3TitleText' }>{ title }</h3>
 

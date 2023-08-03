@@ -15,6 +15,7 @@ const WeBuildOurselves = () => {
 
 	return (
 		<div className={ 'weBuildOurselves' }>
+
 			<div className={ 'container pt-60 d-md-flex jc-between' }>
 				<div>
 					<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.weAlsoBuildOurselves || '' }</h2>

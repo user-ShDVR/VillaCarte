@@ -21,9 +21,10 @@ import { lang } from '@/pages';
 interface IProps {
 	dropBgStyle: any;
 	dropBgClass?: string;
+	scrolled?: boolean;
 }
 
-const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
+const MainMenu = ( { dropBgStyle, scrolled, dropBgClass }: IProps ) => {
 
 	const mainDropMenuSales = useStore( $mainDropMenuVisibleSales );
 	const mainDropMenuServices = useStore( $mainDropMenuVisibleServices );
@@ -99,8 +100,8 @@ const MainMenu = ( { dropBgStyle, dropBgClass }: IProps ) => {
 
 			<div className={ 'ml-20' }/>
 
-			<LanguageSelect className={ cn( dropBgClass, 'fz-12-14' ) }/>
-			<CurrencySelect className={ cn( dropBgClass, 'fz-12-14' ) }/>
+			<LanguageSelect className={ cn( dropBgClass, 'fz-12-14' ) } scrolled={ scrolled }/>
+			<CurrencySelect className={ cn( dropBgClass, 'fz-12-14' ) } scrolled={ scrolled }/>
 		</div>
 	);
 };
