@@ -14,7 +14,6 @@ const CustomSelect = ( { options, className, updateStore, scrolled }: IProps ) =
 
 	const handleChange = ( selectedOption: any ) => {
 		updateStore( selectedOption );
-		console.log( selectedOption );
 	};
 
 	return (

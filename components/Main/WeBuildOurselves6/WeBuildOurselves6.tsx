@@ -4,8 +4,13 @@ import Image from 'next/image';
 import OffersSlider from '@/components/Main/WeBuildOurselves6/OffersSlider/OffersSlider';
 import FiveSteps from '@/components/Main/WeBuildOurselves6/OffersSlider/FiveSteps';
 import { lang } from '@/pages';
+import { IMainPageData } from '@/types/mainPage';
 
-const WeBuildOurselves = () => {
+interface IProps {
+	data: IMainPageData;
+}
+
+const WeBuildOurselves = ( { data }: IProps ) => {
 	const list = [
 		lang?.buyRealEstateOnlyFromTrustedContractors || '',
 		lang?.getAProfitCalculation || '',
@@ -34,7 +39,7 @@ const WeBuildOurselves = () => {
 
 			<div className={ 'weBuildDownBlock' }>
 				<div className={ 'container' }>
-					<OffersSlider/>
+					<OffersSlider data={ data }/>
 				</div>
 
 				<div className={ 'fiveStepsSlider-wrapper' }>

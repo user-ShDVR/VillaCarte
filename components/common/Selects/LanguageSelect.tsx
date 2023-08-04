@@ -1,8 +1,10 @@
 import React from 'react';
 import { saveUserInfo } from '@/store/account';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
-import { updateLanguages } from '@/store/languages';
+import { $languages, updateLanguages } from '@/store/languages';
 import { ILanguages } from '@/types/mainPage';
+import { useStore } from 'effector-react';
+import { useRouter } from 'next/router';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
@@ -10,6 +12,13 @@ interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTML
 }
 
 const LanguageSelect = ( { className, scrolled, ...newProps }: IProps ) => {
+	const router = useRouter();
+
+	const languagesStore = useStore( $languages );
+
+	if ( languagesStore.value === 'ru' ) {
+		router.push( '/ru' );
+	}
 
 	const languages: ILanguages[] = [
 		{ value: 'en', label: 'en' },

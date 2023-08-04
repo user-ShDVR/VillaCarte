@@ -25,11 +25,12 @@ import { useStore } from 'effector-react';
 import { $languages } from '@/store/languages';
 import Spinner from '@/components/common/Spinner/Spinner';
 
-async function getStaticProps() {
+export async function getStaticProps() {
 	// @ts-ignore
 	const res = await fetch(
 		`${ process.env.REACT_APP_URL }api/pages/thailand/index?lang=RU`
 	);
+
 	const info = await res.json();
 
 	return {
@@ -52,8 +53,6 @@ export default function Home( { info }: any ) {
 	}
 
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );
-	// useWheelEvent();
-	// useWindowSize();
 
 	const handleClickScroll = () => {
 		const element = document.getElementById( 'section-2' );
@@ -82,23 +81,20 @@ export default function Home( { info }: any ) {
 					<Head>
 						<meta
 							property="og:title"
-							content={ mainPageInfo?.meta.title }
+							content={ info.meta?.title }
 						/>
 						<meta
 							property="og:description"
-							content={ mainPageInfo?.meta.description }
+							content={ info.meta?.description }
 						/>
 						<meta
 							property="og:keywords"
-							content={ mainPageInfo?.meta.keywords }
+							content={ info.meta?.keywords }
 						/>
 						<meta property="og:image" content={ metaImage.src }/>
 					</Head>
 
-					<section
-						className="pt-100-60 pos"
-						style={ style }
-						id="hero-section">
+					<section className="pt-100-60 pos" style={ style } id="hero-section">
 						<div className={ 'pos' }>
 							<TopBlock/>
 
@@ -115,14 +111,14 @@ export default function Home( { info }: any ) {
 
 						<VideoBlock/>
 
-						<BestProjects/>
+						<BestProjects data={ info.data }/>
 
 						<FeedBackBlock/>
 
 						<div className={ 'pos overflow-hidden' }>
 							<div style={ { backgroundImage: `url(${ weBuildBg.src })`, } } className={ 'palmsTransparent-bg' }/>
 
-							<WeBuildOurselves/>
+							<WeBuildOurselves data={ info.data }/>
 
 							<JoinTheClub/>
 

@@ -1,21 +1,23 @@
 export interface IMainPage {
 	meta: IMeta;
-	data: {
-		villas: IGoods[];
-		apartments: IGoods[];
-		offersNumber: number;
-		layanGreenParkPrice: ICurrencies;
-		laVistaVillasPrice: ICurrencies;
-		layanVerdePrice: ICurrencies;
-		youTubeVideos: ISocialsMediaResources[];
-		instagramPosts: ISocialsMediaResources[];
-	} | null;
+	data: IMainPageData;
 }
 
 export interface IMeta {
 	title: string;
 	description: string;
 	keywords: string;
+}
+
+export interface IMainPageData {
+	villas: IGoods[];
+	apartments: IGoods[];
+	offersNumber: number;
+	layanGreenParkPrice: ICurrencies;
+	laVistaVillasPrice: ICurrencies;
+	layanVerdePrice: ICurrencies;
+	youTubeVideos: ISocialsMediaResources[];
+	instagramPosts: ISocialsMediaResources[];
 }
 
 export interface IGoods {
