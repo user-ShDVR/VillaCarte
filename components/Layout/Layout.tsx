@@ -1,27 +1,27 @@
-import Head from "next/head";
-import Header from "../Header/Header";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { ReactNode } from "react";
-import Preloader from "@/components/common/Preloader/Preloader";
+import Head from 'next/head';
+import Header from '../Header/Header';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { ReactNode } from 'react';
+import Preloader from '@/components/common/Preloader/Preloader';
 
 interface IProps {
 	children: ReactNode;
 }
 
-export default function Layout({ children }: IProps) {
+export default function Layout( { children }: IProps ) {
 	return (
 		<div className="layout">
-			<div className="cover-noize" />
+			<div className="cover-noize"/>
 			<Head>
-				<link rel="icon" href="/favicon33.ico" />
+				<link rel="icon" href="/favicon33.ico"/>
 			</Head>
 
-			<Header />
+			<Header/>
 
-			<main>{children}</main>
+			<main>{ children }</main>
 
-			<Preloader />
+			<Preloader/>
 		</div>
 	);
 }
