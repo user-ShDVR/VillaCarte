@@ -1,22 +1,18 @@
-import React, { useEffect } from 'react';
-import { phoneMask } from '@/utils/phoneMask/mask';
+import React from 'react';
+import PhoneInput from 'react-phone-input-2';
+import es from 'react-phone-input-2/lang/es.json';
 
 export interface IProps {
-	name: string;
 	className?: string;
 	placeholder?: string;
 }
 
-const PhoneInputComp = ( { className, placeholder, name, ...props }: IProps ) => {
-
-	useEffect( () => {
-		phoneMask( 'input' );
-	}, [] );
+const PhoneInputComp = ( { className, placeholder, ...props }: IProps ) => {
 
 	return (
-		<input
-			name={ name }
-			className={ className }
+		<PhoneInput
+			localization={ es }
+			inputClass={ className }
 			placeholder={ placeholder }
 			{ ...props }
 		/>

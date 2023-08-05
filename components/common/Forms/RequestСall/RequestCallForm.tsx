@@ -1,20 +1,27 @@
 import React from 'react';
 import { Form } from 'antd';
-import { updatePreloader } from '@/store/preloader';
 import { postFeedback } from '@/store/feedback';
 import PhoneInputComp from '@/components/common/Forms/PhoneInputComp';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
 import { lang } from '@/pages';
 import TextAreaLikeInput from '@/components/common/Forms/TextAreaLikeInput';
 import noise from '@/public/noise.webp';
+import { IFeedback } from '@/types/feedback';
+import { hideModal } from '@/store/modal';
+import { EModal_VisibleStore } from '@/types/modal';
 
-const RequestCallForm = () => {
+interface IProps {
+	sourcePage: string;
+	sourceForm: string;
+}
+
+const RequestCallForm = ( { sourcePage, sourceForm }: IProps ) => {
 
 	const [ form ] = Form.useForm();
 
-	const onFinish = async ( values: any ) => {
-		updatePreloader( true );
-		await postFeedback( values );
+	const onFinish = async ( values: IFeedback ) => {
+		hideModal( EModal_VisibleStore.CallRequest );
+		await postFeedback( { ...values, sourcePage, sourceForm } );
 	};
 
 	return (
@@ -28,7 +35,7 @@ const RequestCallForm = () => {
 					className={ 'requestCallForm' }
 					form={ form }
 					name="requestCallForm"
-					// onFinish={ onFinish }
+					onFinish={ onFinish }
 				>
 					<Form.Item
 						name="username"
@@ -39,7 +46,6 @@ const RequestCallForm = () => {
 						] }
 					>
 						<TextAreaLikeInput
-							name='name'
 							className={ 'requestCallInput text300' }
 							placeholder={ lang?.yourName || '' }
 						/>
@@ -54,7 +60,6 @@ const RequestCallForm = () => {
 						] }
 					>
 						<PhoneInputComp
-							name="phone"
 							className={ 'requestCallInput text300' }
 							placeholder={ lang?.phoneNumber || '' }
 						/>

@@ -1,31 +1,36 @@
 import React from 'react';
 import { Form } from 'antd';
-import { updatePreloader } from '@/store/preloader';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
 import { hideModal } from '@/store/modal';
 import { EModal_VisibleStore } from '@/types/modal';
 import { lang } from '@/pages';
 import PhoneInputComp from '@/components/common/Forms/PhoneInputComp';
 import TextAreaLikeInput from '@/components/common/Forms/TextAreaLikeInput';
+import { postFeedback } from '@/store/feedback';
+import { IFeedback } from '@/types/feedback';
 
-const FeedBackForm = () => {
+interface IProps {
+	sourcePage: string;
+	sourceForm: string;
+}
+
+const FeedBackForm = ( { sourcePage, sourceForm }: IProps ) => {
 	const [ form ] = Form.useForm();
 
-	const onFinish = async ( values: any ) => {
-		// updatePreloader( true );
-		// hideModal( EModal_VisibleStore.CallRequest );
-		// await postFeedback( values );
+	const onFinish = async ( values: IFeedback ) => {
+		hideModal( EModal_VisibleStore.CallRequest );
+		await postFeedback( { ...values, sourcePage, sourceForm } );
 	};
 
 	return (
 		<Form
 			className={ 'feedBackForm' }
 			form={ form }
-			name="feedback"
-			// onFinish={ onFinish }
+			name={ sourceForm }
+			onFinish={ onFinish }
 		>
 			<Form.Item
-				name="username"
+				name="name"
 				className={ 'feedBackInputWrapper' }
 				rules={ [
 					{ type: 'string', message: lang?.yourName || '' },
@@ -33,7 +38,6 @@ const FeedBackForm = () => {
 				] }
 			>
 				<TextAreaLikeInput
-					name='name'
 					className={ 'feedBackInput text300' }
 					placeholder={ lang?.yourName || '' }
 				/>
@@ -48,7 +52,6 @@ const FeedBackForm = () => {
 				] }
 			>
 				<PhoneInputComp
-					name="phone"
 					className={ 'feedBackInput text300' }
 					placeholder={ lang?.phoneNumber || '' }
 				/>
@@ -61,7 +64,6 @@ const FeedBackForm = () => {
 			<SimpleButton
 				text={ lang?.requestASelection || '' }
 				variant={ 'simple' }
-				type={ 'submit' }
 			/>
 
 		</Form>

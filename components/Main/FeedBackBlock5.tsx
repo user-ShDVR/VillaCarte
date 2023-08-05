@@ -51,7 +51,7 @@ const FeedBackBlock = () => {
 						</h6>
 					</div>
 
-					<FeedBackForm/>
+					<FeedBackForm sourcePage={''} sourceForm={'mainPage_form'}/>
 				</div>
 
 				<div className={ 'ourMessengers-wrapper' }>
