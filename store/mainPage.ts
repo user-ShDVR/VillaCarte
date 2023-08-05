@@ -14,7 +14,7 @@ export const $mainPageInfo = createStore<IMainPage>( {
 		layanVerdePrice: { value: '', label: '' },
 		youTubeVideos: [],
 		instagramPosts: []
-	},
+	} || null,
 } ).on( updateMainPageInfo, ( state, newState ) => newState );
 
 export const getMainPageInfo = async () => {
