@@ -3,9 +3,9 @@ import { hideMobileMenu, showMobileDropMenuServices, } from '@/store/mobileMenu'
 import Link from 'next/link';
 
 export const dropMenuItemsService = [
-	{ label: 'Serv 1', path: '/sale', key: '1' },
-	{ label: 'Serv 2', path: '/sale', key: '2' },
-	{ label: 'Serv 3', path: '/sale', key: '3' },
+	{ label: 'Serv 1', path: '/', key: '1' },
+	{ label: 'Serv 2', path: '/', key: '2' },
+	{ label: 'Serv 3', path: '/', key: '3' },
 ];
 
 const MobileNavService = () => {

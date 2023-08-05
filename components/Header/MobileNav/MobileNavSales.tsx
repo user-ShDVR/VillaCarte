@@ -3,9 +3,9 @@ import { hideMobileMenu, showMobileDropMenuSales } from '@/store/mobileMenu';
 import Link from 'next/link';
 
 export const dropMenuItemsSale = [
-	{ label: 'Sale 1', path: '/sale', key: '1' },
-	{ label: 'Sale 2', path: '/sale', key: '2' },
-	{ label: 'Sale 3', path: '/sale', key: '3' },
+	{ label: 'Sale 1', path: '/', key: '1' },
+	{ label: 'Sale 2', path: '/', key: '2' },
+	{ label: 'Sale 3', path: '/', key: '3' },
 ];
 
 const MobileNavSales = () => {
