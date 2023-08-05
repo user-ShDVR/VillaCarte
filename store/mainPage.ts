@@ -5,7 +5,16 @@ import { IMainPage } from '@/types/mainPage';
 export const updateMainPageInfo = createEvent<IMainPage>();
 export const $mainPageInfo = createStore<IMainPage>( {
 	meta: { title: '', description: '', keywords: '' },
-	data: null,
+	data: {
+		villas: [],
+		apartments: [],
+		offersNumber: 0,
+		layanGreenParkPrice: { value: '', label: '' },
+		laVistaVillasPrice: { value: '', label: '' },
+		layanVerdePrice: { value: '', label: '' },
+		youTubeVideos: [],
+		instagramPosts: []
+	},
 } ).on( updateMainPageInfo, ( state, newState ) => newState );
 
 export const getMainPageInfo = async () => {
