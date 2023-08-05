@@ -43,13 +43,19 @@ export let lang: any;
 
 export default function Home( { info }: any ) {
 	const languages = useStore( $languages );
-	switch ( languages.value ) {
-		case 'en':
-			lang = enLocalization;
-			break;
-		case 'ru':
-			lang = ruLocalization;
-			break;
+
+	if ( typeof window !== 'undefined' ) {
+		const languagesLS = localStorage.getItem( 'lang' );
+		let objFromStringLocalStorage = { value: languagesLS, label: languagesLS };
+
+		switch ( objFromStringLocalStorage.value || languages.value ) {
+			case 'en':
+				lang = enLocalization;
+				break;
+			case 'ru':
+				lang = ruLocalization;
+				break;
+		}
 	}
 
 	const [ style, setStyle ] = useState<any>( { overflow: 'hidden' } );

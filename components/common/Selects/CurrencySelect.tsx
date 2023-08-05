@@ -1,5 +1,4 @@
 import React from 'react';
-import { saveUserInfo } from '@/store/account';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
 import { updateCurrencies } from '@/store/currencies';
 import { ICurrencies } from '@/types/mainPage';
@@ -10,6 +9,7 @@ interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTML
 }
 
 const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
+	const currenciesLS = localStorage.getItem( 'currency' );
 
 	const currenciesList: ICurrencies[] = [
 		{ value: 'usd', label: 'usd' },
@@ -17,11 +17,18 @@ const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
 		{ value: 'thb', label: 'thb' },
 	];
 
-	const onChange = async ( e: any ) => {
-		const data = new FormData();
-		data.set( 'currency', e.target.value );
-		await saveUserInfo( data );
+	// const onChange = async ( e: any ) => {
+	// 	const data = new FormData();
+	// 	data.set( 'currency', e.target.value );
+	// 	await saveUserInfo( data );
+	// };
+
+	const handleChange = ( selectedOption: any ) => {
+		updateCurrencies( selectedOption );
+		localStorage.setItem( 'currency', selectedOption.value );
 	};
+
+	let objFromStringLocalStorage = { value: currenciesLS, label: currenciesLS };
 
 	return (
 		<div className={ 'header-select-wrapper' }>
@@ -29,7 +36,8 @@ const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
 			<CustomSelect
 				options={ currenciesList }
 				className={ className }
-				updateStore={ updateCurrencies }
+				defaultValue={ objFromStringLocalStorage }
+				updateStore={ handleChange }
 				scrolled={ scrolled }
 			/>
 

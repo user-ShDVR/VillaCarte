@@ -27,14 +27,14 @@ const BestProjects = ( { data }: IProps ) => {
 					</TabList>
 
 					<TabPanel className={ '' }>
-						{ data?.apartments.slice( 0, 6 ).map( item =>
-							<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
+						{ data?.apartments.slice( 0, 6 ).map( ( item, index ) =>
+							<GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 						) }
 					</TabPanel>
 
 					<TabPanel className={ '' }>
-						{ data?.villas.slice( 0, 6 ).map( item =>
-							<GoodsCard key={ item.url } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
+						{ data?.villas.slice( 0, 6 ).map( ( item, index ) =>
+							<GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>
 						) }
 					</TabPanel>
 

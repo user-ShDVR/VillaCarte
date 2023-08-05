@@ -1,10 +1,7 @@
 import React from 'react';
-import { saveUserInfo } from '@/store/account';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
-import { $languages, updateLanguages } from '@/store/languages';
+import { updateLanguages } from '@/store/languages';
 import { ILanguages } from '@/types/mainPage';
-import { useStore } from 'effector-react';
-import { useRouter } from 'next/router';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
@@ -12,24 +9,19 @@ interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTML
 }
 
 const LanguageSelect = ( { className, scrolled, ...newProps }: IProps ) => {
-	const router = useRouter();
-
-	const languagesStore = useStore( $languages );
-
-	if ( languagesStore.value === 'ru' ) {
-		router.push( '/ru' );
-	}
+	const languagesLS = localStorage.getItem( 'lang' );
 
 	const languages: ILanguages[] = [
 		{ value: 'en', label: 'en' },
 		{ value: 'ru', label: 'ru' },
 	];
 
-	const onChange = async ( e: any ) => {
-		const data = new FormData();
-		data.set( 'lang', e.target.value );
-		await saveUserInfo( data );
+	const handleChange = ( selectedOption: any ) => {
+		updateLanguages( selectedOption );
+		localStorage.setItem( 'lang', selectedOption.value );
 	};
+
+	let objFromStringLocalStorage = { value: languagesLS, label: languagesLS };
 
 	return (
 		<div className={ 'header-select-wrapper' }>
@@ -37,7 +29,8 @@ const LanguageSelect = ( { className, scrolled, ...newProps }: IProps ) => {
 			<CustomSelect
 				options={ languages }
 				className={ className }
-				updateStore={ updateLanguages }
+				defaultValue={ objFromStringLocalStorage }
+				updateStore={ handleChange }
 				scrolled={ scrolled }
 			/>
 

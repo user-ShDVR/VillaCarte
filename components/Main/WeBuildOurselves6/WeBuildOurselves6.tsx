@@ -28,8 +28,8 @@ const WeBuildOurselves = ( { data }: IProps ) => {
 				</div>
 
 				<ul className={ 'col-md-6' }>
-					{ list.map( item =>
-						<div key={ item }>
+					{ list.map( ( item, index ) =>
+						<div key={ index }>
 							<Image src={ listPoint } alt={ '' }/>
 							<li className={ 'text500 colorWhite' }>{ item }</li>
 						</div>

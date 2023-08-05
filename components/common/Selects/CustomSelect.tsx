@@ -8,21 +8,17 @@ interface IProps {
 	className?: string;
 	updateStore?: any;
 	scrolled?: boolean;
+	defaultValue?: any;
 }
 
-const CustomSelect = ( { options, className, updateStore, scrolled }: IProps ) => {
-
-	const handleChange = ( selectedOption: any ) => {
-		updateStore( selectedOption );
-	};
+const CustomSelect = ( { options, className, updateStore, scrolled, defaultValue }: IProps ) => {
 
 	return (
 		<Select
 			options={ options }
-			defaultValue={ options[ 0 ] }
-			onChange={ handleChange }
+			defaultValue={ defaultValue }
+			onChange={ updateStore }
 			className={ cn( className, 'customSelect', scrolled ? 'bgScrolledColor' : '' ) }
-			// menuIsOpen
 		/>
 	);
 };

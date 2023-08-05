@@ -34,10 +34,12 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 	};
 
 	const currency = useStore( $currencies );
+	const currenciesLS = localStorage.getItem( 'currency' );
+	let objFromStringLocalStorage = { value: currenciesLS, label: currenciesLS };
 
 	let cur;
 
-	switch ( currency.value ) {
+	switch ( objFromStringLocalStorage.value || currency.value ) {
 		case 'usd':
 			cur = '$';
 			break;
