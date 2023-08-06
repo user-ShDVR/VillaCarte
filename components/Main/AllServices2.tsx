@@ -6,7 +6,6 @@ import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import TitleTextArrowCard from '@/components/common/Cards/TitleTextArrowCard/TitleTextArrowCard';
 import Image from 'next/image';
 import { lang } from '@/pages';
-import noise from '@/public/noise.webp';
 
 const AllServices = () => {
 	const allServices = [
@@ -18,7 +17,6 @@ const AllServices = () => {
 
 	return (
 		<div className={ 'allServices' }>
-			<img src={ noise.src } alt="" className={ 'noise z-1' }/>
 
 			<div className={ 'allServices-bg' } style={ { backgroundImage: `url(${ allServicesBg.src })` } }/>
 			<div

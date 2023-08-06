@@ -11,7 +11,7 @@ const InstagramCard = ( { image, path }: IProps ) => {
 	return (
 		<Link target={ '_blank' } href={ path }>
 			<div className={ 'mediaCard' }>
-				<img src={ image } alt={ '' }/>
+				<img src={ staticResource( image ) } alt={ '' }/>
 			</div>
 		</Link>
 	);

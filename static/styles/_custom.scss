@@ -992,18 +992,6 @@ img {
 	backdrop-filter: blur(15px);
 }
 
-.noise {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	max-height: 100%;
-	object-fit: cover;
-	z-index: 2;
-}
-
 @media (min-width: $media1023) {
 	.noisePadding {
 		padding-top: 200px;

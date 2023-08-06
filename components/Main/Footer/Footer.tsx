@@ -18,7 +18,6 @@ import RequestCallForm from '@/components/common/Forms/RequestСall/RequestCallF
 import Contacts from '@/components/Main/Footer/Contacts';
 import { lang } from '@/pages';
 import feedBackBg from '@/public/feedBackBg.webp';
-import noise from '@/public/noise.webp';
 
 const ContactsBlock = () => {
 	const socialsStock = [
@@ -42,7 +41,6 @@ const ContactsBlock = () => {
 	return (
 		<footer>
 			<div className={ 'footer-bg' } style={ { backgroundImage: `url(${ feedBackBg.src })` } }/>
-			<img src={ noise.src } alt="" className={ 'noise' }/>
 
 			<div className={ 'container footer' }>
 				<div className={ 'container contactsBlock' }>

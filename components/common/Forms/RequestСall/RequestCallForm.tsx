@@ -5,7 +5,6 @@ import PhoneInputComp from '@/components/common/Forms/PhoneInputComp';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
 import { lang } from '@/pages';
 import TextAreaLikeInput from '@/components/common/Forms/TextAreaLikeInput';
-import noise from '@/public/noise.webp';
 import { IFeedback } from '@/types/feedback';
 import { hideModal } from '@/store/modal';
 import { EModal_VisibleStore } from '@/types/modal';
@@ -26,7 +25,6 @@ const RequestCallForm = ( { sourcePage, sourceForm }: IProps ) => {
 
 	return (
 		<div className={ 'requestCall-wrapper' }>
-			<img src={ noise.src } alt="" className={ 'noise' }/>
 
 			<div className={ 'requestCall bgGradient' }>
 				<h5 className={ 'text500 fz-20 colorWhite' }>{ lang?.orderAnIndividualSelection || '' }</h5>

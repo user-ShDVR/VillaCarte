@@ -4,7 +4,6 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import GoodsCard from '@/components/common/Cards/GoodsCard/GoodsCard';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { lang } from '@/pages';
-import noise from '@/public/noise.webp';
 
 interface IProps {
 	data: IMainPageData;
@@ -14,7 +13,6 @@ const BestProjects = ( { data }: IProps ) => {
 
 	return (
 		<div className={ 'bgGradient bestProjects' }>
-			<img src={ noise.src } alt="" className={ 'noise noisePadding h-100-p-mobile' }/>
 
 			<div className={ 'container bestProjects-inner' }>
 				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.theBestProjectsForLife || '' }</h2>

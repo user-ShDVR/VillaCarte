@@ -5,7 +5,6 @@ import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import feedBackBg from '@/public/feedBackBg.webp';
 import { lang } from '@/pages';
-import noise from '@/public/noise.webp';
 
 const FeedBackBlock = () => {
 
@@ -31,7 +30,6 @@ const FeedBackBlock = () => {
 
 	return (
 		<div className={ 'feedBackBlock ' }>
-			<img src={ noise.src } alt="" className={ 'noise' }/>
 
 			<div className={ 'feedBackBlock-bg' } style={ { backgroundImage: `url(${ feedBackBg.src })` } }/>
 

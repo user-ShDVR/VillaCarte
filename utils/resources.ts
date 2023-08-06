@@ -10,7 +10,7 @@ export const staticResource = ( link?: string, width?: number, height?: number )
 	if ( width || height ) {
 		link = _link.join( '.' ) + `-${ width }x${ height }.${ ext }`;
 	} else {
-		link = _link.join( '.' ) + `.${ ext }`;
+		link = _link.join( '.' ) + `${ ext }`;
 	}
 
 	return baseUrl + ( `/${ link }`.replace( /\/+/g, '/' ) );

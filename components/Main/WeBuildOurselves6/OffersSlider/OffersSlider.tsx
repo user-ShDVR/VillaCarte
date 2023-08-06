@@ -13,8 +13,8 @@ const OffersSlider = ( { data }: IProps ) => {
 	return (
 		<div className={ 'offersSlider-wrapper' }>
 			<Slider { ...offersSliderSetting } className={ 'offersSlider' }>
-				{ data?.apartments.map( ( offer, index ) =>
-					<OfferCard key={ index } url={ offer.url } image={ offer.image }/>
+				{ data?.ownProjects.map( ( ownProject, index ) =>
+					<OfferCard key={ index } ownProject={ ownProject } index={ index } length={ data?.ownProjects.length }/>
 				) }
 			</Slider>
 		</div>

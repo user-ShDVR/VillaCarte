@@ -1,12 +1,10 @@
 import React from 'react';
 import BgVideo from '@/components/common/Video/BgVideo';
 import { lang } from '@/pages';
-import noise from '@/public/noise.webp';
 
 const TopBlock = () => {
 	return (
 		<div className={ 'topBlock' }>
-			<img src={ noise.src } alt="" className={ 'noise' }/>
 
 			<BgVideo/>
 

@@ -3,10 +3,6 @@ import YouTubeCard from '@/components/common/Cards/MediaCards/YouTubeCard/YouTub
 import DefaultMediaCard from '@/components/common/Cards/MediaCards/DefaultMediaCard';
 import youtubeIcon from '@/public/icons/socials/youtube.svg';
 import instagramIcon from '@/public/icons/socials/instagram.svg';
-import instaImg from '@/public/instaImg.png';
-import videoFrame_1 from '@/public/frameVideo_1.png';
-import videoFrame_2 from '@/public/frameVideo_2.png';
-import videoFrame_3 from '@/public/frameVideo_3.png';
 import ytMedia from '@/public/icons/socials/ytMedia.svg';
 import instaMedia from '@/public/icons/socials/instaMedia.svg';
 import { useStore } from 'effector-react';
@@ -14,28 +10,6 @@ import { IMainPage } from '@/types/mainPage';
 import { $mainPageInfo } from '@/store/mainPage';
 import InstagramCard from '@/components/common/Cards/MediaCards/InstagramCard/InstagramCard';
 import { lang } from '@/pages';
-import noise from '@/public/noise.webp';
-
-const videos = [
-	{ image: videoFrame_1, path: 'https://youtu.be/ew2AIrxIdhM/', code: 1 },
-	{ image: videoFrame_2, path: 'https://youtu.be/Bwn1tmxIHFI/', code: 2 },
-	{ image: videoFrame_3, path: 'https://youtu.be/bpKGWdg5hoU/', code: 3 },
-	// { link: '9-WKpVg63tA' },
-	// { link: 'TR9qHODngPw' },
-	// { link: 'HB3a5_ffNGQ' },
-	// { link: 'Bwn1tmxIHFI' },
-	// { link: 'P69b2dNyVxc' },
-	// { link: 'BEAUErwwG74' },
-];
-
-const photos = [
-	{ image: instaImg, path: 'https://www.instagram.com/p/Cu6uow9s2lk/', code: 1, },
-	{ image: instaImg, path: 'https://www.instagram.com/p/Cu6uow9s2lk/', code: 2, },
-	{ image: instaImg, path: 'https://www.instagram.com/p/Cu6uow9s2lk/', code: 3, },
-	{ image: instaImg, path: 'https://www.instagram.com/p/Cu6uow9s2lk/', code: 4, },
-	{ image: instaImg, path: 'https://www.instagram.com/p/Cu6uow9s2lk/', code: 5, },
-	{ image: instaImg, path: 'https://www.instagram.com/p/Cu6uow9s2lk/', code: 6, },
-];
 
 const ShareContent = () => {
 	const media = useStore<IMainPage>( $mainPageInfo );
@@ -51,11 +25,11 @@ const ShareContent = () => {
 
 					<div className={ 'mediaCards' }>
 						<div className={ 'mediaCard-wrapper' }>
-							{ videos.slice( 0, 3 ).map( ( item ) => (
+							{ media.data.youTubeVideos.slice( 0, 3 ).map( ( item, index ) => (
 								<YouTubeCard
-									key={ item.code }
-									image={ item.image.src }
-									path={ item.path }
+									key={ index }
+									image={ item.image }
+									path={ item.publicationId }
 								/>
 							) ) }
 							<DefaultMediaCard
@@ -67,11 +41,11 @@ const ShareContent = () => {
 						</div>
 
 						<div className={ 'mediaCard-wrapper photoCards' }>
-							{ photos.slice( 0, 5 ).map( ( item ) => (
+							{ media.data.instagramPosts.slice( 0, 5 ).map( ( item, index ) => (
 								<InstagramCard
-									key={ item.code }
-									image={ item.image.src }
-									path={ item.path }
+									key={ index }
+									image={ item.image }
+									path={ item.publicationId }
 								/>
 							) ) }
 							<DefaultMediaCard

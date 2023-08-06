@@ -9,9 +9,7 @@ export const $mainPageInfo = createStore<IMainPage>( {
 		villas: [],
 		apartments: [],
 		offersNumber: 0,
-		layanGreenParkPrice: { value: '', label: '' },
-		laVistaVillasPrice: { value: '', label: '' },
-		layanVerdePrice: { value: '', label: '' },
+		ownProjects: [],
 		youTubeVideos: [],
 		instagramPosts: []
 	} || null,
