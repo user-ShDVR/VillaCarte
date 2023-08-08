@@ -120,6 +120,7 @@
 			0% {
 				opacity: 0;
 			}
+
 			100% {
 				opacity: 1;
 			}
@@ -129,6 +130,7 @@
 			0% {
 				opacity: 0;
 			}
+
 			100% {
 				opacity: 1;
 			}
@@ -192,6 +194,7 @@
 				0% {
 					transform: scale(1.2);
 				}
+
 				100% {
 					transform: scale(1);
 				}
@@ -201,13 +204,15 @@
 				0% {
 					transform: scale(1.2);
 				}
+
 				100% {
 					transform: scale(1);
 				}
 			}
 		}
 
-		h2, h6 {
+		h2,
+		h6 {
 			width: 70%;
 		}
 	}
@@ -271,8 +276,11 @@
 						width: 100%;
 
 						h6 {
-							color: rgba(255, 255, 255, .5);
-							mix-blend-mode: soft-light;
+							background-image: url(../../public/noise-blue.png);
+							background-size: 100px;
+							background-repeat: repeat;
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
 						}
 
 						p {
@@ -751,7 +759,8 @@
 			justify-content: space-between;
 		}
 
-		h2, h6 {
+		h2,
+		h6 {
 			width: 100%;
 		}
 
@@ -875,9 +884,7 @@
 			.titleTextArrowCard {
 				height: 300px;
 
-				h3 {
-
-				}
+				h3 {}
 
 				div {
 					display: flex;
@@ -893,9 +900,7 @@
 	}
 
 	// WeBuildOurselves
-	.weBuildOurselves {
-
-	}
+	.weBuildOurselves {}
 
 	.weBuildDownBlock {
 
@@ -1088,9 +1093,7 @@
 			right: -600px;
 			top: -40px;
 
-			.flowerRight {
-
-			}
+			.flowerRight {}
 		}
 	}
 
@@ -1153,6 +1156,7 @@
 							0% {
 								opacity: 0;
 							}
+
 							100% {
 								opacity: 1;
 							}
@@ -1162,6 +1166,7 @@
 							0% {
 								opacity: 0;
 							}
+
 							100% {
 								opacity: 1;
 							}
@@ -1260,5 +1265,3 @@
 		}
 	}
 }
-
-
