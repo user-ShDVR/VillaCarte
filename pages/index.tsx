@@ -41,7 +41,8 @@ export async function getStaticProps() {
 export let lang: any;
 
 export default function Home( { info }: any ) {
-		const languages = useStore( $languages );
+	const languages = useStore( $languages );
+
 
 	if ( typeof window !== 'undefined' ) {
 		const languagesLS = localStorage.getItem( 'lang' );
@@ -78,10 +79,11 @@ export default function Home( { info }: any ) {
 	return (
 		<>
 			{ isLoading ? (
-				<> </>
+				<div style={ { display: 'none' } }>Loading... </div>
 			) : (
 				<Layout>
 					<Head>
+						<title>{ info.meta?.title }</title>
 						<meta
 							property="og:title"
 							content={ info.meta?.title }
@@ -94,7 +96,7 @@ export default function Home( { info }: any ) {
 							property="og:keywords"
 							content={ info.meta?.keywords }
 						/>
-						<meta property="og:image" content={ metaImage.src }/>
+						<meta property="og:image" content={ 'https://villacartetest.com/' }/>
 					</Head>
 
 					<section className="pt-100-60 pos" style={ style } id="hero-section">

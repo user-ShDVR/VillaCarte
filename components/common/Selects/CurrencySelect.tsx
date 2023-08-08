@@ -1,7 +1,8 @@
 import React from 'react';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
-import { updateCurrencies } from '@/store/currencies';
+import { $currencies, updateCurrencies } from '@/store/currencies';
 import { ICurrencies } from '@/types/mainPage';
+import { useStore } from 'effector-react';
 
 interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {
 	className?: string;
@@ -10,6 +11,7 @@ interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTML
 
 const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
 	const currenciesLS = localStorage.getItem( 'currency' );
+	const currencyStore = useStore( $currencies );
 
 	const currenciesList: ICurrencies[] = [
 		{ value: 'usd', label: 'usd' },
@@ -37,6 +39,7 @@ const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
 				options={ currenciesList }
 				className={ className }
 				defaultValue={ objFromStringLocalStorage }
+				// defaultValue={ currencyStore }
 				updateStore={ handleChange }
 				scrolled={ scrolled }
 			/>
