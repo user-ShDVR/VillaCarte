@@ -12,9 +12,7 @@ function App( { Component, pageProps }: any ) {
 			<Hydrate state={ pageProps.dehydratedState }>
 				{/*<ServiceModal/>*/ }
 				{/*<ToTopButton/>*/ }
-				<Suspense fallback={ <Spinner/> }>
-					<Component { ...pageProps } />
-				</Suspense>
+				<Component { ...pageProps } />
 			</Hydrate>
 		</QueryClientProvider>
 	);

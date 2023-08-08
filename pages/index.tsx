@@ -41,7 +41,7 @@ export async function getStaticProps() {
 export let lang: any;
 
 export default function Home( { info }: any ) {
-	const languages = useStore( $languages );
+		const languages = useStore( $languages );
 
 	if ( typeof window !== 'undefined' ) {
 		const languagesLS = localStorage.getItem( 'lang' );

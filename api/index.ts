@@ -35,8 +35,6 @@ const successHandler = ( response: any ) => {
 	// 	} );
 	// }
 
-	// updatePreloader( false );
-
 	return response.data;
 };
 
@@ -54,8 +52,6 @@ const errorHandler = ( error: AxiosError ) => {
 	// 		message: error.response?.data?.message
 	// 	} );
 	// }
-
-	// updatePreloader( false );
 
 	throw error;
 };
