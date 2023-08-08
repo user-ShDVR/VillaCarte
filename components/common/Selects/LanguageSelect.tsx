@@ -31,8 +31,8 @@ const LanguageSelect = ( { className, scrolled, ...newProps }: IProps ) => {
 			<CustomSelect
 				options={ languages }
 				className={ className }
-				defaultValue={ objFromStringLocalStorage }
-				// defaultValue={ languageStore }
+				// defaultValue={ objFromStringLocalStorage }
+				defaultValue={ languageStore }
 				updateStore={ handleChange }
 				scrolled={ scrolled }
 			/>

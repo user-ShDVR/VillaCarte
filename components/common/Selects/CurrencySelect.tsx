@@ -38,8 +38,8 @@ const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
 			<CustomSelect
 				options={ currenciesList }
 				className={ className }
-				defaultValue={ objFromStringLocalStorage }
-				// defaultValue={ currencyStore }
+				// defaultValue={ objFromStringLocalStorage }
+				defaultValue={ currencyStore }
 				updateStore={ handleChange }
 				scrolled={ scrolled }
 			/>
