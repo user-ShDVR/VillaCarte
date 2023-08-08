@@ -122,7 +122,9 @@ input {
 }
 
 .cover-noize {
-	background-image: url(../../public/noise.webp);
+	background-image: url(../../public/noise.png);
+	background-size: 300px;
+	background-repeat: repeat;
 	position: fixed;
 	left: 0;
 	top: 0;
