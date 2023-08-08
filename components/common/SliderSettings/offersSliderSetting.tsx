@@ -1,6 +1,6 @@
 import React from 'react';
-import { SampleNextArrow } from '@/components/common/Buttons/SliderArrows/SampleNextArrow';
 import { SamplePrevArrow } from '@/components/common/Buttons/SliderArrows/SamplePrevArrow';
+import { OfferNextArrow } from '@/components/common/Buttons/SliderArrows/OfferNextArrow';
 
 export const offersSliderSetting = {
 	dots: false,
@@ -8,7 +8,7 @@ export const offersSliderSetting = {
 	arrows: true,
 	autoplay: true,
 	speed: 1000,
-	nextArrow: <SampleNextArrow/>,
+	nextArrow: <OfferNextArrow/>,
 	prevArrow: <SamplePrevArrow/>,
 	autoplaySpeed: 5000,
 	swipeToSlide: true,

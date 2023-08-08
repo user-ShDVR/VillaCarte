@@ -30,12 +30,12 @@ const ContactsBlock = () => {
 
 	const linkPages = [
 		{ title: lang?.sale || '', link: '/' },
-		{ title: lang?.rent || '', link: '/' },
-		{ title: lang?.concierge || '', link: '/' },
-		{ title: lang?.propertyManagement || '', link: '/' },
 		{ title: lang?.aboutTheCompany || '', link: '/' },
+		{ title: lang?.rent || '', link: '/' },
 		{ title: lang?.aboutPhuket || '', link: '/' },
+		{ title: lang?.concierge || '', link: '/' },
 		{ title: lang?.news || '', link: '/' },
+		{ title: lang?.propertyManagement || '', link: '/' },
 	];
 
 	return (

@@ -53,9 +53,9 @@ const OfferCard = ( { ownProject, index, length }: IProps ) => {
 							{ lang?.bangTaoRegion || '' }
 						</div>
 
-						<h2 className={ 'h2Subtitle colorWhite pt-12' }>{ ownProject.name }</h2>
+						<h2 className={ 'h2Subtitle colorWhite' }>{ ownProject.name }</h2>
 
-						<article className={ 'text300 colorWhite pt-12' }>
+						<article className={ 'text300 colorWhite' }>
 							{ lang?.theFirstAparthotelToGainTheEDGE || '' }
 						</article>
 

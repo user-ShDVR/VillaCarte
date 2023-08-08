@@ -12,7 +12,7 @@ const YouTubeCard = ( { image, path }: IProps ) => {
 
 	return (
 		<Link target={ '_blank' } href={ `https://www.youtube.com/watch?v=${ path }` }>
-			<div className={ 'mediaCard' }>
+			<div className={ 'mediaCard youTubeCard' }>
 				<img src={ staticResource( image ) } alt={ '' } className={ 'object-fit-cover' }/>
 				<div className={ 'playIcon-wrapper' }>
 					<img src={ playBtn.src } alt={ '' } className={ 'playIcon' }/>

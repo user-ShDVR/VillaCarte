@@ -79,7 +79,7 @@ export default function Home( { info }: any ) {
 	return (
 		<>
 			{ isLoading ? (
-				<div style={ { display: 'none' } }>Loading... </div>
+				<div style={ { opacity: 0 } }>Loading... </div>
 			) : (
 				<Layout>
 					<Head>

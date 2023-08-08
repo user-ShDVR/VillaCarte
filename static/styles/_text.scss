@@ -128,6 +128,7 @@
 
 .fz-12 {
 	font-size: 12px;
+	line-height: 20px;
 }
 
 .fz-14 {
@@ -184,6 +185,14 @@
 }
 
 // LetterSpacing
+.ls-0 {
+	letter-spacing: 0;
+}
+
+.ls-012 {
+	letter-spacing: 0.12px;
+}
+
 .ls--028 {
 	letter-spacing: -0.28px;
 }
@@ -206,3 +215,10 @@
 	font-family: $fontManrope600;
 }
 
+@media (min-width: $media1440) {
+	.twoStringTitle {
+		font-size: 48px !important;
+		letter-spacing: -1.44px !important;
+		line-height: 56px !important;
+	}
+}

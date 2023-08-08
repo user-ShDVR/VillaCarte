@@ -57,7 +57,7 @@ const FeedBackForm = ( { sourcePage, sourceForm }: IProps ) => {
 				/>
 			</Form.Item>
 
-			<p className={ 'text300 mt-16' }>
+			<p className={ 'text300 mt-27 ls-012 fz-12' }>
 				{ lang?.byClickingTheRequestACall || '' }
 			</p>
 

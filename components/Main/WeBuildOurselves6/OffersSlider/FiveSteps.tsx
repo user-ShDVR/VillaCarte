@@ -94,27 +94,27 @@ const FiveSteps = () => {
 				:
 				<div className={ 'container' }>
 					<div className={ 'numbers' }>
-						<Fade delay={ 500 }>
+						<Fade delay={ 0 } triggerOnce>
 							<h6 className={ 'text300 fz-80 pl-20' }>
 								01
 							</h6>
 						</Fade>
-						<Fade delay={ 1000 }>
+						<Fade delay={ 500 } triggerOnce>
 							<h6 className={ 'text300 fz-80 pl-16' }>
 								02
 							</h6>
 						</Fade>
-						<Fade delay={ 1500 }>
+						<Fade delay={ 1000 } triggerOnce>
 							<h6 className={ 'text300 fz-80 pl-10' }>
 								03
 							</h6>
 						</Fade>
-						<Fade delay={ 2000 }>
+						<Fade delay={ 1500 } triggerOnce>
 							<h6 className={ 'text300 fz-80 pl-4' }>
 								04
 							</h6>
 						</Fade>
-						<Fade delay={ 2500 }>
+						<Fade delay={ 2000 } triggerOnce>
 							<h6 className={ 'text300 fz-80' }>
 								05
 							</h6>

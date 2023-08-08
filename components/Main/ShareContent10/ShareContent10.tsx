@@ -33,6 +33,7 @@ const ShareContent = () => {
 								/>
 							) ) }
 							<DefaultMediaCard
+								variant={ 'youTube' }
 								icon={ youtubeIcon }
 								hoveredIcon={ ytMedia }
 								text={ lang?.watchExpertReviews || '' }
@@ -49,6 +50,7 @@ const ShareContent = () => {
 								/>
 							) ) }
 							<DefaultMediaCard
+								variant={ 'insta' }
 								icon={ instagramIcon }
 								hoveredIcon={ instaMedia }
 								text={ lang?.learnAllAboutRealEstateInThailand || '' }

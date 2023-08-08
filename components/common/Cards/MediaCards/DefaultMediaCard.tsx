@@ -3,15 +3,17 @@ import Image from 'next/image';
 import arrowBtnAccent from '@/public/icons/arrowBtnAccent.svg';
 import arrowBtnGradient from '@/public/icons/arrowBtnGradient.svg';
 import Link from 'next/link';
+import cn from 'classnames';
 
 interface IProps {
+	variant: 'youTube' | 'insta';
 	icon: string;
 	hoveredIcon: string;
 	text: string;
 	link: string;
 }
 
-const DefaultMediaCard = ( { icon, hoveredIcon, text, link }: IProps ) => {
+const DefaultMediaCard = ( { variant, icon, hoveredIcon, text, link }: IProps ) => {
 	const [ mouseOver, setMouseOver ] = useState<boolean>( false );
 
 	const onMouseOver = () => {
@@ -25,7 +27,7 @@ const DefaultMediaCard = ( { icon, hoveredIcon, text, link }: IProps ) => {
 		<Link
 			target={ '_blank' }
 			href={ link }
-			className={ 'defaultMediaCard-link' }
+			className={ cn( 'defaultMediaCard-link', variant === 'youTube' ? 'youTubeDefCard' : 'instaDefCard' ) }
 			onMouseOver={ onMouseOver }
 			onMouseLeave={ onMouseLeave }
 		>

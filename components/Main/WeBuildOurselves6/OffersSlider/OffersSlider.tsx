@@ -12,11 +12,13 @@ const OffersSlider = ( { data }: IProps ) => {
 
 	return (
 		<div className={ 'offersSlider-wrapper' }>
-			<Slider { ...offersSliderSetting } className={ 'offersSlider' }>
-				{ data?.ownProjects.map( ( ownProject, index ) =>
-					<OfferCard key={ index } ownProject={ ownProject } index={ index } length={ data?.ownProjects.length }/>
-				) }
-			</Slider>
+			<div className={ 'sub-container' }>
+				<Slider { ...offersSliderSetting } className={ 'offersSlider' }>
+					{ data?.ownProjects.map( ( ownProject, index ) =>
+						<OfferCard key={ index } ownProject={ ownProject } index={ index } length={ data?.ownProjects.length }/>
+					) }
+				</Slider>
+			</div>
 		</div>
 	);
 };

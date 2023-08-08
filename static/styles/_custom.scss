@@ -3,6 +3,11 @@
 //section {
 //    line-height: 0;
 //}
+@media (min-width: $media1440) {
+	.sub-container {
+		margin-right: calc(50% - 50vw);
+	}
+}
 
 :where(.css-dev-only-do-not-override-12upa3x).ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus {
 	border-bottom: 1px solid $colorDarkWhite !important;
@@ -687,6 +692,10 @@ img {
 
 .mt-24 {
 	margin-top: 24px;
+}
+
+.mt-27 {
+	margin-top: 27px;
 }
 
 .mt-28 {

@@ -934,13 +934,23 @@
 		}
 	}
 
+	// FeedBackForm
+	.feedBackForm {
+
+		p {
+			max-width: 510px;
+		}
+	}
+
 	// OurMessengers
 	.ourMessengers-wrapper {
-
+		justify-content: start;
+		margin: 70px 90px 0 !important;
 	}
 
 	// OfferCard
 	.offerCard {
+		width: 99%;
 		height: 445px;
 
 		a {
@@ -968,6 +978,7 @@
 
 			h2, article {
 				margin-top: -130px;
+				padding-top: 60px;
 			}
 
 			a {
@@ -983,6 +994,7 @@
 		//margin-top: 20px;
 		//height: fit-content;
 		min-height: 360px;
+		width: 98%;
 
 		&-top {
 
@@ -1001,5 +1013,59 @@
 		.divider {
 			margin: 28px 0;
 		}
+	}
+
+	// MediaCard
+	.mediaCard-wrapper {
+
+		.instaCard {
+			width: 211px;
+
+			img {
+				width: 211px;
+			}
+
+			&:hover {
+
+				img {
+					width: 211px;
+				}
+			}
+		}
+
+		.youTubeCard {
+			width: 324px;
+
+			img {
+				width: 324px;
+			}
+
+			&:hover {
+
+				img {
+					width: 324px;
+				}
+			}
+		}
+	}
+
+	// DefaultMediaCard
+	.defaultMediaCard-link {
+
+		.defaultMediaCard {
+
+			p {
+				letter-spacing: -0.14px !important;
+				line-height: 20px !important;
+			}
+		}
+	}
+
+	.youTubeDefCard {
+		width: 324px;
+	}
+
+	.instaDefCard {
+		width: 211px;
 	}
 }

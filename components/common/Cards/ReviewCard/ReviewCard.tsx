@@ -15,7 +15,7 @@ const ReviewCard = ( { name, profession, avatar, text }: IProps ) => {
 			<div className={ 'reviewCard-top' }>
 				<Image src={ avatar } alt={ name }/>
 				<div className={ 'pl-20' }>
-					<h3 className={ 'h3TitleText colorWhite' }>{ name }</h3>
+					<h3 className={ 'h3TitleText colorWhite ls-0' }>{ name }</h3>
 					<p className={ 'text300 colorWhite' }>{ profession }</p>
 				</div>
 			</div>

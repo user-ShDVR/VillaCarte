@@ -112,8 +112,8 @@
 			display: grid;
 			grid-template-columns: 1fr;
 			gap: 8px;
-			-webkit-animation: fadeTabPanel 2s linear;
-			animation: fadeTabPanel 2s linear;
+			-webkit-animation: fadeTabPanel 1s linear;
+			animation: fadeTabPanel 1s linear;
 		}
 
 		@-webkit-keyframes fadeTabPanel {
@@ -1067,7 +1067,7 @@
 		margin-top: -310px;
 
 		&-inner {
-			margin-top: 110px;
+			margin-top: 70px;
 
 			.bestProjects-tabs {
 				position: relative;
@@ -1090,10 +1090,9 @@
 	.feedBackBlock {
 
 		.element-animation {
-			right: -600px;
-			top: -40px;
-
-			.flowerRight {}
+			scale: 1.5;
+			right: -470px;
+			top: -10px;
 		}
 	}
 
@@ -1215,7 +1214,10 @@
 			bottom: 32px;
 
 			h3 {
-				max-width: 700px;
+				max-width: 630px;
+				font-size: 48px !important;
+				line-height: 62px !important;
+				letter-spacing: -1.44px !important;
 			}
 
 			p {
@@ -1245,7 +1247,7 @@
 				grid-template-columns: 1fr 1fr;
 				top: 180px;
 				right: 40px;
-				column-gap: 0;
+				column-gap: 20px;
 
 				a {
 					width: 193px;

@@ -214,6 +214,11 @@
 			padding: 12px;
 			border: 2px solid $colorWhite;
 			backdrop-filter: blur(2px);
+			transition: .2s all;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.30);
+			}
 
 			img {
 				width: 14px;
@@ -274,7 +279,7 @@
 	.offersSlider {
 
 		.sliderNext {
-			right: 104px;
+			right: 112px;
 			cursor: pointer;
 		}
 	}

@@ -42,9 +42,9 @@ const FeedBackBlock = () => {
 			<div className={ 'container pt-60 pos feedBackBlock-content w-620px z-7' }>
 				<div>
 					<div>
-						<h2 className={ 'h2Subtitle ' }>{ lang?.orderAPersonalSelection || '' }</h2>
-						<h2 className={ 'h2Subtitle ' }>{ lang?.orderAPersonalSelection2 || '' }</h2>
-						<h6 className={ 'text300 colorText pt-8' }>
+						<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ lang?.orderAPersonalSelection || '' }</h2>
+						<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ lang?.orderAPersonalSelection2 || '' }</h2>
+						<h6 className={ 'text300 colorText pt-8 mb-30' }>
 							{ lang?.ourManagerWillCallYou || '' }
 						</h6>
 					</div>
