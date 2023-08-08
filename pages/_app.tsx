@@ -1,8 +1,10 @@
 import '@/static/styles/index.scss';
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+import Spinner from '@/components/common/Spinner/Spinner';
+import { appWithTranslation } from 'next-i18next';
 
-export default function App( { Component, pageProps }: any ) {
+function App( { Component, pageProps }: any ) {
 	const [ queryClient ] = useState( () => new QueryClient() );
 
 	return (
@@ -10,8 +12,12 @@ export default function App( { Component, pageProps }: any ) {
 			<Hydrate state={ pageProps.dehydratedState }>
 				{/*<ServiceModal/>*/ }
 				{/*<ToTopButton/>*/ }
-				<Component { ...pageProps } />
+				<Suspense fallback={ <Spinner/> }>
+					<Component { ...pageProps } />
+				</Suspense>
 			</Hydrate>
 		</QueryClientProvider>
 	);
 }
+
+export default appWithTranslation( App );

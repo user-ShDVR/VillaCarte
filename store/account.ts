@@ -22,7 +22,7 @@ logout.watch( ( state: any ) => {
 
 export const getUserInfo = async () => {
 	const response = await apiGet( {
-		url: '/account',
+		url: '/api/account',
 	} );
 
 	updateUserInfo( response );
@@ -32,7 +32,7 @@ export const getUserInfo = async () => {
 
 export const saveUserInfo = async ( postData: IUserInfo | FormData ) => {
 	const response = await apiPost( {
-		url: '/account',
+		url: '/api/account',
 		postData
 	} );
 

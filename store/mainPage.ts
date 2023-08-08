@@ -17,7 +17,7 @@ export const $mainPageInfo = createStore<IMainPage>( {
 
 export const getMainPageInfo = async () => {
 	const response = await apiGet( {
-		url: '/pages/thailand/index?lang=RU'
+		url: '/api/pages/thailand/index?lang=RU'
 	} );
 
 	updateMainPageInfo( response );

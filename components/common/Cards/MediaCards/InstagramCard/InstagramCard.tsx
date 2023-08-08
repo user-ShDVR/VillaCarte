@@ -9,7 +9,7 @@ interface IProps {
 
 const InstagramCard = ( { image, path }: IProps ) => {
 	return (
-		<Link target={ '_blank' } href={ path }>
+		<Link target={ '_blank' } href={ `https://www.instagram.com/p/${ path }` }>
 			<div className={ 'mediaCard' }>
 				<img src={ staticResource( image ) } alt={ '' }/>
 			</div>

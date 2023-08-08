@@ -11,7 +11,7 @@ interface IProps {
 const YouTubeCard = ( { image, path }: IProps ) => {
 
 	return (
-		<Link target={ '_blank' } href={ path }>
+		<Link target={ '_blank' } href={ `https://www.youtube.com/watch?v=${ path }` }>
 			<div className={ 'mediaCard' }>
 				<img src={ staticResource( image ) } alt={ '' } className={ 'object-fit-cover' }/>
 				<div className={ 'playIcon-wrapper' }>

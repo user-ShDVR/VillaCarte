@@ -1,4 +1,4 @@
 export const API = {
-  url: 'https://villacartetest.com/api',
+  url: 'https://villacartetest.com',
   timeout: 60000,
 };

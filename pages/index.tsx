@@ -23,12 +23,11 @@ import Footer from '@/components/Main/Footer/Footer';
 import { enLocalization, ruLocalization } from '@/static/localization';
 import { useStore } from 'effector-react';
 import { $languages } from '@/store/languages';
-import Spinner from '@/components/common/Spinner/Spinner';
 
 export async function getStaticProps() {
 	// @ts-ignore
 	const res = await fetch(
-		`${ process.env.REACT_APP_URL }api/pages/thailand/index?lang=RU`
+		`${ process.env.REACT_APP_URL }/api/pages/thailand/index?lang=RU`
 	);
 
 	const info = await res.json();
@@ -79,9 +78,7 @@ export default function Home( { info }: any ) {
 	return (
 		<>
 			{ isLoading ? (
-				<>
-					<Spinner/>
-				</>
+				<> </>
 			) : (
 				<Layout>
 					<Head>

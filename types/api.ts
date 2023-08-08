@@ -8,3 +8,8 @@ export interface IApiRequest_Post {
   postData?: {};
   headerList?: {};
 }
+
+export interface IApiResponse_Core<T> {
+  meta: {}
+  data: T;
+}
