@@ -276,6 +276,8 @@
 						width: 100%;
 
 						h6 {
+							color: #FFF;
+							// mix-blend-mode: soft-light;
 							background-image: url(../../public/noise-blue.png);
 							background-size: 100px;
 							background-repeat: repeat;
@@ -1144,9 +1146,16 @@
 						justify-content: space-between;
 
 						h6 {
-							width: 240px;
-							color: rgba(255, 255, 255, .5);
+
+							color: #FFF;
 							mix-blend-mode: soft-light;
+							background-image: url(../../public/noise-blue.png);
+							background-size: 100px;
+							background-repeat: repeat;
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+
+
 							//-webkit-animation: fadeNumbers 2s forwards linear;
 							//animation: fadeNumbers 2s forwards linear;
 						}
