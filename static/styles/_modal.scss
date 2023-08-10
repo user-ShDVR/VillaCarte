@@ -277,3 +277,24 @@
 		}
 	}
 }
+
+@media (min-width: $media1440) {
+	// ModalCallRequest
+	.feedBack-modal {
+
+		.element-animation {
+			scale: 1.1;
+			right: -570px;
+			top: -40px;
+		}
+
+		.ourMessengers-wrapper {
+			margin: 70px 70px 0 !important;
+
+			.ourMessengers {
+				margin-top: -80px;
+			}
+		}
+
+	}
+}
