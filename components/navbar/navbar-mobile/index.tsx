@@ -9,7 +9,6 @@ import useModal from '@/hooks/useModal';
 import { useScrollBlock } from '@/hooks/useScrollBlock';
 import Dropdown from '../drop-down';
 import Link from 'next-intl/link';
-import ButtonBorder from '@/ui/button-border';
 
 const NavbarMobile: React.FC<INavbarMobile> = ({
     sale,
