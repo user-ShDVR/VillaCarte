@@ -51,7 +51,7 @@ const Dropdown: React.FC<IDropDownProps> = ({
                     <ul
                         className={styles.dropDown}
                         style={{ margin: 0 }}>
-                        {options.map((option, index) => (
+                        {options.map((option: any, index: any) => (
                             <li
                                 className='item'
                                 key={index}
