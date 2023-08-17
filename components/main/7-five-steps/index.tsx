@@ -32,8 +32,7 @@ const FiveSteps: React.FC<IFiveStepsProps> = ({
                     width={0}
                     height={0}
                     sizes='100vw'
-                    style={{ width: '100%', height: 'auto' }}
-                />
+                    style={{ width: '100%', height: 'auto' }} alt={''}                />
                 <div className='paragraph2'>
                     <p>{weSelectTheRealEstatePersonally}</p>
                     <p>{weCalculateProfitability}</p>

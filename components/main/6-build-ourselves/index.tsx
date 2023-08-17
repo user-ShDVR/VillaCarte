@@ -8,6 +8,20 @@ import ButtonBorderWhite from '@/ui/button-border-white';
 import ButtonCircle from '@/ui/button-circle';
 import IBuildOurselvesProps from './interface';
 
+//добавил временно чтобы убрать ошибки
+interface ApiResponse {
+    data: {
+        ownProjects: {
+            image: string;
+            type: { ru: string };
+            location: { ru: string };
+            name: string;
+            description: { ru: string };
+            price: { rub: string };
+        }[];
+    };
+}
+
 const BuildOurSelves: React.FC<IBuildOurselvesProps> = ({
     weAlsoBuildOurselves,
     weAlsoBuildOurselves2,
@@ -18,7 +32,7 @@ const BuildOurSelves: React.FC<IBuildOurselvesProps> = ({
 }) => {
     const BASE_URL = 'https://villacartetest.com';
     const URL = 'https://villacartetest.com/api/pages/thailand/index?lang=RU';
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<ApiResponse | null>(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -35,17 +49,17 @@ const BuildOurSelves: React.FC<IBuildOurselvesProps> = ({
     }, []);
 
     useEffect(() => {
-        const slider = document.querySelector('.slider');
+        const slider = document.querySelector('.slider') as HTMLElement;
         const nextButton = document.querySelector('#next-button');
 
-        if (slider && nextButton) {
+        if (data && data.data && data.data.ownProjects ) {
             const sliderItem = document.querySelector('.slider-item');
             const sliderItemWidth = sliderItem ? sliderItem.clientWidth : 0;
-            const step = sliderItemWidth
+            const step = sliderItemWidth;
 
             let position = 0;
 
-            nextButton.addEventListener('click', () => {
+            nextButton?.addEventListener('click', () => {
                 position =
                     (position + step) % (data?.data.ownProjects.length * step);
 
@@ -108,7 +122,7 @@ const BuildOurSelves: React.FC<IBuildOurselvesProps> = ({
                         <div>
                             <ul className='relative slider'>
                                 {data.data.ownProjects.map(
-                                    (item, index: number) => (
+                                    (item: any, index: number) => (
                                         <li
                                             key={index}
                                             className='slider-item'>
@@ -155,8 +169,7 @@ const BuildOurSelves: React.FC<IBuildOurselvesProps> = ({
 
                                                 <div className={styles.price}>
                                                     <p>от {item.price.rub} $</p>
-                                                    <ButtonBorderWhite
-                                                        type='button'>
+                                                    <ButtonBorderWhite type='button'>
                                                         <span>
                                                             Подробнее об объекте
                                                         </span>

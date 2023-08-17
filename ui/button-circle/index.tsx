@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-import arrow from '@/../public/button-border/arrow.svg';
 import IButtonCircle from './interface';
 import styles from './styles.module.scss'
 
@@ -23,12 +21,6 @@ const ButtonCircle: React.FC<IButtonCircle> = ({
             style={buttonStyle}
             type={type}>
             {children}
-            {/* <Image
-                src={arrow}
-                alt='arrow'
-                width={28 / 2}
-                height={20 / 2}
-            /> */}
         </button>
     );
 };

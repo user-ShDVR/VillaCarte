@@ -39,12 +39,15 @@ const VideoSlider: React.FC = () => {
     };
 
     useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.addEventListener('timeupdate', handleTimeUpdate);
+        const videoElement = videoRef.current;
+
+        if (videoElement) {
+            videoElement.addEventListener('timeupdate', handleTimeUpdate);
         }
+
         return () => {
-            if (videoRef.current) {
-                videoRef.current.removeEventListener(
+            if (videoElement) {
+                videoElement.removeEventListener(
                     'timeupdate',
                     handleTimeUpdate
                 );

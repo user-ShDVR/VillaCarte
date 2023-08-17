@@ -7,6 +7,25 @@ import ButtonBorderWhite from '@/ui/button-border-white';
 import styles from './styles.module.scss';
 import IBestProjectsProps from './interface';
 
+//временно добавил 3 интерфейса чтобы не было ошибки
+interface Apartment {
+    image: string;
+}
+
+interface OwnProject {
+    url: string;
+    type: { ru: string };
+    location: { ru: string };
+    price: { rub: string };
+}
+
+interface ApiResponse {
+    data: {
+        apartments: Apartment[];
+        ownProjects: OwnProject[];
+    };
+}
+
 const BestProjects: React.FC<IBestProjectsProps> = ({
     theBestProjectsForLife,
     theBestProjectsForLife2,
@@ -15,7 +34,7 @@ const BestProjects: React.FC<IBestProjectsProps> = ({
 }) => {
     const BASE_URL = 'https://villacartetest.com';
     const URL = 'https://villacartetest.com/api/pages/thailand/index?lang=RU';
-    const [dataa, setData] = useState(null);
+    const [dataa, setData] = useState<ApiResponse | null>(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -51,81 +70,85 @@ const BestProjects: React.FC<IBestProjectsProps> = ({
                     {dataa ? (
                         <div>
                             <ul className={styles.imageList}>
-                                {dataa.data.apartments.map((item, index) => {
-                                    const ownProject =
-                                        dataa.data.ownProjects.find(
-                                            (project) =>
-                                                project.url === item.url
-                                        );
+                                {dataa?.data.apartments.map(
+                                    (item: any, index: any) => {
+                                        const ownProject =
+                                            dataa?.data.ownProjects.find(
+                                                (project: any) =>
+                                                    project.url === item.url
+                                            );
 
-                                    return (
-                                        <li
-                                            key={index}
-                                            className={styles.imageItem}>
-                                            <div
-                                                className={
-                                                    styles.imageContainer
-                                                }>
-                                                <Image
-                                                    className='w-[30.347vw] h-[31.25vw]'
-                                                    src={`${BASE_URL}/${item.image}`}
-                                                    alt='Villa'
-                                                    width={1000 / 2}
-                                                    height={1000 / 2}
-                                                />
-                                            </div>
-                                            <div
-                                                className={
-                                                    styles.infoContainer
-                                                }>
+                                        return (
+                                            <li
+                                                key={index}
+                                                className={styles.imageItem}>
                                                 <div
                                                     className={
-                                                        styles.infoContent
+                                                        styles.imageContainer
                                                     }>
-                                                    <h3
-                                                        className={
-                                                            styles.infoType
-                                                        }>
-                                                        {ownProject &&
-                                                            ownProject.type &&
-                                                            ownProject.type.ru}
-                                                    </h3>
-                                                    <p
-                                                        className={
-                                                            styles.infoLocation
-                                                        }>
-                                                        {ownProject &&
-                                                            ownProject.location &&
-                                                            ownProject.location
-                                                                .ru}
-                                                    </p>
-                                                    <p
-                                                        className={
-                                                            styles.infoPrice
-                                                        }>
-                                                        Цена от
-                                                        {ownProject &&
-                                                            ownProject.price &&
-                                                            ownProject.price
-                                                                .rub}{' '}
-                                                        RUB
-                                                    </p>
+                                                    <Image
+                                                        className='w-[30.347vw] h-[31.25vw]'
+                                                        src={`${BASE_URL}/${item.image}`}
+                                                        alt='Villa'
+                                                        width={1000 / 2}
+                                                        height={1000 / 2}
+                                                    />
                                                 </div>
-                                            </div>
-                                            <div
-                                                className={
-                                                    styles.logoContainer
-                                                }>
-                                                <Image
-                                                    src={`${BASE_URL}/${item.logoImage}`}
-                                                    alt='Villa Logo'
-                                                    width={1000 / 2}
-                                                    height={1000 / 2}
-                                                />
-                                            </div>
-                                        </li>
-                                    );
-                                })}
+                                                <div
+                                                    className={
+                                                        styles.infoContainer
+                                                    }>
+                                                    <div
+                                                        className={
+                                                            styles.infoContent
+                                                        }>
+                                                        <h3
+                                                            className={
+                                                                styles.infoType
+                                                            }>
+                                                            {ownProject &&
+                                                                ownProject.type &&
+                                                                ownProject.type
+                                                                    .ru}
+                                                        </h3>
+                                                        <p
+                                                            className={
+                                                                styles.infoLocation
+                                                            }>
+                                                            {ownProject &&
+                                                                ownProject.location &&
+                                                                ownProject
+                                                                    .location
+                                                                    .ru}
+                                                        </p>
+                                                        <p
+                                                            className={
+                                                                styles.infoPrice
+                                                            }>
+                                                            Цена от
+                                                            {ownProject &&
+                                                                ownProject.price &&
+                                                                ownProject.price
+                                                                    .rub}{' '}
+                                                            RUB
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.logoContainer
+                                                    }>
+                                                    <Image
+                                                        src={`${BASE_URL}/${item.logoImage}`}
+                                                        alt='Villa Logo'
+                                                        width={1000 / 2}
+                                                        height={1000 / 2}
+                                                    />
+                                                </div>
+                                            </li>
+                                        );
+                                    }
+                                )}
                             </ul>
                         </div>
                     ) : (

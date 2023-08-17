@@ -7,12 +7,24 @@ import axios from 'axios';
 import styles from './styles.module.scss';
 import IShareExclusiveContentProps from './interface';
 
+interface ApiResponse {
+    data: {
+        youTubeVideos: {
+            publicationId: string;
+        }[];
+        instagramPosts: {
+            publicationId: string;
+            image: string;
+        }[];
+    };
+}
+
 const ShareExclusiveContent: React.FC<IShareExclusiveContentProps> = ({
     sharingExclusiveContentFromTheIsland,
 }) => {
     const BASE_URL = 'https://villacartetest.com';
     const URL = 'https://villacartetest.com/api/pages/thailand/index?lang=RU';
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<ApiResponse | null>(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -31,11 +43,13 @@ const ShareExclusiveContent: React.FC<IShareExclusiveContentProps> = ({
     return (
         <div className={styles.shareExclusiveContent}>
             <div className={styles.container}>
-                <h1 className='header1'>{sharingExclusiveContentFromTheIsland}</h1>
+                <h1 className='header1'>
+                    {sharingExclusiveContentFromTheIsland}
+                </h1>
                 {data ? (
                     <div className={styles.content}>
                         <div className={styles.youtubeVideos}>
-                            {data.data.youTubeVideos.map((video) => (
+                            {data.data.youTubeVideos.map((video: any) => (
                                 <div
                                     key={video.publicationId}
                                     className={styles.videoContainer}>
@@ -73,7 +87,7 @@ const ShareExclusiveContent: React.FC<IShareExclusiveContentProps> = ({
                         </div>
 
                         <div className={styles.instagramPosts}>
-                            {data.data.instagramPosts.map((post) => (
+                            {data.data.instagramPosts.map((post: any) => (
                                 <div
                                     key={post.publicationId}
                                     className={styles.hoverZoom}>
