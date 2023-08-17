@@ -5,7 +5,7 @@ export const enLocalization = {
 	propertyManagement: 'Property management',
 	aboutTheCompany: 'About the company',
 	aboutPhuket: 'About Phuket',
-	news: 'News',
+	news: 'Newsцуцуц',
 	email: 'E-mail',
 	requestACall: 'Request a call',
 	resortReal: 'Resort real estate service company in Thailand',
