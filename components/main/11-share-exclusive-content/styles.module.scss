@@ -1,0 +1,113 @@
+@import '../../../styles/variables';
+
+.shareExclusiveContent {
+    padding: 34.722vw 3.333vw 5.556vw 3.333vw; //500px 48px 80px 48px;
+    background-color: #f5f5f6;
+    .container {
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 1.111vw; //16px
+
+            .youtubeVideos {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.111vw; //16px
+                iframe {
+                    width: 22.5vw; //324px
+                    height: 13.194vw; //190px
+                }
+                .watchAll {
+                    width: 22.5vw; //324px
+                    height: 13.194vw; //190px
+                    background-color: rgba(255, 255, 255, 1);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 1.736vw 1.111vw; //25px 16px;
+
+
+                    &:hover {
+                        div:nth-child(1) {
+                            filter: invert(36%) sepia(74%) saturate(468%) hue-rotate(169deg) brightness(95%) contrast(84%);
+                        }
+                        div:nth-child(2) {
+                            p {
+                                background: -webkit-linear-gradient(
+                                    277.37deg,
+                                    #7ea2bc 17.22%,
+                                    #4072a3 85.03%
+                                );
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                            img {
+                                filter: invert(36%) sepia(74%) saturate(468%) hue-rotate(169deg) brightness(95%) contrast(84%);
+                            }
+                        }
+                    }
+
+                    .bottom {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: end;
+                    }
+                }
+            }
+
+            .instagramPosts {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.111vw; //16px
+
+                .knowAll {
+                    width: 14.653vw; //211px
+                    height: 13.194vw; //190px
+                    background-color: rgba(255, 255, 255, 1);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 1.736vw 1.111vw; //25px 16px;
+
+                    &:hover {
+                        div:nth-child(1) {
+                            filter: invert(36%) sepia(74%) saturate(468%) hue-rotate(169deg) brightness(95%) contrast(84%);
+                        }
+                        div:nth-child(2) {
+                            p {
+                                background: -webkit-linear-gradient(
+                                    277.37deg,
+                                    #7ea2bc 17.22%,
+                                    #4072a3 85.03%
+                                );
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                            img {
+                                filter: invert(36%) sepia(74%) saturate(468%) hue-rotate(169deg) brightness(95%) contrast(84%);
+                            }
+                        }
+                    }
+
+                    .bottom {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: end;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hoverZoom:hover img,
+.hoverZoom:hover video {
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}

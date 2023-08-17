@@ -1,0 +1,58 @@
+@import '../../../styles/variables';
+
+.navbarMobile {
+    overflow: hidden;
+    .navbarMobileContainer {
+        overflow: hidden;
+        padding: 4.267vw; // 16px;
+        z-index: 1000;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            gap: 2.667vw; //10px
+
+            button {
+                // margin-left: 2.083vw;
+                //styleName: p2;
+                font-family: 'Manrope-Bold';
+                font-size: 3.733vw; //14px
+                font-weight: 700;
+                line-height: 5.099vw; //19.12px
+                letter-spacing: -0.01em;
+                text-align: left;
+
+                background-color: $color-white;
+                padding: 13px 20px;
+                border-radius: 30px;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    color: $color-white;
+                    background-color: rgba(34, 54, 74, 1);
+                }
+            }
+        }
+    }
+    .menuContent {
+        background-color: $color-white;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: 1000;
+        right: -100%;
+        opacity: 0; 
+        transition: right 0.3s ease;
+    }
+}
+
+.menuOpen {
+    right: 0;
+    opacity: 1;
+}

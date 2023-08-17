@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+
+.navbar {
+    .navbarContainer {
+        position: fixed;
+        left: 3.333vw;
+        right: 3.333vw;
+        top: 2.5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+        transition: all 0.4s;
+
+        .logo {
+            z-index: 1;
+        }
+
+        ul:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            gap: 1.389vw;
+            margin-left: 2.431vw;
+        }
+
+        ul:nth-child(3) {
+            display: flex;
+            flex-direction: row;
+            gap: 1.389vw;
+            margin-left: 3.819vw;
+        }
+
+        button {
+            // margin-left: 2.083vw;
+            //styleName: p2;
+            font-family: 'Manrope-Bold';
+            font-size: 0.972vw;
+            font-weight: 700;
+            line-height: 1.389vw;
+            letter-spacing: -0.01em;
+            text-align: left;
+
+            background-color: $color-white;
+            padding: 13px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $color-white;
+                background-color: rgba(34, 54, 74, 1);
+            }
+        }
+    }
+}
+
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 0.417vw // 6px;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        display: none;
+    }
+}

@@ -1,0 +1,39 @@
+.reviews {
+    padding-top: 6.944vw; //100px
+    padding-bottom: 36.111vw; //520px
+    background: linear-gradient(#4072a3, #7ea2bc);
+
+    .reviewsContainer {
+        padding: 0 3.333vw; //0 48px
+
+        .top {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            
+            padding-bottom: 0.694vw; //10px
+            h1 {
+                color: white;
+            }
+            .buttonContainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1.389vw; //20px
+
+                button:nth-child(1) {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .allReviews {
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            gap: 1.389vw; //20px
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+}

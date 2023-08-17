@@ -1,0 +1,140 @@
+@import '../../../styles/variables';
+
+.bestProjects {
+    z-index: 100;
+    background: linear-gradient(#7ea2bc, #4072a3);
+    .bestProjectsContainer {
+        padding: 20.833vw 3.33vw 7.639vw 3.333vw; //300px 48px 110px 48px
+        display: flex;
+        flex-direction: column;
+        gap: 2.778vw; //40px
+
+        .title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+            color: $color-white;
+
+            div:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                gap: 1.389vw; //20px
+                color: $color-white;
+            }
+        }
+
+        .content {
+            .imageList {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.389vw; //20px
+
+                @media (max-width: 1024px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            .imageItem {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &:hover {
+                    .logoContainer {
+                        display: none;
+                    }
+                }
+            }
+
+            .imageContainer {
+                position: relative;
+                width: 30.347vw;
+                height: 31.25vw;
+                // width: 437px;
+                // height: 450px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            .infoContainer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: background-color 0.3s ease-in-out;
+                // display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .imageItem:hover .infoContainer {
+                display: flex;
+            }
+
+            .infoContent {
+                text-align: center;
+                color: white;
+                padding: 1.389vw; //20px
+            }
+
+            .infoType {
+                font-size: 1.25vw; //18px
+                font-weight: bold;
+                margin-bottom: 0.347vw; //5px
+            }
+
+            .infoLocation,
+            .infoPrice {
+                font-size: 0.972vw; //14px
+                margin-bottom: 0.347vw; //5px
+            }
+
+            .logoContainer {
+                position: absolute;
+                width: 30.347vw;
+                height: 31.25vw;
+                object-fit: cover;
+                // width: 437px;
+                // height: 450px;
+                // top: 0;
+                // left: 0;
+                // width: 100%;
+                // height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            .logoContainer {
+                z-index: 1;
+                // opacity: 0.5;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                // &:hover {
+                //     display: none;
+                // }
+            }
+        }
+
+        button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3 ease-in-out;
+            &:hover {
+                img {
+                    filter: invert(80%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@import '../../../styles/variables';
+
+.orderPersonal {
+    .orderPersonalContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: $color-white;
+        position: relative;
+        padding: 5.694vw 8.125vw; //82px //117px
+        background-image: url('../../../public/main/5-order-personal/bg.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .leftSide {
+            display: flex;
+            flex-direction: column;
+            gap: 2.083vw; //30px
+
+            .title {
+                h2 {
+                    color: rgba(34, 54, 74, 1);
+                    padding-bottom: 2.667vw; //10px
+                }
+            }
+
+            .form {
+                .form__group {
+                    position: relative;
+                    padding: 5px 0 0;
+                    width: 100%;
+                    max-width: 180px;
+                }
+
+                .form__field {
+                    font-family: inherit;
+                    width: 23.403vw;
+                    border: none;
+                    border-bottom: 2px solid #9b9b9b;
+                    outline: 0;
+                    font-size: 17px;
+                    color: #fff;
+                    padding: 20px 0;
+                    background: transparent;
+                    transition: border-color 0.2s;
+                }
+
+                .form__field::placeholder {
+                    color: transparent;
+                }
+
+                .form__field:placeholder-shown ~ .form__label {
+                    font-size: 17px;
+                    cursor: text;
+                    top: 20px;
+                }
+
+                .form__label {
+                    padding-left: 10px;
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    transition: 0.2s;
+                    font-size: 17px;
+                    color: #9b9b9b;
+                    pointer-events: none;
+
+                    //styleName: p3;
+                    font-family: 'Manrope-Light';
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 24px;
+                    letter-spacing: 0.01em;
+                    text-align: left;
+                }
+
+                .form__field:focus {
+                    padding-bottom: 6px;
+                    font-weight: 700;
+                    border-width: 1px;
+                    border-image-slice: 1;
+                }
+
+                .form__field:focus ~ .form__label {
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    transition: 0.2s;
+                    font-size: 17px;
+                    font-weight: 700;
+                }
+
+                .form__field:required,
+                .form__field:invalid {
+                    box-shadow: none;
+                }
+            }
+
+            .order {
+                display: flex;
+                flex-direction: column;
+                gap: 5.333vw; //20px
+
+                p {
+                    width: 40.069vw;
+                }
+                div:nth-child(2) {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

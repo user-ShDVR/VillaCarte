@@ -1,0 +1,54 @@
+@import '../../../../styles/variables';
+
+.weAreTrustedItem {
+    width: 46.111vw; //664px
+    height: 24.167vw; //348px
+    padding: 2.778vw 2.083vw 2.778vw 2.083vw; //40px 30px 40px 30px
+    background-color: rgba(255, 255, 255, 0.1);
+
+    @media (max-width: 1024px) {
+        width: 91.733vw; //344px
+        height: 123.2vw; //462px
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.222vw; //32px
+
+        .person {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.111vw; //16px
+            .photo {
+            }
+
+            .nameAndTitle {
+                h3 {
+                    color: $color-white;
+                }
+
+                p {
+                    color: $color-white;
+                }
+            }
+        }
+
+        hr {
+            width: 41.944vw;
+            height: 1px;
+            color: rgba(240, 240, 242, 0.5);
+        }
+
+        .reviewText {
+            p {
+                width: 41.944vw;
+                color: white;
+
+                @media (max-width: 1024px) {
+                    width: 83.2vw;
+                }
+            }
+        }
+    }
+}
