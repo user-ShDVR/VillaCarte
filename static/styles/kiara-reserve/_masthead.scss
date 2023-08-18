@@ -1,0 +1,68 @@
+.kiara-reserve {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    .masthead {
+        background: url(../../../public/kiara-reserve/bg.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 93.333vw;
+        height: 45.972vw;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        // padding: 2.778vw 2.778vw;
+
+        .text {
+            padding: 2.778vw 2.778vw;
+            color: #ffffff;
+            p:nth-child(1) {
+                font-family: 'Manrope-Bold';
+                font-size: 0.972vw;
+                font-weight: 700;
+                line-height: 1.389vw;
+                letter-spacing: -0.01em;
+                text-align: left;
+
+                display: inline;
+                border: 2px solid #ffffff;
+                border-radius: 2.083vw;
+                padding: 0.694vw 1.389vw;
+            }
+
+            h1 {
+                font-family: 'TTTsarsA-Light', sans-serif;
+                font-size: 5vw;
+                font-weight: 300;
+                line-height: 5.833vw;
+                letter-spacing: -0.03em;
+                text-align: left;
+                padding-top: 1.389vw;
+            }
+
+            h3 {
+                font-family: 'TTTsarsA-Light', sans-serif;
+                font-size: 2.222vw;
+                font-weight: 300;
+                line-height: 2.431vw;
+                letter-spacing: -0.03em;
+                text-align: left;
+                padding-top: 0.694vw;
+            }
+
+            p:nth-child(4) {
+                font-family: 'Manrope-Bold';
+                font-size: 0.972мц;
+                font-weight: 700;
+                line-height: 1.667vw;
+                letter-spacing: 0em;
+                text-align: left;
+                padding-top: 2.778vw;
+            }
+        }
+    }
+}

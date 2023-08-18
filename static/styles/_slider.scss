@@ -1,0 +1,301 @@
+@import "variables";
+
+@media (min-width: $media0) {
+	// VideoSlider
+	.videoSlider {
+		position: relative;
+		z-index: 6;
+
+		.sliderNext {
+			position: absolute;
+			bottom: 32px;
+			right: 20px;
+			z-index: 1;
+			cursor: pointer;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: 32px;
+			right: 60px;
+			z-index: 1;
+			cursor: pointer;
+		}
+
+		.slick-track {
+			height: 700px;
+		}
+
+		.slick-slider {
+			position: relative;
+			display: block;
+			width: 100%;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			z-index: 3;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			bottom: 20px;
+			right: 16px;
+			width: 0;
+			height: 0;
+			padding: 0;
+			text-indent: -9999px;
+			background: transparent;
+			border: none;
+		}
+
+		.slick-arrow:after {
+			content: "";
+			position: absolute;
+			bottom: 20px;
+			z-index: 2;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+	}
+
+	// OffersSlider
+	.offersSlider {
+		position: relative;
+
+		.sliderNext {
+			position: absolute;
+			bottom: -30px;
+			right: 40%;
+			z-index: 1;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: -30px;
+			left: 40%;
+			z-index: 1;
+		}
+
+		.slick-track {
+			//min-height: 700px;
+		}
+
+		.slick-slider {
+			position: relative;
+			display: block;
+			width: 100%;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			z-index: 3;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			bottom: 20px;
+			right: 16px;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+			text-indent: -9999px;
+			background: transparent;
+			border: none;
+		}
+
+		.slick-arrow:after {
+			content: "";
+			position: absolute;
+			bottom: 20px;
+			z-index: 2;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+	}
+
+	// WeAreTrustedSlider
+	.weAreTrustedSlider {
+		position: relative;
+		padding-bottom: 100px;
+
+		.sliderNext {
+			position: absolute;
+			bottom: 60px;
+			right: 40%;
+			cursor: pointer;
+			z-index: 3;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: 60px;
+			left: 40%;
+			cursor: pointer;
+			z-index: 3;
+		}
+
+		.slick-track {
+			height: fit-content;
+			display: flex;
+			justify-content: end;
+		}
+
+		.slick-slider {
+			position: relative;
+			display: block;
+			width: 100%;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			z-index: 3;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			bottom: 20px;
+			right: 16px;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+			text-indent: -9999px;
+			background: transparent;
+			border: none;
+		}
+
+		.slick-arrow:after {
+			content: "";
+			position: absolute;
+			bottom: 20px;
+			z-index: 2;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+	}
+}
+
+@media (min-width: $media475) {
+	// OffersSlider
+	.offersSlider {
+
+		.sliderNext {
+			bottom: -40px;
+		}
+
+		.sliderPrev {
+			bottom: -40px;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: $media768) {
+	// OffersSlider
+	.offersSlider {
+
+		.slick-track {
+			min-height: auto;
+		}
+
+		.sliderNext {
+			right: -20px;
+			bottom: 46%;
+			border-radius: 50%;
+			padding: 12px;
+			border: 2px solid $colorWhite;
+			backdrop-filter: blur(2px);
+			transition: .2s all;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.30);
+			}
+
+			img {
+				width: 14px;
+				height: 10px;
+			}
+		}
+
+		.sliderPrev {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: $media1023) {
+	.weAreTrustedSlider {
+
+		.sliderNext {
+			position: absolute;
+			bottom: auto;
+			top: -34px;
+			right: 0;
+			z-index: 1;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: auto;
+			top: -34px;
+			left: auto;
+			right: 40px;
+			z-index: 1;
+		}
+	}
+}
+
+@media (min-width: $media1200) {
+	// OffersSlider
+	.offersSlider {
+
+		.sliderNext {
+			right: 88px;
+		}
+	}
+}
+
+@media (min-width: $media1400) {
+	// OffersSlider
+	.offersSlider {
+
+		.sliderNext {
+			right: 98px;
+		}
+	}
+}
+
+@media (min-width: $media1440) {
+	// OffersSlider
+	.offersSlider {
+
+		.sliderNext {
+			right: 112px;
+			cursor: pointer;
+		}
+	}
+
+	// WeAreTrustedSlider
+	.weAreTrustedSlider {
+
+		.sliderNext {
+			top: -54px;
+		}
+
+		.sliderPrev {
+			top: -54px;
+		}
+	}
+}
+
+
+

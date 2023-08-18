@@ -1,0 +1,31 @@
+import React from 'react';
+import leavesTransparent from '@/public/leavesTransparent.png';
+import leavesLeft from '@/public/leavesLeft.webp';
+import leavesRight from '@/public/leavesRight.webp';
+import Image from 'next/image';
+import HoveredButton from '@/components/common/Buttons/HoveredButton';
+import { lang } from '@/pages';
+
+const JoinTheClub = () => {
+	return (
+		<div className={ 'joinTheClub container-xs pos z-5' }>
+			<div style={ { backgroundImage: `url(${ leavesTransparent.src })` } } className={ 'joinTheClub-bg' }/>
+
+			<Image src={ leavesLeft } alt={ '' } className={ 'leavesLeft' }/>
+
+			<div className={ 'container pt-60 mb-60 d-flex flex-column jc-center ai-center' }>
+				<h2 className={ 'h2Subtitle ta-center ls--144' }>{ lang?.joinThePrivateVillaCarteClub || '' }</h2>
+
+				<p className={ 'text300 colorGrey ta-center' }>
+					{ lang?.youBecomeAClubMember || '' }
+				</p>
+
+				<HoveredButton to={ '/' } text={ lang?.learnMoreSmall || '' } variant={ 'arrow' } className={ 'ta-center' }/>
+			</div>
+
+			<Image src={ leavesRight } alt={ '' } className={ 'leavesRight' }/>
+		</div>
+	);
+};
+
+export default JoinTheClub;

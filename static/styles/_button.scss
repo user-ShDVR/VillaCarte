@@ -1,0 +1,157 @@
+@import "variables";
+
+@media (min-width: $media0) {
+	.hoveredButton {
+		padding: 10px 20px;
+		border-radius: 30px;
+		transition: all .3s;
+		font-size: 14px;
+		line-height: 22px;
+		font-family: Manrope-Bold, sans-serif;
+		color: $colorAccent;
+		border: 1.6px solid $colorAccent;
+		background: $colorWhite;
+		text-decoration: none;
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+
+		span {
+			letter-spacing: -0.14px;
+		}
+
+		&-link {
+			text-decoration: none;
+		}
+
+		img {
+			margin-left: 8px;
+			width: 14px;
+			height: 11px;
+			//margin-bottom: 2px;
+		}
+
+		&-only {
+			border: none;
+		}
+
+		&-simple {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-simpleDark {
+			background: $colorAccent;
+			color: $colorWhite;
+		}
+
+		&-arrowWhite {
+			color: $colorWhite;
+			background: transparent;
+			border-color: $colorWhite;
+		}
+
+		&-arrowRevert {
+			background: rgba(255, 255, 255, 0.10);
+			box-shadow: 0 51px 64px 0 rgba(0, 0, 0, 0.10) !important;
+			backdrop-filter: blur(2px) !important;
+			color: $colorWhite;
+			border-color: $colorWhite;
+		}
+
+		&-light {
+			border: 1px solid $colorWhite;
+			background: rgba(255, 255, 255, .1);
+			color: $colorWhite;
+			cursor: pointer;
+		}
+	}
+
+	// Scroll Button
+	.btn-scroll {
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 40px;
+		height: 40px;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 2px solid $colorWhite;
+		background: rgba(255, 255, 255, .2);
+		z-index: 7;
+
+		img {
+			width: 14px;
+			height: 10px;
+		}
+	}
+}
+
+@media (min-width: $media1200) {
+	.hoveredButton {
+
+		&-only {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-simple {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-simpleDark {
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
+		}
+
+		&-arrow {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+			}
+		}
+
+		&-arrowWhite {
+
+			&:hover {
+				background: $colorAccent;
+				color: $colorWhite;
+				border-color: $colorAccent;
+			}
+		}
+
+		&-arrowRevert {
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
+		}
+
+		&-light {
+
+			&:hover {
+				background: $colorWhite;
+				color: $colorAccent;
+			}
+		}
+	}
+}

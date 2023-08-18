@@ -1,0 +1,95 @@
+.verifed {
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-direction: column;
+        align-items: flex-start;
+		padding: 8.431vw 3.333vw; //107px 48px 402px 48px
+
+
+        h1 {
+			max-width: 1074px;
+            font-family: 'TTTsarsA-Light', sans-serif;
+			color: #fff;
+            font-size: 5vw;
+            font-weight: 300;
+            line-height: 5.833vw;
+            letter-spacing: -0.03em;
+            text-align: left;
+        }
+    }
+	.Interested__container {
+			display: flex;
+			justify-content: center;
+			gap: 50px;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0vw 3.333vw; //107px 48px 402px 48px
+	
+	
+			h1 {
+				max-width: 1074px;
+				font-family: 'TTTsarsA-Light', sans-serif;
+				color: #fff;
+				font-size: 5vw;
+				font-weight: 300;
+				line-height: 5.833vw;
+				letter-spacing: -0.03em;
+				text-align: left;
+			}
+			@-webkit-keyframes fadeTabPanel {
+				0% {
+					opacity: 0;
+				}
+		
+				100% {
+					opacity: 1;
+				}
+			}
+		
+			@keyframes fadeTabPanel {
+				0% {
+					opacity: 0;
+				}
+		
+				100% {
+					opacity: 1;
+				}
+			}
+			Interested-tabs {
+				width: 100%;
+				box-sizing: border-box;
+				margin-top: 11px;
+			}
+			Interested-tabList {
+				margin-bottom: 50px;
+				padding: 0;
+				display: flex;
+				justify-content: start;
+		
+				li {
+					color: rgba(255, 255, 255, 0.50);
+					border: none;
+					padding: 10px 20px;
+					cursor: pointer;
+					background: transparent !important;
+					border-radius: 0;
+				}
+		
+				.react-tabs__tab--selected {
+					color: #FFF;
+					border-bottom: 1px solid #FFF;
+				}
+		
+				.react-tabs__tab:focus:after {
+					background: transparent !important;
+				}
+			}
+			.react-tabs__tab-panel--selected {
+				display: grid;
+				-webkit-animation: fadeTabPanel 1s linear;
+				animation: fadeTabPanel 1s linear;
+			}
+		}
+}

@@ -1,13 +1,34 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-        domains: ['villacartetest.com'],
-    },
+// const nextConfig = {};
+const withVideos = require( 'next-videos' );
+
+module.exports = {
+	i18n: {
+		defaultLocale: 'en',
+		locales: [ 'en', 'ru' ],
+		domains: [
+			{
+				domain: process.env.NEXT_PUBLIC_APP_URL,
+				defaultLocale: 'en',
+			},
+			{
+				domain: `${ process.env.NEXT_PUBLIC_APP_URL }/ru`,
+				defaultLocale: 'ru',
+			},
+		],
+	},
 };
 
-const withNextIntl = require('next-intl/plugin')(
-    // This is the default (also the `src` folder is supported out of the box)
-    './i18n.ts'
-);
+module.exports = withVideos();
+// module.exports = nextConfig;
 
-module.exports = withNextIntl(nextConfig);
+// const withImages = require( 'next-images' );
+// module.exports = withImages( {
+// 	images: {
+// 		formats: [ 'webp, png, jpg, jpeg, svg' ],
+// 	},
+// } );
+// const withVideos = require( 'next-videos' );
+//
+//
+// module.exports = withImages( withVideos() );

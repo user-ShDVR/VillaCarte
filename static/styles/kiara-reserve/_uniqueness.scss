@@ -1,0 +1,41 @@
+.uniqueness {
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 113px;
+        align-items: center;
+        padding: 4.167vw 100px;
+
+        .map img {
+
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.389vw;
+
+            h1 {
+                font-family: 'TTTsarsA-Light', sans-serif;
+                font-size: 5vw;
+                font-weight: 300;
+                line-height: 5.833vw;
+                letter-spacing: -0.03em;
+                text-align: left;
+            }
+
+            ul {
+                //styleName: p1;
+                display: flex;
+                flex-direction: column;
+                gap: 1.389vw;
+                font-family: 'Manrope-Medium';
+                font-size: 1.25vw;
+                font-weight: 500;
+                line-height: 2.083vw;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+    }
+}

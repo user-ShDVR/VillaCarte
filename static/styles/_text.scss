@@ -1,0 +1,224 @@
+@import "variables";
+
+.noUnderline {
+	text-decoration: none !important;
+}
+
+.tt-uppercase {
+	text-transform: uppercase !important;
+}
+
+.tt-capitalize {
+	text-transform: capitalize !important;
+}
+
+.text-nowrap {
+	white-space: nowrap;
+}
+
+@media (min-width: $media0) {
+	.h1Title {
+		font-size: 32px;
+		font-family: $fontTTTsarsA300;
+		color: $colorAccent;
+		line-height: 38px;
+		letter-spacing: 0.14px;
+		font-weight: lighter;
+	}
+
+	.h2Subtitle {
+		font-size: 30px;
+		font-family: $fontTTTsarsA300;
+		color: $colorAccent;
+		line-height: 38px;
+		letter-spacing: 0.14px;
+	}
+
+	.h3TitleText {
+		font-size: 18px;
+		font-family: $fontManrope600;
+		color: $colorAccent;
+		line-height: 28px;
+		letter-spacing: 0.14px;
+	}
+
+	.text500 {
+		font-size: 14px;
+		font-family: $fontManrope500;
+		color: $colorAccent;
+		line-height: 20px;
+		letter-spacing: 0.14px;
+	}
+
+	.text700 {
+		font-size: 16px;
+		font-family: $fontManrope700;
+		color: $colorAccent;
+		line-height: 28px;
+		letter-spacing: 0.14px;
+	}
+
+	.text300 {
+		font-size: 12px;
+		font-family: $fontManrope300;
+		color: $colorAccent;
+		line-height: 18px;
+		letter-spacing: 0.14px;
+	}
+
+	.text300-min {
+		font-size: 10px;
+		font-family: $fontManrope300;
+		color: $colorAccent;
+		line-height: 16px;
+		letter-spacing: 0.14px;
+	}
+}
+
+@media (min-width: $media1440) {
+	.h1Title {
+		font-size: 72px;
+		font-family: $fontTTTsarsA300;
+		color: $colorAccent;
+		line-height: 84px;
+	}
+
+	.h2Subtitle {
+		font-size: 48px;
+		font-family: $fontTTTsarsA300;
+		color: $colorAccent;
+		line-height: 62px;
+	}
+
+	.h3TitleText {
+		font-size: 26px;
+		font-family: $fontManrope600;
+		color: $colorAccent;
+		line-height: 36px;
+	}
+
+	.text500 {
+		font-size: 18px;
+		font-family: $fontManrope500;
+		color: $colorAccent;
+		line-height: 30px;
+	}
+
+	.text700 {
+		font-size: 14px;
+		font-family: $fontManrope700;
+		color: $colorAccent;
+		line-height: 24px;
+	}
+
+	.text300 {
+		font-size: 14px;
+		font-family: $fontManrope300;
+		color: $colorAccent;
+		line-height: 24px;
+	}
+
+	.text300-min {
+		font-size: 12px;
+		font-family: $fontManrope300;
+		color: $colorAccent;
+		line-height: 20px;
+	}
+}
+
+.fz-12 {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.fz-14 {
+	font-size: 14px;
+}
+
+.fz-12-14 {
+	font-size: 12px;
+}
+
+@media (min-width: $media1440) {
+	.fz-12-14 {
+		font-size: 14px;
+	}
+}
+
+.fz-20 {
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.fz-18-24 {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+@media (min-width: $media1200) {
+	.fz-18-24 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+
+.fz-24 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.fz-60-200 {
+	font-size: 60px;
+	line-height: 72px;
+}
+
+@media (min-width: $media1320) {
+	.fz-60-200 {
+		font-size: 200px;
+		line-height: 220px;
+	}
+}
+
+.fz-80 {
+	font-size: 80px;
+	line-height: 88px;
+}
+
+// LetterSpacing
+.ls-0 {
+	letter-spacing: 0;
+}
+
+.ls-012 {
+	letter-spacing: 0.12px;
+}
+
+.ls--028 {
+	letter-spacing: -0.28px;
+}
+
+.ls--144 {
+	letter-spacing: -1.44px;
+}
+
+.ls--216 {
+	letter-spacing: -2.16px;
+}
+
+.ls--8 {
+	letter-spacing: -8px;
+}
+
+//differentFonts
+.manrope600-14 {
+	font-size: 14px;
+	font-family: $fontManrope600;
+}
+
+@media (min-width: $media1440) {
+	.twoStringTitle {
+		font-size: 48px !important;
+		letter-spacing: -1.44px !important;
+		line-height: 56px !important;
+	}
+}

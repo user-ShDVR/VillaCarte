@@ -1,0 +1,32 @@
+@media (min-width: $media0) {
+	// FeedBackBlock
+	.presentationBlock {
+        background: #fff;
+		position: relative;
+		overflow: hidden;
+
+		.presentationBlock-bg {
+			width: fit-content;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+        .feedBackBlock-content {
+			padding-bottom: 20px;
+			margin-left: 0px;
+			align-items: center;
+		}
+
+		.w-620px {
+			height: 620px;
+            display: flex;
+            flex-direction: row;
+			align-items: center;
+
+
+		}
+
+
+	}
+}
