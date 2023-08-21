@@ -20,11 +20,9 @@ export function generateStaticParams() {
 export default async function RootLayout({
     children,
     params: { locale },
-    pageProps,
 }: {
     children: React.ReactNode;
     params: { locale: string };
-    pageProps: Record<string, any>;
 }) {
     let messages;
     try {
