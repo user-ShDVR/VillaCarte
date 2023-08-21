@@ -2,31 +2,16 @@
 
 .linkButton {
 	background: transparent;
+	overflow: hidden;
 	border: 1.6px solid #22364A;
 	border-radius: 50%;
 	transition: all 0.3s;
 	// background-image: ;
 	img {
+		position: relative;
 		-webkit-filter: invert(1);
 		filter: invert(1);
-	}
-	&:hover {
-		background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
-		border: none;
-		img {
-			-webkit-filter: invert(0);
-			filter: invert(0);
-		}
-		transition: all 0.3s;
-	}
-	
-	@keyframes gradientShift {
-		0% {
-			background-position: 0%;
-		}
-		100% {
-			background-position: 100%;
-		}
+		z-index: 3;
 	}
 }
 
@@ -162,12 +147,51 @@
 			background-color: transparent;
 			background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
 		}
+  
+  
+
+
+  .linkButton::after, .linkButton::before{
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
+	z-index: -1;
+  }
+
+  .linkButton::before {
+	/*   background: blue; */
+	  transform: translateX(-100%);
+	  z-index: 1;
+	}
+	.linkButton::after {
+		z-index: 0;
+	   transform: translateX(100%);
+	   transition: none;
+	   transition: transform 350ms ease;
+	 }
 		&:hover .linkButton {
-			background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
-			border: none;
+			&:before {
+				transform: translateX(0);
+				transition: transform 350ms ease;
+			  }
+			  
+			
+			  
+			&:after {
+				opacity: 1;
+				transform: translateX(0);
+			   transition: transform 350ms 360ms ease;
+			  }
+			  border: 1.6px solid #fff;
 			img {
 				-webkit-filter: invert(0);
 				filter: invert(0);
+				z-index: 5;
 			}
 			transition: all 0.3s;
 		}
