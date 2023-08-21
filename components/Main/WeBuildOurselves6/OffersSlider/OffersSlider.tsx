@@ -5,7 +5,7 @@ import { IMainPageData } from '@/types/mainPage';
 import { offersSliderSetting } from '@/components/common/SliderSettings/offersSliderSetting';
 
 interface IProps {
-	data: IMainPageData;
+	data: IMainPageData| undefined;
 }
 
 const OffersSlider = ( { data }: IProps ) => {

@@ -1,0 +1,72 @@
+// FeedBackBlock
+.presentationBlock {
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+
+	.presentationBlock-bg {
+		width: fit-content;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.presentationBlock-content {
+		padding-bottom: 20px;
+		margin-left: 0px;
+		align-items: center;
+	}
+
+	.w-620px {
+		height: 620px;
+		padding: 0 3.333vw;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+
+	}
+
+
+}
+
+@media (max-width: 500px) {
+	.presentationBlock {
+		background: #fff;
+		position: relative;
+		overflow: hidden;
+	
+		.presentationBlock-bg {
+			width: fit-content;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	
+		.presentationBlock-content {
+			padding-bottom: 20px;
+			margin-left: 0px;
+			align-items: center;
+			h2{
+				
+			}
+			img{
+				display: none;
+			}
+		}
+	
+		.w-620px {
+			height: 620px;
+			padding: 0 3.333vw;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+	
+	
+		}
+	
+	
+	}
+}

@@ -1,3 +1,6 @@
+import PhoneInputComp from '@/components/common/Forms/PhoneInputComp';
+import TextAreaLikeInput from '@/components/common/Forms/TextAreaLikeInput';
+import { Form } from 'antd';
 import { FC } from 'react';
 
 const RequestCall: FC = () => {
@@ -9,37 +12,43 @@ const RequestCall: FC = () => {
                     <br />
                     своими глазами
                 </p>
-                <div className='form__group field'>
-                    <input
-                        type='text'
-                        name='name'
-                        className='form__field'
-                        placeholder='Ваше имя'
-                    />
-                    <label
-                        htmlFor='name'
-                        className='form__label'>
-                        Ваше имя
-                    </label>
-                </div>
-                <div className='form__group field form__phone'>
-                    <input
-                        type='text'
-                        name='name'
-                        className='form__field'
-                        placeholder='Ваше имя'
-                    />
-                    <label
-                        htmlFor='name'
-                        className='form__label'>
-                        Номер телефона
-                    </label>
-                </div>
-                <p>
+                <Form
+                    className={'feedBackForm'}
+                >
+                    <Form.Item
+                        name="name"
+                        className={'feedBackInputWrapper'}
+                        rules={[
+                            { type: 'string', message: 'Ваше имя' },
+                            { required: true, message: 'Ваше имя' }
+                        ]}
+                    >
+                        <TextAreaLikeInput
+                            className={'feedBackInput text300'}
+                            placeholder={'Ваше имя'}
+                        />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="phone"
+                        style={{color: 'white'}}
+                        className={'feedBackInputWrapper'}
+                        rules={[
+                            { type: 'string', message: 'Номер телефона' },
+                            { required: true, message: 'Номер телефона' }
+                        ]}
+                    >
+                        <PhoneInputComp
+                            className={'feedBackInput text300'}
+                            placeholder={'Номер телефона'}
+                        />
+                    </Form.Item>
+                    <p className='request-p'>
                     Нажимая кнопку “Заказать звонок” я даю согласие на обработку
                     моих персональных данных
                 </p>
-                <button>Заказать звонок</button>
+                    <button>Заказать звонок</button>
+                </Form>
             </div>
         </>
     );

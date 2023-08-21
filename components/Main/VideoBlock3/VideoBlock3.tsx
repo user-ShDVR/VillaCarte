@@ -6,7 +6,7 @@ const VideoBlock = () => {
 	return (
 		<div className={ 'pos z-5 videoBlock' }>
 
-			<div className={ 'pos container-xl z-5' }>
+			<div className={ 'pos z-5' }>
 				<div className={ 'bgLightGrey pos videoInner' }>
 					<video className={ 'slideVideo' } autoPlay muted playsInline loop>
 						<source src={ video.link } type="video/mp4"/>

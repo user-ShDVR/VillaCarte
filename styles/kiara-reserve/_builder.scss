@@ -1,0 +1,212 @@
+.Builder {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    .Builder-bg{
+        width: fit-content;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+    }
+    // height: 100%;
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4.167vw;
+        align-items: center;
+        padding: 7.431vw 3.333vw; //107px 48px 402px 48px
+        .Builder-logo{
+            width: 14.653vw;
+            height: 4.931vw;
+        }
+        .items__Builder{
+            display: grid;
+            grid-template-columns:  repeat(3, 1fr);
+            gap: 8px;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 2.08vw;
+            align-items: center;
+
+            h1 {
+                font-family: 'TTTsarsA-Light', sans-serif;
+                font-size: 5vw;
+                font-weight: 300;
+                line-height: 5.833vw;
+                letter-spacing: -0.03em;
+                text-align: center;
+            }
+            p{
+                max-width: 61.806vw;
+                font-family: 'Manrope-Light', sans-serif;
+                font-size: 1vw;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 1.666vw; /* 171.429% */
+                letter-spacing: 0.01px;
+                text-align: center;
+                margin-bottom: 2.08vw;
+            }
+        }
+    }
+}
+.District {
+    width: 100%;
+    background-color: #fff;
+    // height: 100%;
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.389vw;
+        padding: 7.431vw 3.333vw 27vw ; //107px 48px 402px 48px
+
+        .mr-170{
+            margin-right: 11.806vw;
+            align-self: end;
+        }
+        .District-content {
+            display: flex;
+            flex-direction: row;
+            gap: 5.08vw;
+            align-items: center;
+
+            h1 {
+                font-family: 'TTTsarsA-Light', sans-serif;
+                font-size: 5vw;
+                max-width: 21.458vw;
+
+                font-weight: 300;
+                line-height: 5.833vw;
+                letter-spacing: -0.03em;
+                text-align: left;
+            }
+            .District-text {
+                margin-top: 17px;
+                display: flex;
+                flex-direction: row;
+                gap: 3.194vw;
+                p{
+                    max-width: 30.417vw;
+                    font-family: 'Manrope-Light', sans-serif;
+                    font-size: 1vw;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 1.666vw; /* 171.429% */
+                    letter-spacing: 0.01px;
+                    text-align: left;
+                    margin-bottom: 2.08vw;
+                }
+            }
+
+        }
+    }
+}
+@media (max-width: 500px) {
+    .Builder {
+        width: 100%;
+        background-color: #fff;
+        // height: 100%;
+        &__container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4.167vw;
+            align-items: center;
+            padding: 7.431vw 3.333vw; //107px 48px 402px 48px
+            .Builder-logo{
+                width: 50.4vw;
+                height: 16.8vw;
+            }
+            .items__Builder{
+                display: grid;
+                grid-template-columns:  1fr;
+            }
+            .text {
+                display: flex;
+                flex-direction: column;
+                gap: 2.08vw;
+                align-items: center;
+    
+                h1 {
+                    font-family: 'TTTsarsA-Light', sans-serif;
+                    font-size: 8.533vw;
+                    font-weight: 300;
+                    line-height: 10.133vw;
+                    letter-spacing: -0.03em;
+                    text-align: center;
+                }
+                p{
+                    max-width: 100%;
+                    width: 91.2vw;
+                    font-family: 'Manrope-Light', sans-serif;
+                    font-size: 3.733vw;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 6.4vw; /* 171.429% */
+                    letter-spacing: 0.01px;
+                    text-align: center;
+                    margin-bottom: 2.08vw;
+                }
+            }
+        }
+    }
+    .District {
+        width: 100%;
+        background-color: #fff;
+        // height: 100%;
+        &__container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.389vw;
+            padding: 7.431vw 3.333vw 27vw ; //107px 48px 402px 48px
+    
+            .mr-170{
+                display: none !important;
+                margin-right: 0;
+                align-self: center;
+            }
+            .District-content {
+                display: flex;
+                flex-direction: column;
+                gap: 2.667vw;
+                align-items: center;
+    
+                h1 {
+                    font-family: 'TTTsarsA-Light', sans-serif;
+                    font-size: 8.533vw;
+                    width: 91.467vw;
+                    max-width: 100%;
+                    font-weight: 300;
+                    line-height: 10.133vw;
+                    letter-spacing: -0.03em;
+                    text-align: left;
+                }
+                .District-text {
+                    margin-top: 17px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.667vw;
+                    margin-bottom: 10.667vw;
+                    p{
+                        max-width: 91.467vw;
+                        font-family: 'Manrope-Light', sans-serif;
+                        font-size: 3.733vw;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 6.4vw; /* 171.429% */
+                        letter-spacing: 0.01px;
+                        text-align: left;
+                        margin-bottom: 0;
+                    }
+                }
+    
+            }
+        }
+    }
+}

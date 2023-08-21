@@ -4,40 +4,55 @@ import avatar1 from '@/public/icons/avatar1.png';
 import avatar2 from '@/public/icons/avatar2.png';
 import ReviewCard from '@/components/common/Cards/ReviewCard/ReviewCard';
 import { weAreTrustedSliderSettings } from '@/components/common/SliderSettings/weAreTrustedSliderSettings';
-import { lang } from '@/pages';
-
-const WeAreTrusted = () => {
+interface IProps {
+	weAreTrustedBySuccessfulPeople: string;
+	yensBrakerbush: string;
+	cEOofPPGIndustry: string;
+	review1: string;
+	okishimaJunichi: string;
+	cEOYOKOHAMARUS: string;
+	review2: string;
+}
+const WeAreTrusted: React.FC<IProps> = ({
+	weAreTrustedBySuccessfulPeople,
+	yensBrakerbush,
+	cEOofPPGIndustry,
+	review1,
+	okishimaJunichi,
+	cEOYOKOHAMARUS,
+	review2,
+}) => {
 	const reviews = [
 		{
-			name: lang?.yensBrakerbush || '',
-			profession: lang?.cEOofPPGIndustry || '',
+			name: yensBrakerbush,
+			profession: cEOofPPGIndustry,
 			avatar: avatar1,
-			text: lang?.review1 || ''
+			text: review1
 		},
 		{
-			name: lang?.okishimaJunichi || '',
-			profession: lang?.cEOYOKOHAMARUS || '',
+			name: okishimaJunichi,
+			profession: cEOYOKOHAMARUS,
 			avatar: avatar2,
-			text: lang?.review2 || ''
+			text: review2
 		},
 		{
-			name: lang?.yensBrakerbush || '',
-			profession: lang?.cEOofPPGIndustry || '',
+			name: yensBrakerbush,
+			profession: cEOofPPGIndustry,
 			avatar: avatar1,
-			text: lang?.review1 || ''
+			text: review1
 		},
 		{
-			name: lang?.okishimaJunichi || '',
-			profession: lang?.cEOYOKOHAMARUS || '',
+			name: okishimaJunichi,
+			profession: cEOYOKOHAMARUS,
 			avatar: avatar2,
-			text: lang?.review2 || ''
+			text: review2
 		},
 	];
 
 	return (
 		<div className={ 'weAreTrusted pos' }>
-			<div className={ 'container pt-60-80' }>
-				<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.weAreTrustedBySuccessfulPeople || '' }</h2>
+			<div style={{padding: '7vw 3.333vw 0'}} className={ 'pt-60-80' }>
+				<h2 className={ 'h1Title colorWhite ls--216' }>{ weAreTrustedBySuccessfulPeople }</h2>
 
 				<Slider { ...weAreTrustedSliderSettings } className={ 'weAreTrustedSlider' }>
 					{ reviews.map( ( review, index ) =>

@@ -6,27 +6,24 @@ import Slider from 'react-slick';
 import photo from '@/public/kiara-reserve/Rectangle.jpg';
 import { OfferNextArrow } from '@/components/common/Buttons/SliderArrows/OfferNextArrow';
 import { OfferPrevArrow } from '@/components/common/Buttons/SliderArrows/OfferPrevArrow';
-import { SamplePrevArrow } from '@/components/common/Buttons/SliderArrows/SamplePrevArrow';
-
 
 const PhotosOfTheComplex = () => {
 
 	const SliderSetting = {
 		dots: false,
-		infinite: true,
 		arrows: true,
 		autoplay: false,
 		speed: 1000,
 		nextArrow: <OfferNextArrow />,
 		prevArrow: <OfferPrevArrow />,
-		centerMode: true,
+		infinite: true,
 		slidesToShow: 1,
-		slidesToScroll: 1,
+		slidesToScroll: 1
 	};
 	return (
 		<div className={'bgGradient photos'}>
 
-			<div className={'container photos-inner'}>
+			<div className={'photos-inner'}>
 				<h2 className={'h1Title colorWhite ls--216'}>Фотографии комплекса</h2>
 
 				<Tabs className={'photos-tabs'} selectedTabPanelClassName={''}>
@@ -37,15 +34,13 @@ const PhotosOfTheComplex = () => {
 					</TabList>
 
 					<TabPanel className={''}>
-					<div className="container">
+					<div style={{ width: '100%', maxWidth: '94vw'}}>
 							<Slider className='PhotosSlider' {...SliderSetting} >
 							<div className="slide-inner-container">
 								<Image
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
 								/>
 								<p>
 									01<span>/03</span>
@@ -58,8 +53,6 @@ const PhotosOfTheComplex = () => {
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
 								/>
 								<p>
 									02<span>/03</span>
@@ -70,8 +63,6 @@ const PhotosOfTheComplex = () => {
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
 								/>
 								<p>
 									03<span>/03</span>
@@ -82,15 +73,13 @@ const PhotosOfTheComplex = () => {
 					</TabPanel>
 
 					<TabPanel className={''}>
-					<div className="container">
+					<div style={{ width: '100%', maxWidth: '94vw'}}>
 							<Slider className='PhotosSlider' {...SliderSetting} >
 							<div className="slide-inner-container">
 								<Image
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
 								/>
 								<p>
 									01<span>/03</span>
@@ -103,8 +92,6 @@ const PhotosOfTheComplex = () => {
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
 								/>
 								<p>
 									02<span>/03</span>
@@ -115,8 +102,6 @@ const PhotosOfTheComplex = () => {
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
 								/>
 								<p>
 									03<span>/03</span>
@@ -127,15 +112,14 @@ const PhotosOfTheComplex = () => {
 					</TabPanel>
 					
 					<TabPanel className={''}>
-					<div className="container">
+					<div style={{ width: '100%', maxWidth: '94vw'}}>
 							<Slider className='PhotosSlider' {...SliderSetting} >
 							<div className="slide-inner-container">
 								<Image
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
+									
 								/>
 								<p>
 									01<span>/03</span>
@@ -148,8 +132,6 @@ const PhotosOfTheComplex = () => {
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
 								/>
 								<p>
 									02<span>/03</span>
@@ -160,8 +142,6 @@ const PhotosOfTheComplex = () => {
 									className='custom-slide'
 									src={photo}
 									alt='photo'
-									width={2688 / 2}
-									height={1400 / 2}
 								/>
 								<p>
 									03<span>/03</span>

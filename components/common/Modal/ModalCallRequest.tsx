@@ -8,9 +8,22 @@ import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import ModalCloseButton from '@/components/common/Buttons/ModalCloseButton';
 import { hideModal } from '@/store/modal';
-import { lang } from '@/pages';
+import { useTranslations } from 'next-intl';
+interface IProps {
+orderAPersonalSelection: string;
+orderAPersonalSelection2: string;
+ourManagerWillCallYou: string;
+contactUsThroughOurMessengers: string;
 
-const ModalCallRequest = () => {
+}
+
+const ModalCallRequest: React.FC<IProps>= ({
+orderAPersonalSelection,
+orderAPersonalSelection2,
+ourManagerWillCallYou,
+contactUsThroughOurMessengers
+}) => {
+	const t = useTranslations('Index');
 	const toCloseModal = () => {
 		hideModal( EModal_VisibleStore.CallRequest );
 	};
@@ -28,10 +41,10 @@ const ModalCallRequest = () => {
 				<div className={ 'container pos feedBackBlock-content' }>
 					<div>
 						<div>
-							<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ lang?.orderAPersonalSelection || '' }</h2>
-							<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ lang?.orderAPersonalSelection2 || '' }</h2>
+							<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{orderAPersonalSelection}</h2>
+							<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{orderAPersonalSelection2 }</h2>
 							<h6 className={ 'text300 colorText pt-8 mb-30 fz-14' }>
-								{ lang?.ourManagerWillCallYou || '' }
+								{ ourManagerWillCallYou}
 							</h6>
 						</div>
 
@@ -39,7 +52,7 @@ const ModalCallRequest = () => {
 					</div>
 
 					<div className={ 'ourMessengers-wrapper' }>
-						<OurMessengers/>
+						<OurMessengers contactUsThroughOurMessengers={contactUsThroughOurMessengers} />
 					</div>
 
 				</div>

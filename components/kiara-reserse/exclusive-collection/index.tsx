@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import ExclusiveItem from '../exclusive-item';
 import Image from 'next/image';
 import icon1 from '../../../public/kiara-reserve/1.svg';
@@ -49,58 +49,59 @@ const ExclusiveCollection: FC = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='items'>
-                        <ExclusiveItem
-                            firstName={'Ландшафт'}
-                            secondName={'холм'}
-                            icon={icon1}
-                        />
-                        <ExclusiveItem
-                            firstName={'Тип владения'}
-                            secondName={'freehold/leasehold'}
-                            icon={icon2}
-                        />
-                        <ExclusiveItem
-                            firstName={'Этажность'}
-                            secondName={'2-4 этажа'}
-                            icon={icon3}
-                        />
-                        <ExclusiveItem
-                            firstName={'Вид'}
-                            secondName={'на море, на город, на горы, на сад'}
-                            icon={icon4}
-                        />
-                        <ExclusiveItem
-                            firstName={'Пляж '}
-                            secondName={'13 км до Банг Тао'}
-                            icon={icon5}
-                        />
-                        <ExclusiveItem
-                            firstName={null}
-                            secondName={'Бассейн'}
-                            icon={icon6}
-                        />
-                        <ExclusiveItem
-                            firstName={null}
-                            secondName={'Спортзал'}
-                            icon={icon7}
-                        />
-                        <ExclusiveItem
-                            firstName={null}
-                            secondName={'Парковка '}
-                            icon={icon8}
-                        />
-                        <ExclusiveItem
-                            firstName={null}
-                            secondName={'Охрана 24/7'}
-                            icon={icon9}
-                        />
-                        <ExclusiveItem
-                            firstName={null}
-                            secondName={'Видеонаблюдение'}
-                            icon={icon10}
-                        />
-                    </div>
+                        <div className='items'> 
+                            <ExclusiveItem
+                                firstName={'Ландшафт'}
+                                secondName={'холм'}
+                                icon={icon1}
+                            />
+                            <ExclusiveItem
+                                firstName={'Тип владения'}
+                                secondName={'freehold/leasehold'}
+                                icon={icon2}
+                            />
+                            <ExclusiveItem
+                                firstName={'Этажность'}
+                                secondName={'2-4 этажа'}
+                                icon={icon3}
+                            />
+                            <ExclusiveItem
+                                firstName={'Вид'}
+                                secondName={'на море, на город, на горы, на сад'}
+                                icon={icon4}
+                            />
+                            <ExclusiveItem
+                                firstName={'Пляж '}
+                                secondName={'13 км до Банг Тао'}
+                                icon={icon5}
+                            />
+                            <ExclusiveItem
+                                firstName={null}
+                                secondName={'Бассейн'}
+                                icon={icon6}
+                            />
+                            <ExclusiveItem
+                                firstName={null}
+                                secondName={'Спортзал'}
+                                icon={icon7}
+                            />
+                            <ExclusiveItem
+                                firstName={null}
+                                secondName={'Парковка '}
+                                icon={icon8}
+                            />
+                            <ExclusiveItem
+                                firstName={null}
+                                secondName={'Охрана 24/7'}
+                                icon={icon9}
+                            />
+                            <ExclusiveItem
+                                firstName={null}
+                                secondName={'Видеонаблюдение'}
+                                icon={icon10}
+                            />
+                        </div>
+
 
                     <Image
                         className='line'

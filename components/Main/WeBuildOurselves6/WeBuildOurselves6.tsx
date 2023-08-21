@@ -3,53 +3,84 @@ import listPoint from '@/public/icons/listPoint.svg';
 import Image from 'next/image';
 import OffersSlider from '@/components/Main/WeBuildOurselves6/OffersSlider/OffersSlider';
 import FiveSteps from '@/components/Main/WeBuildOurselves6/OffersSlider/FiveSteps';
-import { lang } from '@/pages';
 import { IMainPageData } from '@/types/mainPage';
 
 interface IProps {
-	data: IMainPageData;
+	data: IMainPageData | undefined;
+	buyRealEstateOnlyFromTrustedContractors: string;
+	getAProfitCalculation: string;
+	willBeTheFirstToKnow: string;
+	remainConfidentAndCalm: string;
+	weAlsoBuildOurselves: string;
+	weAlsoBuildOurselves2: string;
+	fiveSteps: string;
+	fiveSteps2: string;
+	weSelectTheRealEstatePersonally: string;
+	weCalculateProfitability: string;
+	weNegotiateWithTheDeveloper: string;
+	weLegallyAccompanyTheTransaction: string;
+	weTakeCareOfYourPropertyManagement: string;
 }
 
-const WeBuildOurselves = ( { data }: IProps ) => {
+const WeBuildOurselves = ({
+	data,
+	buyRealEstateOnlyFromTrustedContractors,
+	getAProfitCalculation,
+	willBeTheFirstToKnow,
+	remainConfidentAndCalm,
+	weAlsoBuildOurselves,
+	weAlsoBuildOurselves2,
+	fiveSteps,
+	fiveSteps2,
+	weSelectTheRealEstatePersonally,
+weCalculateProfitability,
+weNegotiateWithTheDeveloper,
+weLegallyAccompanyTheTransaction,
+weTakeCareOfYourPropertyManagement,
+}: IProps) => {
 	const list = [
-		lang?.buyRealEstateOnlyFromTrustedContractors || '',
-		lang?.getAProfitCalculation || '',
-		lang?.willBeTheFirstToKnow || '',
-		lang?.remainConfidentAndCalm || '',
+		buyRealEstateOnlyFromTrustedContractors,
+		getAProfitCalculation,
+		willBeTheFirstToKnow,
+		remainConfidentAndCalm,
 	];
 
 	return (
-		<div className={ 'weBuildOurselves' }>
+		<div className={'weBuildOurselves'}>
 
-			<div className={ 'container pt-60 d-md-flex jc-between' }>
+			<div style={{ padding: '0 3.333vw' }} className={'pt-60 d-md-flex jc-between'}>
 				<div>
-					<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.weAlsoBuildOurselves || '' }</h2>
-					<h2 className={ 'h1Title colorWhite ls--216' }>{ lang?.weAlsoBuildOurselves2 || '' }</h2>
+					<h2 className={'h1Title colorWhite ls--216'}>{weAlsoBuildOurselves}</h2>
+					<h2 className={'h1Title colorWhite ls--216'}>{weAlsoBuildOurselves2}</h2>
 				</div>
 
-				<ul className={ 'col-md-6' }>
-					{ list.map( ( item, index ) =>
-						<div key={ index }>
-							<Image src={ listPoint } alt={ '' }/>
-							<li className={ 'text500 colorWhite' }>{ item }</li>
+				<ul className={'col-md-6'}>
+					{list.map((item, index) =>
+						<div key={index}>
+							<Image src={listPoint} alt={''} />
+							<li className={'text500 colorWhite'}>{item}</li>
 						</div>
-					) }
+					)}
 				</ul>
 			</div>
 
-			<div className={ 'weBuildDownBlock' }>
-				<div className={ 'container' }>
-					<OffersSlider data={ data }/>
+			<div className={'weBuildDownBlock'}>
+				<div style={{ padding: '0 3.333vw' }}>
+					<OffersSlider data={data} />
 				</div>
 
-				<div className={ 'fiveStepsSlider-wrapper' }>
+				<div className={'fiveStepsSlider-wrapper'}>
 
-					<div className={ 'container' }>
-						<h3 className={ 'h1Title colorWhite pos ls--216' }>{ lang?.fiveSteps || '' }</h3>
-						<h3 className={ 'h1Title colorWhite pos ls--216' }>{ lang?.fiveSteps2 || '' }</h3>
+					<div style={{ padding: '0 3.333vw' }}>
+						<h3 className={'h1Title colorWhite pos ls--216'}>{fiveSteps}</h3>
+						<h3 className={'h1Title colorWhite pos ls--216'}>{fiveSteps2}</h3>
 					</div>
 
-					<FiveSteps/>
+					<FiveSteps weSelectTheRealEstatePersonally={weSelectTheRealEstatePersonally}
+weCalculateProfitability={weCalculateProfitability}
+weNegotiateWithTheDeveloper={weNegotiateWithTheDeveloper}
+weLegallyAccompanyTheTransaction={weLegallyAccompanyTheTransaction}
+weTakeCareOfYourPropertyManagement={weTakeCareOfYourPropertyManagement} />
 
 				</div>
 			</div>

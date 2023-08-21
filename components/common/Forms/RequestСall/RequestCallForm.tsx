@@ -3,7 +3,7 @@ import { Form } from 'antd';
 import { postFeedback } from '@/store/feedback';
 import PhoneInputComp from '@/components/common/Forms/PhoneInputComp';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
-import { lang } from '@/pages';
+import { useTranslations } from 'next-intl';
 import TextAreaLikeInput from '@/components/common/Forms/TextAreaLikeInput';
 import { IFeedback } from '@/types/feedback';
 import { hideModal } from '@/store/modal';
@@ -15,6 +15,7 @@ interface IProps {
 }
 
 const RequestCallForm = ( { sourcePage, sourceForm }: IProps ) => {
+	const t = useTranslations('Index');
 
 	const [ form ] = Form.useForm();
 
@@ -27,7 +28,7 @@ const RequestCallForm = ( { sourcePage, sourceForm }: IProps ) => {
 		<div className={ 'requestCall-wrapper' }>
 
 			<div className={ 'requestCall bgGradient' }>
-				<h5 className={ 'text500 fz-20 colorWhite' }>{ lang?.orderAnIndividualSelection || '' }</h5>
+				<h5 className={ 'text500 fz-20 colorWhite' }>{ t('orderAnIndividualSelection') || '' }</h5>
 
 				<Form
 					className={ 'requestCallForm' }
@@ -39,13 +40,13 @@ const RequestCallForm = ( { sourcePage, sourceForm }: IProps ) => {
 						name="username"
 						className={ 'requestCallInputWrapper' }
 						rules={ [
-							{ type: 'string', message: lang?.yourName || '' },
-							{ required: true, message: lang?.yourName || '' }
+							{ type: 'string', message: t('yourName') || '' },
+							{ required: true, message: t('yourName') || '' }
 						] }
 					>
 						<TextAreaLikeInput
 							className={ 'requestCallInput text300' }
-							placeholder={ lang?.yourName || '' }
+							placeholder={ t('yourName') || '' }
 						/>
 					</Form.Item>
 
@@ -53,21 +54,21 @@ const RequestCallForm = ( { sourcePage, sourceForm }: IProps ) => {
 						name="phone"
 						className={ 'requestCallInputWrapper' }
 						rules={ [
-							{ type: 'string', message: lang?.phoneNumber || '' },
-							{ required: true, message: lang?.phoneNumber || '' }
+							{ type: 'string', message: t('phoneNumber') || '' },
+							{ required: true, message: t('phoneNumber') || '' }
 						] }
 					>
 						<PhoneInputComp
 							className={ 'requestCallInput text300' }
-							placeholder={ lang?.phoneNumber || '' }
+							placeholder={ t('phoneNumber') || '' }
 						/>
 					</Form.Item>
 
 					<p className={ 'text300-min mt-16 colorWhite60' }>
-						{ lang?.byClickingTheSendRequest || '' }
+						{ t('byClickingTheSendRequest') || '' }
 					</p>
 
-					<SimpleButton text={ lang?.requestACall || '' } variant={ 'light' } type={ 'submit' }/>
+					<SimpleButton text={ t('requestACall') || '' } variant={ 'light' } type={ 'submit' }/>
 
 				</Form>
 			</div>

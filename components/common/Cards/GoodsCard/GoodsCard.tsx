@@ -6,7 +6,7 @@ import arrowRight from '@/public/icons/arrowBtnWhite.svg';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import { useStore } from 'effector-react';
 import { $currencies } from '@/store/currencies';
-import { lang } from '@/pages';
+import { useTranslations } from 'next-intl';
 
 interface IProps {
 	image: string;
@@ -16,6 +16,7 @@ interface IProps {
 
 const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 	const size = useWindowSize();
+	const t = useTranslations('Index');
 	// @ts-ignore
 	const isMobile = size.width <= 1400;
 
@@ -126,8 +127,8 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 					<Link href={ url } className={ 'mobileLink' }>
 						{ mobileShowContent && (
 							<div className={ 'cardLabel text300 colorWhite' }>
-								{ lang?.apartments || '' } | { lang?.region || '' }:{ ' ' }
-								{ lang?.surin || '' }
+								{ t('apartments') || '' } | { t('region') || '' }:{ ' ' }
+								{ t('surin') || '' }
 							</div>
 						) }
 
@@ -136,16 +137,16 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 								<div className={ 'description-wrapper' }>
 									<div>
 										<div className={ 'text300 colorWhite' }>
-											{ lang?.priceFrom || '' } { cur }100 000
+											{ t('priceFrom') || '' } { cur }100 000
 										</div>
 										<div className={ 'text300 colorWhite mt-8' }>
-											{ lang?.income || '' } 10%{ ' ' }
-											{ lang?.aYear || '' }
+											{ t('income') || '' } 10%{ ' ' }
+											{ t('aYear') || '' }
 										</div>
 									</div>
 
 									<p className={ 'text300 colorWhite' }>
-										{ lang?.more || '' }{ ' ' }
+										{ t('more') || '' }{ ' ' }
 										<Image src={ arrowRight } alt={ '' }/>
 									</p>
 								</div>
@@ -173,8 +174,8 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 						<div
 							className={ 'cardLabel text300 colorWhite' }
 							style={ styleShowContent }>
-							{ lang?.apartments || '' } | { lang?.region || '' }:{ ' ' }
-							{ lang?.surin || '' }
+							{ t('apartments') || '' } | { t('region') || '' }:{ ' ' }
+							{ t('surin') || '' }
 						</div>
 
 						<img
@@ -190,15 +191,15 @@ const GoodsCard = ( { image, logoImage, url }: IProps ) => {
 								style={ styleShowContent }>
 								<div>
 									<div className={ 'text300 colorWhite' }>
-										{ lang?.priceFrom || '' } { cur }100 000
+										{ t('priceFrom') || '' } { cur }100 000
 									</div>
 									<div className={ 'text300 colorWhite mt-8' }>
-										{ lang?.income || '' } 10%{ ' ' }
-										{ lang?.aYear || '' }
+										{ t('income')|| '' } 10%{ ' ' }
+										{ t('aYear') || '' }
 									</div>
 								</div>
 								<p className={ 'text300 colorWhite' }>
-									{ lang?.more || '' }{ ' ' }
+									{ t('more') || '' }{ ' ' }
 									<Image src={ arrowRight } alt={ '' }/>
 								</p>
 							</div>

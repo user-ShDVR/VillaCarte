@@ -1,0 +1,326 @@
+@media (min-width: $media0)  {
+    .PhotosSlider {
+		position: relative;
+
+		.sliderNext {
+			position: absolute;
+			bottom: 4.267vw;
+			right: 6%;
+			z-index: 3;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: 4.267vw;
+			right: 16%;
+			z-index: 3;
+		}
+
+		.slick-track {
+			//min-height: 700px;
+		}
+
+		.slick-slider {
+			position: relative;
+			display: block;
+			width: 100%;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			z-index: 3;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			bottom: 20px;
+			right: 16px;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+			text-indent: -9999px;
+			background: transparent;
+			border: none;
+		}
+
+		.slick-arrow:after {
+			content: "";
+			position: absolute;
+			bottom: 20px;
+			z-index: 2;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+	}
+	.photos {
+		position: relative;
+		z-index: 1;
+
+		&-inner {
+			padding: 4.86vw 3vw 11.2vw 3vw;
+			padding-top: 70px;
+		}
+
+		&-tabs {
+			margin-top: 28px;
+		}
+       .slide-inner-container{
+            padding: 0 20px; /* Отступы по бокам */
+            display: flex;
+
+			.custom-slide{
+				width: 93.333vw;
+				height: 48.611vw;
+			}
+			position: relative;
+            justify-content: center; /* Главная картинка по центру */
+            align-items: center;
+            p{
+                margin-top: 9px;
+                font-size: 18px;
+                color: #FFF;
+                span{
+                    color: rgba(255, 255, 255, 0.50);
+                }
+            }
+          }
+          
+		.react-tabs__tab-panel--selected {
+			display: grid;
+			gap: 8px;
+			-webkit-animation: fadeTabPanel 1s linear;
+			animation: fadeTabPanel 1s linear;
+			justify-items: center;
+		}
+
+		@-webkit-keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		&-tabList {
+			margin-bottom: 5.333vw;
+			padding: 0;
+			margin-bottom: 3.472vw;
+			padding: 7.467vw 2.933vw 7.467vw 0;
+			overflow: hidden;
+			overflow-x: scroll;
+			position: relative;
+			width: 91vw;
+			display: grid;
+			grid-template-columns: 27.733vw 27.733vw 27.733vw ;
+			justify-content: start;
+			align-items: stretch;
+			gap: 2.133vw;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			li {
+				color: rgba(255, 255, 255, .5);
+				font-size: 4vw;
+				line-height: 6.933vw;
+				border: none;
+			    cursor: pointer;
+                padding: 2.667vw 2.667vw;
+				background: transparent !important;
+				border-radius: 0;
+			}
+
+			.react-tabs__tab--selected {
+				color: $colorWhite;
+				border-bottom: 1px solid $colorWhite;
+			}
+
+			.react-tabs__tab:focus:after {
+				background: transparent !important;
+			}
+		}
+	}
+}
+@media (min-width: $media768) {
+	// PhotosSlider
+	.PhotosSlider {
+
+		.slick-track {
+			min-height: auto;
+		}
+
+		.sliderNext {
+			right: -20px;
+			bottom: 46%;
+			border-radius: 50%;
+			padding: 12px;
+			border: 2px solid $colorWhite;
+			backdrop-filter: blur(2px);
+			transition: .2s all;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.30);
+			}
+
+			img {
+				width: 14px;
+				height: 10px;
+			}
+		}
+
+		.sliderPrev {
+			left: -20px;
+			bottom: 46%;
+			right: auto;
+			border-radius: 50%;
+			padding: 12px;
+			border: 2px solid $colorWhite;
+			backdrop-filter: blur(2px);
+			transition: .2s all;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.30);
+			}
+
+			img {
+				width: 14px;
+				height: 10px;
+			}
+		}
+	}
+}
+@media (min-width: $media1023) {
+	.photos {
+
+		&-inner {
+			padding: 4.86vw 3vw;
+		}
+		
+
+		&-tabList {
+			display: flex;
+			justify-content: end;
+		}
+
+		h2 {
+			max-width: 80%;
+		}
+
+		&-tabs {
+			margin-top: -56px;
+		}
+
+		.react-tabs__tab-panel--selected {
+			margin-top: 40px;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+@media (min-width: $media1440) {
+    .PhotosSlider {
+
+		.sliderNext {
+			right: 112px;
+			cursor: pointer;
+		}
+        .sliderPrev {
+			right: auto;
+			left: 112px;
+			cursor: pointer;
+		}
+	}
+	// BestProjects
+	.photos {
+		position: relative;
+		z-index: 1;
+
+		&-inner {
+			padding-top: 70px;
+		}
+
+		&-tabs {
+		}
+       .slide-inner-container{
+            padding: 0 20px; /* Отступы по бокам */
+            display: flex;
+            justify-content: center; /* Главная картинка по центру */
+            align-items: center;
+            p{
+                margin-top: 9px;
+                font-size: 18px;
+                color: #FFF;
+                span{
+                    color: rgba(255, 255, 255, 0.50);
+                }
+            }
+          }
+          
+		.react-tabs__tab-panel--selected {
+			margin-top: 100px;
+			display: grid;
+			gap: 8px;
+			-webkit-animation: fadeTabPanel 1s linear;
+			animation: fadeTabPanel 1s linear;
+		}
+
+		@-webkit-keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		&-tabList {
+			margin-bottom: 20px;
+			padding: 0;
+
+			li {
+				color: rgba(255, 255, 255, .5);
+				border: none;
+			    cursor: pointer;
+				font-size: initial;
+				line-height: initial;
+                padding: 10px 20px;
+				background: transparent !important;
+				border-radius: 0;
+			}
+
+			.react-tabs__tab--selected {
+				color: $colorWhite;
+				border-bottom: 1px solid $colorWhite;
+			}
+
+			.react-tabs__tab:focus:after {
+				background: transparent !important;
+			}
+		}
+	}
+}

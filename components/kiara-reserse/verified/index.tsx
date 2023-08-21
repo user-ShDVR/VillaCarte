@@ -5,16 +5,16 @@ import Map from '@/public/kiara-reserve/Group 1000004524.png';
 
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
+import GoodsCard from '@/components/common/Cards/GoodsCard/GoodsCard';
 
 const VideoKiera: React.FC = () => {
     return (
-        <div className='video-kiera' style={{marginTop: '-355px', position: 'relative'}}>
+        <div className='video-kiera' style={{marginTop: '-24.2vw', position: 'relative'}}>
             <div className='video-kiera__container'>
                 <Image
                     src={verifed}
                     alt='photo'
-                    width={2688 / 2}
-                    height={1400 / 2}
+                    fill={true}
                 />
                 <div className={' d-flex jc-center'} style={{ position: 'absolute'}}>
 					<HoveredButton
@@ -49,8 +49,7 @@ const Verifed: FC = () => {
                 <Image
                     src={Map}
                     alt='Map'
-                    width={2688 / 2}
-                    height={1400 / 2}
+                    className='verifed__Image'
                 />
             </div>
             <div className='Interested__container'>
@@ -66,23 +65,30 @@ const Verifed: FC = () => {
 
 					<TabPanel className={'Interested-tabs-container'}>
                     { data?.apartments.slice( 0, 3 ).map( ( item, index ) =>
-                            'тут проекты_'
-							// <GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>// #TODO подключить store и currency иначе не работает
+                            
+							<GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>// #TODO подключить store и currency иначе не работает
 						) }
 					</TabPanel>
                     <TabPanel className={'Interested-tabs-container'}>
                     { data?.apartments.slice( 0, 3 ).map( ( item, index ) =>
-                            'тут проекты_'
-							// <GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>// #TODO подключить store и currency иначе не работает
+                            
+							<GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>// #TODO подключить store и currency иначе не работает
 						) }
 					</TabPanel>
                     <TabPanel className={'Interested-tabs-container'}>
                     { data?.apartments.slice( 0, 3 ).map( ( item, index ) =>
-                            'тут проекты_'
-							// <GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>// #TODO подключить store и currency иначе не работает
+                            <GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>// #TODO подключить store и currency иначе не работает
 						) }
 					</TabPanel>
                     </Tabs>
+                    <div className={' d-flex jc-center'}>
+					<HoveredButton
+						text={'Показать еще 115 предложений'}
+						to={'/'}
+						variant={'arrowRevert'}
+						className={'manrope600-14 z-7'}
+					/>
+				</div>
             </div>
         </div>
 

@@ -1,0 +1,665 @@
+.Invest {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	margin-top: -25vw;
+	gap: 8.3vw;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;
+	padding-bottom: 13vw;
+
+	&-inner {
+		width: 100%;
+		padding: 4.9vw 3.33vw;
+		&-header {
+			color: #22364A;
+			font-family: 'TTTsarsA-Light', sans-serif;
+			font-size: 5vw;
+			font-weight: 300;
+			line-height: 5.833vw;
+			text-align: center;
+		}
+	}
+	.Invest-bg{
+		display: block;
+		position: absolute;
+		top: 25vw;
+		right: 0;
+		z-index: 0;
+	}
+
+
+
+
+	&-tabs {
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 11px;
+	}
+	.Invest-tabs-container{
+		width: 100%;
+		height:  30.90vw;
+		background-color: $colorWhite;
+		display: none;
+		flex-direction: row;
+		grid-template-columns: auto 4px auto;
+		padding: 0 3.611vw;
+		text-align: center;
+		gap: 3.611vw;
+
+		.investLine {
+			width: 4px;
+			height: 16.667vw;
+			flex-shrink: 0;
+			background: #EFEFF1;
+			align-self: center;
+		}
+
+		div {
+			padding: 7.083vw 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		h1 {
+			font-family: 'Manrope-Medium';
+			font-size: 1.25vw;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 2.083vw;
+		}
+
+		.invest-percent {
+			color: #22364A;
+			font-family: 'TTTsarsA-Light', sans-serif;
+			font-size: 5vw;
+			font-weight: 300;
+			line-height: 5.833vw;
+		}
+
+		h2 {
+			font-family: 'Manrope-Light', sans-serif;
+			font-size: 0.97vw;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 1.6vw;
+			letter-spacing: 0.14px;
+		}
+
+		p {
+			max-width: 39.236vw;
+			color: #87909B;
+			font-family: 'Manrope-Light', sans-serif;
+			font-size: 0.97vw;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 1.6vw;
+			letter-spacing: 0.14px;
+		}
+	}
+	.Invest-tabs-container2 {
+		box-sizing: border-box;
+		padding: 2.7vw 2.7vw 6.7vw 2.7vw;
+		width: 100%;
+		height: 30.9vw;
+		background-color: $colorWhite;
+		display: none;
+		flex-direction: row;
+		grid-template-columns: auto;
+		text-align: left;
+		gap: 1.8vw;
+
+		h1 {
+			color: #22364A;
+			font-family: 'Manrope-Medium';
+			font-size: 1.25vw;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 2.083vw;
+		}
+		table{
+			width: 100%;
+			
+		}
+		td {
+			border: 1px solid #d4d4d4;
+			text-align: left;
+			width: 90%;
+			color: #87909B;
+			font-family: 'Manrope-Light', sans-serif;
+			font-size: 0.97vw;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 1.6vw;
+			letter-spacing: 0.14px;
+			padding: 6px 24px;
+		}
+
+		.table-percent{
+			text-align: center;
+			color: #22364A;
+			width: 10%;
+			padding: 6px 12px;
+		}
+	}
+	.Invest-tabs-container3{
+		width: 100%;
+		height: 30.9vw;
+		position: relative;
+		background-color: $colorWhite;
+		display: none;
+		flex-direction: row;
+		justify-items: center;
+    	align-items: center;
+		grid-template-columns: auto;
+		padding: 0 3.611vw;
+		text-align: center;
+		.Invest-palmT {
+			position: absolute;
+			height: 29.236vw;
+			right: 0;
+			top: 0;
+		}
+		.Invest-palmb {
+			position: absolute;
+			height: 29.236vw;
+			bottom: 0;
+			left: 0;
+		}
+		.invest-percent {
+			color: #22364A;
+			font-family: 'TTTsarsA-Light', sans-serif;
+			font-size: 5vw;
+			font-weight: 300;
+			line-height: 5.833vw;
+
+		}
+
+		p {
+			margin-top: 1.389vw;
+			max-width: 39.236vw;
+			color: #87909B;
+			font-family: 'Manrope-Light', sans-serif;
+			font-size: 0.97vw;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 1.6vw;
+			letter-spacing: 0.14px;
+		}
+	}
+	.Invest-tabs-container4{
+		width: 100%;
+		height: 30.9vw;
+		background-color: $colorWhite;
+		display: none;
+		flex-direction: row;
+		grid-template-columns: 70% 30%;
+		padding: 0 2.083vw;
+		text-align: left;
+		gap: 1.042vw;
+
+		div {
+			padding: 3.472vw 0 0 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			gap: 0.694vw;
+		}
+
+		h1 {
+			font-size: 3.3vw;
+			text-align: left;
+			font-family: 'TTTsarsA-Light', sans-serif;
+			line-height: 4.3vw;
+			letter-spacing: -0.1vw;
+		}
+
+		p {
+			max-width: 52.986vw;
+			color: #87909B;
+			font-family: 'Manrope-Light', sans-serif;
+			font-size: 0.97vw;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 1.6vw;
+			letter-spacing: 0.14px;
+		}
+	}
+
+	@-webkit-keyframes fadeTabPanel {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeTabPanel {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	&-tabList {
+		margin-bottom: 3.472vw;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+
+		li {
+			color: rgba(135, 144, 155, 1);
+			border: none;
+			padding: 0.694vw 1.389vw;
+			cursor: pointer;
+			background: transparent !important;
+			border-radius: 0;
+		}
+
+		.react-tabs__tab--selected {
+			color: #22364A;
+			border-bottom: 1px solid #22364A;
+		}
+
+		.react-tabs__tab:focus:after {
+			background: transparent !important;
+		}
+	}
+	.react-tabs__tab-panel--selected {
+		display: grid;
+		-webkit-animation: fadeTabPanel 1s linear;
+		animation: fadeTabPanel 1s linear;
+	}
+}
+@media (max-width: 500px) {
+	.Invest {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		margin-top: -15vw;
+		gap: 0;
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-self: center;
+	
+		&-inner {
+			width: 100%;
+			padding: 16vw 4.267vw;
+			&-header {
+				width: 91.467vw;
+				color: #22364A;
+				font-family: 'TTTsarsA-Light', sans-serif;
+				font-size: 8.533vw;
+				font-weight: 300;
+				line-height: 10.133vw;
+				text-align: left;
+			}
+		}
+		.Invest-bg{
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 0;
+		}
+	
+	
+	
+	
+		&-tabs {
+			width: 100%;
+			box-sizing: border-box;
+			margin-top: 11px;
+		}
+		.Invest-tabs-container-mobile{
+			padding: 2.7vw 2.7vw 6.7vw 2.7vw;
+			width: 100%;
+			display: none;
+			flex-direction: row;
+			padding: 5.333vw 4.267vw;
+			text-align: center;
+			gap: 3.611vw;
+			
+			.InvestSlide {
+				width: 100%;
+			  }
+			
+			  .slideWrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 343px; /* Ширина слайдера */
+				height: 600px;
+				background-color: $colorWhite;
+				margin: 0 auto; /* Центрирование */
+			  }
+			
+			  .slidecont {
+				padding: 7.083vw 0;
+				height: 100%; /* Высота 100% */
+				background-color: $colorWhite;
+				.mFlex {
+				  width: 100%; /* Ширина 100% */
+				  display: flex;
+				  flex-direction: column;
+				  justify-content: space-between;
+				  align-items: center;
+				  text-align: center;
+				}
+			  }
+			
+			
+			
+			
+			
+			
+			
+			
+	
+			h1 {
+				font-family: 'Manrope-Medium';
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 30px;
+			}
+	
+			.invest-percent {
+				color: #22364A;
+				font-family: 'TTTsarsA-Light', sans-serif;
+				font-size: 74px;
+				font-weight: 300;
+				line-height: 84px;
+			}
+	
+			h2 {
+				font-family: 'Manrope-Light', sans-serif;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 24px;
+				letter-spacing: 0.14px;
+			}
+	
+			p {
+				max-width: 100%;
+				color: #87909B;
+				font-family: 'Manrope-Light', sans-serif;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 24px;
+				letter-spacing: 0.14px;
+			}
+		}
+		.Invest-tabs-container{
+			width: 100%;
+			height:  160vw;
+			background-color: $colorWhite;
+			display: none;
+			flex-direction: row;
+			grid-template-columns: auto 4px auto;
+			padding: 5.333vw 4.267vw;
+			text-align: center;
+			gap: 3.611vw;
+	
+			.investLine {
+				width: 4px;
+				height: 16.667vw;
+				flex-shrink: 0;
+				background: #EFEFF1;
+				align-self: center;
+			}
+	
+			div {
+				padding: 7.083vw 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+			}
+	
+			h1 {
+				font-family: 'Manrope-Medium';
+				font-size: 1.25vw;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 2.083vw;
+			}
+	
+			.invest-percent {
+				color: #22364A;
+				font-family: 'TTTsarsA-Light', sans-serif;
+				font-size: 5vw;
+				font-weight: 300;
+				line-height: 5.833vw;
+			}
+	
+			h2 {
+				font-family: 'Manrope-Light', sans-serif;
+				font-size: 0.97vw;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 1.6vw;
+				letter-spacing: 0.14px;
+			}
+	
+			p {
+				max-width: 39.236vw;
+				color: #87909B;
+				font-family: 'Manrope-Light', sans-serif;
+				font-size: 0.97vw;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 1.6vw;
+				letter-spacing: 0.14px;
+			}
+		}
+		.Invest-tabs-container2 {
+			box-sizing: border-box;
+			padding: 2.7vw 2.7vw 6.7vw 2.7vw;
+			width: 100%;
+			height: 160vw;
+			background-color: $colorWhite;
+			display: none;
+			flex-direction: column;
+			grid-template-columns: auto;
+			text-align: left;
+			gap: 5.867vw;
+	
+			h1 {
+				color: #22364A;
+				font-family: 'Manrope-Medium';
+				font-size: 4.8vw;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 8vw;
+			}
+			table{
+				width: 100%;
+				
+			}
+			td {
+				border: 1px solid #d4d4d4;
+				text-align: left;
+				width: 80%;
+				color: #87909B;
+				font-family: 'Manrope-Light', sans-serif;
+				font-size: 3.733vw;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 6.4vw;
+				letter-spacing: 0.14px;
+				padding: 1.6vw 3.2vw;
+			}
+	
+			.table-percent{
+				text-align: center;
+				color: #22364A;
+				width: 20%;
+				padding: 1.6vw 3.2vw;
+			}
+		}
+		.Invest-tabs-container3{
+			width: 100%;
+			height: 160vw;
+			background-color: $colorWhite;
+			display: none;
+			flex-direction: column;
+			justify-items: center;
+			align-items: center;
+			grid-template-columns: auto;
+			padding: 0 3.611vw;
+			text-align: center;
+			.Invest-palmT {
+				position: absolute;
+				width: 50%;
+				height: 50%;
+				right: 0;
+				top: 0;
+			}
+			.Invest-palmb {
+				position: absolute;
+				bottom: 0;
+				width: 50%;
+				height: 50%;
+				left: 0;
+			}
+			.invest-percent {
+				color: #22364A;
+				font-family: 'TTTsarsA-Light', sans-serif;
+				font-size: 19.2vw;
+				font-weight: 300;
+				line-height: 22.4vw;
+	
+			}
+	
+			p {
+				margin-top: 11.733vw;
+				max-width: 82.933vw;
+				color: #87909B;
+				font-family: 'Manrope-Light', sans-serif;
+				font-size: 3.733vw;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 6.4vw;
+				letter-spacing: 0.14px;
+			}
+		}
+		.Invest-tabs-container4{
+			width: 100%;
+			height: 160vw;
+			background-color: $colorWhite;
+			display: none;
+			flex-direction: column;
+			grid-template-columns: 100%;
+			padding: 8vw 4.267vw;
+			text-align: left;
+			gap: 1.042vw;
+	
+			div {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				gap: 1.067vw;
+			}
+	
+			h1 {
+				width: 82.933vw;
+				height: 70.933vw;
+				font-size: 8.533vw;
+				text-align: left;
+				font-family: 'TTTsarsA-Light', sans-serif;
+				line-height: 10.133vw;
+				letter-spacing: -0.1vw;
+			}
+	
+			p {
+				max-width: 100%;
+				width: 82.933vw;
+				height: 44.8vw;
+				color: #87909B;
+				font-family: 'Manrope-Light', sans-serif;
+				font-size: 3.733vw;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 6.4vw;
+				letter-spacing: 0.14px;
+			}
+		}
+	
+		@-webkit-keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+	
+			100% {
+				opacity: 1;
+			}
+		}
+	
+		@keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+	
+			100% {
+				opacity: 1;
+			}
+		}
+	
+		&-tabList {
+
+			margin-bottom: 3.472vw;
+			padding: 7.467vw 2.933vw 7.467vw 0;
+			overflow: hidden;
+			overflow-x: scroll;
+			position: relative;
+			width: 91vw;
+			display: grid;
+			grid-template-columns: 43.733vw 26.933vw 32.533vw 54.4vw;
+
+			justify-content: start;
+			align-items: stretch;
+			&::-webkit-scrollbar {
+                display: none;
+            }
+			li {
+				color: rgba(135, 144, 155, 1);
+				text-align: center;
+				border: none;
+				padding: 2.667vw 2.667vw;
+				width: 100%;
+				cursor: pointer;
+				background: transparent !important;
+				border-radius: 0;
+			}
+	
+			.react-tabs__tab--selected {
+				color: #22364A;
+				// border-bottom: 1px solid #22364A;
+			}
+	
+			.react-tabs__tab:focus:after {
+				background: transparent !important;
+			}
+		}
+
+		.react-tabs__tab-panel--selected {
+			display: flex;
+			-webkit-animation: fadeTabPanel 1s linear;
+			animation: fadeTabPanel 1s linear;
+		}
+
+	}
+}

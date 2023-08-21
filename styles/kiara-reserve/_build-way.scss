@@ -1,0 +1,503 @@
+@media (min-width: $media0) {
+	.BeforeBuildWaySlider {
+		position: relative;
+
+		.BeforeBuildWay__container {
+			width: 100vw;
+
+		}
+
+		.sliderNext {
+			position: absolute;
+			bottom: -20px;
+			right: 40%;
+			z-index: 1;
+
+			img {
+				filter: invert(100%);
+			}
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: -20px;
+			left: 40%;
+			z-index: 1;
+
+			img {
+				filter: invert(100%);
+			}
+		}
+
+		.slick-track {
+			//min-height: 700px;
+		}
+
+		.slick-slider {
+			position: relative;
+			display: block;
+			width: 100%;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			z-index: 3;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			bottom: 20px;
+			right: 16px;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+			text-indent: -9999px;
+			background: transparent;
+			border: none;
+		}
+
+		.slick-arrow:after {
+			content: "";
+			position: absolute;
+			bottom: 20px;
+			z-index: 2;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+	}
+
+	.buildWay {
+		z-index: 2;
+
+		.custom-slide {
+			width: 100vw;
+			height: 100vw;
+		}
+
+		.BeforeBuildWaySlider {}
+
+		&__container {
+
+			display: flex;
+			justify-content: center;
+			gap: 3.472vw;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 16vw 3.333vw; //107px 48px 402px 48px
+
+			.custom-slide {
+				width: 87.2vw;
+				height: 57.6vw;
+			}
+
+
+
+			h1 {
+				font-family: 'TTTsarsA-Light', sans-serif;
+				font-size: 8.533vw;
+				font-weight: 300;
+				line-height: 10.133vw;
+				letter-spacing: -0.03em;
+				text-align: left;
+			}
+
+			hr {
+				display: none;
+				stroke-width: 1px;
+				stroke: #D4D4D4;
+			}
+
+			.buildWay_text {
+				display: flex;
+				flex-direction: column;
+				gap: 10.667vw;
+
+				ul {
+					//styleName: p1;
+					display: flex;
+					flex-direction: column;
+					gap: 1.389vw;
+					font-family: 'Manrope-Medium';
+					font-size: 1.25vw;
+					font-weight: 500;
+					line-height: 2.083vw;
+					letter-spacing: 0em;
+					text-align: left;
+				}
+
+				.Phase {
+					display: grid;
+					overflow: hidden;
+					overflow-x: scroll;
+					padding: 7.467vw 2.933vw 7.467vw 0;
+					position: relative;
+					width: 91vw;
+					grid-template-columns: repeat(3, 1fr);
+					column-gap: 10.667vw;
+
+					&::-webkit-scrollbar {
+						display: none;
+					}
+
+
+					.phase-content {
+						display: flex;
+						flex-direction: column;
+						width: 47.2vw;
+						height: 36vw;
+						gap: 2.667vw;
+
+						h1 {
+							font-family: 'Manrope-Medium', sans-serif;
+							font-size: 4.8vw;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 8vw
+						}
+
+						p {
+							font-family: 'Manrope-Light', sans-serif;
+							color: #848C98;
+							font-size: 3.733vw;
+							font-style: normal;
+							font-weight: 300;
+							line-height: 6.4vw;
+							letter-spacing: 0.01vw;
+							margin-bottom: 0;
+						}
+
+						.bold {
+							font-family: 'Manrope-Bold', sans-serif;
+							color: #22364A;
+							font-weight: 700;
+							letter-spacing: 0.01vw;
+							line-height: 5.333vw;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+			.buildWay_innerContainer {
+				width: 91.467vw;
+
+				p {
+					font-family: 'Manrope-Bold', sans-serif;
+					color: #22364A;
+					font-weight: 700;
+					font-size: 3.733vw;
+					letter-spacing: 0.01vw;
+					line-height: 5.333vw;
+					margin-top: 0.694vw;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $media768) {
+	.buildWay {
+		.custom-slide {
+			width: 500px;
+			height: auto;
+		}
+		&__container {
+			display: flex;
+			justify-content: center;
+			gap: 50px;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 7.431vw 3.333vw; //107px 48px 402px 48px
+
+
+			.slide-inner-container {
+				margin-left: 5.556vw;
+			}
+			h1 {
+				font-family: 'TTTsarsA-Light', sans-serif;
+				font-size: 5vw;
+				font-weight: 300;
+				line-height: 5.833vw;
+				letter-spacing: -0.03em;
+				text-align: left;
+			}
+
+			hr {
+				display: block;
+				stroke-width: 1px;
+				stroke: #D4D4D4;
+			}
+
+			.buildWay_text {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 1.389vw;
+
+				ul {
+					//styleName: p1;
+					display: flex;
+					flex-direction: column;
+					gap: 1.389vw;
+					font-family: 'Manrope-Medium';
+					font-size: 1.25vw;
+					font-weight: 500;
+					line-height: 2.083vw;
+					letter-spacing: 0em;
+					text-align: left;
+				}
+
+				.Phase {
+					width: 30.34722vw;
+					display: flex;
+					flex-direction: column;
+					overflow: visible;
+					column-gap: 0px;
+
+
+
+					.phase-content {
+						display: grid;
+						grid-template-areas: 'a a'
+							'b c';
+						flex-direction: column;
+						width: auto;
+						height: auto;
+						row-gap: 7px;
+						column-gap: 50px;
+
+						h1 {
+							grid-area: a;
+							font-family: 'Manrope-Medium', sans-serif;
+							font-size: 1.25vw;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 2.08vw
+						}
+
+						.EndDate {
+							grid-area: b;
+						}
+
+						.Stage {
+							grid-area: c;
+						}
+
+						p {
+							font-family: 'Manrope-Light', sans-serif;
+							color: #848C98;
+							font-size: 1vw;
+							font-style: normal;
+							font-weight: 300;
+							line-height: 1.6vw;
+							letter-spacing: 0.01vw;
+						}
+
+						.bold {
+							font-family: 'Manrope-Bold', sans-serif;
+							color: #22364A;
+							font-weight: 700;
+							letter-spacing: 0.01vw;
+							line-height: 1.4vw;
+						}
+					}
+				}
+			}
+
+			.buildWay_innerContainer {
+				width: 57.292vw;
+				p {
+					font-family: 'Manrope-Bold', sans-serif;
+					color: #22364A;
+					font-weight: 700;
+					font-size: 0.972vw;
+					letter-spacing: 0.01vw;
+					line-height: 1.4vw;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	// PhotosSlider
+	.BeforeBuildWaySlider {
+
+		.slick-track {
+			min-height: auto;
+		}
+
+		.sliderNext {
+			right: -20px;
+			bottom: 46%;
+			border-radius: 50%;
+			padding: 12px;
+			border: 2px solid #22364A;
+			backdrop-filter: blur(2px);
+			transition: .2s all;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.30);
+			}
+
+			img {
+				width: 14px;
+				height: 10px;
+				filter: invert(100%);
+			}
+		}
+
+		.sliderPrev {
+			left: -20px;
+			bottom: 46%;
+			border-radius: 50%;
+			padding: 12px;
+			border: 2px solid #22364A;
+			backdrop-filter: blur(2px);
+			transition: .2s all;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.30);
+			}
+
+			img {
+				width: 14px;
+				height: 10px;
+				filter: invert(100%);
+			}
+		}
+	}
+}
+
+@media (min-width: $media1440) {
+	.buildWay {
+		&__container {
+			display: flex;
+			justify-content: center;
+			gap: 50px;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 7.431vw 3.333vw; //107px 48px 402px 48px
+
+
+
+			h1 {
+				font-family: 'TTTsarsA-Light', sans-serif;
+				font-size: 5vw;
+				font-weight: 300;
+				line-height: 5.833vw;
+				letter-spacing: -0.03em;
+				text-align: left;
+			}
+
+			hr {
+				display: block;
+				stroke-width: 1px;
+				stroke: #D4D4D4;
+			}
+
+			.buildWay_text {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 1.389vw;
+
+				ul {
+					//styleName: p1;
+					display: flex;
+					flex-direction: column;
+					gap: 1.389vw;
+					font-family: 'Manrope-Medium';
+					font-size: 1.25vw;
+					font-weight: 500;
+					line-height: 2.083vw;
+					letter-spacing: 0em;
+					text-align: left;
+				}
+
+				.Phase {
+					width: 30.34722vw;
+					display: flex;
+					flex-direction: column;
+					overflow: visible;
+					column-gap: 0px;
+
+
+
+					.phase-content {
+						display: grid;
+						grid-template-areas: 'a a'
+							'b c';
+						flex-direction: column;
+						width: auto;
+						height: auto;
+						row-gap: 7px;
+						column-gap: 50px;
+
+						h1 {
+							grid-area: a;
+							font-family: 'Manrope-Medium', sans-serif;
+							font-size: 1.25vw;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 2.08vw
+						}
+
+						.EndDate {
+							grid-area: b;
+						}
+
+						.Stage {
+							grid-area: c;
+						}
+
+						p {
+							font-family: 'Manrope-Light', sans-serif;
+							color: #848C98;
+							font-size: 1vw;
+							font-style: normal;
+							font-weight: 300;
+							line-height: 1.6vw;
+							letter-spacing: 0.01vw;
+						}
+
+						.bold {
+							font-family: 'Manrope-Bold', sans-serif;
+							color: #22364A;
+							font-weight: 700;
+							letter-spacing: 0.01vw;
+							line-height: 1.4vw;
+						}
+					}
+				}
+			}
+
+			.buildWay_innerContainer {
+				width: 57.292vw;
+				p {
+					font-family: 'Manrope-Bold', sans-serif;
+					color: #22364A;
+					font-weight: 700;
+					font-size: 0.972vw;
+					letter-spacing: 0.01vw;
+					line-height: 1.4vw;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	.BeforeBuildWaySlider {
+
+		.sliderNext {
+			right: 40px;
+			cursor: pointer;
+		}
+
+		.sliderPrev {
+			left: 40px;
+			cursor: pointer;
+		}
+	}
+}

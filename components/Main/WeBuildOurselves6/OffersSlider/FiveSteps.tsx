@@ -2,165 +2,178 @@ import React, { useEffect, useState } from 'react';
 import listPoint from '@/public/icons/listPoint1.svg';
 import Image from 'next/image';
 import { useWindowSize } from '@/hooks/useWindowSize';
-import { lang } from '@/pages';
+import { useTranslations } from 'next-intl';
 import { Fade } from 'react-awesome-reveal';
+interface IProps {
+	weSelectTheRealEstatePersonally: string;
+	weCalculateProfitability: string;
+	weNegotiateWithTheDeveloper: string;
+	weLegallyAccompanyTheTransaction: string;
+	weTakeCareOfYourPropertyManagement: string;
 
-const FiveSteps = () => {
+}
+const FiveSteps: React.FC<IProps> = ({
+	weSelectTheRealEstatePersonally,
+weCalculateProfitability,
+weNegotiateWithTheDeveloper,
+weLegallyAccompanyTheTransaction,
+weTakeCareOfYourPropertyManagement,
+}) => {
 	const size = useWindowSize();
 	// @ts-ignore
 	const isMobile = size.width <= 1439;
 
-	const [ step, setStep ] = useState<number>( 0 );
-	const [ scrolled, setScrolled ] = useState<boolean>( false );
+	const [step, setStep] = useState<number>(0);
+	const [scrolled, setScrolled] = useState<boolean>(false);
 
 	const toShow = () => {
 		// @ts-ignore
-		setStep( count => count + 1 );
+		setStep(count => count + 1);
 	};
 
-	useEffect( () => {
+	useEffect(() => {
 		const onScroll = () => {
 			// @ts-ignore
-			if ( document.documentElement.scrollTop > 4850 ) {
-				setScrolled( true );
+			if (document.documentElement.scrollTop > 4850) {
+				setScrolled(true);
 			} else {
-				setScrolled( false );
+				setScrolled(false);
 			}
 		};
 
-		window.addEventListener( 'scroll', onScroll );
+		window.addEventListener('scroll', onScroll);
 
 		return () => {
-			window.removeEventListener( 'scroll', onScroll );
+			window.removeEventListener('scroll', onScroll);
 		};
-	}, [] );
+	}, []);
 
-	if ( scrolled ) {
-		setInterval( toShow, 1000 );
+	if (scrolled) {
+		setInterval(toShow, 1000);
 	}
 
 	return (
-		<div className={ 'stepsWrapper container' }>
+		<div className={'stepsWrapper container'}>
 
-			{ isMobile
+			{isMobile
 				?
 				<>
-					<div className={ 'step' }>
-						<h6 className={ 'text300 fz-80 pl-16' }>01</h6>
-						<Image src={ listPoint } alt={ '' }/>
-						<div className={ 'stepLine' }/>
-						<p className={ 'text300 colorWhite pl-16' }>
-							{ lang?.weSelectTheRealEstatePersonally || '' }
+					<div className={'step'}>
+						<h6 className={'text300 fz-80 pl-16'}>01</h6>
+						<Image src={listPoint} alt={''} />
+						<div className={'stepLine'} />
+						<p className={'text300 colorWhite pl-16'}>
+							{weSelectTheRealEstatePersonally}
 						</p>
 					</div>
 
-					<div className={ 'step' }>
-						<h6 className={ 'text300 fz-80 pl-16' }>02</h6>
-						<Image src={ listPoint } alt={ '' }/>
-						<div className={ 'stepLine' }/>
-						<p className={ 'text300 colorWhite pl-16' }>
-							{ lang?.weCalculateProfitability || '' }
+					<div className={'step'}>
+						<h6 className={'text300 fz-80 pl-16'}>02</h6>
+						<Image src={listPoint} alt={''} />
+						<div className={'stepLine'} />
+						<p className={'text300 colorWhite pl-16'}>
+							{weCalculateProfitability}
 						</p>
 					</div>
 
-					<div className={ 'step' }>
-						<h6 className={ 'text300 fz-80 pl-16' }>03</h6>
-						<Image src={ listPoint } alt={ '' }/>
-						<div className={ 'stepLine' }/>
-						<p className={ 'text300 colorWhite pl-16' }>
-							{ lang?.weNegotiateWithTheDeveloper || '' }
+					<div className={'step'}>
+						<h6 className={'text300 fz-80 pl-16'}>03</h6>
+						<Image src={listPoint} alt={''} />
+						<div className={'stepLine'} />
+						<p className={'text300 colorWhite pl-16'}>
+							{weNegotiateWithTheDeveloper}
 						</p>
 					</div>
 
-					<div className={ 'step' }>
-						<h6 className={ 'text300 fz-80 pl-16' }>04</h6>
-						<Image src={ listPoint } alt={ '' }/>
-						<div className={ 'stepLine' }/>
-						<p className={ 'text300 colorWhite pl-16' }>
-							{ lang?.weLegallyAccompanyTheTransaction || '' }
+					<div className={'step'}>
+						<h6 className={'text300 fz-80 pl-16'}>04</h6>
+						<Image src={listPoint} alt={''} />
+						<div className={'stepLine'} />
+						<p className={'text300 colorWhite pl-16'}>
+							{weLegallyAccompanyTheTransaction}
 						</p>
 					</div>
 
-					<div className={ 'step' }>
-						<h6 className={ 'text300 fz-80 pl-16' }>05</h6>
-						<Image src={ listPoint } alt={ '' }/>
-						<div className={ 'stepLine' }/>
-						<p className={ 'text300 colorWhite pl-16' }>
-							{ lang?.weTakeCareOfYourPropertyManagement || '' }
+					<div className={'step'}>
+						<h6 className={'text300 fz-80 pl-16'}>05</h6>
+						<Image src={listPoint} alt={''} />
+						<div className={'stepLine'} />
+						<p className={'text300 colorWhite pl-16'}>
+							{weTakeCareOfYourPropertyManagement}
 						</p>
-						<Image className={ 'lastImage' } src={ listPoint } alt={ '' }/>
+						<Image className={'lastImage'} src={listPoint} alt={''} />
 					</div>
 				</>
 				:
-				<div className={ 'container' }>
-					<div className={ 'numbers' }>
-						<Fade delay={ 0 } triggerOnce>
-							<h6 className={ 'text300 fz-80 pl-20' }>
+				<div className={'container'}>
+					<div className={'numbers'}>
+						<Fade delay={0} triggerOnce>
+							<h6 className={'text300 fz-80 pl-20'}>
 								01
 							</h6>
 						</Fade>
-						<Fade delay={ 500 } triggerOnce>
-							<h6 className={ 'text300 fz-80 pl-16' }>
+						<Fade delay={500} triggerOnce>
+							<h6 className={'text300 fz-80 pl-16'}>
 								02
 							</h6>
 						</Fade>
-						<Fade delay={ 1000 } triggerOnce>
-							<h6 className={ 'text300 fz-80 pl-10' }>
+						<Fade delay={1000} triggerOnce>
+							<h6 className={'text300 fz-80 pl-10'}>
 								03
 							</h6>
 						</Fade>
-						<Fade delay={ 1500 } triggerOnce>
-							<h6 className={ 'text300 fz-80 pl-4' }>
+						<Fade delay={1500} triggerOnce>
+							<h6 className={'text300 fz-80 pl-4'}>
 								04
 							</h6>
 						</Fade>
-						<Fade delay={ 2000 } triggerOnce>
-							<h6 className={ 'text300 fz-80' }>
+						<Fade delay={2000} triggerOnce>
+							<h6 className={'text300 fz-80'}>
 								05
 							</h6>
 						</Fade>
 					</div>
 
-					<div className={ 'steps' }>
-						<div className={ 'step' }>
-							<Image src={ listPoint } alt={ '' }/>
-							<div className={ 'stepLine' }/>
-							<p className={ 'text300 colorWhite pl-16' }>
-								{ lang?.weSelectTheRealEstatePersonally || '' }
+					<div className={'steps'}>
+						<div className={'step'}>
+							<Image src={listPoint} alt={''} />
+							<div className={'stepLine'} />
+							<p className={'text300 colorWhite pl-16'}>
+								{weSelectTheRealEstatePersonally}
 							</p>
 						</div>
 
-						<div className={ 'step' }>
-							<Image src={ listPoint } alt={ '' }/>
-							<div className={ 'stepLine' }/>
-							<p className={ 'text300 colorWhite pl-16' }>
-								{ lang?.weCalculateProfitability || '' }
+						<div className={'step'}>
+							<Image src={listPoint} alt={''} />
+							<div className={'stepLine'} />
+							<p className={'text300 colorWhite pl-16'}>
+								{weCalculateProfitability}
 							</p>
 						</div>
 
-						<div className={ 'step' }>
-							<Image src={ listPoint } alt={ '' }/>
-							<div className={ 'stepLine' }/>
-							<p className={ 'text300 colorWhite pl-16' }>
-								{ lang?.weNegotiateWithTheDeveloper || '' }
+						<div className={'step'}>
+							<Image src={listPoint} alt={''} />
+							<div className={'stepLine'} />
+							<p className={'text300 colorWhite pl-16'}>
+								{weNegotiateWithTheDeveloper}
 							</p>
 						</div>
 
-						<div className={ 'step' }>
-							<Image src={ listPoint } alt={ '' }/>
-							<div className={ 'stepLine' }/>
-							<p className={ 'text300 colorWhite pl-16' }>
-								{ lang?.weLegallyAccompanyTheTransaction || '' }
+						<div className={'step'}>
+							<Image src={listPoint} alt={''} />
+							<div className={'stepLine'} />
+							<p className={'text300 colorWhite pl-16'}>
+								{weLegallyAccompanyTheTransaction}
 							</p>
 						</div>
 
-						<div className={ 'step' }>
-							<Image src={ listPoint } alt={ '' }/>
-							<div className={ 'stepLine' }/>
-							<p className={ 'text300 colorWhite pl-16' }>
-								{ lang?.weTakeCareOfYourPropertyManagement || '' }
+						<div className={'step'}>
+							<Image src={listPoint} alt={''} />
+							<div className={'stepLine'} />
+							<p className={'text300 colorWhite pl-16'}>
+								{weTakeCareOfYourPropertyManagement}
 							</p>
-							<Image className={ 'lastImage' } src={ listPoint } alt={ '' }/>
+							<Image className={'lastImage'} src={listPoint} alt={''} />
 						</div>
 					</div>
 

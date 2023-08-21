@@ -6,19 +6,23 @@ import telegramWhiteIcon from '@/public/icons/socials/telegramWhiteIcon.svg';
 import whatsappWhiteIcon from '@/public/icons/socials/whatsappWhiteIcon.svg';
 import facebookWhiteIcon from '@/public/icons/socials/facebookWhiteIcon.svg';
 import MessengerCard from '@/components/common/OurMessengers/MessengerCard';
-import { lang } from '@/pages';
+import { useTranslations } from 'next-intl';
 
 const messengers = [
 	{ url: '/', icon: telegramIcon, whiteIcon: telegramWhiteIcon, text: 'Telegram' },
 	{ url: '/', icon: whatsappIcon, whiteIcon: whatsappWhiteIcon, text: 'WhatsApp' },
 	{ url: '/', icon: facebookIcon, whiteIcon: facebookWhiteIcon, text: 'Facebook' },
 ];
-
-const OurMessengers = () => {
-
+interface IProps {
+	contactUsThroughOurMessengers: string;
+}
+const OurMessengers: React.FC<IProps> = ({
+	contactUsThroughOurMessengers
+}) => {
+	const t = useTranslations('Index');
 	return (
 		<div className={ 'ourMessengers' }>
-			<h3 className={ 'h3TitleText fz-18-24 mb-28' }>{ lang?.contactUsThroughOurMessengers || '' }</h3>
+			<h3 className={ 'h3TitleText fz-18-24 mb-28' }>{ contactUsThroughOurMessengers }</h3>
 
 			{ messengers.map( item =>
 				<MessengerCard

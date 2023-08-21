@@ -9,8 +9,7 @@ const VideoKiera: React.FC = () => {
                 <Image
                     src={photo}
                     alt='photo'
-                    width={2688 / 2}
-                    height={1400 / 2}
+                    fill={true}
                 />
             </div>
         </div>

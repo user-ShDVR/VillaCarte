@@ -1,7 +1,10 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import logo from '../../../public/kiara-reserve/minorlogo.png';
+import BuilderBg from '../../../public/kiara-reserve/palmBgBuilder.png';
+
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
+import GoodsCard from '@/components/common/Cards/GoodsCard/GoodsCard';
 
 const Builder: FC = () => {
     const data = { apartments:
@@ -13,6 +16,7 @@ const Builder: FC = () => {
     return (
         <>
             <div className='Builder'>
+                <Image src={BuilderBg} alt='bg' className={'Builder-bg'} />
                 <div className='Builder__container'>
                     <div className='text'>
                         <h1>Застройщик</h1>
@@ -24,12 +28,15 @@ const Builder: FC = () => {
                         <Image 
                             src={logo}
                             alt='logo'
+                            className='Builder-logo'
                         />
                     </div>
+                    <div className="items__Builder">
                     { data?.apartments.slice( 0, 3 ).map( ( item, index ) =>
-                            'тут проекты_'
-							// <GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>// #TODO подключить store и currency иначе не работает
+                            <GoodsCard key={ index } url={ item.url } image={ item.image } logoImage={ item.logoImage }/>// #TODO подключить store и currency иначе не работает
 						) }
+                    </div>
+
                     <div className={'d-flex jc-center'}>
 					<HoveredButton
 						text={'Показать все проекты застройщика'}

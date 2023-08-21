@@ -1,0 +1,82 @@
+.uniqueness {
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 113px;
+        align-items: center;
+        padding: 4.167vw 100px;
+
+        .map img {}
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.389vw;
+
+            h1 {
+                font-family: 'TTTsarsA-Light', sans-serif;
+                font-size: 5vw;
+                font-weight: 300;
+                line-height: 5.833vw;
+                letter-spacing: -0.03em;
+                text-align: left;
+            }
+
+            ul {
+                //styleName: p1;
+                display: flex;
+                flex-direction: column;
+                gap: 1.389vw;
+                font-family: 'Manrope-Medium';
+                font-size: 1.25vw;
+                font-weight: 500;
+                line-height: 2.083vw;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .uniqueness {
+        &__container {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            padding: 16vw 4.267vw;
+
+            .map img {}
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                gap: 3.733vw;
+
+                h1 {
+                    font-family: 'TTTsarsA-Light', sans-serif;
+                    font-size: 8.533vw;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 10.133vw;
+                    letter-spacing: -0.96px;
+                    text-align: left;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.667vw;
+                    font-family: 'Manrope-Medium';
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 6.4vw;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

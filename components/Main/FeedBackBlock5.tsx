@@ -4,10 +4,20 @@ import Image from 'next/image';
 import FeedBackForm from '@/components/common/Forms/FeedBackForm/FeedBackForm';
 import OurMessengers from '@/components/common/OurMessengers/OurMessengers';
 import feedBackBg from '@/public/feedBackBg.webp';
-import { lang } from '@/pages';
+import { useTranslations } from 'next-intl';
 
-const FeedBackBlock = () => {
-
+interface IProps {
+	orderAPersonalSelection: string;
+	orderAPersonalSelection2: string;
+	ourManagerWillCallYou: string;
+    contactUsThroughOurMessengers: string;
+}
+const FeedBackBlock: React.FC<IProps> = ({
+	orderAPersonalSelection,
+orderAPersonalSelection2,
+ourManagerWillCallYou,
+contactUsThroughOurMessengers
+}) => {
 	const [ scrolled, setScrolled ] = useState<boolean>( false );
 
 	useEffect( () => {
@@ -42,10 +52,10 @@ const FeedBackBlock = () => {
 			<div className={ 'container pt-60 pos feedBackBlock-content w-620px z-7' }>
 				<div>
 					<div>
-						<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ lang?.orderAPersonalSelection || '' }</h2>
-						<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ lang?.orderAPersonalSelection2 || '' }</h2>
+						<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ orderAPersonalSelection }</h2>
+						<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ orderAPersonalSelection2 }</h2>
 						<h6 className={ 'text300 colorText pt-8 mb-30' }>
-							{ lang?.ourManagerWillCallYou || '' }
+							{ ourManagerWillCallYou}
 						</h6>
 					</div>
 
@@ -53,7 +63,7 @@ const FeedBackBlock = () => {
 				</div>
 
 				<div className={ 'ourMessengers-wrapper' }>
-					<OurMessengers/>
+					<OurMessengers contactUsThroughOurMessengers={contactUsThroughOurMessengers} />
 				</div>
 
 			</div>

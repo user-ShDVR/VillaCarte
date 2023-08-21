@@ -17,14 +17,15 @@ import CurrencySelect from '@/components/common/Selects/CurrencySelect';
 import cn from 'classnames';
 import MobileNavService from '@/components/Header/MobileNav/MobileNavService';
 import MobileNavSales from '@/components/Header/MobileNav/MobileNavSales';
-import CustomMenuItem from '@/components/Header/CustomMenuItem';
-import { lang } from '@/pages';
 import { $modalVisible, showModal } from '@/store/modal';
 import { EModal_VisibleStore } from '@/types/modal';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
 import ModalCallRequest from '@/components/common/Modal/ModalCallRequest';
+import CustomMenuItem from '../CustomMenuItem';
+import { useTranslations } from 'next-intl';
 
 const MobileMainMenu = () => {
+	const t = useTranslations('Index');
 	const mobileDropMenuServices = useStore( $mobileDropMenuVisibleServices );
 	const mobileDropMenuSales = useStore( $mobileDropMenuVisibleSales );
 	const mobileMenu = useStore( $mobileMenuVisible );
@@ -73,7 +74,7 @@ const MobileMainMenu = () => {
 				<div className={ '' } onClick={ toShowDropMenuSales }>
 					<CustomMenuItem
 						key={ '9656' }
-						text={ lang?.sale || '' }
+						text={ t('sale') || '' }
 						className={ 'mobileMainMenu-item' }
 						textClass={ cn( mobileDropMenuSales ? 'colorGradient' : '' ) }
 					/>
@@ -83,7 +84,7 @@ const MobileMainMenu = () => {
 				<div onClick={ toHideSaleServiceDropMenu }>
 					<CustomMenuItem
 						path={ '/' }
-						text={ lang?.rent || '' }
+						text={ t('rent') || '' }
 						className={ 'mobileMainMenu-item' }
 					/>
 				</div>
@@ -91,7 +92,7 @@ const MobileMainMenu = () => {
 				<div className={ '' } onClick={ toShowDropMenu }>
 					<CustomMenuItem
 						key={ '9646' }
-						text={ lang?.concierge || '' }
+						text={ t('concierge') || '' }
 						className={ 'mobileMainMenu-item' }
 						textClass={ cn( mobileDropMenuServices ? 'colorGradient' : '' ) }
 					/>
@@ -101,7 +102,7 @@ const MobileMainMenu = () => {
 				<div onClick={ toHideSaleServiceDropMenu }>
 					<CustomMenuItem
 						path={ '/' }
-						text={ lang?.propertyManagement || '' }
+						text={ t('propertyManagement') || '' }
 						className={ 'mobileMainMenu-item' }
 					/>
 				</div>
@@ -109,7 +110,7 @@ const MobileMainMenu = () => {
 				<div onClick={ toHideSaleServiceDropMenu }>
 					<CustomMenuItem
 						path={ '/' }
-						text={ lang?.aboutTheCompany || '' }
+						text={ t('aboutTheCompany') || '' }
 						className={ 'mobileMainMenu-item' }
 					/>
 				</div>
@@ -117,7 +118,7 @@ const MobileMainMenu = () => {
 				<div onClick={ toHideSaleServiceDropMenu }>
 					<CustomMenuItem
 						path={ '/' }
-						text={ lang?.aboutPhuket || '' }
+						text={ t('aboutPhuket') || '' }
 						className={ 'mobileMainMenu-item' }
 					/>
 				</div>
@@ -125,7 +126,7 @@ const MobileMainMenu = () => {
 				<div onClick={ toHideSaleServiceDropMenu }>
 					<CustomMenuItem
 						path={ '/' }
-						text={ lang?.news || '' }
+						text={ t('news') || '' }
 						className={ 'mobileMainMenu-item' }
 					/>
 				</div>
@@ -133,15 +134,15 @@ const MobileMainMenu = () => {
 
 			<div className={ 'mb-60 ml-16 d-flex flex-column ai-start' }>
 				<div className={ 'mb-16 d-flex flex-column ai-start' } onClick={ toHideSaleServiceDropMenu }>
-					<p className={ 'text300 colorText m-0' }>{ lang?.email || '' }</p>
+					<p className={ 'text300 colorText m-0' }>{ t('email') || '' }</p>
 					<a className={ 'text700 t-decor-none' } href='mailto: sales@villacarte.com'>sales@villacarte.com</a>
 				</div>
 				<div className={ 'mb-16 d-flex flex-column ai-start' } onClick={ toHideSaleServiceDropMenu }>
-					<p className={ 'text300 colorText m-0' }>{ lang?.montenegro || '' }</p>
+					<p className={ 'text300 colorText m-0' }>{ t('montenegro') || '' }</p>
 					<a className={ 'text700 t-decor-none' } href='tel: +38268815019'>+382 (68) 815-019</a>
 				</div>
 				<div className={ 'mb-20 d-flex flex-column ai-start' } onClick={ toHideSaleServiceDropMenu }>
-					<p className={ 'text300 colorText m-0' }>{ lang?.phuket || '' }</p>
+					<p className={ 'text300 colorText m-0' }>{ t('phuket') || '' }</p>
 					<a className={ 'text700 t-decor-none' } href='tel: +66892900110'>+66 (89) 290-01-10</a>
 				</div>
 				<SimpleButton text={ 'Заказать звонок' } variant={ 'simpleDark' } onClick={ toCallModal }/>

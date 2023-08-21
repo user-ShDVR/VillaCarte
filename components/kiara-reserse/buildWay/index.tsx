@@ -10,42 +10,43 @@ import { OfferPrevArrow } from '@/components/common/Buttons/SliderArrows/OfferPr
 
 const BuildWay: FC = () => {
     const SliderSetting = {
-		dots: false,
-		infinite: true,
-		arrows: true,
-		autoplay: false,
-		speed: 1000,
-		nextArrow: <OfferNextArrow />,
-		prevArrow: <OfferPrevArrow />,
-		centerMode: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-	};
+        dots: false,
+        infinite: true,
+        arrows: true,
+        autoplay: false,
+        speed: 1000,
+        nextArrow: <OfferNextArrow />,
+        prevArrow: <OfferPrevArrow />,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
     return (
         <div className='buildWay'>
-            <div className="container">
-            <Slider {...SliderSetting} className='BeforeBuildWaySlider' >
-                <Image
-                    className='custom-slide'
-                    src={MapBay}
-                    alt='photo'
-                />
-                 <Image
-                    className='custom-slide'
-                    src={MapBay}
-                    alt='photo'
-                />
-            </Slider>
+            <div className='BeforeBuildWay__container' style={{ width: '94vw', margin: '-26.6vw auto 0' }}>
+                <Slider {...SliderSetting} className='BeforeBuildWaySlider' >
+                    <Image
+                        className='custom-slide'
+                        src={MapBay}
+                        alt='photo'
+                    />
+                    <Image
+                        className='custom-slide'
+                        src={MapBay}
+                        alt='photo'
+                    />
+                </Slider>
             </div>
 
             <div className='buildWay__container'>
                 <h1>Ход строительства</h1>
                 <div className='buildWay_text'>
                     <div className="Phase">
-                        <h1>
-                            Фаза 1
-                        </h1>
+
                         <div className="phase-content">
+                            <h1>
+                                Фаза 1
+                            </h1>
                             <div className="EndDate">
                                 <p>Окончание строительства</p>
                                 <p className='bold'>05.2022</p>
@@ -56,10 +57,10 @@ const BuildWay: FC = () => {
                             </div>
                         </div>
                         <hr />
-                        <h1>
-                            Фаза 2
-                        </h1>
                         <div className="phase-content">
+                            <h1>
+                                Фаза 2
+                            </h1>
                             <div className="EndDate">
                                 <p>Окончание строительства</p>
                                 <p className='bold'>07.2024</p>
@@ -70,10 +71,11 @@ const BuildWay: FC = () => {
                             </div>
                         </div>
                         <hr />
-                        <h1>
-                            Фаза 2
-                        </h1>
+
                         <div className="phase-content">
+                            <h1>
+                                Фаза 2
+                            </h1>
                             <div className="EndDate">
                                 <p>Окончание строительства</p>
                                 <p className='bold'>10.2025</p>

@@ -1,0 +1,216 @@
+.verifed {
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 3.472vw;
+        flex-direction: column;
+        align-items: flex-start;
+		padding: 8.431vw 3.333vw; //107px 48px 402px 48px
+		.verifed__Image{
+			width: 93.333vw;
+    		height: 48.611vw;
+			margin: 0 auto;
+		}
+
+        h1 {
+			max-width: 74.58vw;
+            font-family: 'TTTsarsA-Light', sans-serif;
+			color: #fff;
+            font-size: 5vw;
+            font-weight: 300;
+            line-height: 5.833vw;
+            letter-spacing: -0.03em;
+            text-align: left;
+        }
+    }
+	.Interested__container {
+			display: flex;
+			justify-content: center;
+			gap: 2.083vw;
+			flex-direction: column;
+			// align-items: flex-start;
+			padding: 0vw 3.333vw 8.333vw ; //107px 48px 402px 48px
+	
+	
+			h1 {
+				max-width: 74.58vw;
+				font-family: 'TTTsarsA-Light', sans-serif;
+				color: #fff;
+				font-size: 5vw;
+				font-weight: 300;
+				line-height: 5.833vw;
+				letter-spacing: -0.03em;
+				text-align: left;
+			}
+			@-webkit-keyframes fadeTabPanel {
+				0% {
+					opacity: 0;
+				}
+		
+				100% {
+					opacity: 1;
+				}
+			}
+		
+			@keyframes fadeTabPanel {
+				0% {
+					opacity: 0;
+				}
+		
+				100% {
+					opacity: 1;
+				}
+			}
+			.Interested-tabs {
+				width: 100%;
+				box-sizing: border-box;
+				margin-top: 0.764vw;
+			}
+			.Interested-tabList {
+				margin-bottom: 3.472vw;
+				padding: 0;
+				display: flex;
+				justify-content: start;
+		
+				li {
+					color: rgba(255, 255, 255, 0.50);
+					border: none;
+					padding: 0.694vw 1.389vw;
+					cursor: pointer;
+					background: transparent !important;
+					border-radius: 0;
+				}
+		
+				.react-tabs__tab--selected {
+					color: #FFF;
+					border-bottom: 0.069vw solid #FFF;
+				}
+		
+				.react-tabs__tab:focus:after {
+					background: transparent !important;
+				}
+			}
+			.react-tabs__tab-panel--selected {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 8px;
+				-webkit-animation: fadeTabPanel 1s linear;
+				animation: fadeTabPanel 1s linear;
+			}
+		}
+}
+@media (max-width: 500px) {
+	.verifed {
+		&__container {
+			display: flex;
+			justify-content: center;
+			gap: 3.472vw;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 8.431vw 3.333vw; 
+			.verifed__Image{
+				width: 93.333vw;
+				height: 48.611vw;
+				margin: 0 auto;
+			}
+	
+			h1 {
+				max-width: 100%;
+				width: 91.467vw;
+				font-family: 'TTTsarsA-Light', sans-serif;
+				color: #fff;
+				font-size: 8.533vw;
+				font-weight: 300;
+				line-height: 10.133vw;
+				letter-spacing: -0.03em;
+				text-align: left;
+			}
+		}
+		.Interested__container {
+				display: flex;
+				justify-content: center;
+				gap: 2.083vw;
+				flex-direction: column;
+				// align-items: flex-start;
+				padding: 0vw 3.333vw 8.333vw ; //107px 48px 402px 48px
+		
+		
+				h1 {
+					max-width: 100%;
+					width: 91.467vw;
+					font-family: 'TTTsarsA-Light', sans-serif;
+					color: #fff;
+					font-size: 8.533vw;
+					font-weight: 300;
+					line-height: 10.133vw;
+					letter-spacing: -0.03em;
+					text-align: left;
+				}
+				@-webkit-keyframes fadeTabPanel {
+					0% {
+						opacity: 0;
+					}
+			
+					100% {
+						opacity: 1;
+					}
+				}
+			
+				@keyframes fadeTabPanel {
+					0% {
+						opacity: 0;
+					}
+			
+					100% {
+						opacity: 1;
+					}
+				}
+				.Interested-tabs {
+					width: 100%;
+					box-sizing: border-box;
+					margin-top: 0.764vw;
+				}
+				.Interested-tabList {
+					margin-bottom: 3.472vw;
+					padding: 7.467vw 2.933vw 7.467vw 0;
+					overflow: hidden;
+					overflow-x: scroll;
+					position: relative;
+					   width: 91vw;
+					display: grid;
+					grid-template-columns: 75px 145px 318px;
+					justify-content: start;
+					align-items: stretch;
+					&::-webkit-scrollbar {
+						display: none;
+					}
+			
+					li {
+						color: rgba(255, 255, 255, 0.50);
+						border: none;
+						padding: 2.667vw;
+						text-align: center;
+						cursor: pointer;
+						background: transparent !important;
+						border-radius: 0;
+					}
+			
+					.react-tabs__tab--selected {
+						color: #FFF;
+						border-bottom: 0.069vw solid #FFF;
+					}
+			
+					.react-tabs__tab:focus:after {
+						background: transparent !important;
+					}
+				}
+				.react-tabs__tab-panel--selected {
+					display: grid;
+					grid-template-columns:  1fr;
+
+					-webkit-animation: fadeTabPanel 1s linear;
+					animation: fadeTabPanel 1s linear;
+				}
+			}
+	}
+}

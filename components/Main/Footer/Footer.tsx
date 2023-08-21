@@ -15,11 +15,35 @@ import Link from 'next/link';
 import creativeTeam from '@/public/creativeTeam.svg';
 import Socials from '@/components/common/Socials/Socials';
 import RequestCallForm from '@/components/common/Forms/RequestСall/RequestCallForm';
-import Contacts from '@/components/Main/Footer/Contacts';
-import { lang } from '@/pages';
 import feedBackBg from '@/public/feedBackBg.webp';
+import { useTranslations } from 'next-intl';
+import Contacts from './Contacts';
 
-const ContactsBlock = () => {
+interface IProps {
+    sale: string;
+    rent: string;
+    concierge: string;
+    propertyManagement: string;
+    aboutTheCompany: string;
+    aboutPhuket: string;
+    news: string;
+	privacyPolicy: string;
+	VillaCarteAllRights: string;
+	websiteDevelopment: string;
+}
+
+const ContactsBlock: React.FC<IProps> = ({
+	sale,
+	rent,
+	concierge,
+	propertyManagement,
+	aboutTheCompany,
+	aboutPhuket,
+	news,
+	privacyPolicy,
+	VillaCarteAllRights,
+	websiteDevelopment
+}) => {
 	const socialsStock = [
 		{ icon: facebookStock, hoveredIcon: fbHovered, link: '/' },
 		{ icon: youtubeStock, hoveredIcon: youtubeHovered, link: '/' },
@@ -29,20 +53,20 @@ const ContactsBlock = () => {
 	];
 
 	const linkPages = [
-		{ title: lang?.sale || '', link: '/' },
-		{ title: lang?.aboutTheCompany || '', link: '/' },
-		{ title: lang?.rent || '', link: '/' },
-		{ title: lang?.aboutPhuket || '', link: '/' },
-		{ title: lang?.concierge || '', link: '/' },
-		{ title: lang?.news || '', link: '/' },
-		{ title: lang?.propertyManagement || '', link: '/' },
+		{ title: sale, link: '/' },
+		{ title: aboutTheCompany, link: '/' },
+		{ title: rent, link: '/' },
+		{ title: aboutPhuket, link: '/' },
+		{ title: concierge, link: '/' },
+		{ title: news, link: '/' },
+		{ title: propertyManagement, link: '/' },
 	];
 
 	return (
 		<footer>
 			<div className={ 'footer-bg' } style={ { backgroundImage: `url(${ feedBackBg.src })` } }/>
 
-			<div className={ 'container footer' }>
+			<div className={ 'footer' }>
 				<div className={ 'container contactsBlock' }>
 					<div>
 						<div className={ 'logotype' }>
@@ -60,7 +84,7 @@ const ContactsBlock = () => {
 
 						<div className={ 'privacyPolicy-wrapper' }>
 							<Link href={ '/' } className={ 'text300 colorText privacyPolicy' }>
-								{ lang?.privacyPolicy || '' }
+								{ privacyPolicy }
 							</Link>
 						</div>
 					</div>
@@ -76,10 +100,10 @@ const ContactsBlock = () => {
 					<div className={ 'divider' }/>
 
 					<div className={ 'd-xl-flex jc-between' }>
-						<p className={ 'text300-min copyRights' }>{ lang?.VillaCarteAllRights || '' }</p>
+						<p className={ 'text300-min copyRights' }>{ VillaCarteAllRights }</p>
 
 						<p className={ 'text300-min copyRights' }>
-							{ lang?.websiteDevelopment || '' }
+							{ websiteDevelopment }
 							<Link href={ '/' }>
 								<Image src={ creativeTeam } alt={ 'creativeTeam' }/>
 							</Link>

@@ -9,18 +9,25 @@ import { useStore } from 'effector-react';
 import { IMainPage } from '@/types/mainPage';
 import { $mainPageInfo } from '@/store/mainPage';
 import InstagramCard from '@/components/common/Cards/MediaCards/InstagramCard/InstagramCard';
-import { lang } from '@/pages';
-
-const ShareContent = () => {
+interface IProps {
+	sharingExclusiveContentFromTheIsland: string;
+	watchExpertReviews: string;
+	learnAllAboutRealEstateInThailand: string;
+}
+const ShareContent: React.FC<IProps> = ({
+	sharingExclusiveContentFromTheIsland,
+	watchExpertReviews,
+	learnAllAboutRealEstateInThailand,
+}) => {
 	const media = useStore<IMainPage>( $mainPageInfo );
 
 	return (
 		<div className={ 'shareContent' }>
 
-			<div className={ 'container pt-60-80' }>
+			<div style={{padding: '5.6vw 3.333vw'}} className={ 'pt-60-80' }>
 				<div>
 					<h2 className={ 'h1Title ls--216' }>
-						{ lang?.sharingExclusiveContentFromTheIsland || '' }
+						{ sharingExclusiveContentFromTheIsland }
 					</h2>
 
 					<div className={ 'mediaCards' }>
@@ -36,7 +43,7 @@ const ShareContent = () => {
 								variant={ 'youTube' }
 								icon={ youtubeIcon }
 								hoveredIcon={ ytMedia }
-								text={ lang?.watchExpertReviews || '' }
+								text={ watchExpertReviews }
 								link={ 'https://www.youtube.com/@VillaCartePhuket/videos' }
 							/>
 						</div>
@@ -53,7 +60,7 @@ const ShareContent = () => {
 								variant={ 'insta' }
 								icon={ instagramIcon }
 								hoveredIcon={ instaMedia }
-								text={ lang?.learnAllAboutRealEstateInThailand || '' }
+								text={ learnAllAboutRealEstateInThailand }
 								link={ 'https://www.instagram.com/villacarte.vip/?igshid=NTc4MTIwNjQ2YQ%3D%3D' }
 							/>
 						</div>

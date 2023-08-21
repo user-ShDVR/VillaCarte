@@ -1,0 +1,747 @@
+@media (min-width: $media0) and (max-width: 500px) {
+	.PlanerSlider {
+		position: relative;
+
+		.sliderNext {
+			position: absolute;
+			bottom: -30px;
+			right: 40%;
+			z-index: 1;
+		}
+
+		.sliderPrev {
+			position: absolute;
+			bottom: -30px;
+			left: 40%;
+			z-index: 1;
+		}
+
+		.slick-track {
+			//min-height: 700px;
+		}
+
+		.slick-slider {
+			position: relative;
+			display: block;
+			width: 100%;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			z-index: 3;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			bottom: 20px;
+			right: 16px;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+			text-indent: -9999px;
+			background: transparent;
+			border: none;
+		}
+
+		.slick-arrow:after {
+			content: "";
+			position: absolute;
+			bottom: 20px;
+			z-index: 2;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+	}
+
+	.planer {
+		position: relative;
+		z-index: 1;
+
+		&-inner {
+			padding: 4.861vw 3.3333vw 31.25vw;
+
+		}
+
+		&-tabs {
+			margin-top: 28px;
+		}
+
+		.Area-container {
+			display: flex;
+			flex-direction: row;
+			gap: 1.11vw;
+			// padding-bottom: 450px;
+		}
+
+		.Area-info {
+			display: flex;
+			width: 91.467vw;
+			height: 156.533vw;
+			flex-direction: column-reverse;
+			justify-content: flex-end;
+			background: rgba(0, 0, 0, 0.10);
+			backdrop-filter: blur(10px);
+			padding: 4.267vw;
+		}
+
+		.Area-inner-info {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			width: 82.933vw;
+			gap: 8vw;
+			color: #FFF;
+			padding: 2.083vw 0 2.77vw;
+		}
+
+		.Area-text {
+			width: 82.933vw;
+
+			h1 {
+				margin-bottom: 2.083vw;
+				width: 82.933vw;
+				font-family: 'Manrope-Bold';
+				font-size: 5.333vw;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+			}
+
+			p {
+				font-family: 'Manrope-Light';
+				font-size: 3.733vw;
+				width: 100%;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 6.4vw;
+				letter-spacing: 0.037vw;
+			}
+
+			p:not(:nth-child(2)) {
+				display: none;
+				margin-bottom: 0.41vw;
+				font-family: 'Manrope-Light';
+				font-size: 0.97vw;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 1.667vw;
+				/* 171.429% */
+				letter-spacing: 0.01vw;
+			}
+		}
+
+		.Area-price {
+			p {
+				display: none;
+			}
+
+			h2 {
+				width: 35.467vw;
+				margin-bottom: 5.333vw;
+				font-family: 'Manrope-Bold';
+				font-size: 5.333vw;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+			}
+		}
+
+		.Area-tags {
+			display: none;
+			margin-top: 0.972;
+			flex-wrap: wrap;
+			gap: 0.56vw;
+
+			span {
+				font-size: 0.9722vw;
+				color: #FFF;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 1.38vw;
+				/* 142.857% */
+				letter-spacing: -0.14px;
+				border-radius: 3.472vw;
+				border: 0.11vw solid #FFF;
+				background: rgba(255, 255, 255, 0.10);
+				backdrop-filter: blur(0.13vw);
+				padding: 0.83vw 1.11vw;
+			}
+		}
+
+		.Area-slider {
+			width: 82.933vw;
+			height: 88.868vw;
+			background: rgba(255, 255, 255, 0.10);
+			backdrop-filter: blur(10px);
+		}
+
+		.Area-choose {
+			display: none;
+		}
+
+		.planer-inner-container {
+			padding: 0 20px;
+			/* Отступы по бокам */
+			display: flex;
+			justify-content: center;
+			/* Главная картинка по центру */
+			align-items: center;
+
+			p {
+				margin-top: 9px;
+				font-size: 18px;
+				color: #FFF;
+
+				span {
+					color: rgba(255, 255, 255, 0.50);
+				}
+			}
+		}
+
+		.react-tabs__tab-panel--selected {
+			display: grid;
+			gap: 8px;
+			-webkit-animation: fadeTabPanel 1s linear;
+			animation: fadeTabPanel 1s linear;
+		}
+
+		@-webkit-keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		&-tabList {
+			margin-bottom: 3.472vw;
+			padding: 7.467vw 2.933vw 7.467vw 0;
+			overflow: hidden;
+			overflow-x: scroll;
+			position: relative;
+			width: 91vw;
+			display: grid;
+			grid-template-columns: 27.733vw 13.6vw 14.133vw 14.933vw 31.2vw 31.2vw;
+			justify-content: start;
+			align-items: stretch;
+			gap: 2.133vw;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			li {
+				color: rgba(255, 255, 255, 0.40);
+				border: none;
+				cursor: pointer;
+				padding: 3.2vw 5.333vw;
+				border-radius: 13.333vw;
+				text-align: center;
+				background: rgba(255, 255, 255, 0.10);
+				border: 0.533vw solid rgba(255, 255, 255, 0.40);
+				backdrop-filter: blur(2px);
+				background: transparent !important;
+			}
+
+			.react-tabs__tab--selected {
+				color: $colorWhite;
+				border: 2px solid #FFF;
+			}
+
+			.react-tabs__tab:focus:after {
+				background: transparent !important;
+			}
+		}
+	}
+}
+
+@media (min-width: $media768) {
+
+	// PhotosSlider
+	.PlanerSlider {
+
+		.slick-track {
+			min-height: auto;
+		}
+
+		.sliderNext {
+			right: -20px;
+			bottom: 46%;
+			border-radius: 50%;
+			padding: 12px;
+			border: 2px solid $colorWhite;
+			backdrop-filter: blur(2px);
+			transition: .2s all;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.30);
+			}
+
+			img {
+				width: 14px;
+				height: 10px;
+			}
+		}
+
+		.sliderPrev {
+			left: -20px;
+			right: auto;
+			bottom: 46%;
+			border-radius: 50%;
+			padding: 12px;
+			border: 2px solid $colorWhite;
+			backdrop-filter: blur(2px);
+			transition: .2s all;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.30);
+			}
+
+			img {
+				width: 14px;
+				height: 10px;
+			}
+		}
+	}
+	.planer {
+		position: relative;
+		z-index: 1;
+
+		&-inner {
+			padding: 4.861vw 3.3333vw;
+
+			.Area-container {
+				display: flex;
+				flex-direction: row;
+				gap: 1.11vw;
+				padding-bottom: 31.25vw;
+			}
+
+			.Area-info {
+				display: flex;
+				flex-direction: row;
+				background: rgba(0, 0, 0, 0.10);
+				backdrop-filter: blur(10px);
+				padding: 1.39vw 1.39vw 1.39vw 2.083vw;
+			}
+
+			.Area-inner-info {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				width: 23.6vw;
+				color: #FFF;
+				padding: 2.083vw 0 2.77vw;
+			}
+
+			.Area-text {
+				h1 {
+					margin-bottom: 2.083vw;
+					width: 11.52vw;
+					font-family: 'Manrope-Bold';
+					font-size: 1.38vw;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+
+				p {
+					margin-bottom: 0.41vw;
+					font-family: 'Manrope-Light';
+					font-size: 0.97vw;
+					font-style: normal;
+					font-weight: 300;
+					line-height: 1.667vw;
+					/* 171.429% */
+					letter-spacing: 0.01vw;
+				}
+			}
+
+			.Area-price {
+				h2 {
+					margin-bottom: 1.38vw;
+					font-family: 'Manrope-Bold';
+					font-size: 1.38vw;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+			}
+
+			.Area-tags {
+				display: flex;
+				margin-top: 0.972;
+				flex-wrap: wrap;
+				gap: 0.56vw;
+
+				span {
+					font-size: 0.9722vw;
+					color: #FFF;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 1.38vw;
+					/* 142.857% */
+					letter-spacing: -0.14px;
+					border-radius: 3.472vw;
+					border: 0.11vw solid #FFF;
+					background: rgba(255, 255, 255, 0.10);
+					backdrop-filter: blur(0.13vw);
+					padding: 0.83vw 1.11vw;
+				}
+			}
+
+			.Area-slider {
+				width: 36.875vw;
+				height: 39.5139vw;
+				background: rgba(255, 255, 255, 0.10);
+				backdrop-filter: blur(10px);
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: center;
+				gap: 7.361vw;
+				padding: 1.528vw;
+				p{
+					color: #fff;
+					justify-self: start;
+				}
+			}
+
+			.Area-choose {
+				width: 30.35vw;
+				padding: 1.39vw 1.39vw;
+				background: rgba(0, 0, 0, 0.10);
+				backdrop-filter: blur(10px);
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 16.667vw;
+				gap: 1.111vw;
+			}
+			.item_Planer{
+				p{
+					color: #fff;
+				}
+				padding: 1.389vw;
+				width: 13.542vw;
+				height: 16.667vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				background: rgba(255, 255, 255, 0.10);
+			}
+		}
+
+		&-tabs {
+		}
+
+		.planer-inner-container {
+			padding: 0 20px;
+			/* Отступы по бокам */
+			display: flex;
+			justify-content: center;
+			/* Главная картинка по центру */
+			align-items: center;
+
+			p {
+				margin-top: 9px;
+				font-size: 18px;
+				color: #FFF;
+
+				span {
+					color: rgba(255, 255, 255, 0.50);
+				}
+			}
+		}
+
+		.react-tabs__tab-panel--selected {
+			display: grid;
+			gap: 8px;
+			margin-top: 100px;
+			-webkit-animation: fadeTabPanel 1s linear;
+			animation: fadeTabPanel 1s linear;
+		}
+
+		@-webkit-keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		&-tabList {
+			margin-bottom: 20px;
+			padding: 0;
+
+			li {
+				color: rgba(255, 255, 255, 0.40);
+				border: none;
+				cursor: pointer;
+				padding: 0.833vw 1.389vw;
+				border-radius: 3.472vw;
+				text-align: center;
+				background: rgba(255, 255, 255, 0.10);
+				border: 0.014vw solid rgba(255, 255, 255, 0.40);
+				backdrop-filter: blur(2px);
+				background: transparent !important;
+			}
+
+			.react-tabs__tab--selected {
+				border-radius: 3.472vw;
+				color: $colorWhite;
+				border: 2px solid #FFF;
+			}
+
+			.react-tabs__tab:focus:after {
+				background: transparent !important;
+			}
+		}
+	}
+}
+
+@media (min-width: $media1023) {
+
+	// BestProjects
+	.planer {
+
+		&-inner {}
+
+		&-tabList {
+			display: flex;
+			justify-content: end;
+		}
+
+		h2 {
+			max-width: 80%;
+		}
+
+		&-tabs {
+			margin-top: -75px;
+		}
+
+		.react-tabs__tab-panel--selected {
+			margin-top: 40px;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+@media (min-width: $media1440) {
+	.PlanerSlider {
+
+		.sliderNext {
+			right: 112px;
+			cursor: pointer;
+		}
+
+		.sliderPrev {
+			left: 112px;
+			right: auto;
+			cursor: pointer;
+		}
+	}
+
+	// BestProjects
+	.planer {
+		position: relative;
+		z-index: 1;
+
+		&-inner {
+			padding: 4.861vw 3.3333vw;
+
+			.Area-container {
+				display: flex;
+				flex-direction: row;
+				gap: 1.11vw;
+				padding-bottom: 31.25vw;
+			}
+
+			.Area-info {
+				display: flex;
+				flex-direction: row;
+				background: rgba(0, 0, 0, 0.10);
+				backdrop-filter: blur(10px);
+				padding: 1.39vw 1.39vw 1.39vw 2.083vw;
+			}
+
+			.Area-inner-info {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				width: 23.6vw;
+				color: #FFF;
+				padding: 2.083vw 0 2.77vw;
+			}
+
+			.Area-text {
+				h1 {
+					margin-bottom: 2.083vw;
+					width: 11.52vw;
+					font-family: 'Manrope-Bold';
+					font-size: 1.38vw;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+
+				p {
+					margin-bottom: 0.41vw;
+					font-family: 'Manrope-Light';
+					font-size: 0.97vw;
+					font-style: normal;
+					font-weight: 300;
+					line-height: 1.667vw;
+					/* 171.429% */
+					letter-spacing: 0.01vw;
+				}
+			}
+
+			.Area-price {
+				h2 {
+					margin-bottom: 1.38vw;
+					font-family: 'Manrope-Bold';
+					font-size: 1.38vw;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+			}
+
+			.Area-tags {
+				display: flex;
+				margin-top: 0.972;
+				flex-wrap: wrap;
+				gap: 0.56vw;
+
+				span {
+					font-size: 0.9722vw;
+					color: #FFF;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 1.38vw;
+					/* 142.857% */
+					letter-spacing: -0.14px;
+					border-radius: 3.472vw;
+					border: 0.11vw solid #FFF;
+					background: rgba(255, 255, 255, 0.10);
+					backdrop-filter: blur(0.13vw);
+					padding: 0.83vw 1.11vw;
+				}
+			}
+
+			.Area-slider {
+				width: 36.875vw;
+				height: 39.5139vw;
+				background: rgba(255, 255, 255, 0.10);
+				backdrop-filter: blur(10px);
+			}
+
+			.Area-choose {
+				width: 30.35vw;
+				padding: 1.39vw 1.39vw;
+				background: rgba(0, 0, 0, 0.10);
+				backdrop-filter: blur(10px);
+			}
+		}
+
+		&-tabs {
+		}
+
+		.planer-inner-container {
+			padding: 0 20px;
+			/* Отступы по бокам */
+			display: flex;
+			justify-content: center;
+			/* Главная картинка по центру */
+			align-items: center;
+
+			p {
+				margin-top: 9px;
+				font-size: 18px;
+				color: #FFF;
+
+				span {
+					color: rgba(255, 255, 255, 0.50);
+				}
+			}
+		}
+
+		.react-tabs__tab-panel--selected {
+			display: grid;
+			gap: 8px;
+			margin-top: 100px;
+			-webkit-animation: fadeTabPanel 1s linear;
+			animation: fadeTabPanel 1s linear;
+		}
+
+		@-webkit-keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeTabPanel {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		&-tabList {
+			margin-bottom: 20px;
+			padding: 0;
+
+			li {
+				color: rgba(255, 255, 255, .5);
+				border: none;
+				cursor: pointer;
+				padding: 10px 20px;
+				background: transparent !important;
+				border-radius: 0;
+			}
+
+			.react-tabs__tab--selected {
+				color: $colorWhite;
+				border-bottom: 1px solid $colorWhite;
+			}
+
+			.react-tabs__tab:focus:after {
+				background: transparent !important;
+			}
+		}
+	}
+}
