@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import photo from '@/public/kiara-reserve/Rectangle.png';
+import photo from '@/public/kiara-reserve/Rectangle.webp';
 
 const VideoKiera: React.FC = () => {
     return (

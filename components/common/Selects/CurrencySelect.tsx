@@ -10,7 +10,6 @@ interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTML
 }
 
 const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
-	const currenciesLS = localStorage.getItem( 'currency' );
 	const currencyStore = useStore( $currencies );
 
 	const currenciesList: ICurrencies[] = [
@@ -30,7 +29,6 @@ const CurrencySelect = ( { className, scrolled, ...newProps }: IProps ) => {
 		localStorage.setItem( 'currency', selectedOption.value );
 	};
 
-	let objFromStringLocalStorage = { value: currenciesLS, label: currenciesLS };
 
 	return (
 		<div className={ 'header-select-wrapper' }>

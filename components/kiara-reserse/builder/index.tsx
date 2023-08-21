@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import logo from '../../../public/kiara-reserve/minorlogo.png';
-import BuilderBg from '../../../public/kiara-reserve/palmBgBuilder.png';
+import logo from '../../../public/kiara-reserve/minorlogo.webp';
+import BuilderBg from '../../../public/kiara-reserve/palmBgBuilder.webp';
 
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import GoodsCard from '@/components/common/Cards/GoodsCard/GoodsCard';

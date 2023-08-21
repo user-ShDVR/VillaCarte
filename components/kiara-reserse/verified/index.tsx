@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import verifed from '@/public/kiara-reserve/verifed.png';
-import Map from '@/public/kiara-reserve/Group 1000004524.png';
+import verifed from '@/public/kiara-reserve/verifed.webp';
+import Map from '@/public/kiara-reserve/Group 1000004524.webp';
 
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';

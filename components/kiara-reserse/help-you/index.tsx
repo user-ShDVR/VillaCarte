@@ -1,6 +1,6 @@
 import React from 'react';
-import feedBackBg from '@/public/kiara-reserve/formBg.png';
-import flowers from '@/public/kiara-reserve/flowers.png';
+import feedBackBg from '@/public/kiara-reserve/formBg.webp';
+import flowers from '@/public/kiara-reserve/flowers.webp';
 
 import { Form } from 'antd';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';

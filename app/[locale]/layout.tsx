@@ -30,7 +30,6 @@ export default async function RootLayout({
     } catch (error) {
         notFound();
     }
-    // const t = useTranslations('Index');
     return (
         <html lang={locale}>
             <QueryClientProviderWrapper>

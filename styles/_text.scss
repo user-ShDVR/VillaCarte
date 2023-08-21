@@ -77,52 +77,52 @@
 
 @media (min-width: $media1440) {
 	.h1Title {
-		font-size: 72px;
+		font-size: 5vw;
 		font-family: $fontTTTsarsA300;
 		color: $colorAccent;
-		line-height: 84px;
+		line-height: 5.833vw;
 	}
 
 	.h2Subtitle {
-		font-size: 48px;
+		font-size: 3.333vw;
 		font-family: $fontTTTsarsA300;
 		color: $colorAccent;
-		line-height: 62px;
+		line-height: 4.306vw;
 	}
 
 	.h3TitleText {
-		font-size: 26px;
+		font-size: 1.806vw;
 		font-family: $fontManrope600;
 		color: $colorAccent;
-		line-height: 36px;
+		line-height: 2.5vw;
 	}
 
 	.text500 {
-		font-size: 18px;
+		font-size: 1.25vw;
 		font-family: $fontManrope500;
 		color: $colorAccent;
-		line-height: 30px;
+		line-height: 2.083vw;
 	}
 
 	.text700 {
-		font-size: 14px;
+		font-size: 0.972vw;
 		font-family: $fontManrope700;
 		color: $colorAccent;
-		line-height: 24px;
+		line-height: 1.667vw;
 	}
 
 	.text300 {
-		font-size: 14px;
+		font-size: 0.972vw;
 		font-family: $fontManrope300;
 		color: $colorAccent;
-		line-height: 24px;
+		line-height: 1.667vw;
 	}
 
 	.text300-min {
-		font-size: 12px;
+		font-size: 0.833vw;
 		font-family: $fontManrope300;
 		color: $colorAccent;
-		line-height: 20px;
+		line-height: 1.389vw;
 	}
 }
 

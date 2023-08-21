@@ -1,5 +1,5 @@
 import React from 'react';
-import groupPhoto from '@/public/groupPhoto.png';
+import groupPhoto from '@/public/groupPhoto.webp';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 interface IProps {

@@ -1,5 +1,5 @@
 import React from 'react';
-import leavesTransparent from '@/public/leavesTransparent.png';
+import leavesTransparent from '@/public/leavesTransparent.webp';
 import leavesLeft from '@/public/leavesLeft.webp';
 import leavesRight from '@/public/leavesRight.webp';
 import Image from 'next/image';

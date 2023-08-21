@@ -12,9 +12,17 @@ import icon8 from '../../../public/kiara-reserve/8.svg';
 import icon9 from '../../../public/kiara-reserve/9.svg';
 import icon10 from '../../../public/kiara-reserve/10.svg';
 import line from '../../../public/kiara-reserve/line.svg';
-import palms from '../../../public/kiara-reserve/palms.png';
-
-const ExclusiveCollection: FC = () => {
+import palms from '../../../public/kiara-reserve/palms.webp';
+interface IProps{
+    exclusiveCollection: string;
+    residence: string;
+    ComplexWhere: string;
+}
+const ExclusiveCollection: FC<IProps> = ({
+    exclusiveCollection,
+    residence,
+    ComplexWhere,
+}) => {
     return (
         <>
             <div className='exclusive-collection'>
@@ -28,24 +36,14 @@ const ExclusiveCollection: FC = () => {
                     />
                     <div className='text'>
                         <h2>
-                            Эксклюзивная коллекция Minor Hotels для тех, кто
-                            берёт от жизни всё
+                            {exclusiveCollection}
                         </h2>
                         <div className='paragraphs'>
                             <p>
-                                42 резиденции с продуманным до мелочей
-                                интерьером и современными технологиями. Всего в
-                                коллекции 17 вилл и 25 кондоминиумов площадью от
-                                251 до 829 м², в которых есть всё для комфортной
-                                жизни и отдыха.
+                                {residence}
                             </p>
                             <p>
-                                Комплекс находится в заливе Layan на Пхукете.
-                                Управляющая компания — знаменитая сеть отелей
-                                Minor Hotels, которая владеет 530+ резиденциями
-                                на шести континентах мира. Среди них —
-                                премиальный отель Anantara с виллами в
-                                легендарном тайском дизайне.
+                                {ComplexWhere}
                             </p>
                         </div>
                     </div>

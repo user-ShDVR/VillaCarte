@@ -2,8 +2,18 @@ import PhoneInputComp from '@/components/common/Forms/PhoneInputComp';
 import TextAreaLikeInput from '@/components/common/Forms/TextAreaLikeInput';
 import { Form } from 'antd';
 import { FC } from 'react';
-
-const RequestCall: FC = () => {
+interface IProps {
+    phoneNumber: string;
+    yourName: string;
+    byClickingTheRequestACall: string;
+    requestACall: string;
+}
+const RequestCall: FC<IProps> = ({
+    phoneNumber,
+    yourName,
+    byClickingTheRequestACall,
+    requestACall
+}) => {
     return (
         <>
             <div className='request-call'>
@@ -19,13 +29,13 @@ const RequestCall: FC = () => {
                         name="name"
                         className={'feedBackInputWrapper'}
                         rules={[
-                            { type: 'string', message: 'Ваше имя' },
-                            { required: true, message: 'Ваше имя' }
+                            { type: 'string', message: yourName },
+                            { required: true, message: yourName }
                         ]}
                     >
                         <TextAreaLikeInput
                             className={'feedBackInput text300'}
-                            placeholder={'Ваше имя'}
+                            placeholder={yourName}
                         />
                     </Form.Item>
 
@@ -34,20 +44,19 @@ const RequestCall: FC = () => {
                         style={{color: 'white'}}
                         className={'feedBackInputWrapper'}
                         rules={[
-                            { type: 'string', message: 'Номер телефона' },
-                            { required: true, message: 'Номер телефона' }
+                            { type: 'string', message: phoneNumber },
+                            { required: true, message: phoneNumber }
                         ]}
                     >
                         <PhoneInputComp
                             className={'feedBackInput text300'}
-                            placeholder={'Номер телефона'}
+                            placeholder={phoneNumber}
                         />
                     </Form.Item>
                     <p className='request-p'>
-                    Нажимая кнопку “Заказать звонок” я даю согласие на обработку
-                    моих персональных данных
+                    {byClickingTheRequestACall}
                 </p>
-                    <button>Заказать звонок</button>
+                    <button>{requestACall}</button>
                 </Form>
             </div>
         </>

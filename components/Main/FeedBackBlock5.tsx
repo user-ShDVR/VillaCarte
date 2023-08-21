@@ -49,7 +49,7 @@ contactUsThroughOurMessengers
 				</div>
 			}
 
-			<div className={ 'container pt-60 pos feedBackBlock-content w-620px z-7' }>
+			<div className={ 'pt-60 pos feedBackBlock-content w-620px z-7' }>
 				<div>
 					<div>
 						<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{ orderAPersonalSelection }</h2>

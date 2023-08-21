@@ -1,8 +1,22 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import Map from '../../../public/kiara-reserve/map.png';
-
-const Uniqueness: FC = () => {
+import Map from '../../../public/kiara-reserve/map.webp';
+interface IProps {
+    Complex: string;
+    Uniq: string;
+    SeeOnTheSea: string;
+    ControlCompany: string;
+    BigBuilder: string;
+    beachClub: string;
+}
+const Uniqueness: FC<IProps> = ({
+    Uniq,
+    Complex,
+    SeeOnTheSea,
+    ControlCompany,
+    BigBuilder,
+    beachClub,
+}) => {
     return (
         <>
             <div className='uniqueness'>
@@ -16,12 +30,12 @@ const Uniqueness: FC = () => {
                         />
                     </div>
                     <div className='text'>
-                        <h1>Уникальность<br/>комплекса</h1>
+                        <h1>{Uniq}<br />{Complex}</h1>
                         <ul>
-                            <li>&#10022;&nbsp; &nbsp; &nbsp;  Вид на море и горы</li>
-                            <li>&#10022;&nbsp; &nbsp; &nbsp;  Управляющая компания международного уровня</li>
-                            <li>&#10022;&nbsp; &nbsp; &nbsp;  Крупный застройщик</li>
-                            <li>&#10022;&nbsp; &nbsp; &nbsp;  Пляжный клуб и теннисный корт на территории комплекса</li>
+                            <li>&#10022;&nbsp; &nbsp; &nbsp; {SeeOnTheSea}</li>
+                            <li>&#10022;&nbsp; &nbsp; &nbsp;  {ControlCompany}</li>
+                            <li>&#10022;&nbsp; &nbsp; &nbsp;  {BigBuilder}</li>
+                            <li>&#10022;&nbsp; &nbsp; &nbsp; {beachClub} </li>
                         </ul>
                     </div>
                 </div>

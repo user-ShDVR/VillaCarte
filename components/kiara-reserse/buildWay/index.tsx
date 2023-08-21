@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import Phase1 from '@/public/kiara-reserve/Phase1.png';
-import Phase2 from '@/public/kiara-reserve/Phase2.png';
-import MapBay from '@/public/kiara-reserve/MapBay.png';
+import Phase1 from '@/public/kiara-reserve/Phase1.webp';
+import Phase2 from '@/public/kiara-reserve/Phase2.webp';
+import MapBay from '@/public/kiara-reserve/MapBay.webp';
 import Slider from 'react-slick';
 import { offersSliderSetting } from '@/components/common/SliderSettings/offersSliderSetting';
 import { OfferNextArrow } from '@/components/common/Buttons/SliderArrows/OfferNextArrow';

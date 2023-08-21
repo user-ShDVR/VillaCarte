@@ -2,16 +2,26 @@ import React from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import Image from 'next/image';
 import VideoKiera from '../video-kiera';
-import photo from '@/public/kiara-reserve/minorlogo.png';
-import InvestrBg from '@/public/kiara-reserve/investAttBg.png';
-import PalmOne from '@/public/kiara-reserve/TenYearsT.png';
-import PalmTwo from '@/public/kiara-reserve/TenYearsB.png';
+import photo from '@/public/kiara-reserve/minorlogo.webp';
+import InvestrBg from '@/public/kiara-reserve/investAttBg.webp';
+import PalmOne from '@/public/kiara-reserve/TenYearsT.webp';
+import PalmTwo from '@/public/kiara-reserve/TenYearsB.webp';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import Slider from 'react-slick';
 
 
-
-const InvestmentAttractivness = () => {
+interface IProps {
+	Program:string;
+	Rassrochka:string;
+	Okupaemost:string;
+	ControledCompany:string;
+}
+const InvestmentAttractivness: React.FC<IProps> = ({
+	Program,
+	Rassrochka,
+	Okupaemost,
+	ControledCompany,
+}) => {
 	const size = useWindowSize();
 	// @ts-ignore
 	const isMobile = size.width <= 500;
@@ -37,10 +47,10 @@ const InvestmentAttractivness = () => {
 
 				<Tabs className={'Invest-tabs'} selectedTabPanelClassName={''}>
 					<TabList className={'Invest-tabList text500 colorBlack'}>
-						<Tab>Программа дохода</Tab>
-						<Tab>Рассрочка</Tab>
-						<Tab>Окупаемость</Tab>
-						<Tab>Управляющая компания</Tab>
+						<Tab>{Program}</Tab>
+						<Tab>{Rassrochka}</Tab>
+						<Tab>{Okupaemost}</Tab>
+						<Tab>{ControledCompany}</Tab>
 					</TabList>
 					{isMobile ?
 						<TabPanel className={' container Invest-tabs-container-mobile'}>
