@@ -148,7 +148,7 @@ const MobileMainMenu = () => {
 				<SimpleButton text={ 'Заказать звонок' } variant={ 'simpleDark' } onClick={ toCallModal }/>
 			</div>
 
-			{ requestCallModal && <ModalCallRequest/> }
+			{ requestCallModal && <ModalCallRequest orderAPersonalSelection={''} orderAPersonalSelection2={''} ourManagerWillCallYou={''} contactUsThroughOurMessengers={''}/> }
 		</section>
 	);
 };
