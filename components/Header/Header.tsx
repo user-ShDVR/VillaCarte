@@ -54,7 +54,7 @@ contactUsThroughOurMessengers
     const [scrolled, setScrolled] = useState<boolean>(false);
     const mobileMenu = useStore($mobileMenuVisible);
     const requestCallModal = useStoreMap($modalVisible, (s) => s.callRequest);
-    const ref = useRef();
+    const ref = useRef<HTMLDivElement>(null);
 
     const toCallModal = () => {
         showModal(EModal_VisibleStore.CallRequest);
