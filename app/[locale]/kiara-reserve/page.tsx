@@ -1,6 +1,5 @@
 "use client"
 import React, { FC } from 'react';
-import Header from '@/components/Header/Header';
 import Masthead from '@/components/kiara-reserse/masthead';
 import Uniqueness from '@/components/kiara-reserse/uniqueness';
 import ExclusiveCollection from '@/components/kiara-reserse/exclusive-collection';

@@ -414,7 +414,7 @@
 						p {
 							width: 200px;
 							padding-top: 20px;
-							height: 120px;
+							// height: 120px;
 						}
 
 						.lastImage {
@@ -965,6 +965,7 @@
 	}
 }
 
+
 @media (min-width: $media1200) {
 	.mainText {
 
@@ -1210,6 +1211,8 @@
 		scale: 1.26;
 	}
 
+
+
 	// BestProjects
 	.bestProjects {
 		margin-top: -310px;
@@ -1391,8 +1394,8 @@
 		padding-bottom: 80px;
 
 		h2 {
-			margin-bottom: 40px;
-			max-width: 860px;
+			margin-bottom: 2.778vw; //40px
+			max-width: 60.694vw;
 		}
 	}
 
@@ -1422,6 +1425,14 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+@media (min-width: 1441px) {
+	.allServices {
+		.leavesVideo {
+			top: 0;
 		}
 	}
 }
