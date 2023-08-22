@@ -2,25 +2,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const VideoBlock = () => {
-	const videos = [
-        '/taiVideo.mp4',
-        '/taiVideo2.mp4',
-    ];
+    const videos = ['/taiVideo.mp4', '/taiVideo2.mp4'];
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-    const [videoKey, setVideoKey] = useState(Date.now());
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const [progress, setProgress] = useState(0);
 
     const handleNextVideo = () => {
         setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
-        setVideoKey(Date.now());
     };
 
     const handlePreviousVideo = () => {
         setCurrentVideoIndex(
             (prevIndex) => (prevIndex - 1 + videos.length) % videos.length
         );
-        setVideoKey(Date.now());
     };
 
     const handleTimeUpdate = () => {
@@ -40,6 +34,9 @@ const VideoBlock = () => {
 
         if (videoElement) {
             videoElement.addEventListener('timeupdate', handleTimeUpdate);
+            videoElement.src = videos[currentVideoIndex];
+            videoElement.load(); 
+            videoElement.play(); 
         }
 
         return () => {
@@ -50,19 +47,17 @@ const VideoBlock = () => {
                 );
             }
         };
-    }, [videoRef, currentVideoIndex]);
+    }, [currentVideoIndex]);
 
     useEffect(() => {
         setProgress(0);
     }, [currentVideoIndex]);
-	return (
-		<div className={ 'pos z-5 videoBlock' }>
-
-			<div className={ 'pos z-5' }>
-			<div className={'videoContainer'}>
+    return (
+        <div className={'pos z-5 videoBlock'}>
+            <div className={'pos z-5'}>
+                <div className={'videoContainer'}>
                     <video
                         ref={videoRef}
-                        key={videoKey}
                         autoPlay
                         loop
                         muted
@@ -72,17 +67,23 @@ const VideoBlock = () => {
                             type='video/mp4'
                         />
                     </video>
-                    <div className={'videoItems'} style={{ '--progress': progress }as any}>
-					<div className="progress-bar html">
-    				<progress id="html" max="100"></progress>
-  					</div>
+                    <div
+                        className={'videoItems'}
+                        style={{ '--progress': progress } as any}>
+                        <div className='progress-bar html'>
+                            <progress
+                                id='html'
+                                max='100'></progress>
+                        </div>
 
                         <div className={'videoControls'}>
                             <button
                                 onClick={handlePreviousVideo}
                                 id='arrow-left'
                                 className={
-                                    currentVideoIndex === 0 ? 'disabled' : 'videoBtn'
+                                    currentVideoIndex === 0
+                                        ? 'disabled'
+                                        : 'videoBtn'
                                 }
                                 disabled={currentVideoIndex === 0}>
                                 <Image
@@ -113,9 +114,9 @@ const VideoBlock = () => {
                         </div>
                     </div>
                 </div>
-			</div>
-		</div>
-	);
+            </div>
+        </div>
+    );
 };
 
 export default VideoBlock;
