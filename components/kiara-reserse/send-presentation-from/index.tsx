@@ -1,6 +1,6 @@
 import React from 'react';
-import feedBackBg from '@/public/kiara-reserve/Image.webp';
-import cardImg from '@/public/kiara-reserve/Group1000004473.webp';
+import feedBackBg from '@/public/kiara-reserve/Image.png';
+import cardImg from '@/public/kiara-reserve/Group1000004473.png';
 
 import { Form } from 'antd';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
@@ -11,15 +11,24 @@ import TextAreaLikeInput from '@/components/common/Forms/TextAreaLikeInput';
 import { postFeedback } from '@/store/feedback';
 import { IFeedback } from '@/types/feedback';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 
 interface IProps {
 	sourcePage: string;
 	sourceForm: string;
+	downloadText: string;
+	downloadButton: string;
+	yourName: string;
+	phoneNumber: string;
 }
 
-const FeedBackForm = ({ sourcePage, sourceForm }: IProps) => {
-	const t = useTranslations('Index');
+const FeedBackForm = ({ 
+	sourcePage, 
+	sourceForm,
+	downloadText,
+	downloadButton,
+	yourName,
+	phoneNumber,
+}: IProps) => {
 	const [form] = Form.useForm();
 
 	const onFinish = async (values: IFeedback) => {
@@ -38,13 +47,13 @@ const FeedBackForm = ({ sourcePage, sourceForm }: IProps) => {
 				name="name"
 				className={'feedBackInputWrapper'}
 				rules={[
-					{ type: 'string', message: t('yourName') },
-					{ required: true, message: t('yourName') }
+					{ type: 'string', message: yourName },
+					{ required: true, message: yourName }
 				]}
 			>
 				<TextAreaLikeInput
 					className={'feedBackInput text300'}
-					placeholder={t('yourName')}
+					placeholder={yourName}
 				/>
 			</Form.Item>
 
@@ -52,22 +61,22 @@ const FeedBackForm = ({ sourcePage, sourceForm }: IProps) => {
 				name="phone"
 				className={'feedBackInputWrapper'}
 				rules={[
-					{ type: 'string', message: t('phoneNumber') },
-					{ required: true, message:t('phoneNumber') }
+					{ type: 'string', message: phoneNumber},
+					{ required: true, message: phoneNumber }
 				]}
 			>
 				<PhoneInputComp
 					className={'feedBackInput text300'}
-					placeholder={t('phoneNumber')}
+					placeholder={phoneNumber}
 				/>
 			</Form.Item>
 
 			<p className={'text300 mt-27 ls-012 fz-12'}>
-				Нажимая на кнопку «Скачать», я даю согласие на обработку персональных данных
+				{downloadText}
 			</p>
 
 			<SimpleButton
-				text='Скачать презентацию'
+				text={downloadButton}
 				variant={'simple'}
 			/>
 
@@ -75,8 +84,22 @@ const FeedBackForm = ({ sourcePage, sourceForm }: IProps) => {
 	);
 };
 
-
-const SendPresentationFrom = () => {
+interface IPropsPres {
+	startEarning:string;
+	fillForm: string;
+	yourName: string;
+	phoneNumber: string;
+	downloadText: string;
+	downloadButton: string;
+}
+const SendPresentationFrom: React.FC<IPropsPres> = ({
+	startEarning,
+	fillForm,
+	phoneNumber,
+	yourName,
+	downloadText,
+	downloadButton,
+}) => {
 
 
 	return (
@@ -87,15 +110,18 @@ const SendPresentationFrom = () => {
 			<div className={'pos presentationBlock-content w-620px z-7'}>
 				<div>
 					<div>
-						<h2 className={'h2Subtitle twoStringTitle m-0'}>Начните зарабатывать
-							с Kiara Reserve</h2>
+						<h2 className={'h2Subtitle twoStringTitle m-0'}>{startEarning}</h2>
 						<h6 className={'text300 colorText pt-8 mb-30'}>
-							Заполните форму — пришлём презентацию, которая поможет
-							вам выбрать виллу или апартаменты в этом комплексе
+							{fillForm}
 						</h6>
 					</div>
 
-					<FeedBackForm sourcePage={''} sourceForm={'kiaraPage_Presentation'} />
+					<FeedBackForm
+					phoneNumber={phoneNumber}
+					yourName={yourName}
+					downloadText={downloadText}
+					downloadButton={downloadButton}
+					 sourcePage={''} sourceForm={'kiaraPage_Presentation'} />
 				</div>
 
 					<Image

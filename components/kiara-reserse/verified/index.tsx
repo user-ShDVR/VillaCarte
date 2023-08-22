@@ -1,13 +1,17 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import verifed from '@/public/kiara-reserve/verifed.webp';
-import Map from '@/public/kiara-reserve/Group 1000004524.webp';
+import verifed from '@/public/kiara-reserve/verifed.png';
+import Map from '@/public/kiara-reserve/Group 1000004524.png';
 
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import GoodsCard from '@/components/common/Cards/GoodsCard/GoodsCard';
 
-const VideoKiera: React.FC = () => {
+interface IPropsVideo {
+    seeVideoReview: string;
+}
+
+const VideoKiera: React.FC<IPropsVideo> = ({seeVideoReview} ) => {
     return (
         <div className='video-kiera' style={{marginTop: '-24.2vw', position: 'relative'}}>
             <div className='video-kiera__container'>
@@ -18,7 +22,7 @@ const VideoKiera: React.FC = () => {
                 />
                 <div className={' d-flex jc-center'} style={{ position: 'absolute'}}>
 					<HoveredButton
-						text={'Посмотрите видеообзор районов Пхукета'}
+						text={seeVideoReview}
 						to={'/'}
 						variant={'arrowRevert'}
 						className={'manrope600-14 z-7'}
@@ -29,7 +33,27 @@ const VideoKiera: React.FC = () => {
     );
 };
 
-const Verifed: FC = () => {
+interface IProps {
+    verifed: string;
+    interested: string;
+    nearby: string;
+    similarPrice: string;
+    sameProfitability: string;
+    showTheRest: string;
+    offers: string;
+    seeVideoReview: string;
+}
+
+const Verifed: FC<IProps> = ({
+    verifed,
+    interested,
+    nearby,
+    similarPrice,
+    sameProfitability,
+    showTheRest,
+    offers,
+    seeVideoReview
+}) => {
 
     const data = { apartments:
         [{'image':'store/th/sale/5554/uRhJoaPS-sq','logoImage':'store/th/sale/5554/3yKPkNBg','type':{'en':'Apartments','ru':'Апартаменты'},'locationName':{'en':'Bang Tao','ru':'Банг Тао'},'price':{'usd':100000,'thb':3507000,'rub':10000000},'url':'sale/thailand/kiara'},
@@ -39,12 +63,13 @@ const Verifed: FC = () => {
 
     return (
         <div className='bgGradient verifed'>
-           <VideoKiera/>
+           <VideoKiera
+            seeVideoReview={seeVideoReview}
+           />
 
             <div className='verifed__container'>
                 <h1>
-                    Лично проверили и выбрали для вас лучшие заведения
-                    и места рядом с комплексом
+                    {verifed}
                 </h1>
                 <Image
                     src={Map}
@@ -54,13 +79,13 @@ const Verifed: FC = () => {
             </div>
             <div className='Interested__container'>
                 <h1>
-                    Комплексы, которые могут вас заинтересовать
+                    {interested}
                 </h1>
                 <Tabs className={'Interested-tabs'} selectedTabPanelClassName={''}>
 					<TabList className={'Interested-tabList text500 colorBlack'}>
-						<Tab>Рядом</Tab>
-						<Tab>По схожей цене</Tab>
-						<Tab>С такими же программами доходности</Tab>
+						<Tab>{nearby}</Tab>
+						<Tab>{similarPrice}</Tab>
+						<Tab>{sameProfitability}</Tab>
 					</TabList>
 
 					<TabPanel className={'Interested-tabs-container'}>
@@ -83,7 +108,7 @@ const Verifed: FC = () => {
                     </Tabs>
                     <div className={' d-flex jc-center'}>
 					<HoveredButton
-						text={'Показать еще 115 предложений'}
+						text={`${showTheRest} 115 ${offers}`}
 						to={'/'}
 						variant={'arrowRevert'}
 						className={'manrope600-14 z-7'}

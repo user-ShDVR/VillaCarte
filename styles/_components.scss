@@ -951,7 +951,7 @@
 		& > div {
 
 			& > div > div {
-				color: $colorWhite;
+				color: var(--headerColor)
 			}
 		}
 
@@ -960,7 +960,7 @@
 			.css-1n6sfyn-MenuList {
 
 				div {
-					color: $colorWhite;
+					color: var(--headerColor);
 				}
 			}
 		}

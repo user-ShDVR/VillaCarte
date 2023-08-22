@@ -1,14 +1,32 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import Phase1 from '@/public/kiara-reserve/Phase1.webp';
-import Phase2 from '@/public/kiara-reserve/Phase2.webp';
-import MapBay from '@/public/kiara-reserve/MapBay.webp';
+import Phase1 from '@/public/kiara-reserve/Phase1.png';
+import Phase2 from '@/public/kiara-reserve/Phase2.png';
+import MapBay from '@/public/kiara-reserve/MapBay.png';
 import Slider from 'react-slick';
 import { offersSliderSetting } from '@/components/common/SliderSettings/offersSliderSetting';
 import { OfferNextArrow } from '@/components/common/Buttons/SliderArrows/OfferNextArrow';
 import { OfferPrevArrow } from '@/components/common/Buttons/SliderArrows/OfferPrevArrow';
-
-const BuildWay: FC = () => {
+interface IProps {
+    constructionProgress: string;
+    phase1: string;
+    objectDelivery: string;
+    foundationConstruction: string;
+    phase2: string;
+    completionOfConstruction: string;
+    constructionStage: string;
+    preparationForConstruction: string;
+}
+const BuildWay: FC<IProps> = ({
+    constructionProgress,
+    phase1,
+    objectDelivery,
+    foundationConstruction,
+    phase2,
+    completionOfConstruction,
+    constructionStage,
+    preparationForConstruction,
+}) => {
     const SliderSetting = {
         dots: false,
         infinite: true,
@@ -39,50 +57,50 @@ const BuildWay: FC = () => {
             </div>
 
             <div className='buildWay__container'>
-                <h1>Ход строительства</h1>
+                <h1>{constructionProgress}</h1>
                 <div className='buildWay_text'>
                     <div className="Phase">
 
                         <div className="phase-content">
                             <h1>
-                                Фаза 1
+                                {phase1}
                             </h1>
                             <div className="EndDate">
-                                <p>Окончание строительства</p>
+                            <p>{completionOfConstruction}</p>
                                 <p className='bold'>05.2022</p>
                             </div>
                             <div className="Stage">
-                                <p>Стадия строительства</p>
-                                <p className='bold'>Сдача объекта</p>
+                                <p>{constructionStage}</p>
+                                <p className='bold'>{objectDelivery}</p>
                             </div>
                         </div>
                         <hr />
                         <div className="phase-content">
                             <h1>
-                                Фаза 2
+                                {phase2}
                             </h1>
                             <div className="EndDate">
-                                <p>Окончание строительства</p>
+                                <p>{completionOfConstruction}</p>
                                 <p className='bold'>07.2024</p>
                             </div>
                             <div className="Stage">
-                                <p>Стадия строительства</p>
-                                <p className='bold'>Возведение фундамента</p>
+                                <p>{constructionStage}</p>
+                                <p className='bold'>{foundationConstruction}</p>
                             </div>
                         </div>
                         <hr />
 
                         <div className="phase-content">
                             <h1>
-                                Фаза 2
+                                {phase2}
                             </h1>
                             <div className="EndDate">
-                                <p>Окончание строительства</p>
+                            <p>{completionOfConstruction}</p>
                                 <p className='bold'>10.2025</p>
                             </div>
                             <div className="Stage">
-                                <p>Стадия строительства</p>
-                                <p className='bold'>Подготовка к строительству</p>
+                                <p>{constructionStage}</p>
+                                <p className='bold'>{preparationForConstruction}</p>
                             </div>
                         </div>
                         <hr />

@@ -33,7 +33,7 @@ const Masthead: FC<IProps> = ({
                             <h3>{KRprice}</h3>
                         </span>
                         <p>
-                            {Place}<br className='masthead__mobileBreak' />{EndDateBuild}
+                            {Place}&nbsp;|&nbsp;<br className='masthead__mobileBreak' />{EndDateBuild}
                         </p>
                         <button className='masthead__mobileCall'>
                             {requestACall}

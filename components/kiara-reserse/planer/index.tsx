@@ -10,8 +10,34 @@ import { OfferNextArrow } from '@/components/common/Buttons/SliderArrows/OfferNe
 import { OfferPrevArrow } from '@/components/common/Buttons/SliderArrows/OfferPrevArrow';
 import { SamplePrevArrow } from '@/components/common/Buttons/SliderArrows/SamplePrevArrow';
 
-
-const Planer = () => {
+interface IProps {
+	studio: string;
+	one: string;
+	two: string;
+	threePlus: string;
+	penthouse: string;
+	duplex: string;
+	areaTextHeader: string;
+	square: string;
+	bedrooms: string;
+	bathroom: string;
+	view: string;
+	price: string;
+}
+const Planer: React.FC<IProps> = ({
+	studio,
+	one,
+	two,
+	threePlus,
+	penthouse,
+	duplex,
+	areaTextHeader,
+	square,
+	bedrooms,
+	bathroom,
+	view,
+	price
+}) => {
 
 	const SliderSetting = {
 		dots: false,
@@ -35,12 +61,12 @@ const Planer = () => {
 
 				<Tabs className={'planer-tabs'} selectedTabPanelClassName={''}>
 					<TabList className={'planer-tabList text500 colorWhite'}>
-						<Tab>Студия</Tab>
-						<Tab>1</Tab>
-						<Tab>2</Tab>
-						<Tab>3+</Tab>
-						<Tab>Пентхаус</Tab>
-						<Tab>Дуплекс</Tab>
+						<Tab>{studio}</Tab>
+						<Tab>{one}</Tab>
+						<Tab>{two}</Tab>
+						<Tab>{threePlus}</Tab>
+						<Tab>{penthouse}</Tab>
+						<Tab>{duplex}</Tab>
 					</TabList>
 
 					<TabPanel className={''}>
@@ -49,22 +75,21 @@ const Planer = () => {
 								<div className="Area-inner-info">
 									<div className="Area-text">
 										<h1>
-											Kiara Reserve
-											Апартаменты А2
+											{areaTextHeader}
 										</h1>
 										<p>
-											Общая площадь: от 382 м2
+											{square}
 										</p>
 										<p>
-											Спальни: 3
+											{bedrooms}
 										</p>
 										<p>
-											Санузел: 3
+											{bathroom}
 										</p>
 										<p>
-											Вид: на горы, на сад, на город
+											{view}
 										</p>
-										<div className="Area-tags">
+										<div className="Area-tags"> 									{/* добавляй скок хочешь только в спан не забудь обернуть <3 */}
 											<span>
 												Частный бассейн
 											</span>
@@ -83,7 +108,7 @@ const Planer = () => {
 										</div>
 									</div>
 									<div className="Area-price">
-										<p>Цена</p>
+										<p>{price}</p>
 										<h2>от $1 540 000</h2>
 										<HoveredButton
 											text={'Забронировать'}
@@ -92,11 +117,10 @@ const Planer = () => {
 											className={'manrope600-14 z-7'}
 										/>
 									</div>
-									{/* добавляй скок хочешь только в спан не забудь обернуть <3 */}
 								</div>
 								<div className="Area-slider">
-								<p>Grand Residences</p>
-								<Image
+									<p>Grand Residences</p>
+									<Image
 										alt='Choose-image'
 										src={Info}
 									/>
@@ -112,7 +136,7 @@ const Planer = () => {
 									<p>382 м2</p>
 								</div>
 								<div className="item_Planer">
-								<p>Grand Residences</p>
+									<p>Grand Residences</p>
 									<Image
 										alt='Choose-image'
 										src={Choose}
@@ -120,7 +144,7 @@ const Planer = () => {
 									<p>382 м2</p>
 								</div>
 								<div className="item_Planer">
-								<p>Grand Residences</p>
+									<p>Grand Residences</p>
 									<Image
 										alt='Choose-image'
 										src={Choose}
@@ -128,7 +152,7 @@ const Planer = () => {
 									<p>382 м2</p>
 								</div>
 								<div className="item_Planer">
-								<p>Grand Residences</p>
+									<p>Grand Residences</p>
 									<Image
 										alt='Choose-image'
 										src={Choose}

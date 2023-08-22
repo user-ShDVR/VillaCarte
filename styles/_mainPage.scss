@@ -34,7 +34,6 @@
 			}
 		}
 	}
-
 	.videoWrapper {
 		position: relative;
 		overflow: hidden;
@@ -45,6 +44,114 @@
 			object-fit: cover;
 		}
 	}
+
+
+        .videoContainer {
+            position: relative;
+            // transform: translateY(-34vw);
+			.videoBtn{
+				background-color: transparent;
+				border: none;
+			}
+            video {
+                width: 93.333vw;
+                height: 48.611vw;
+            }
+
+            .videoItems {
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 0.694vw 0.694vw; //10px 10px
+
+                bottom: 1vw;
+				progress {
+					visibility: hidden;
+					width: 0;
+					height: 0;
+				}
+				@property --progress-value {
+					syntax: '<integer>';
+					inherits: false;
+					initial-value: 0;
+				  }
+				  
+				  @keyframes html-progress {
+					to { --progress-value: var(--progress); }
+				  }
+				  
+				  
+				  .progress-bar {
+					width: 24px;
+					height: 24px;
+					border-radius: 50%;
+					
+					/* to center the percentage value */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				  }
+				  
+				  .html {
+					background: 
+					  radial-gradient(closest-side, white 59%, transparent 60% 100%),
+					  conic-gradient(white calc(var(--progress-value) * 1%), rgba(255, 255, 255, 0.4) 0);
+					animation: html-progress 2s 1 forwards;
+				  }
+
+                .videoProgressBar {
+                    width: 1.667vw;
+                    height: 1.667vw;
+                    // background-color: transparent;
+                    border-radius: 50%;
+                    position: relative;
+                    border: 2px solid white;
+                    transition: border 0.3s ease;
+                    z-index: 100;
+
+                    .progressOverlay {
+                        position: absolute;
+                        top: -0.139vw;
+                        left: -0.139vw;
+
+                        width: 1.667vw;
+                        height: 1.667vw;
+                        border-radius: 50%;
+                        border: 2px solid red;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        z-index: 101;
+                    }
+                    span {
+                        color: white;
+                        opacity: 1;
+                        position: absolute;
+                        top: 0.2vw;
+                        right: 0.139vw;
+                    }
+                }
+
+                .videoControls {
+                    z-index: 100;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1.111vw; //16px
+                    right: 0;
+                }
+            }
+        }
+
+
+.disabled {
+    opacity: 0.4;
+	background-color: transparent;
+	border: none;
+}
+
 
 	.mainText {
 		position: absolute;
@@ -95,9 +202,6 @@
 		}
 		.HoverBtn__AllService:hover {
 			color: #FFF;
-			border: none;
-			padding: 10.8px 20.8px;
-			background-image: linear-gradient(135deg, #4072A3, #7EA2BC);
 			img {
 				
 				-webkit-filter: brightness(0) invert(1);

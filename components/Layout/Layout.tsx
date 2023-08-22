@@ -10,9 +10,10 @@ import ContactsBlock from '../Main/Footer/Footer';
 
 interface IProps {
     children: ReactNode;
+    headerColor: string;
 }
 
-export default function Layout({ children }: IProps) {
+export default function Layout({ children, headerColor }: IProps) {
     const t = useTranslations('Index');
     return (
         <div className='layout'>
@@ -25,6 +26,7 @@ export default function Layout({ children }: IProps) {
             </Head>
 
             <Header
+                headerColor={headerColor}
                 sale={t('sale')}
                 rent={t('rent')}
                 concierge={t('concierge')}

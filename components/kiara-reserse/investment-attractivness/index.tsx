@@ -2,25 +2,59 @@ import React from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import Image from 'next/image';
 import VideoKiera from '../video-kiera';
-import photo from '@/public/kiara-reserve/minorlogo.webp';
-import InvestrBg from '@/public/kiara-reserve/investAttBg.webp';
-import PalmOne from '@/public/kiara-reserve/TenYearsT.webp';
-import PalmTwo from '@/public/kiara-reserve/TenYearsB.webp';
+import photo from '@/public/kiara-reserve/minorlogo.png';
+import InvestrBg from '@/public/kiara-reserve/investAttBg.png';
+import PalmOne from '@/public/kiara-reserve/TenYearsT.png';
+import PalmTwo from '@/public/kiara-reserve/TenYearsB.png';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import Slider from 'react-slick';
 
 
 interface IProps {
-	Program:string;
-	Rassrochka:string;
-	Okupaemost:string;
-	ControledCompany:string;
+	Program: string;
+	Rassrochka: string;
+	Okupaemost: string;
+	ControledCompany: string;
+	garanted: string;
+	year5: string;
+	managmentCompany: string;
+	rentalPool: string;
+	managmentCompanyBuilder: string;
+	Summary: string;
+	booking: string;
+	signing: string;
+	foundationReadiness: string;
+	concreteStructure: string;
+	readlinesWall: string;
+	clearFloor: string;
+	registration: string;
+	year10: string;
+approximately: string;
+underManagement: string;
+averageRating: string;
 }
 const InvestmentAttractivness: React.FC<IProps> = ({
 	Program,
 	Rassrochka,
 	Okupaemost,
 	ControledCompany,
+	garanted,
+	year5,
+	managmentCompany,
+	rentalPool,
+	managmentCompanyBuilder,
+	Summary,
+	booking,
+	signing,
+	foundationReadiness,
+	concreteStructure,
+	readlinesWall,
+	clearFloor,
+	registration,
+	year10,
+approximately,
+underManagement,
+averageRating,
 }) => {
 	const size = useWindowSize();
 	// @ts-ignore
@@ -58,13 +92,11 @@ const InvestmentAttractivness: React.FC<IProps> = ({
 								<div className='slideWrapper'>
 									<div className='slidecont'>
 										<div className="mFlex">
-											<h1>Гарантированный доход</h1>
+											<h1>{garanted}</h1>
 											<span className="invest-percent">7%</span>
-											<h2>годовых в течение 5 лет</h2>
+											<h2>{year5}</h2>
 											<p>
-												Управляющая компания застройщика сдаёт ваши апартаменты в аренду,
-												а вы получаете % от их стоимости при любых обстоятельствах.
-												У вас появится надёжный источник пассивного дохода на несколько лет
+												{managmentCompany}
 											</p>
 										</div>
 									</div>
@@ -73,13 +105,9 @@ const InvestmentAttractivness: React.FC<IProps> = ({
 								<div className='slideWrapper'>
 									<div className='slidecont'>
 										<div className="mFlex ">
-											<h1>Rental Pool</h1>
+											<h1>{rentalPool}</h1>
 											<span className="invest-percent">60/40%</span>
-											<p>
-												Управляющая компания застройщика объединяет похожие апартаменты
-												в группы — пулы. А затем сдаёт их в аренду и начисляет вам % от общей прибыли — при этом неважно,
-												сдавались именно ваши апартаменты или нет
-											</p>
+											<p>{managmentCompanyBuilder}</p>
 										</div>
 									</div>
 								</div>
@@ -90,61 +118,55 @@ const InvestmentAttractivness: React.FC<IProps> = ({
 						<TabPanel className={'Invest-tabs-container'}>
 
 							<div>
-								<h1>Гарантированный доход</h1>
+								<h1>{garanted}</h1>
 								<span className="invest-percent">7%</span>
-								<h2>годовых в течение 5 лет</h2>
+								<h2>{year5}</h2>
 								<p>
-									Управляющая компания застройщика сдаёт ваши апартаменты в аренду,
-									а вы получаете % от их стоимости при любых обстоятельствах.
-									У вас появится надёжный источник пассивного дохода на несколько лет
+									{managmentCompany}
 								</p>
 							</div>
 							<div className="investLine">
 							</div>
 							<div>
-								<h1>Rental Pool</h1>
+								<h1>{rentalPool}</h1>
 								<span className="invest-percent">60/40%</span>
-								<p>
-									Управляющая компания застройщика объединяет похожие апартаменты
-									в группы — пулы. А затем сдаёт их в аренду и начисляет вам % от общей прибыли — при этом неважно,
-									сдавались именно ваши апартаменты или нет
-								</p>
+								<p>{managmentCompanyBuilder}</p>
 							</div>
 						</TabPanel>
 					}
 
 
 					<TabPanel className={'Invest-tabs-container2'}>
-						<h1>Стоимость разбивается на несколько частей. Размер платежа зависит от этапа:</h1>
+						<h1>{Summary}</h1>
 						<table>
 							<tbody>
 								<tr>
 									<td className='table-percent' >2%</td>
-									<td>бронирование</td>
+									<td>{booking}</td>
 								</tr>
 								<tr>
 									<td className='table-percent'>28%</td>
-									<td>подписание договора купли-продажи в течение 30 дней после бронирования</td>
+									<td>{signing}</td>
 								</tr>
 								<tr>
 									<td className='table-percent'>28%</td>
-									<td>готовность фундамента</td>
+									<td>{foundationReadiness}</td>
 								</tr>
 								<tr>
 									<td className='table-percent'>15%</td>
-									<td>готовность бетонной конструкции</td>
+									<td>{concreteStructure}</td>
 								</tr>
 								<tr>
 									<td className='table-percent'>15%</td>
-									<td>готовность стен и крыши</td>
+									<td>{readlinesWall}</td>
 								</tr>
 								<tr>
 									<td className='table-percent'>10%</td>
-									<td>чистовая отделка пола, встроенная мебель и покраска, оконная и дверная рама</td>
+									<td>{clearFloor}</td>
 								</tr>
 								<tr>
 									<td className='table-percent'>10%</td>
-									<td>регистрация участка в земельном департаменте</td>
+									<td>{registration}</td>
 								</tr>
 							</tbody>
 						</table>
@@ -155,23 +177,16 @@ const InvestmentAttractivness: React.FC<IProps> = ({
 						<Image src={PalmTwo} alt='bg' className={'Invest-palmb'} />
 
 						<div>
-							<span className="invest-percent">10 лет</span>
-							<p>
-								Примерно за это время ваши вложения могут окупиться. Это наш прогноз:
-								мы рассчитали срок, ориентируясь на программы доходности от застройщика
-								и свой 10-летний опыт работы на рынке недвижимости Таиланда
-							</p>
+							<span className="invest-percent">{year10}</span>
+							<p>{approximately}</p>
 						</div>
 					</TabPanel>
 
 					<TabPanel className={'Invest-tabs-container4'}>
 						<div>
-							<h1>Комплекс находится под управлением международной управляющей компании Minor Hotels.</h1>
+							<h1>{underManagement}</h1>
 							<p>
-								Её средняя оценка на букинге — 9,3.
-								Компания управляет 550+ отелями в 55 странах.
-								Среди них — знаменитые проекты Anantara и Avani на Пхукете и Самуи.
-								Благодаря такой надёжной управляющей компании вы повысите стоимость и рентабельность апартаментов, если захотите сдать их в аренду или продать.
+								{averageRating}
 							</p>
 						</div>
 						<div style={{ justifyContent: 'center', alignItems: 'center' }}>

@@ -1,6 +1,6 @@
 import React from 'react';
-import feedBackBg from '@/public/kiara-reserve/formBg.webp';
-import flowers from '@/public/kiara-reserve/flowers.webp';
+import feedBackBg from '@/public/kiara-reserve/formBg.png';
+import flowers from '@/public/kiara-reserve/flowers.png';
 
 import { Form } from 'antd';
 import SimpleButton from '@/components/common/Buttons/SimpleButton';
@@ -23,9 +23,13 @@ import { useTranslations } from 'next-intl';
 interface IProps {
 	sourcePage: string;
 	sourceForm: string;
+	yourName: string;
+	phoneNumber: string;
+	toggleButton: string;
+	subscribe: string;
 }
 
-const OurMessengers = () => {
+const OurMessengers = ({talk}: any) => {
 	const messengers = [
 		{ url: '/', icon: telegramIcon, whiteIcon: telegramWhiteIcon, text: 'Telegram' },
 		{ url: '/', icon: whatsappIcon, whiteIcon: whatsappWhiteIcon, text: 'WhatsApp' },
@@ -33,7 +37,7 @@ const OurMessengers = () => {
 	];
 	return (
 		<div className={ 'ourMessengers' }>
-			<h3 className={ 'h3TitleText fz-18-24 mb-28' }>{ 'Общайтесь с нами,как вам удобнее' }</h3>
+			<h3 className={ 'h3TitleText fz-18-24 mb-28' }>{ talk }</h3>
 
 			{ messengers.map( item =>
 				<MessengerCard
@@ -48,8 +52,7 @@ const OurMessengers = () => {
 	);
 };
 
-const FeedBackForm = ({ sourcePage, sourceForm }: IProps) => {
-	const t = useTranslations('Index');
+const FeedBackForm = ({ sourcePage, sourceForm, yourName, phoneNumber, toggleButton, subscribe }: IProps) => {
 	
 	const [form] = Form.useForm();
 
@@ -69,13 +72,13 @@ const FeedBackForm = ({ sourcePage, sourceForm }: IProps) => {
 				name="name"
 				className={'feedBackInputWrapper'}
 				rules={[
-					{ type: 'string', message: t('yourName') },
-					{ required: true, message: t('yourName') || '' }
+					{ type: 'string', message: yourName },
+					{ required: true, message: yourName }
 				]}
 			>
 				<TextAreaLikeInput
 					className={'feedBackInput text300'}
-					placeholder={t('yourName')}
+					placeholder={yourName}
 				/>
 			</Form.Item>
 
@@ -83,23 +86,22 @@ const FeedBackForm = ({ sourcePage, sourceForm }: IProps) => {
 				name="phone"
 				className={'feedBackInputWrapper'}
 				rules={[
-					{ type: 'string', message: t('phoneNumber') },
-					{ required: true, message: t('phoneNumber') }
+					{ type: 'string', message: phoneNumber },
+					{ required: true, message: phoneNumber }
 				]}
 			>
 				<PhoneInputComp
 					className={'feedBackInput text300'}
-					placeholder={t('phoneNumber')}
+					placeholder={phoneNumber}
 				/>
 			</Form.Item>
 
 			<p className={'text300 mt-27 ls-012 fz-12'}>
-				Нажимая кнопку «Записаться», я соглашаюсь с политикой конфиденциальности 
-				и даю согласие на обработку персональных данных
+			{toggleButton}
 			</p>
 
 			<SimpleButton
-				text='Записаться'
+				text={subscribe}
 				variant={'simple'}
 			/>
 
@@ -107,8 +109,24 @@ const FeedBackForm = ({ sourcePage, sourceForm }: IProps) => {
 	);
 };
 
-
-const HelpYou =  () => {
+interface IPropsHelpYou {
+	helpChoose: string;
+	signUp: string;
+	yourName: string;
+phoneNumber: string;
+toggleButton: string;
+subscribe: string;
+talk: string;
+}
+const HelpYou: React.FC<IPropsHelpYou> = ({
+	helpChoose,
+	signUp,
+	yourName,
+	phoneNumber,
+	toggleButton,
+subscribe,
+talk
+}) => {
 
 
 	return (
@@ -120,20 +138,23 @@ const HelpYou =  () => {
 				<div>
 					<div>
 						<h2 className={'h2Subtitle twoStringTitle m-0'}>
-							Поможем выбрать виллу 
-							или апартаменты
+							{helpChoose}
 						</h2>
 						<h6 className={'text300 colorText pt-8 mb-30'}>
-							Запишитесь на консультацию — менеджер ответит на ваши вопросы
-							и поможет сделать выбор
+							{signUp}
 						</h6>
 					</div>
 
-					<FeedBackForm sourcePage={''} sourceForm={'kiaraPage_HelpForm'} />
+					<FeedBackForm
+						toggleButton={toggleButton}
+						subscribe={subscribe}
+						yourName={yourName}
+						phoneNumber={phoneNumber}
+						sourcePage={''} sourceForm={'kiaraPage_HelpForm'} />
 				</div>
 
 				<div className={ 'ourMessengers-wrapper' }>
-					<OurMessengers/>
+					<OurMessengers talk={talk}/>
 				</div>
 
 			</div>

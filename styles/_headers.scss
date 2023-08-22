@@ -51,6 +51,7 @@
 			img {
 				width: 34px;
 				height: 38px;
+				
 			}
 		}
 	}
@@ -238,7 +239,6 @@
 
 @media (min-width: $media475) {
 	.header {
-
 		&-logo {
 
 			&-wrapper {
@@ -248,6 +248,10 @@
 			img {
 				width: 176px;
 				height: 22px;
+				&.invert {
+                    -webkit-filter: invert(1);
+                    filter: invert(1);
+                }
 			}
 		}
 	}
@@ -258,7 +262,7 @@
 
 @media (min-width: $media1440) {
 	.header {
-
+		color: var(--headerColor);
 		&-wrapper {
 			overflow: visible;
 
@@ -266,7 +270,73 @@
 				display: none !important;
 			}
 		}
-
+		&Black{
+			.meinMenu-wrapper {
+				display: flex;
+				justify-content: space-between;
+	
+				nav {
+					display: flex;
+					align-items: center;
+	
+					.nav-item {
+						text-decoration: none;
+						display: flex;
+						align-items: center;
+						position: relative;
+						padding: 10px;
+						cursor: pointer;
+	
+						//&:hover p {
+						//	color: $colorDarkWhite;
+						//}
+	
+						p {
+							//padding: 1px;
+							color: var(--headerColor);
+							font-family: $fontManrope700;
+							font-size: 14px;
+							//margin-right: auto;
+							margin: 0;
+							white-space: nowrap;
+							letter-spacing: -0.42px;
+						}
+	
+						img {
+							width: 15px;
+							height: 15px;
+							margin-left: 4px;
+							-webkit-filter: invert(1);
+							filter: invert(1);
+						}
+	
+						.dropdownContent {
+							min-width: 180px;
+							display: flex;
+							flex-direction: column;
+							align-items: flex-start;
+							position: absolute;
+							top: 48px;
+							left: 0;
+							padding: 16px 16px 8px 16px;
+							//border-radius: 0 0 15px 15px;
+							//background: rgba(34, 54, 74, .4);
+	
+							a {
+								text-decoration: none;
+								color: var(--headerColor);
+								font-size: 12px;
+								padding: 8px 0;
+	
+								&:hover {
+									color: $colorDarkWhite;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		// MainMenu
 		.meinMenu-wrapper {
 			display: flex;
@@ -290,7 +360,7 @@
 
 					p {
 						//padding: 1px;
-						color: $colorWhite;
+						color: var(--headerColor);
 						font-family: $fontManrope700;
 						font-size: 14px;
 						//margin-right: auto;
@@ -319,7 +389,7 @@
 
 						a {
 							text-decoration: none;
-							color: $colorWhite;
+							color: var(--headerColor);
 							font-size: 12px;
 							padding: 8px 0;
 

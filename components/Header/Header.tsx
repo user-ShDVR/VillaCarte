@@ -31,9 +31,12 @@ interface IProps {
     orderAPersonalSelection2: string;
     ourManagerWillCallYou: string;
     contactUsThroughOurMessengers: string;
+    headerColor: string;
+
 }
 
 const Header: React.FC<IProps> = ({
+    headerColor,
     requestACall,
     sale,
     rent,
@@ -63,7 +66,6 @@ contactUsThroughOurMessengers
     const toShowMenu = () => {
         showMobileMenu(!mobileMenu);
     };
-
     const transform = {
         background: 'rgba(34, 54, 74, .4)',
         backdropFilter: 'blur(15px)',
@@ -110,7 +112,7 @@ contactUsThroughOurMessengers
 
     return (
         <>
-            <header className='header'>
+            <header className={'header ' + (headerColor === '#FFFFFF' ? '' : 'headerBlack')} style={{ '--headerColor': headerColor } as any}>
                 <div
                     style={style}
                     className={scrolled ? 'header__bg _blur' : 'header__bg'}
@@ -128,11 +130,13 @@ contactUsThroughOurMessengers
                                 <Image
                                     src={logoImg}
                                     alt={'VillaCarte'}
+                                    className={(headerColor === '#22364A' ? 'invert' : '')} 
                                 />
                             ) : (
                                 <Image
                                     src={logoDesktop}
                                     alt={'VillaCarte'}
+                                    className={(headerColor === '#22364A' ? 'invert' : '')} 
                                 />
                             )}
                         </Link>
@@ -154,7 +158,7 @@ contactUsThroughOurMessengers
                     <div className={'d-flex ai-center'}>
                         <SimpleButton
                             text={requestACall}
-                            variant={'only'}
+                            variant={headerColor === '#22364A' ? 'simpleDark' : 'only'}
                             className={'text-nowrap ml-10'}
                             onClick={toCallModal}
                         />

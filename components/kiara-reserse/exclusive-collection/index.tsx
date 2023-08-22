@@ -12,7 +12,7 @@ import icon8 from '../../../public/kiara-reserve/8.svg';
 import icon9 from '../../../public/kiara-reserve/9.svg';
 import icon10 from '../../../public/kiara-reserve/10.svg';
 import line from '../../../public/kiara-reserve/line.svg';
-import palms from '../../../public/kiara-reserve/palms.webp';
+import palms from '../../../public/kiara-reserve/palms.png';
 interface IProps{
     exclusiveCollection: string;
     residence: string;

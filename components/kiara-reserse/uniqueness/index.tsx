@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import Map from '../../../public/kiara-reserve/map.webp';
+import Map from '../../../public/kiara-reserve/map.png';
 interface IProps {
     Complex: string;
     Uniq: string;

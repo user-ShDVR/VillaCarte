@@ -6,8 +6,18 @@ import Slider from 'react-slick';
 import photo from '@/public/kiara-reserve/Rectangle.jpg';
 import { OfferNextArrow } from '@/components/common/Buttons/SliderArrows/OfferNextArrow';
 import { OfferPrevArrow } from '@/components/common/Buttons/SliderArrows/OfferPrevArrow';
-
-const PhotosOfTheComplex = () => {
+interface IProps {
+	complexPhoto: string;
+	interior: string;
+	exterior: string;
+	infrastructure: string;
+}
+const PhotosOfTheComplex: React.FC<IProps> = ({
+	complexPhoto,
+	interior,
+	exterior,
+	infrastructure,
+}) => {
 
 	const SliderSetting = {
 		dots: false,
@@ -24,128 +34,128 @@ const PhotosOfTheComplex = () => {
 		<div className={'bgGradient photos'}>
 
 			<div className={'photos-inner'}>
-				<h2 className={'h1Title colorWhite ls--216'}>Фотографии комплекса</h2>
+				<h2 className={'h1Title colorWhite ls--216'}>{complexPhoto}</h2>
 
 				<Tabs className={'photos-tabs'} selectedTabPanelClassName={''}>
 					<TabList className={'photos-tabList text500 colorWhite'}>
-						<Tab>Интерьер</Tab>
-						<Tab>Экстерьер</Tab>
-						<Tab>Инфраструктура</Tab>
+						<Tab>{interior}</Tab>
+						<Tab>{exterior}</Tab>
+						<Tab>{infrastructure}</Tab>
 					</TabList>
 
 					<TabPanel className={''}>
-					<div style={{ width: '100%', maxWidth: '94vw'}}>
+						<div style={{ width: '100%', maxWidth: '94vw' }}>
 							<Slider className='PhotosSlider' {...SliderSetting} >
-							<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-								/>
-								<p>
-									01<span>/03</span>
-								</p>
-								
+								<div className="slide-inner-container">
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+									/>
+									<p>
+										01<span>/03</span>
+									</p>
+
 								</div>
 
 								<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-								/>
-								<p>
-									02<span>/03</span>
-								</p>
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+									/>
+									<p>
+										02<span>/03</span>
+									</p>
 								</div>
 								<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-								/>
-								<p>
-									03<span>/03</span>
-								</p>
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+									/>
+									<p>
+										03<span>/03</span>
+									</p>
 								</div>
 							</Slider>
 						</div>
 					</TabPanel>
 
 					<TabPanel className={''}>
-					<div style={{ width: '100%', maxWidth: '94vw'}}>
+						<div style={{ width: '100%', maxWidth: '94vw' }}>
 							<Slider className='PhotosSlider' {...SliderSetting} >
-							<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-								/>
-								<p>
-									01<span>/03</span>
-								</p>
-								
+								<div className="slide-inner-container">
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+									/>
+									<p>
+										01<span>/03</span>
+									</p>
+
 								</div>
 
 								<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-								/>
-								<p>
-									02<span>/03</span>
-								</p>
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+									/>
+									<p>
+										02<span>/03</span>
+									</p>
 								</div>
 								<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-								/>
-								<p>
-									03<span>/03</span>
-								</p>
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+									/>
+									<p>
+										03<span>/03</span>
+									</p>
 								</div>
 							</Slider>
 						</div>
 					</TabPanel>
-					
+
 					<TabPanel className={''}>
-					<div style={{ width: '100%', maxWidth: '94vw'}}>
+						<div style={{ width: '100%', maxWidth: '94vw' }}>
 							<Slider className='PhotosSlider' {...SliderSetting} >
-							<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-									
-								/>
-								<p>
-									01<span>/03</span>
-								</p>
-								
+								<div className="slide-inner-container">
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+
+									/>
+									<p>
+										01<span>/03</span>
+									</p>
+
 								</div>
 
 								<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-								/>
-								<p>
-									02<span>/03</span>
-								</p>
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+									/>
+									<p>
+										02<span>/03</span>
+									</p>
 								</div>
 								<div className="slide-inner-container">
-								<Image
-									className='custom-slide'
-									src={photo}
-									alt='photo'
-								/>
-								<p>
-									03<span>/03</span>
-								</p>
+									<Image
+										className='custom-slide'
+										src={photo}
+										alt='photo'
+									/>
+									<p>
+										03<span>/03</span>
+									</p>
 								</div>
 							</Slider>
 						</div>

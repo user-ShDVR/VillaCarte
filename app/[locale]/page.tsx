@@ -60,7 +60,7 @@ export default function Home() {
 			{isLoading ? (
 				<div style={{ opacity: 0 }}>Loading... </div>
 			) : (
-				<Layout>
+				<Layout headerColor={"#FFFFFF"}>
 					<Head>
 						<title>{mainPageInfo?.meta?.title}</title>
 						<meta
