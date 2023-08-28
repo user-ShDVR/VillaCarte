@@ -9,6 +9,7 @@ import { useStore } from 'effector-react';
 import { IMainPage } from '@/types/mainPage';
 import { $mainPageInfo } from '@/store/mainPage';
 import InstagramCard from '@/components/common/Cards/MediaCards/InstagramCard/InstagramCard';
+import { useWindowSize } from '@/hooks/useWindowSize';
 interface IProps {
 	sharingExclusiveContentFromTheIsland: string;
 	watchExpertReviews: string;
@@ -20,6 +21,9 @@ const ShareContent: React.FC<IProps> = ({
 	learnAllAboutRealEstateInThailand,
 }) => {
 	const media = useStore<IMainPage>( $mainPageInfo );
+	const size = useWindowSize();
+	// @ts-ignore
+	const isMobile = size.width <= 700;
 
 	return (
 		<div className={ 'shareContent' }>
@@ -49,13 +53,19 @@ const ShareContent: React.FC<IProps> = ({
 						</div>
 
 						<div className={ 'mediaCard-wrapper photoCards' }>
-							{ media.data.instagramPosts.slice( 0, 5 ).map( ( item, index ) => (
+							{ isMobile ? media.data.instagramPosts.slice( 0, 3 ).map( ( item, index ) => (
 								<InstagramCard
 									key={ index }
 									image={ item.image }
 									path={ item.publicationId }
 								/>
-							) ) }
+							) ) : media.data.instagramPosts.slice( 0, 5 ).map( ( item, index ) => (
+								<InstagramCard
+									key={ index }
+									image={ item.image }
+									path={ item.publicationId }
+								/>
+							) )}
 							<DefaultMediaCard
 								variant={ 'insta' }
 								icon={ instagramIcon }

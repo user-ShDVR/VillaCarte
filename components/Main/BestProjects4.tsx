@@ -4,6 +4,7 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import GoodsCard from '@/components/common/Cards/GoodsCard/GoodsCard';
 import HoveredButton from '@/components/common/Buttons/HoveredButton';
 import { useTranslations } from 'next-intl';
+import { useWindowSize } from '@/hooks/useWindowSize';
 
 interface IProps {
 	data: IMainPageData | undefined;
@@ -26,6 +27,9 @@ const BestProjects = ({
 	offers,
 }: IProps) => {
 	const t = useTranslations('Index');
+	const size = useWindowSize();
+	// @ts-ignore
+	const isMobile = size.width <= 1400;
 	return (
 		<div className={'bgGradient bestProjects'}>
 
@@ -40,15 +44,19 @@ const BestProjects = ({
 					</TabList>
 
 					<TabPanel className={''}>
-						{data?.apartments.slice(0, 6).map((item, index) =>
+						{isMobile ? data?.apartments.slice(0, 3).map((item, index) =>
 							<GoodsCard key={index} url={item.url} image={item.image} logoImage={item.logoImage} />
-						)}
+						): data?.apartments.slice(0, 6).map((item, index) =>
+						<GoodsCard key={index} url={item.url} image={item.image} logoImage={item.logoImage} />
+					)}
 					</TabPanel>
 
 					<TabPanel className={''}>
-						{data?.villas.slice(0, 6).map((item, index) =>
+						{isMobile ? data?.villas.slice(0, 3).map((item, index) =>
 							<GoodsCard key={index} url={item.url} image={item.image} logoImage={item.logoImage} />
-						)}
+						): data?.villas.slice(0, 6).map((item, index) =>
+						<GoodsCard key={index} url={item.url} image={item.image} logoImage={item.logoImage} />
+					)}
 					</TabPanel>
 
 				</Tabs>

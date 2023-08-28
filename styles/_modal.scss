@@ -83,7 +83,9 @@
 		position: relative;
 		overflow: hidden;
 		margin: 10px;
-
+		.feedBackBlock-content {
+			margin-top: 40vw;
+		}
 		.feedBack-modal-bg {
 			background-size: cover;
 			background-repeat: no-repeat;

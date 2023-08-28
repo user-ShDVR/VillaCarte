@@ -38,7 +38,7 @@ contactUsThroughOurMessengers
 					<Image src={ flowerRight } alt={ '' } className={ 'flowerRight-modal' }/>
 				</div>
 
-				<div className={ 'container pos feedBackBlock-content' }>
+				<div className={ 'pos feedBackBlock-content' }>
 					<div>
 						<div>
 							<h2 className={ 'h2Subtitle twoStringTitle m-0' }>{orderAPersonalSelection}</h2>

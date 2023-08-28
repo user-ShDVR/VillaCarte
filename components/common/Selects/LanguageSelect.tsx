@@ -1,8 +1,10 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import CustomSelect from '@/components/common/Selects/CustomSelect';
 import { $languages, updateLanguages } from '@/store/languages';
 import { ILanguages } from '@/types/mainPage';
 import { useStore } from 'effector-react';
+import { useLocale } from 'next-intl';
 import {usePathname, useRouter} from 'next-intl/client';
 
 
@@ -12,7 +14,7 @@ interface IProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTML
 }
 
 const LanguageSelect = ( { className, scrolled, ...newProps }: IProps ) => {
-	const languageStore = useStore( $languages );
+	const locale = useLocale();
 	const pathname = usePathname();
 	const router = useRouter();
 	const languages: ILanguages[] = [
@@ -22,10 +24,9 @@ const LanguageSelect = ( { className, scrolled, ...newProps }: IProps ) => {
 
 	const handleChange = ( selectedOption: any ) => {
 		router.replace(pathname, {locale: `${selectedOption.value}`});
-		updateLanguages( selectedOption );
-		localStorage.setItem( 'lang', selectedOption.value );
 	};
 
+	let objFromStringLocalStorage = { value: locale, label: locale };
 
 	return (
 		<div className={ 'header-select-wrapper' }>
@@ -33,8 +34,7 @@ const LanguageSelect = ( { className, scrolled, ...newProps }: IProps ) => {
 			<CustomSelect
 				options={ languages }
 				className={ className }
-				// defaultValue={ objFromStringLocalStorage }
-				defaultValue={ languageStore }
+				defaultValue={ objFromStringLocalStorage }
 				updateStore={ handleChange }
 				scrolled={ scrolled }
 			/>

@@ -12,7 +12,6 @@ import vkHovered from '@/public/icons/socials/contacts/vkHovered.svg';
 import instagramHovered from '@/public/icons/socials/contacts/instagramHovered.svg';
 import telegramHovered from '@/public/icons/socials/contacts/telegramHovered.svg';
 import Link from 'next/link';
-import creativeTeam from '@/public/creativeTeam.svg';
 import Socials from '@/components/common/Socials/Socials';
 import RequestCallForm from '@/components/common/Forms/RequestСall/RequestCallForm';
 import feedBackBg from '@/public/feedBackBg.webp';
@@ -104,8 +103,8 @@ const ContactsBlock: React.FC<IProps> = ({
 
 						<p className={ 'text300-min copyRights' }>
 							{ websiteDevelopment }
-							<Link href={ '/' }>
-								<Image src={ creativeTeam } alt={ 'creativeTeam' }/>
+							<Link target='_blank' href={ 'https://github.com/user-ShDVR' }>
+								ShDVR
 							</Link>
 						</p>
 					</div>

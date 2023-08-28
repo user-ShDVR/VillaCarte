@@ -170,7 +170,7 @@
         position: relative;
 
         h3 {
-            max-width: 17.361vw;
+            
         }
 
         &:hover h3 {
@@ -189,27 +189,30 @@
             top: 0;
             bottom: 0;
             right: 0;
+            background-image: -webkit-linear-gradient(135deg, #4072a3, #7ea2bc); /* Safari 5.1-6 */
             background-image: linear-gradient(135deg, #4072a3, #7ea2bc);
             z-index: -1;
         }
-
+        
         .linkButton::before {
-            /*   background: blue; */
+            /* background: blue; */
             transform: translateX(-100%);
             z-index: 1;
         }
+        
         .linkButton::after {
             z-index: 0;
             transform: translateX(100%);
             transition: none;
             transition: transform 350ms ease;
         }
+        
         &:hover .linkButton {
             &:before {
                 transform: translateX(0);
                 transition: transform 350ms ease;
             }
-
+        
             &:after {
                 opacity: 1;
                 transform: translateX(0);
@@ -223,6 +226,7 @@
             }
             transition: all 0.3s;
         }
+        
 
         a {
             text-decoration: none;
@@ -415,12 +419,12 @@
             p {
                 display: flex;
                 justify-content: end;
+                align-items: center;
                 margin-bottom: 0;
 
                 img {
                     width: 18px;
                     height: 10px;
-                    margin-top: 4px;
                 }
             }
         }
@@ -836,7 +840,9 @@
     // TitleTextArrowCard
     .titleTextArrowCard {
         padding: 32px;
-
+        h3 {
+            max-width: 17.361vw;
+        }
         div {
             grid-template-columns: 1fr;
         }
@@ -995,7 +1001,6 @@
         .description-wrapper {
             p {
                 img {
-                    margin-top: 8px;
                 }
             }
         }

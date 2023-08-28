@@ -126,6 +126,7 @@
 		transition: all .2s;
 		overflow-y: hidden;
 		display: flex;
+		z-index: 6;
 		flex-direction: column;
 		justify-content: space-between;
 
